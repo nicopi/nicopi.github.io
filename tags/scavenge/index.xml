@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Scavenge on Nicola Piovesan</title>
-    <link>https://example.com/tags/scavenge/</link>
+    <link>https://nicopi.github.io/tags/scavenge/</link>
     <description>Recent content in Scavenge on Nicola Piovesan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -12,10 +12,10 @@
     
     <item>
       <title>SCAVENGE</title>
-      <link>https://example.com/project/deep-learning/</link>
+      <link>https://nicopi.github.io/project/deep-learning/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/project/deep-learning/</guid>
+      <guid>https://nicopi.github.io/project/deep-learning/</guid>
       <description>&lt;p&gt;I am one of the ESR that are currently working in the EU H2020 SCAVENGE project.&lt;/p&gt;
 
 &lt;p&gt;The title of my project is &amp;ldquo;Network resource allocation policies with energy transfer capabilities&amp;rdquo;.

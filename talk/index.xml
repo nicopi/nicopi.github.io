@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Recent &amp; Upcoming Talks on Nicola Piovesan</title>
-    <link>https://example.com/talk/</link>
+    <link>https://nicopi.github.io/talk/</link>
     <description>Recent content in Recent &amp; Upcoming Talks on Nicola Piovesan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -12,10 +12,10 @@
     
     <item>
       <title>Presentation of the SCAVENGE ESR-05</title>
-      <link>https://example.com/talk/scavenge-esr5/</link>
+      <link>https://nicopi.github.io/talk/scavenge-esr5/</link>
       <pubDate>Mon, 21 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/talk/scavenge-esr5/</guid>
+      <guid>https://nicopi.github.io/talk/scavenge-esr5/</guid>
       <description>&lt;p&gt;Embed your slides or video here using &lt;a href=&#34;https://gcushen.github.io/hugo-academic-demo/post/writing-markdown-latex/&#34; target=&#34;_blank&#34;&gt;shortcodes&lt;/a&gt;. Further details can easily be added using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
 
 &lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;f07eda2a318048aa82db114b7b5b9e2c&#34; data-ratio=&#34;1.77777777777778&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
@@ -24,10 +24,10 @@
     
     <item>
       <title>Data analytics Worldsensing student contest 2014</title>
-      <link>https://example.com/talk/example-talk/</link>
+      <link>https://nicopi.github.io/talk/example-talk/</link>
       <pubDate>Fri, 05 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/talk/example-talk/</guid>
+      <guid>https://nicopi.github.io/talk/example-talk/</guid>
       <description>&lt;p&gt;Embed your slides or video here using &lt;a href=&#34;https://gcushen.github.io/hugo-academic-demo/post/writing-markdown-latex/&#34; target=&#34;_blank&#34;&gt;shortcodes&lt;/a&gt;. Further details can easily be added using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
 </description>
     </item>
