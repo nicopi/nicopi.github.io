@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Scavenge on Nicola Piovesan</title>
+    <link>https://example.com/tags/scavenge/</link>
+    <description>Recent content in Scavenge on Nicola Piovesan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 Nicola Piovesan</copyright>
+    <lastBuildDate>Wed, 27 Apr 2016 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/scavenge/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>SCAVENGE</title>
+      <link>https://example.com/project/deep-learning/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/project/deep-learning/</guid>
+      <description>&lt;p&gt;I am one of the ESR that are currently working in the EU H2020 SCAVENGE project.&lt;/p&gt;
+
+&lt;p&gt;The title of my project is &amp;ldquo;Network resource allocation policies with energy transfer capabilities&amp;rdquo;.
+This project investigates on possible integration architectures between the energy harvesting mobile network and the smart electricity grid. In particular, the main scope is to study the capability of 5G mobile networks of intelligently routing energy in a micro grid of interconnected conventional/renewable energy sources and loads to (i) satisfy the demand of communication networks while avoiding energy outages in zones with high user density and/or low ambient energy availability and (ii) to provide ancillary services to the grid.&lt;/p&gt;
+
+&lt;p&gt;The exptected results are to build a theory-to-practice understanding of energy routing systems and of the associated performance trade-offs. In particular, I am at designing joint traffic/energy allocation policies for environmentally powered networks with energy transfer capabilities, taking into account complexity constraints, energy storage capability and partial system-state knowledge at the BSs.
+Machine Learning will be explored to predict/estimate/model load demands and to take appropriate actions (e.g., direct load control, load shifting, gamification) to provide sufficient energy to satisfy the demand.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
