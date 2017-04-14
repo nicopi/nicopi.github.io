@@ -25,7 +25,7 @@
       <pubDate>Mon, 21 Nov 2016 00:00:00 +0000</pubDate>
       
       <guid>https://nicopi.github.io/talk/scavenge-esr5/</guid>
-      <description>&lt;p&gt;Embed your slides or video here using &lt;a href=&#34;https://gcushen.github.io/hugo-academic-demo/post/writing-markdown-latex/&#34; target=&#34;_blank&#34;&gt;shortcodes&lt;/a&gt;. Further details can easily be added using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
+      <description>&lt;p&gt;This is the presentation of my background and current position in the SCAVENGE project.&lt;/p&gt;
 
 &lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;f07eda2a318048aa82db114b7b5b9e2c&#34; data-ratio=&#34;1.77777777777778&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
 </description>
@@ -813,11 +813,11 @@ Here&#39;s some important information...
     
     <item>
       <title>Data analytics Worldsensing student contest 2014</title>
-      <link>https://nicopi.github.io/talk/example-talk/</link>
+      <link>https://nicopi.github.io/talk/dei-awards/</link>
       <pubDate>Fri, 05 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://nicopi.github.io/talk/example-talk/</guid>
-      <description>&lt;p&gt;Embed your slides or video here using &lt;a href=&#34;https://gcushen.github.io/hugo-academic-demo/post/writing-markdown-latex/&#34; target=&#34;_blank&#34;&gt;shortcodes&lt;/a&gt;. Further details can easily be added using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
+      <guid>https://nicopi.github.io/talk/dei-awards/</guid>
+      <description>&lt;p&gt;Presentation of the project that won the Worldsensing Smart City Big Data Contest 2014.&lt;/p&gt;
 </description>
     </item>
     
