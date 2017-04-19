@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Nicola Piovesan</title>
-    <link>https://www.nicolapiovesan.com/tags/</link>
+    <link>http://www.nicolapiovesan.com/tags/</link>
     <description>Recent content in Tags on Nicola Piovesan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -12,38 +12,38 @@
     
     <item>
       <title>Content tagged as &#39;Academic&#39;</title>
-      <link>https://www.nicolapiovesan.com/tags/academic/</link>
+      <link>http://www.nicolapiovesan.com/tags/academic/</link>
       <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://www.nicolapiovesan.com/tags/academic/</guid>
+      <guid>http://www.nicolapiovesan.com/tags/academic/</guid>
       <description>&lt;p&gt;Here is a list of all the content that has been tagged as &lt;em&gt;academic&lt;/em&gt;.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Hugo</title>
-      <link>https://www.nicolapiovesan.com/tags/hugo/</link>
+      <link>http://www.nicolapiovesan.com/tags/hugo/</link>
       <pubDate>Wed, 20 Apr 2016 12:00:00 +0000</pubDate>
       
-      <guid>https://www.nicolapiovesan.com/tags/hugo/</guid>
+      <guid>http://www.nicolapiovesan.com/tags/hugo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Jekyll</title>
-      <link>https://www.nicolapiovesan.com/tags/jekyll/</link>
+      <link>http://www.nicolapiovesan.com/tags/jekyll/</link>
       <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://www.nicolapiovesan.com/tags/jekyll/</guid>
+      <guid>http://www.nicolapiovesan.com/tags/jekyll/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Scavenge</title>
-      <link>https://www.nicolapiovesan.com/tags/scavenge/</link>
+      <link>http://www.nicolapiovesan.com/tags/scavenge/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://www.nicolapiovesan.com/tags/scavenge/</guid>
+      <guid>http://www.nicolapiovesan.com/tags/scavenge/</guid>
       <description></description>
     </item>
     
