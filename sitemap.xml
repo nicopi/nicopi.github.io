@@ -68,32 +68,8 @@
     
     
     <url>
-      <loc>http://www.nicolapiovesan.com/post/getting-started/</loc>
-      <lastmod>2016-04-20T12:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-      <loc>http://www.nicolapiovesan.com/post/widgets/</loc>
-      <lastmod>2016-04-20T11:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-      <loc>http://www.nicolapiovesan.com/post/managing-content/</loc>
-      <lastmod>2016-04-20T11:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-      <loc>http://www.nicolapiovesan.com/post/writing-markdown-latex/</loc>
-      <lastmod>2016-04-20T10:00:00+00:00</lastmod>
+      <loc>http://www.nicolapiovesan.com/publication/distributed-algorithms-for-localization-in-wsns/</loc>
+      <lastmod>2016-04-11T00:00:00+00:00</lastmod>
     </url>
     
   
@@ -108,8 +84,8 @@
     
     
     <url>
-      <loc>http://www.nicolapiovesan.com/post/migrate-from-jekyll/</loc>
-      <lastmod>2014-03-10T00:00:00+00:00</lastmod>
+      <loc>http://www.nicolapiovesan.com/publication/studio-di-support-vector-machine-per-la-classificazione-e-la-regressione-statistica/</loc>
+      <lastmod>2013-07-22T00:00:00+00:00</lastmod>
     </url>
     
   
@@ -125,25 +101,16 @@
     
     
     <url>
+      <loc>http://www.nicolapiovesan.com/publication_types/7/</loc>
+      <lastmod>2016-04-11T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
       <loc>http://www.nicolapiovesan.com/categories/</loc>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-      <loc>http://www.nicolapiovesan.com/tags/hugo/</loc>
-      <lastmod>2016-04-20T12:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-      <loc>http://www.nicolapiovesan.com/tags/jekyll/</loc>
-      <lastmod>2014-03-10T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     

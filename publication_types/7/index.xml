@@ -1,32 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Publications on Nicola Piovesan</title>
-    <link>http://www.nicolapiovesan.com/publication/</link>
-    <description>Recent content in Publications on Nicola Piovesan</description>
+    <title>7 on Nicola Piovesan</title>
+    <link>http://www.nicolapiovesan.com/publication_types/7/</link>
+    <description>Recent content in 7 on Nicola Piovesan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Nicola Piovesan</copyright>
-    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/publication/" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Cooperative Localization in WSNs: a Hybrid Convex/non-Convex Solution</title>
-      <link>http://www.nicolapiovesan.com/publication/cooperative-localization/</link>
-      <pubDate>Wed, 14 Dec 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.nicolapiovesan.com/publication/cooperative-localization/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Data Analytics for Smart Parking Applications</title>
-      <link>http://www.nicolapiovesan.com/publication/data-analytics/</link>
-      <pubDate>Fri, 23 Sep 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.nicolapiovesan.com/publication/data-analytics/</guid>
-      <description></description>
-    </item>
+    <lastBuildDate>Mon, 11 Apr 2016 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/publication_types/7/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Distributed algorithms for localization in Wireless Sensor Networks</title>
