@@ -42,7 +42,9 @@
           position: relative;
       }
       
-
+.c3-region.regionY {
+  fill: red;
+}
       
 
 
@@ -116,7 +118,10 @@ function plot(){
 				rows: rows,
 				type: 'line'
 			},
-			color:{pattern:['#18c950']}
+			color:{pattern:['#18c950']},
+			point: {
+        show: false
+    },
 		});
 	});
 
@@ -133,11 +138,16 @@ function plot(){
 			},
 			data: {
 				rows: rows,
-				type: 'line'
+				types:{trafficRequest: 'line', 
+				trafficOffloaded:'area'
+			}
 			},
 color: {
     pattern: ['#b3b6bc','#f26615']
-}
+},
+point: {
+        show: false
+    },
 		});
 	});
 
@@ -192,18 +202,22 @@ var chart = c3.generate({
             // Range includes padding, set 0 if no padding needed
             // padding: {top:0, bottom:0}
         }
-    }
+    },
+    regions: [
+        {axis: 'y', end: 0.2, class: 'regionY'}],
 });
 
 var chart = c3.generate({
 	bindto: '#status',
     data: {
         url: 'https://raw.githubusercontent.com/nicopi/data/master/status_'+strUser+'.csv',
-        type: 'area-step'
+        type: 'area-step',
+        tooltip:{order:'asc'}
     },
     size: {
 		height: 200,
-	}
+	},
+
 });
 }
 </script>
