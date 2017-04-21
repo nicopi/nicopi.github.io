@@ -1,0 +1,213 @@
+	<html>
+	<head>
+		<!-- Load c3.css -->
+		<link href="./c3/c3.css" rel="stylesheet" type="text/css">
+
+		<!-- Load d3.js and c3.js -->
+		<script src="https://d3js.org/d3.v3.js"></script>
+		<script src="./c3/c3.min.js"></script>
+		<link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css" integrity="sha384-UQiGfs9ICog+LwheBSRCt1o5cbyKIHbwjWscjemyBMT9YCUMZffs6UqUTd0hObXD" crossorigin="anonymous">
+<style>
+      .custom-menu-wrapper {
+          background-color: #808080;
+          margin-bottom: 2.0em;
+          white-space: nowrap;
+          position: relative;
+      }
+      
+      .custom-menu {
+          display: inline-block;
+          width: auto;
+          height:60px;
+          vertical-align: middle;
+          -webkit-font-smoothing: antialiased;
+      }
+      
+      .custom-menu .pure-menu-link,
+      .custom-menu .pure-menu-heading {
+          color: white;
+      }
+      
+      
+      
+      .custom-menu-top {
+          position: relative;
+          padding-top: .9em;
+          padding-bottom: .5em;
+      }
+      
+      .custom-menu-brand {
+          display: block;
+          text-align: center;
+          position: relative;
+      }
+      
+
+      
+
+
+      
+     
+      </style>
+	</head>
+
+	<body>
+      <div class="custom-menu-wrapper">
+          <div class="pure-menu custom-menu custom-menu-top">
+              <a href="#" class="pure-menu-heading custom-menu-brand">DATA</a>
+              <a href="#" class="custom-menu" id=""><s class="bar"></s><s class="bar"></s></a>
+          </div>
+          <div class="pure-menu pure-menu-horizontal pure-menu-scrollable custom-menu custom-menu-bottom custom-menu-tucked" id="tuckedMenu">
+              <div >
+              <form class="pure-form pure-form-stacked">
+              <select id="nsc" class="pure-form" onChange="getnsc()">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+    <option value="5">5</option>
+</select></form></div>
+  
+          </div>
+      </div>
+		
+		
+		<div id="energy"></div>
+		<div id="traffic"></div>
+		<div id="load"></div>
+		<div id="battery"></div>
+		<div id="status"></div>
+		<div id="datalogo" align="center" style="font-size:100"><h1>Data.</h1></div>
+
+
+		<script>
+	// var chart = c3.generate({
+	//    bindto: '#chart',
+	//    data: {
+	//      columns: [
+	//        ['data1', 30, 200, 100, 400, 150, 250],https://crossorigin.me/https://plot.ly/~nicopi/41.csv
+	//        ['data2', 50, 20, 10, 40, 15, 25]
+	//      ]
+	//    }
+	// });
+	var strUser;
+ function getnsc(){
+	var e = document.getElementById("nsc");
+	strUser = e.options[e.selectedIndex].value;
+	//console.log("https://raw.githubusercontent.com/nicopi/data/1d0d6449d0f138e99e1d533f616fd3a98808c0ff/general_"+strUser+".csv")
+	try{
+	document.getElementById("datalogo").remove();
+    }catch(err){}
+	plot();
+  }
+
+function plot(){
+	d3.csv("https://raw.githubusercontent.com/nicopi/data/master/general_"+strUser+".csv")
+	.row(function(d) { return [d.energyHarvested]; })
+	.get(function(error, rows) { 
+		rows.unshift (["energyHarvested"])
+
+		var chart = c3.generate({
+			bindto: '#energy',
+			size: {
+				height: 150,
+			},
+			data: {
+				rows: rows,
+				type: 'line'
+			},
+			color:{pattern:['#18c950']}
+		});
+	});
+
+
+	d3.csv("https://raw.githubusercontent.com/nicopi/data/master/general_"+strUser+".csv")
+	.row(function(d) { return [d.trafficRequest, d.trafficOffloaded]; })
+	.get(function(error, rows) { 
+		rows.unshift (["trafficRequest","trafficOffloaded"])
+
+		var chart = c3.generate({
+			bindto: '#traffic',
+			size: {
+				height: 150,
+			},
+			data: {
+				rows: rows,
+				type: 'line'
+			},
+color: {
+    pattern: ['#b3b6bc','#f26615']
+}
+		});
+	});
+
+	d3.csv("https://raw.githubusercontent.com/nicopi/data/master/general_"+strUser+".csv")
+	.row(function(d) { return [d.macroLoad, d.trafficDropped]; })
+	.get(function(error, rows) { 
+		rows.unshift (["macroLoad","trafficDropped"])
+
+		var chart = c3.generate({
+			bindto: '#load',
+			size: {
+				height: 150,
+			},
+			data: {
+				rows: rows,
+				type: 'line'
+			},
+			axis: {
+        y: {
+            max: 1,
+            min: 0,
+            padding: {top:0, bottom:0},
+            // Range includes padding, set 0 if no padding needed
+            // padding: {top:0, bottom:0}
+        }
+    }
+		});
+	});
+
+
+var chart = c3.generate({
+	bindto: '#battery',
+    data: {
+        url: 'https://raw.githubusercontent.com/nicopi/data/master/battery_'+strUser+'.csv',
+        type: 'line'
+    },
+    size: {
+		height: 150,
+	},
+	grid: {
+        y: {
+            lines: [
+                {value: 0.2, text: 'Battery Limit', position: 'start'}
+            ]
+        }
+    },
+    axis: {
+        y: {
+            max: 1,
+            min: 0,
+            padding: {top:0, bottom:0},
+            // Range includes padding, set 0 if no padding needed
+            // padding: {top:0, bottom:0}
+        }
+    }
+});
+
+var chart = c3.generate({
+	bindto: '#status',
+    data: {
+        url: 'https://raw.githubusercontent.com/nicopi/data/master/status_'+strUser+'.csv',
+        type: 'area-step'
+    },
+    size: {
+		height: 200,
+	}
+});
+}
+</script>
+<p align="center" style="color: gray" >Copyright &copy 2017 Nicola Piovesan</div>
+</body>
+
+</html>
