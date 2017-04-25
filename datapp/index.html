@@ -1,6 +1,7 @@
 	<html>
 	<head>
 		<!-- Load c3.css -->
+		<title>Data.</title>
 		<link href="./c3/c3.css" rel="stylesheet" type="text/css">
 
 		<!-- Load d3.js and c3.js -->
@@ -69,22 +70,36 @@
 						 	<option disabled selected value># SCs</option>
 							<option value="1">1 SC</option>
 							<option value="2">2 SCs</option>
+							<option value="3">3 SCs</option>
 							<option value="5">5 SCs</option>
-						</select></form></div>
-
-					</div>
+							<option value="6">6 SCs</option>
+						</select></form>
 				</div>
+			</div>
+			<div class="pure-menu custom-menu custom-menu-top" >
+				<a id="desc" href="#" class="pure-menu-heading custom-menu-brand" style="text-transform: capitalize;">DATA</a>
+				<a href="#" class="custom-menu" id=""><s class="bar"></s><s class="bar"></s></a>
+			</div>
 
 
-				<div id="energy"></div>
-				<div id="traffic"></div>
-				<div id="load"></div>
-				<div id="battery"></div>
-				<div id="status"></div>
-				<div id="datalogo" align="center" style="font-size:100"><h1>Data.</h1></div>
+		</div>
 
 
-				<script>
+
+		<div id="energy"></div>
+		<div id="traffic"></div>
+		<div id="load"></div>
+		<div id="battery"></div>
+		<div id="status"></div>
+		<div id="datalogo" align="center" style="font-size:100"><h1>Data.</h1></div>
+
+	
+
+
+
+
+
+		<script>
 	// var chart = c3.generate({
 	//    bindto: '#chart',
 	//    data: {
@@ -166,12 +181,13 @@ function plot(){
 		}
 	});
 	});
+var mL=0;
+var tD=0;
 
 	d3.csv("https://raw.githubusercontent.com/nicopi/data/master/general_"+strUser+".csv")
-	.row(function(d) { return [d.macroLoad, d.trafficDropped]; })
+	.row(function(d) { mL=mL+parseFloat(d.macroEnergy); tD=tD+parseFloat(d.trafficDropped)*parseFloat(d.trafficRequest); return [d.macroLoad, d.trafficDropped]; })
 	.get(function(error, rows) { 
 		rows.unshift (["macroLoad","trafficDropped"])
-
 		var chart = c3.generate({
 			bindto: '#load',
 			size: {
@@ -194,6 +210,7 @@ function plot(){
 				}
 			}
 		});
+		document.getElementById('desc').innerHTML = 'MacroBS energy consumption: '+mL.toFixed(2)+ ' kW, Traffic dropped: '+tD.toFixed(2);
 	});
 
 
