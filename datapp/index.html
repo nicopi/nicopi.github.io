@@ -48,36 +48,68 @@
 			}
 
 
+.row {
+    display: table-row;
+    width: 1000px;
+}
 
-
+.cell {
+    display: table-cell;
+    border: solid 0px #DADADA;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: top;
+}
+.table
+{
+    display:table;
+    width:98%;
+}
 
 		</style>
 	</head>
 
 	<body>
-		<div class="custom-menu-wrapper" style="position: fixed;    top: 0px;    left: 0px;        width: 200em;     z-index: 999;">
-			<div class="pure-menu custom-menu custom-menu-top" style="background-color: #a3a1a1">
-				<a href="#" class="pure-menu-heading custom-menu-brand">DATA</a>
+		<div class="custom-menu-wrapper" style="position: fixed;    top: 0px;    left: 70px;        width: 200em;  height: 50px;   z-index: 999;">
+			<div class="pure-menu custom-menu custom-menu-top" style="background-color: #a3a1a1; height: 50px;  position:fixed; top: 0px;    left: 0px; ">
+				<a href="#" class="pure-menu-heading custom-menu-brand" style="top:0px; padding-top: 2px">DATA</a>
 				<a href="#" class="custom-menu" id=""><s class="bar"></s><s class="bar"></s></a>
 			</div>
 			<div class="pure-menu custom-menu custom-menu-top">
-				<a href=""  class="pure-menu-heading custom-menu-brand" style="text-transform: lowercase;">Settings:</a>
+				<a href=""  class="pure-menu-heading custom-menu-brand" style="text-transform: lowercase;padding-top: 2px">Settings:</a>
 			</div>
 			<div class="pure-menu pure-menu-horizontal pure-menu-scrollable custom-menu custom-menu-bottom custom-menu-tucked" id="tuckedMenu">
 				<div >
 					<form class="pure-form pure-form-stacked">
-						<select id="nsc" class="pure-form" onchange="getnsc()">
+						<select id="nsc" class="pure-form" onchange="getnsc()" style="height: 25px;padding: 0;">
 						 	<option disabled selected value># SCs</option>
 							<option value="1">1 SC</option>
 							<option value="2">2 SCs</option>
 							<option value="3">3 SCs</option>
+							<option value="4">4 SCs</option>
 							<option value="5">5 SCs</option>
-							<option value="6">6 SCs</option>
-						</select></form>
+							<option value="6">6 SCs</option>							
+						</select>
+						</form>
+
 				</div>
+
 			</div>
+
 			<div class="pure-menu custom-menu custom-menu-top" >
-				<a id="desc" href="#" class="pure-menu-heading custom-menu-brand" style="text-transform: capitalize;"></a>
+				<a id="desc" href="#" class="pure-menu-heading custom-menu-brand" style="text-transform: capitalize;padding-top: 2px;"></a>
+				<a href="#" class="custom-menu" id=""><s class="bar"></s><s class="bar"></s></a>
+			</div>
+
+
+		</div>
+				<div id="infobox" class="custom-menu-wrapper" style="display:none;background-color:red;position: fixed; top: 50px; left: 0px; width: 200em; height:25px; padding: 0; margin:0; z-index: 999;">
+				
+
+
+			<div class="pure-menu custom-menu custom-menu-top" style="padding: 0; margin:0;">
+				<a id="addinfo" href="#" class="pure-menu-heading custom-menu-brand" style="text-transform: capitalize; font-size:12">Additional information</a>
 				<a href="#" class="custom-menu" id=""><s class="bar"></s><s class="bar"></s></a>
 			</div>
 
@@ -85,21 +117,33 @@
 		</div>
 
 
-		<div style="height:70px"></div>
-		<div id="energy"></div>
-		<div id="traffic"></div>
-		<div id="load"></div>
-		<div id="battery"></div>
-		<div id="status"></div>
+<div style="height:90px"></div>
 		<div id="datalogo" align="center" style="font-size:100"><h1>Data.</h1></div>
 
-	
+<div class="table">
+<div class="row" id="plot1">
+<div class="cell" style="color: grey; font-size: 10;padding-left: 2px;padding-top: 15px;text-align: center;" id="d1"></div>
+<div class="cell" id="energy"></div></div>
+<div class="row">
+<div class="cell" style="color: grey; font-size: 10;padding-left: 2px;padding-top: 15px;text-align: center;" id="d2"></div>
+<div class="cell2" id="traffic" ></div>
+</div>
+<div class="row">
+<div class="cell" style="color: grey; font-size: 10;padding-left: 2px;padding-top: 2px;text-align: center;" id="d3"></div>
+<div class="cell2" id="load" ></div>
+</div>
+<div class="row">
+<div class="cell" style="color: grey; font-size: 10;padding-left: 2px;padding-top: 15px;text-align: center;" id="d4"></div>
+<div class="cell2" id="battery" ></div>
+</div>
+<div class="row">
+<div class="cell" style="color: grey; font-size: 10;padding-left: 2px;padding-top: 15px;text-align: center;" id="d5"></div>
+<div class="cell2" id="status" ></div>
+</div>
+</div>
+		
 
-
-
-
-
-		<script>
+			<script>
 	// var chart = c3.generate({
 	//    bindto: '#chart',
 	//    data: {
@@ -121,8 +165,8 @@
 }
 
 function plot(){
-	d3.csv("https://raw.githubusercontent.com/nicopi/data/master/general_"+strUser+".csv")
-	.row(function(d) { return [d.energyHarvested]; })
+	d3.csv("https://raw.githubusercontent.com/nicopi/data/master/SC_"+strUser+".csv")
+	.row(function(d) {return [d['energyHarvested']];  })
 	.get(function(error, rows) { 
 		rows.unshift (["energyHarvested"])
 
@@ -147,10 +191,11 @@ function plot(){
 				}
 			}
 		});
+		document.getElementById('d1').innerHTML = 'E<br>N<br>E<br>R<br>G<br>Y';
 	});
 
 
-	d3.csv("https://raw.githubusercontent.com/nicopi/data/master/general_"+strUser+".csv")
+	d3.csv("https://raw.githubusercontent.com/nicopi/data/master/SC_"+strUser+".csv")
 	.row(function(d) { return [d.trafficRequest, d.trafficOffloaded]; })
 	.get(function(error, rows) { 
 		rows.unshift (["trafficRequest","trafficOffloaded"])
@@ -180,11 +225,12 @@ function plot(){
 			}
 		}
 	});
+	document.getElementById('d2').innerHTML = 'T<br>R<br>A<br>F<br>F<br>I<br>C';
 	});
 var mL=0;
 var tD=0;
 
-	d3.csv("https://raw.githubusercontent.com/nicopi/data/master/general_"+strUser+".csv")
+	d3.csv("https://raw.githubusercontent.com/nicopi/data/master/SC_"+strUser+".csv")
 	.row(function(d) { mL=mL+parseFloat(d.macroEnergy); tD=tD+parseFloat(d.trafficDropped)*parseFloat(d.trafficRequest); return [d.macroLoad, d.trafficDropped]; })
 	.get(function(error, rows) { 
 		rows.unshift (["macroLoad","trafficDropped"])
@@ -210,68 +256,128 @@ var tD=0;
 				}
 			}
 		});
-		document.getElementById('desc').innerHTML = 'MacroBS energy consumption: '+mL.toFixed(2)+ ' kW, Traffic dropped: '+tD.toFixed(2);
+		document.getElementById('desc').innerHTML = '<i>MacroBS energy consumption:</i> '+mL.toFixed(2)+ ' kW, <i>Traffic dropped:</i> '+tD.toFixed(2);
+		document.getElementById('d3').innerHTML = 'L<br>O<br>A<br>D<br>+<br>D<br>R<br>O<br>P';
 	});
 
-
-	var chart = c3.generate({
-		bindto: '#battery',
-		data: {
-			url: 'https://raw.githubusercontent.com/nicopi/data/master/battery_'+strUser+'.csv',
-			type: 'line'
-		},
-		size: {
-			height: 150,
-		},
-		grid: {
-			y: {
-				lines: [
-				{value: 0.2, text: 'Battery Limit', position: 'start'}
-				]
-			}
-		},
-		axis: {
-			y: {
-				max: 1,
-				min: 0,
-				padding: {top:0, bottom:0},
-			},
-			x : {
-				tick: {
-					format: function (x) { return x%24; }
-				}
-			},
-		},
-		regions: [
-		{axis: 'y', end: 0.2, class: 'regionY'}],
-	});
-
-	var chart = c3.generate({
-		bindto: '#status',
-		data: {
-			url: 'https://raw.githubusercontent.com/nicopi/data/master/status_'+strUser+'.csv',
-			type: 'area-step',
-			tooltip:{order:'asc'}
-		},
-		size: {
-			height: 200,
-		},
-		axis : {
-			x : {
-				tick: {
-					format: function (x) { return x%24; }
-				}
-			},
-			y: {
-            tick: {
-                count: 2,
-                format: function (x) { if (x==0) return 'OFF'; else return 'ON'; }            }
-        }
+	d3.csv("https://raw.githubusercontent.com/nicopi/data/master/SC_"+strUser+".csv")
+	.row(function(d) {
+		k=parseInt(strUser);
+		d_vec = new Array(k);
+		d_vecStr = new Array(k);
+		for (i=1;i<=k;i++){
+			d_vec[i-1]=d['battery_'+i];
+			d_vecStr[i-1]="battery_"+i;
 		}
+		return d_vec; 
+	})
+	.get(function(error, rows) { 
+		rows.unshift (d_vecStr)
+		var chart = c3.generate({
+			bindto: '#battery',
+			data: {
+				rows: rows,
+				type: 'line'
+			},
+			size: {
+				height: 150,
+			},
+			grid: {
+				y: {
+					lines: [
+					{value: 0.2, text: 'Battery Limit', position: 'start'}
+					]
+				}
+			},
+			axis: {
+				y: {
+					max: 1,
+					min: 0,
+					padding: {top:0, bottom:0},
+				},
+				x : {
+					tick: {
+						format: function (x) { return x%24; }
+					}
+				},
+			},
+			regions: [
+			{axis: 'y', end: 0.2, class: 'regionY'}],
+		});
+		document.getElementById('d4').innerHTML = 'B<br>A<br>T<br>T<br>E<br>R<br>Y';
 	});
+
+	d3.csv("https://raw.githubusercontent.com/nicopi/data/master/SC_"+strUser+".csv")
+		.row(function(d) {
+			k=parseInt(strUser);
+			d_vec = new Array(k);
+			d_vecStr = new Array(k);
+			for (i=1;i<=k;i++){
+				d_vec[i-1]=d['status_'+i];
+				d_vecStr[i-1]="status_"+i;
+			}
+			return d_vec; 
+		})
+		.get(function(error, rows) { 
+			rows.unshift (d_vecStr)
+		var chart = c3.generate({
+			bindto: '#status',
+			data: {
+				rows: rows,
+				type: 'area-step',
+				tooltip:{order:'asc'}
+			},
+			size: {
+				height: 150,
+			},
+			axis : {
+				x : {
+					tick: {
+						format: function (x) { return x%24; }
+					}
+				},
+				y: {
+	            tick: {
+	                count: 2,
+	                format: function (x) { if (x==0) return 'OFF'; else return 'ON'; }            }
+	        }
+			}
+		});
+		document.getElementById('d5').innerHTML = 'S<br>T<br>A<br>T<br>U<br>S';
+	});
+
+
+	var myData = null;
+
+	d3.csv("https://raw.githubusercontent.com/nicopi/data/master/SC_"+strUser+".csv")
+	    .row(function(d) { return d.extra; })
+	    .get(function(error, rows) {
+	      myData = rows;// Now you can assign it
+	      myDataIsReady()// Now you can draw it
+	    });
+
+	function sec2str(timeInSeconds){	
+		var date = new Date(null);
+		date.setSeconds(timeInSeconds); // specify value for SECONDS here
+		var result = date.toISOString().substr(11, 8);
+		return result;
+	}
+
+
+	function myDataIsReady() {
+		strInfo="<b>Additional information|</b> "+"winSize:"+myData[0]+", battery states:"+myData[1]+", execution time: "+sec2str(myData[2])+" ("+myData[3]+" iterations)";
+	  document.getElementById('addinfo').innerHTML =strInfo;// will trace the data that was loaded
+	  // Here you can draw your visualization
+
+var ibox = document.getElementById('infobox');
+   
+       ibox.style.display = 'block';
+
+}
+	
 }
 </script>
-<p align="center" style="color: gray" >Copyright &copy 2017 Nicola Piovesan</div>
+<p align="center" style="color: gray; font-size: 15" >Copyright &copy 2017 Nicola Piovesan</div>
 </body>
 
 </html>
