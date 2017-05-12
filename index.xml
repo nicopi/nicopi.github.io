@@ -11,6 +11,15 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Optimal policies for self-sustainable Small Cells</title>
+      <link>http://www.nicolapiovesan.com/talk/scavenge-glasgow/</link>
+      <pubDate>Fri, 02 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.nicolapiovesan.com/talk/scavenge-glasgow/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Cooperative Localization in WSNs: a Hybrid Convex/non-Convex Solution</title>
       <link>http://www.nicolapiovesan.com/publication/cooperative-localization/</link>
       <pubDate>Wed, 14 Dec 2016 00:00:00 +0000</pubDate>
@@ -46,7 +55,7 @@
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
       
       <guid>http://www.nicolapiovesan.com/project/scavenge/</guid>
-      <description>&lt;p&gt;I am one of the ESR that are currently working in the &lt;em&gt;EU H2020 SCAVENGE&lt;/em&gt; project.&lt;/p&gt;
+      <description>&lt;p&gt;I am currently working as ESR to the &lt;a href=&#34;http://www.scavenge.eu&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;EU H2020 SCAVENGE&lt;/em&gt;&lt;/a&gt; project.&lt;/p&gt;
 
 &lt;p&gt;The title of my research project is &lt;strong&gt;&amp;ldquo;Network resource allocation policies with energy transfer capabilities&amp;rdquo;&lt;/strong&gt;. &lt;br /&gt;
 This project investigates on possible integration architectures between the energy harvesting mobile network and the smart electricity grid. In particular, the main scope is to study the capability of 5G mobile networks of intelligently routing energy in a micro grid of interconnected conventional/renewable energy sources and loads to &lt;em&gt;(i)&lt;/em&gt; satisfy the demand of communication networks while avoiding energy outages in zones with high user density and/or low ambient energy availability and &lt;em&gt;(ii)&lt;/em&gt; to provide ancillary services to the grid.&lt;/p&gt;
@@ -55,11 +64,17 @@ This project investigates on possible integration architectures between the ener
 
 &lt;table &gt;
   &lt;tr&gt;
-    &lt;td style=&#34;    animation : none;    background : 0; border:0;&#34;&gt;&lt;img style=&#34;box-shadow: none;&#34; src=&#34;https://upload.wikimedia.org/wikipedia/en/thumb/8/84/European_Commission.svg/1280px-European_Commission.svg.png&#34; width=&#34;200&#34; height=&#34;200&#34; /&gt;
+    &lt;td style=&#34;    animation : none;    background : 0; border:0;&#34;&gt;&lt;img style=&#34;box-shadow: none;&#34; src=&#34;http://www.nicolapiovesan.com/img/flagEU.jpg&#34; width=&#34;200&#34; height=&#34;200&#34; /&gt;
     &lt;td style=&#34;    animation : none;    background : 0; border:0;&#34;&gt;&lt;img style=&#34;box-shadow: none;&#34; src=&#34;http://www.scavenge.eu/wp-content/uploads/2016/03/SCAVENGE_logo_small.jpg&#34;/&gt;&lt;/td&gt;
 &lt;/td&gt;
   &lt;/tr&gt;
 &lt;/table&gt;
+
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;//www.youtube.com/embed/EgAQTGWRfZU&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
+ &lt;/div&gt;
+
 </description>
     </item>
     

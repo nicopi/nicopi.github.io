@@ -11,6 +11,15 @@
     <atom:link href="/talk/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Optimal policies for self-sustainable Small Cells</title>
+      <link>http://www.nicolapiovesan.com/talk/scavenge-glasgow/</link>
+      <pubDate>Fri, 02 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.nicolapiovesan.com/talk/scavenge-glasgow/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Presentation of the SCAVENGE ESR-05</title>
       <link>http://www.nicolapiovesan.com/talk/scavenge-esr5/</link>
       <pubDate>Mon, 21 Nov 2016 00:00:00 +0000</pubDate>
