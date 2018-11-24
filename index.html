@@ -1,582 +1,418 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Nicola Piovesan</title>
+<head>
 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-    <link rel="stylesheet" href="./css/font-awesome/css/all.css">
-    <link rel="stylesheet" href="./css/font-awesome/css/v4-shims.css">
-    <link rel="stylesheet" href="./css/academicons/css/academicons.css"/>
+  <title>Nicola Piovesan</title>
+  <link rel="icon" href="images/favicon.png" />
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="css/jumbotron-narrow.css" rel="stylesheet">
-    <link rel="icon" href="images/favicon.png" />
+  <!-- Custom styles for this template -->
+  <link href="css/scrolling-nav.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/font-awesome/css/all.css">
+  <link rel="stylesheet" href="./css/font-awesome/css/v4-shims.css">
+  <link rel="stylesheet" href="./css/academicons/css/academicons.css"/>
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "url": "http://www.nicolapiovesan.com",
+      "sameAs": [
+      "http://www.linkedin.com/in/nicolapiovesan/",
+      "http://www.twitter.com/itspiove"
+      ],
+      "givenname": "Nicola",
+      "familyname": "Piovesan",
+      "jobtitle": "Researcher",
+      "image": "http://www.nicolapiovesan.com/images/nicola.jpg",
+      "email": "nicola.piovesan@cttc.es"
+    }
+  </script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-21708306-4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-21708306-4');
+  </script>
+</head>
 
-    <!-- code to show/hide abstract, tl;dr and bibtex blocks -->
-    <script type="text/javascript">
-      function showDiv(parentNode, classname) {
-      moreBlock = parentNode.getElementsByClassName(classname)[0];
+<body id="page-top">
 
-      if (moreBlock.style.display == 'none' || moreBlock.style.display == '') {
-      moreBlock.style.display = 'block';
-      }
-      else {
-      moreBlock.style.display = 'none';
-      }
-      }
-
-    </script>
-<script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "Person",
-  "url": "http://www.nicolapiovesan.com",
-  "sameAs": [
-    "http://www.linkedin.com/in/nicolapiovesan/",
-    "http://www.twitter.com/itspiove"
-  ],
-  "givenname": "Nicola",
-  "familyname": "Piovesan",
-  "jobtitle": "Researcher",
-  "image": "http://www.nicolapiovesan.com/images/nicola.jpg",
-  "email": "nicola.piovesan@cttc.es"
-}
-</script>
-    <style>
-    body {
-  font-family: Helvetica, Arial, sans-serif!important;
-}
-      .abstract, .code {
-      display: none;
-      border-width: 0 0 0 2pt;  border-style: groove;padding:5px 5px 0px 20px; background-color: #f8f9fa
-      }
-      .bib {
-      display: none;
-      margin-left: 20px;
-      margin-right: 30px;
-      border-width: 1pt;  border-style: solid;padding:2px; background-color: #f8f9fa
-      }
-      .tldr {
-      display: none;
-      margin-left: 20px;
-      }
-      ul.no_bullet {
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
-      }
-      .l_mail:hover, .l_twitter:hover, .l_linkedin:hover, .l_rg:hover, .l_github:hover, .l_scholar:hover, .l_academia:hover {
-        color: red;
-      }
-    </style>
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-21708306-4"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-21708306-4');
-</script>
-
-  </head>
-
-  <body>
-
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
     <div class="container">
-      <header class="header clearfix">
-        <nav>
-          <ul class="nav nav-pills float-right">
-            <li class="nav-item">
-              <a class="nav-link" href="#publications">Publications</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#talks">Talks</a>
-            </li>
-          </ul>
-        </nav>
-        <h3 class="text-muted">Nicola Piovesan</h3>
-      </header>
-
-      <main role="main">
-
-   <div class="row marketing">
-          <div class="col-lg-8">
-          <p>My name's Nicola Piovesan. I am a European Commission Marie Skłodowska-Curie fellow and I am working on <a href="http://www.scavenge.eu">EU H2020 SCAVENGE</a> at the <a href="http://www.cttc.es">Centre Tecnològic de Telecomunicacions de Catalunya (CTTC)</a>.</p> <p>I received the BSc degree in <i>Information Engineering</i> and the MSc in <i>Telecommunication Engineering</i> from the University of Padova, Italy, and I am currently pursuing a PhD at the department of <i>Telematics Engineering</i> of the Technical University of Catalonia (UPC).</p>
-	          <p>My current research interests include energy harvesting in wireless communications, energy transfer systems and resource allocation in wireless communication systems.</p>
-            <p></p>
-            <div align="center">
-            <a href="mailto:nicola.piovesan@cttc.es" target="_blank" class="l_mail"><i class="fa fa-envelope fa-2x"></i></a>
-<a href="http://twitter.com/itspiove" target="_blank" class="l_twitter"><i class="fa fa-twitter fa-2x"></i></a>
-<a href="https://www.linkedin.com/in/nicolapiovesan/" target="_blank" class="l_linkedin"><i class="fa fa-linkedin fa-2x"></i></a>
-<a href="http://github.com/nicopi" target="_blank" class="l_github"><i class="fa fa-github fa-2x"></i></a>
-<a href="https://www.researchgate.net/profile/Nicola_Piovesan" target="_blank" class="l_rg"><i class="ai ai-researchgate ai-2x"></i></a>
-<a href="https://scholar.google.it/citations?user=hxWbCAUAAAAJ" target="_blank" class="l_scholar"><i class="ai ai-google-scholar ai-2x"></i></a>
-<a href="https://cttc.academia.edu/NicolaPiovesan" target="_blank" class="l_academia"><i class="ai ai-academia ai-2x"></i></a>
-</div>
-	       </div>
-         <div class="col-lg-4" align="center">
-           <p><img src="images/nicola3.jpg" alt="Nicola Piovesan" width="210" height="210"></p>
-
-
-
-
-        </div>
-      </div>
-
-
-
-      <hr>
-  <!--    <div class="row content">
-        <a name="research"><h3>Research</h3></a>
-<div class="col-lg-4" align="center" style="vertical-align:middle;">
-        <p><img src="images/scenario.png" style="max-width:200px"></p>
-      </div>
-      <div class="col-lg-8">
-        <p>My research project investigates on possible integration architectures between the energy harvesting mobile network and the smart electricity grid. 
-In particular, the main scope is to study the capability of 5G mobile networks of intelligently routing energy in a micro grid of interconnected conventional/renewable energy sources and loads to
-<ul>
-<li>satisfy the demand of communication networks while avoiding energy outages in zones with high user density and/or low ambient energy availability</li>
-<li>provide ancillary services to the grid.</li></ul></p>
-<p>The exptected results are to build a theory-to-practice understanding of energy routing systems and of the associated performance trade-offs. In particular, I am studying the design of joint traffic/energy allocation policies for environmentally powered networks with energy transfer capabilities, taking into account complexity constraints, energy storage capability and partial system-state knowledge at the base stations.</p>
-</div>
-</div>
-
-
-
-<div style="    display:flex;    align-items:center;">
-    <img src="./images/flagEU.jpg" alt="EU logo" width="80px" style="margin-right:10px;"><span style="line-height: 15px; font-style:italic; font-size:10pt">This project has received funding from the European Union Horizon 2020 research and innovation programme under the Marie Sklodowska-Curie grant agreement No. 675891 (SCAVENGE).</span><p></p>
-
-<p></p></div>-->
-
-
-
-
-                            <div class="row marketing">
-          <div class="col-lg-14"><h3 style="color:#007bff"><b>Research</b></h3>
-<p>My research project investigates on possible <b>integration architectures</b> between the energy harvesting mobile network and the smart electricity grid. 
-In particular, the main scope is to study the capability of 5G mobile networks of intelligently <b>routing energy</b> in a micro grid of interconnected conventional/renewable energy sources and loads to:
-<ul>
-<li><b>satisfy the demand of communication networks</b> while avoiding energy outages in zones with high user density and/or low ambient energy availability;</li>
-<li>provide <b>ancillary services</b> to the grid.</li></ul></p>
-<p>The exptected results are to build a theory-to-practice understanding of energy routing systems and of the associated performance trade-offs. In particular, I am studying the design of <b>joint traffic/energy allocation policies</b> for environmentally powered networks with energy transfer capabilities, taking into account complexity constraints, energy storage capability and partial system-state knowledge at the base stations.</p>
-          <div align="center"><img src="images/scenario.png" class="img-fluid"></div></div>
-          
-   </div>       <div style="    display:flex;    align-items:center;">
-    <img src="./images/flagEU.jpg" alt="EU logo" width="80px" style="margin-right:10px;"><span style="line-height: 15px; font-style:italic; font-size:10pt">This project has received funding from the European Union Horizon 2020 research and innovation programme under the Marie Sklodowska-Curie grant agreement No. 675891 (SCAVENGE).</span></div>
-        
-
-
-
-<br><br>
-      <hr>  
-
-
-      <div class="row marketing">
-          <div class="col-lg-14">
-            <a name="publications"><h3 style="color:#007bff"><b>Publications</b></h3></a>
-            <h5>2018</h5>
- <ul class="no_bullet">
-
-
-          <li>
-            <b>Toward the Energy Self-Sufficiency of Mobile Networks via Intelligent Traffic Load Management</b>
-            <br />
-            <u>Nicola Piovesan</u>, Dagnachew Temesgene, Marco Miozzo, Paolo Dini
-            <br />
-            <i>in preparation</i>
-            <br /><br />
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">Nicola Piovesan</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">Biography</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#services">Research</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#publications">Publications</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#talks">Talks</a>
           </li>
 
-          <li>
-            <b>Layered Learning Load Control for Renewable Powered Small Base Stations</b>
-            <br />
-            Marco Miozzo, <u>Nicola Piovesan</u>, Paolo Dini
-            <br />
-            <i>submitted</i>
-            <br />
-            <br />
-          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-
-
-
-          <li>
-            <b>Unsupervised Learning of Representations from Solar Energy Data</b>
-            <br />
-            <u>Nicola Piovesan</u>, Paolo Dini
-            <br />
-            <i>IEEE International Symposium on Personal, Indoor and Mobile Radio Communications (PIMRC), 9–12 September 2018, Bologna (Italy)</i>
-            <br/>
-            <a href="#" onclick="showDiv(this.parentNode, 'abstract');return false;" class="btn btn-secondary btn-xs" role="button">Abstract</a>
-            <a href="https://www.researchgate.net/publication/326231377_Unsupervised_Learning_of_Representations_from_Solar_Energy_Data" target="_blank" class="btn btn-secondary btn-xs" role="button">Preprint</a> 
-            <div class="abstract" >
-            <p>
-In this paper, we propose an unsupervised method to learn hidden features of the solar energy generation from a PV system that may give a more accurate characterization of the process. In a first step, solar radiation data is converted into instantaneous solar power through a detailed source model. Then, two different approaches, namely PCA and autoencoder, are used to extract meaningful features from the traces of the solar energy generation. We interpret the latent variables characterizing the solar energy generation process by analyzing the similarities of 67 cities in Europe, North-Africa and Middle-East through an agglomerative hierarchical clustering algorithm. This analysis provides also a comparison between the feature extraction capabilities of the PCA and the autoencoder.
-            </p>
-            </div>
-            <br />
-            <br />
-          </li>
-
-  <li>
-
-          <li>
-            <b>Optimal Placement of Baseband Functions for Energy Harvesting Virtual Small Cells</b>
-            <br />
-            Dagnachew Temesgene, <u>Nicola Piovesan</u>, Marco Miozzo, Paolo Dini
-            <br />
-            <i>IEEE Vehicular Technology Conference: VTC2018-Fall, 27–30 August 2018, Chicago (USA)</i>
-	<br />
-            <a href="#" onclick="showDiv(this.parentNode, 'abstract');return false;" class="btn btn-secondary btn-xs" role="button">Abstract</a>
-            <a href="https://arxiv.org/pdf/1805.12015.pdf" target="_blank" class="btn btn-secondary btn-xs" role="button">Preprint</a> 
-            <div class="abstract" >
-            <p>
-Flexible functional split in Cloud Radio Access Network (CRAN) greatly overcomes fronthaul capacity and latency challenges. In such architecture, part of the baseband processing is done locally and the remaining is done remotely in the central cloud. On the other hand, Energy Harvesting (EH) technologies are increasingly adopted due to sustainability and economic advantages. Power consumption due to baseband processing has a huge share in the total power consumption breakdown of smaller base stations. Given that such base stations are powered by EH, in addition to QoS constraints, energy availability also conditions the decision on where to place each baseband function in the system. This work focuses on determining the performance bounds of an optimal placement of baseband functional split option in virtualized small cells that are solely powered by EH. The work applies Dynamic Programming (DP), in particular, Shortest Path search is used to determine the optimal functional split option considering traffic requirements and available energy budget.
-            </p>
-            </div>
-            <br /><br />
-          </li>
-<li>
-            <b>Optimal Direct Load Control of Renewable Powered Small Cells: Performance Evaluation and Bounds</b>
-            <br />
-            <u>Nicola Piovesan</u>, Marco Miozzo, Paolo Dini
-            <br />
-            <i>IEEE Wireless Communications and Networking Conference (WCNC), 15-18 April 2018, Barcelona (Spain)</i>
-            <br />
-            <a href="#" onclick="showDiv(this.parentNode, 'abstract');return false;" class="btn btn-secondary btn-xs" role="button">Abstract</a>
-        <a href="https://ieeexplore.ieee.org/document/8377448/" class="btn btn-secondary btn-xs" target="_blank" role="button">Paper</a>  
-            <a href="https://www.researchgate.net/publication/322953132_Optimal_Direct_Load_Control_of_Renewable_Powered_Small_Cells_Performance_Evaluation_and_Bounds" target="_blank" class="btn btn-secondary btn-xs" role="button">Preprint</a> 
-            <div class="abstract" >
-            <p>
-              In this paper, we propose an optimal direct load control of renewable powered small base stations based on Dynamic Programming. The optimization is represented using Graph Theory and the problem is stated as a Shortest Path problem. The proposed optimal algorithm is able to adapt to the varying conditions of renewable energy sources and traffic demands. We analyze the optimal ON/OFF policies considering different energy and traffic scenarios. Then, we evaluate network performance in terms of system drop rate and grid energy consumption. The obtained results are compared with a greedy approach. This study allows to elaborate on the behavior and performance bounds of the system and gives a guidance for approximated policy search methods.
-            </p>
-            </div>
-            <br /><br />
-          </li>
-
-      <li>
-        <b>Energy sustainable paradigms and methods for future mobile networks: A survey</b>
-        <br />
-        <u>Nicola Piovesan</u>, Angel F. Gambin, Marco Miozzo, Michele Rossi, Paolo Dini
-        <br />
-        <i>Elsevier Computer Communications,</i> 2018.
-        <br />
-        <a href="#" onclick="showDiv(this.parentNode, 'abstract');return false;" class="btn btn-secondary btn-xs" role="button">Abstract</a>
-        <a href="http://www.sciencedirect.com/science/article/pii/S0140366417309088" class="btn btn-secondary btn-xs" target="_blank" role="button">Paper</a>  
-        <a href="https://arxiv.org/abs/1801.07551" target="_blank" class="btn btn-secondary btn-xs" role="button">Preprint</a>  
-       <!-- <a href="#" onclick="showDiv(this.parentNode, 'bib');return false;">[bib]</a><br>-->
-        <div class="abstract" >
-          <p>
-            In this survey, we discuss the role of energy in the design of future mobile networks and, in particular, we advocate and elaborate on the use of energy harvesting (EH) hardware as a means to decrease the environmental footprint of 5G technology. To take full advantage of the harvested (renewable) energy, while still meeting the quality of service required by dense 5G deployments, suitable management techniques are here reviewed, highlighting the open issues that are still to be solved to provide eco-friendly and cost-effective mobile architectures. Several solutions have recently been proposed to tackle capacity, coverage and efficiency problems, including: C-RAN, Software Defined Networking (SDN) and fog computing, among others. However, these are not explicitly tailored to increase the energy efficiency of networks featuring renewable energy sources, and have the following limitations: (i) their energy savings are in many cases still insufficient and (ii) they do not consider network elements possessing energy harvesting capabilities. In this paper, we systematically review existing energy sustainable paradigms and methods to address points (i) and (ii), discussing how these can be exploited to obtain highly efficient, energy self-sufficient and high capacity networks. Several open issues have emerged from our review, ranging from the need for accurate energy, transmission and consumption models, to the lack of accurate data traffic profiles, to the use of power transfer, energy cooperation and energy trading techniques. These challenges are here discussed along with some research directions to follow for achieving sustainable 5G systems.
-          </p>
+  <header class="bg-info text-white">
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-lg">
+          <img src="images/nicola3.jpg" alt="..." class="img-thumbnail" width="40%">
         </div>
-        <br /><br />
-    </li>
-  </ul>
-  <br><br>
-            <h5>2017</h5>
-<ul class="no_bullet">
-          <li>
-            <b>Optimal Direct Load Control of Renewable Powered Small Cells: A Shortest Path Approach</b>
-            <br />
-            <u>Nicola Piovesan</u>, Paolo Dini
-            <br />
-            <i>Internet Technology Letters,</i> Wiley, 2017.
-            <br />
-            <a href="#" onclick="showDiv(this.parentNode, 'abstract');return false;" class="btn btn-secondary btn-xs" role="button" aria-pressed="false">Abstract</a>   
-            <a href="http://onlinelibrary.wiley.com/doi/10.1002/itl2.7/abstract" target="_blank" class="btn btn-secondary btn-xs" role="button">Paper</a>          
-         <!--   <a href="#" onclick="showDiv(this.parentNode, 'bib');return false;">[bib]</a><br>-->
-            <div class="abstract" >
-              <p>
-                 In this letter, we propose an optimal direct load control of renewable powered small base stations (SBSs) in a two-tier mobile network based on dynamic programming (DP). We represent the DP optimization using Graph Theory and state the problem as a Shortest Path search. We use the Label Correcting Method to explore the graph and find the optimal ON/OFF policy for the SBSs. Simulation results demonstrate that the proposed algorithm is able to adapt to the varying conditions of the environment, namely renewable energy arrivals and traffic demands. The key benefit of our study is that it allows to elaborate on the behavior and performance bounds of the system.
-              </p>
+        <div class="col-lg align-middle">
+          <h2>Nicola Piovesan</h2>
+          <p>Assistant Researcher @ CTTC
+            <br>PhD Candidate @ UPC<br>European Commision Marie Skladowska-Curie Fellow</p>
+            <div align="center" class="text-white">
+              <a href="mailto:nicola.piovesan@cttc.es" target="_blank" class="l_mail text-light"><i class="fa fa-envelope fa-2x"></i></a>
+              <a href="http://twitter.com/itspiove" target="_blank" class="l_twitter text-light"><i class="fa fa-twitter fa-2x"></i></a>
+              <a href="https://www.linkedin.com/in/nicolapiovesan/" target="_blank" class="l_linkedin text-light"><i class="fa fa-linkedin fa-2x"></i></a>
+              <a href="http://github.com/nicopi" target="_blank" class="l_github"><i class="fa fa-github fa-2x text-light"></i></a>
+              <a href="https://www.researchgate.net/profile/Nicola_Piovesan" target="_blank" class="l_rg text-light"><i class="ai ai-researchgate ai-2x"></i></a>
+              <a href="https://scholar.google.it/citations?user=hxWbCAUAAAAJ" target="_blank" class="l_scholar text-light"><i class="ai ai-google-scholar ai-2x"></i></a>
+              <a href="https://cttc.academia.edu/NicolaPiovesan" target="_blank" class="l_academia text-light"><i class="ai ai-academia ai-2x"></i></a>
             </div>
-            <div class="tldr">
-              <p>
-             </p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2>Biography</h2>
+            <p class="lead">I'm an Assistant Researcher at the Mobile Network Department of the  <a href="http://www.cttc.es">Centre Tecnològic de Telecomunicacions de Catalunya (CTTC)</a>. I received the B.Sc. degree in <i>Information Engineering</i> and the M.Sc. in <i>Telecommunication Engineering</i> from the University of Padova, Italy, in 2013 and 2016, respectively. Currently, I'm pursuing a Ph.D. at the department of <i>Telematics Engineering</i> of the Technical University of Catalonia (UPC), Spain.<p>
+              <p class="lead">Since September 2016, I'm working as European Commission's Marie Skłodowska-Curie fellow in the <a href="http://www.scavenge.eu">EU H2020 MSCA SCAVENGE</a> (Sustainable Cellular Networks Harvesting Ambient Energy) project.</p>
+              <p class="lead">My current research interests include energy harvesting in wireless communications, energy transfer systems, resource allocation in wireless communication system and artificial intelligenge.</p>
+            <!--
+              <p class="lead">My name's Nicola Piovesan. I am a European Commission Marie Skłodowska-Curie fellow and I am working on <a href="http://www.scavenge.eu">EU H2020 SCAVENGE</a> at the <a href="http://www.cttc.es">Centre Tecnològic de Telecomunicacions de Catalunya (CTTC)</a>.</p> <p class="lead">I received the BSc degree in <i>Information Engineering</i> and the MSc in <i>Telecommunication Engineering</i> from the University of Padova, Italy, and I am currently pursuing a PhD at the department of <i>Telematics Engineering</i> of the Technical University of Catalonia (UPC).</p>-->
             </div>
-            <div class="bib" >
-              <code><pre>@article {piovesan2017optimal,
-author = {Piovesan, Nicola and Dini, Paolo},
-title = {Optimal direct load control of renewable powered small cells: A shortest path approach},
-journal = {Internet Technology Letters},
-publisher = {John Wiley & Sons, Ltd},
-issn = {2476-1508},
-}
-             </pre>
-            </code>
-          </div><br /><br /><br />
-        </li>
-      </ul>
-
-      <h5>2016</h5>
-      <ul class="no_bullet">
-        <li>
-        <b>Cooperative Localization in WSNs: a Hybrid Convex/non-Convex Solution</b>
-        <br />
-        <u>Nicola Piovesan</u>, Tomaso Erseghe
-        <br />
-        <i>IEEE Transactions on Signal and Information Processing over Networks,</i> 2016.
-        <br />
-        <a href="#" onclick="showDiv(this.parentNode, 'abstract');return false;" class="btn btn-secondary btn-xs" role="button">Abstract</a>
-        <a href="http://ieeexplore.ieee.org/abstract/document/7782840/" target="_blank" class="btn btn-secondary btn-xs" role="button">Paper</a> 
-        <a href="https://arxiv.org/abs/1604.02838" target="_blank" class="btn btn-secondary btn-xs" role="button">Preprint</a> 
-        <a href="#" onclick="showDiv(this.parentNode, 'code');return false;" class="btn btn-secondary btn-xs" role="button">Code</a> 
-        <!--<a href="#" onclick="showDiv(this.parentNode, 'bib');return false;">[bib]</a><br>-->
-        <div class="abstract" >
-          <p>
-            We propose an efficient solution to peer-to-peer localization in a wireless sensor network which works in two stages. At the first stage the optimization problem is relaxed into a convex problem, given in the form recently proposed by Soares, Xavier, and Gomes. The convex problem is efficiently solved in a distributed way by an ADMM approach, which provides a significant improvement in speed with respect to the original solution. In the second stage, a soft transition to the original, non-convex, non relaxed formulation is applied in such a way to force the solution towards a local minimum. The algorithm is built in such a way to be fully distributed, and it is tested in meaningful situations, showing its effectiveness in localization accuracy and speed of convergence, as well as its inner robustness.
-          </p>
+          </div>
         </div>
-        <div class="code" >
-          <p>
-            You can request the code by sending an email to me. <a href="mailto:nicola.piovesan@cttc.es"><i class="fa fa-envelope"></i></a><br>
-            Please give credits to this paper if you use the code for your research.
-          </p>
-        </div>
-        <div class="bib"><pre>
-@article{piovesan2016cooperative, 
-author={Nicola Piovesan and Tomaso Erseghe}, 
-journal={IEEE Transactions on Signal and Information Processing over Networks}, 
-title={Cooperative Localization in WSNs: a Hybrid Convex/non-Convex Solution}, 
-year={2016}, 
-volume={PP}, 
-number={99}, 
-pages={1-1},}</pre>
-      </div><br /><br />
-    </li>
-    <li>
-        <b>Data Analytics for Smart Parking Applications</b>
-        <br />
-        <u>Nicola Piovesan</u>, Leo Turi, Enrico Toigo, Borja Martinez, Michele Rossi
-        <br />
-        <i>MDPI Sensors,</i> 2016.
-        <br />
-        <a href="#" onclick="showDiv(this.parentNode, 'abstract');return false;" class="btn btn-secondary btn-xs" role="button">Abstract</a>
-        <a href="http://www.mdpi.com/1424-8220/16/10/1575/htm" target="_blank" class="btn btn-secondary btn-xs" role="button">Paper</a>  
-       <!-- <a href="#" onclick="showDiv(this.parentNode, 'bib');return false;">[bib]</a><br>-->
-        <div class="abstract" >
-          <p>
-            We consider real-life smart parking systems where parking lot occupancy data are collected from field sensor devices and sent to backend servers for further processing and usage for applications. Our objective is to make these data useful to end users, such as parking managers, and, ultimately, to citizens. To this end, we concoct and validate an automated classification algorithm having two objectives: (1) outlier detection: to detect sensors with anomalous behavioral patterns, i.e., outliers; and (2) clustering: to group the parking sensors exhibiting similar patterns into distinct clusters. We first analyze the statistics of real parking data, obtaining suitable simulation models for parking traces. We then consider a simple classification algorithm based on the empirical complementary distribution function of occupancy times and show its limitations. Hence, we design a more sophisticated algorithm exploiting unsupervised learning techniques (self-organizing maps). These are tuned following a supervised approach using our trace generator and are compared against other clustering schemes, namely expectation maximization, k-means clustering and DBSCAN, considering six months of data from a real sensor deployment. Our approach is found to be superior in terms of classification accuracy, while also being capable of identifying all of the outliers in the dataset.
-          </p>
-        </div>
-        <div class="bib" >
-          <code>
-            <pre>
-@article{piovesan2016data,
-AUTHOR = {Piovesan, Nicola and Turi, Leo and Toigo, Enrico and Martinez, Borja and Rossi, Michele},
-TITLE = {Data Analytics for Smart Parking Applications},
-JOURNAL = {Sensors},
-VOLUME = {16},
-YEAR = {2016},
-NUMBER = {10},
-ARTICLE NUMBER = {1575},
-URL = {http://www.mdpi.com/1424-8220/16/10/1575},
-ISSN = {1424-8220},
-DOI = {10.3390/s16101575}
-}
-          </pre>
-        </code>
-      </div><br /><br />
-    </li>
-    <li>
-      <b>Distributed algorithms for localization in Wireless Sensor Networks</b>
-      <br />
-      <u>Nicola Piovesan</u>
-      <br />
-      <i>M.Sc. thesis,</i> 2016.
-      <br />
-      <a href="#" onclick="showDiv(this.parentNode, 'abstract');return false;" class="btn btn-secondary btn-xs" role="button">Abstract</a>
-      <a href="http://tesi.cab.unipd.it/51898/" target="_blank" class="btn btn-secondary btn-xs" role="button">Thesis</a>&nbsp;&nbsp;
-      <div class="abstract" >
-        <p>
-          We introduce the concept of localization in Wireless Sensor Networks, starting from ranging measurements available at sensor nodes. We explore different solutions available in the literature and then we introduce the algorithms proposed by two recent publications. Finally, we propose a new hybrid ADMM algorithm that, considering both the original non-convex problem and a convexification of the problem, allows to obtain better performances.
-        </p>
-      </div>
-    </li>
-  </ul>
-<br /><br />
-<h5>2013</h5>
- <ul class="no_bullet">
-    <li>
-      <b>Studio di Support Vector Machine per la classificazione e la regressione statistica</b>
-      <br />
-      <u>Nicola Piovesan</u>
-      <br />
-      <i>B.Sc. thesis,</i> 2013.
-      <br />
-      <a href="#" onclick="showDiv(this.parentNode, 'abstract');return false;" class="btn btn-secondary btn-xs" role="button">Abstract</a>
-      <a href="http://tesi.cab.unipd.it/43809/" target="_blank" class="btn btn-secondary btn-xs" role="button">Thesis</a>&nbsp;&nbsp;
-      <div class="abstract" >
-        <p>
-          Il lavoro studia inizialmente l’utilizzo di Support Vector Machine per la classificazione. Vengono introdotte SVM lineari per dati separabili e non separabili e SVM non lineari con Kernel. In seguito, quanto visto in via teorica viene applicato a due casi di classificazione (Iris di Fisher e classificazione dei dati di una analisi SPECT). Per finire vengono introdotte le SVM per la regressione statistica.
-        </p>
-      </div>
-    </li>
-  </ul>
+      </section>
 
-<br><br>
-<hr>
-
-
-
-
-
-<a name="talks"><h3 style="color:#007bff"><b>Talks </b>(<i class="fa fa-chalkboard-teacher"></i>)<b>  and Posters </b>(<i class="fa fa-map"></i>)<b> </b></h3></a>
-<ul class="no_bullet">
-  <li>
-      <b>Network resource allocation policies with energy transfer capabilities: Latest research results and future steps</b> <i class="fa fa-map"></i>
-      <br />
-      <i>SCAVENGE workshop</i>
-      <br><i class="fa fa-calendar"></i> September 27th, 2018<br/><i class="fa fa-globe"></i> CTTC, Barcelona, Spain<br> 
-     <!--          <a href="#" onclick="showDiv(this.parentNode, 'abstract');return false;"  class="btn btn-secondary btn-xs" role="button">Abstract</a>
-    <div class="abstract" >
-        <p>
-This project investigates on possible integration architectures between the energy harvesting mobile network and the smart
-electricity grid. The main scope is to study the capability of 5G mobile networks of intelligently routing energy in a micro grid
-of interconnected conventional/renewable energy sources and loads, in order to (i) satisfy the demand of communication networks
-while avoiding energy outages in zones with high user density and/or low ambient energy availability and (ii) to provide ancillary
-services to the grid.
-        </p>
-      </div>
-      <br />--><br/>
-    </li>
-
-  <li>
-      <b>Network resource allocation policies with energy transfer capabilities</b> <i class="fa fa-map"></i>
-      <br />
-      <i>1st CTTC Workshop</i>
-      <br><i class="fa fa-calendar"></i> September 21th, 2018<br/><i class="fa fa-globe"></i> Sitges, Spain<br> 
-             <a href="#" onclick="showDiv(this.parentNode, 'abstract');return false;"  class="btn btn-secondary btn-xs" role="button">Abstract</a>
-      <div class="abstract" >
-        <p>
-This project investigates on possible integration architectures between the energy harvesting mobile network and the smart
-electricity grid. The main scope is to study the capability of 5G mobile networks of intelligently routing energy in a micro grid
-of interconnected conventional/renewable energy sources and loads, in order to (i) satisfy the demand of communication networks
-while avoiding energy outages in zones with high user density and/or low ambient energy availability and (ii) to provide ancillary
-services to the grid.
-        </p>
-      </div>
-      <br /><br/>
-    </li>
-
-
-    <li>
-      <b>SCAVENGE: a European Training Network for PhD students</b> <i class="fa fa-chalkboard-teacher"></i>
-      <br />
-      <i>Science week 2017</i>
-      <br><i class="fa fa-calendar"></i> November 16th, 2017<br/><i class="fa fa-globe"></i> CTTC, Barcelona, Spain<br> 
-             <a href="#" onclick="showDiv(this.parentNode, 'abstract');return false;"  class="btn btn-secondary btn-xs" role="button">Abstract</a>
-      <div class="abstract" >
-        <p>
-In this talk we introduce our work in SCAVENGE, an European Training Network. The project is about sustainable design for mobile communication systems by engineering the integration and the control of renewable energy sources within communication network elements, such as base stations and mobile phones. We will describe the main objectives of the Network, detailing the training and research activities that we have been carrying out during our first year of work.
-        </p>
-      </div>
-      <br /><br/>
-    </li>
-
-      <li>
-      <b>Network resource allocation policies with energy transfer capabilities</b> <i class="fa fa-map"></i>
-      <br />
-      <i>SCAVENGE mid-term review</i>
-      <br><i class="fa fa-calendar"></i> September 21th, 2017<br/><i class="fa fa-globe"></i> Paris, France<br> 
-             <a href="#" onclick="showDiv(this.parentNode, 'abstract');return false;"  class="btn btn-secondary btn-xs" role="button">Abstract</a>
-      <div class="abstract" >
-        <p>
-This project investigates on possible integration architectures between the energy harvesting mobile network and the smart
-electricity grid. The main scope is to study the capability of 5G mobile networks of intelligently routing energy in a micro grid
-of interconnected conventional/renewable energy sources and loads, in order to (i) satisfy the demand of communication networks
-while avoiding energy outages in zones with high user density and/or low ambient energy availability and (ii) to provide ancillary
-services to the grid.
-        </p>
-      </div>
-      <br /><br/>
-    </li>
-
-
-
-
-        <li>
-      <b>Optimal energy conservation policies for self-sustainable Small Cells</b> <i class="fa fa-chalkboard-teacher"></i>
-      <br />
-      <i>SCAVENGE workshop</i>
-      <br><i class="fa fa-calendar"></i> June 2nd, 2017<br/><i class="fa fa-globe"></i> Strathclyde University, Glasgow, UK<br> 
-      <a href="#" onclick="showDiv(this.parentNode, 'abstract');return false;"  class="btn btn-secondary btn-xs" role="button">Abstract</a>
-      <div class="abstract" >
-        <p>
-Current trends anticipate that 5G mobile networks will be composed of ultra-dense deployments of heterogeneous Base Stations (BSs), where BSs using different transmission powers coexist to provide the 1000x network capacity increase that is required by 2020. Accordingly, the traditional macro cell layer will be complemented or replaced with multiple overlapping tiers of smaller cells, which extend the system capacity, thanks to a higher spatial reuse and to a better spectral efficiency. We introduce a two-tier cellular network architecture, where self-sustainable small cells (SCs), solely relying on energy harvesting and storage, can offload the grid-connected macro base station. The available energy at the SC must be allocated in an optimal way, in order to jointly minimize the consumption of grid energy and maximize the system performance. The proposed offline optimal algorithm, based on the label correcting algorithm, finds the optimal energy allocation policy, after transforming the problem into a shortest-path problem.
-        </p>
-      </div>
-      <br /><br/>
-    </li>
-
-    <li>
-      <b>Presentation of the SCAVENGE ESR-05</b> <i class="fa fa-chalkboard-teacher"></i>
-      <br />
-      <i>SCAVENGE initial training school</i><br><i class="fa fa-calendar"></i> November 21st, 2016.<br/><i class="fa fa-globe"></i> CTTC, Barcelona, Spain <br> 
-      <br />
-    </li>
-
-    <li>
-      <b>Data analytics Worldsensing contest 2014</b> <i class="fa fa-chalkboard-teacher"></i>
-      <br />
-      <i>DEI Awards</i> <br><i class="fa fa-calendar"></i> June 5th, 2015.<br/><i class="fa fa-globe"></i> University of Padova, Padova, Italy<br> 
-      <br /><br/>
-    </li>
-  </ul>
-
-
-
-<br>
-<hr>
-<a name="other"><h3 style="color:#007bff"><b>Other</b></h3></a>
-<b>Services to the Research Community</b>
-<ul class="no_bullet">
-    <li>
-      <i class="fas fa-book-open"></i> Reviewer of IEEE Transactions on Wireless Communications, IEEE Transactions on Green Communications and Networking, IEEE Internet of Things Journal, Wiley Transactions on Emerging Telecommunications Technologies, Elsevier Computer Networks, among others.
-    </li>
-<li><i class="fas fa-user-graduate"></i> Student volunteer at IEEE WCNC 2018.</li>
-</ul>
-
-
-
+      <section id="services" class="bg-light">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <h2>Research</h2>
+              <p class="lead">My research project investigates on possible <b>integration architectures</b> between the energy harvesting mobile network and the smart electricity grid. In particular, the main scope is to study the capability of 5G mobile networks of intelligently <b>routing energy</b> in a micro grid of interconnected conventional/renewable energy sources and loads. The goals are (i) to satisfy the demand of communication networks</b> while avoiding energy outages in zones with high user density and/or low ambient energy availability (ii) provide <b>ancillary services</b> to the grid.</li></ul></p>
+              <p class="lead">The exptected results are to build a theory-to-practice understanding of energy routing systems and of the associated performance trade-offs. In particular, I am studying the design of <b>joint traffic/energy allocation policies</b> for environmentally powered networks with energy transfer capabilities, taking into account complexity constraints, energy storage capability and partial system-state knowledge at the base stations.</p>
+              <!--  <div align="center"><img src="images/scenario.png" class="img-fluid"></div>-->
+              <div style="    display:flex;    align-items:center;">
+                <img src="./images/flagEU.jpg" alt="EU logo" width="80px" style="margin-right:10px;"><span style="line-height: 15px; font-style:italic; font-size:10pt">This project has received funding from the European Union Horizon 2020 research and innovation programme under the Marie Sklodowska-Curie grant agreement No. 675891 (SCAVENGE).</span>
+              </div>
+            </div>
 
           </div>
         </div>
+      </section>
+
+      <section id="publications">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <h2>Publications</h2>
+              <h5>2018</h5>
+
+              <b>Joint Load Control and Energy Sharing for Autonomous Operation of Mobile Networks in Micro-Grid</b>
+              <br />
+              <u>Nicola Piovesan</u>, Dagnachew Temesgene, Marco Miozzo, Paolo Dini
+              <br />
+              <i>in preparation</i>
+              <br /><br />
+
+              <b>Layered Learning Load Control for Renewable Powered Small Base Stations</b>
+              <br />
+              Marco Miozzo, <u>Nicola Piovesan</u>, Paolo Dini
+              <br />
+              <i>submitted</i>
+              <br />
+              <br />
+
+              <b>Unsupervised Learning of Representations from Solar Energy Data</b>
+              <br />
+              <u>Nicola Piovesan</u>, Paolo Dini
+              <br />
+              <i>IEEE International Symposium on Personal, Indoor and Mobile Radio Communications (PIMRC), 9–12 September 2018, Bologna (Italy)</i>
+              <br/>
+              <a class="btn btn-outline-primary btn-xs" data-toggle="collapse" href="#col_unsu" role="button" aria-expanded="false" aria-controls="collapseExample">Abstract</a>
+              <a href="https://www.researchgate.net/publication/326231377_Unsupervised_Learning_of_Representations_from_Solar_Energy_Data" target="_blank" class="btn btn-outline-secondary btn-xs" role="button">Preprint</a> 
+              <p><div class="collapse" id="col_unsu"><div class="card card-body">
+                In this paper, we propose an unsupervised method to learn hidden features of the solar energy generation from a PV system that may give a more accurate characterization of the process. In a first step, solar radiation data is converted into instantaneous solar power through a detailed source model. Then, two different approaches, namely PCA and autoencoder, are used to extract meaningful features from the traces of the solar energy generation. We interpret the latent variables characterizing the solar energy generation process by analyzing the similarities of 67 cities in Europe, North-Africa and Middle-East through an agglomerative hierarchical clustering algorithm. This analysis provides also a comparison between the feature extraction capabilities of the PCA and the autoencoder.
+              </div></div><p>
+
+
+
+                <b>Optimal Placement of Baseband Functions for Energy Harvesting Virtual Small Cells</b>
+                <br />
+                Dagnachew Temesgene, <u>Nicola Piovesan</u>, Marco Miozzo, Paolo Dini
+                <br />
+                <i>IEEE Vehicular Technology Conference: VTC2018-Fall, 27–30 August 2018, Chicago (USA)</i>
+                <br />
+                <a class="btn btn-outline-primary btn-xs" data-toggle="collapse" href="#col_vtc18" role="button" aria-expanded="false" aria-controls="collapseExample">Abstract</a>
+                <a href="https://arxiv.org/pdf/1805.12015.pdf" target="_blank" class="btn btn-outline-secondary btn-xs" role="button">Preprint</a> 
+                <p><div class="collapse" id="col_vtc18"><div class="card card-body">
+                  Flexible functional split in Cloud Radio Access Network (CRAN) greatly overcomes fronthaul capacity and latency challenges. In such architecture, part of the baseband processing is done locally and the remaining is done remotely in the central cloud. On the other hand, Energy Harvesting (EH) technologies are increasingly adopted due to sustainability and economic advantages. Power consumption due to baseband processing has a huge share in the total power consumption breakdown of smaller base stations. Given that such base stations are powered by EH, in addition to QoS constraints, energy availability also conditions the decision on where to place each baseband function in the system. This work focuses on determining the performance bounds of an optimal placement of baseband functional split option in virtualized small cells that are solely powered by EH. The work applies Dynamic Programming (DP), in particular, Shortest Path search is used to determine the optimal functional split option considering traffic requirements and available energy budget.
+                </div></div><p>
+
+
+                  <b>Optimal Direct Load Control of Renewable Powered Small Cells: Performance Evaluation and Bounds</b>
+                  <br />
+                  <u>Nicola Piovesan</u>, Marco Miozzo, Paolo Dini
+                  <br />
+                  <i>IEEE Wireless Communications and Networking Conference (WCNC), 15-18 April 2018, Barcelona (Spain)</i>
+                  <br />
+                  <a class="btn btn-outline-primary btn-xs" data-toggle="collapse" href="#col_wcnc18" role="button" aria-expanded="false" aria-controls="collapseExample">Abstract</a>
+                  <a href="https://ieeexplore.ieee.org/document/8377448/" class="btn btn-outline-secondary btn-xs" target="_blank" role="button">Paper</a>  
+                  <a href="https://www.researchgate.net/publication/322953132_Optimal_Direct_Load_Control_of_Renewable_Powered_Small_Cells_Performance_Evaluation_and_Bounds" target="_blank" class="btn btn-outline-secondary btn-xs" role="button">Preprint</a> 
+                  <p><div class="collapse" id="col_wcnc18"><div class="card card-body">
+                    In this paper, we propose an optimal direct load control of renewable powered small base stations based on Dynamic Programming. The optimization is represented using Graph Theory and the problem is stated as a Shortest Path problem. The proposed optimal algorithm is able to adapt to the varying conditions of renewable energy sources and traffic demands. We analyze the optimal ON/OFF policies considering different energy and traffic scenarios. Then, we evaluate network performance in terms of system drop rate and grid energy consumption. The obtained results are compared with a greedy approach. This study allows to elaborate on the behavior and performance bounds of the system and gives a guidance for approximated policy search methods.
+                  </div></div></p>
+
+
+                  <b>Energy sustainable paradigms and methods for future mobile networks: A survey</b>
+                  <br />
+                  <u>Nicola Piovesan</u>, Angel F. Gambin, Marco Miozzo, Michele Rossi, Paolo Dini
+                  <br />
+                  <i>Elsevier Computer Communications,</i> 2018.
+                  <br />
+                  <a class="btn btn-outline-primary btn-xs" data-toggle="collapse" href="#col_survey_cc" role="button" aria-expanded="false" aria-controls="collapseExample">Abstract</a>
+                  <a href="http://www.sciencedirect.com/science/article/pii/S0140366417309088" class="btn btn-outline-secondary btn-xs" target="_blank" role="button">Paper</a>  
+                  <a href="https://arxiv.org/abs/1801.07551" target="_blank" class="btn btn-outline-secondary btn-xs" role="button">Preprint</a>  
+                  <!-- <a href="#" onclick="showDiv(this.parentNode, 'bib');return false;">[bib]</a><br>-->
+                  <p><div class="collapse" id="col_survey_cc"><div class="card card-body">
+                    In this survey, we discuss the role of energy in the design of future mobile networks and, in particular, we advocate and elaborate on the use of energy harvesting (EH) hardware as a means to decrease the environmental footprint of 5G technology. To take full advantage of the harvested (renewable) energy, while still meeting the quality of service required by dense 5G deployments, suitable management techniques are here reviewed, highlighting the open issues that are still to be solved to provide eco-friendly and cost-effective mobile architectures. Several solutions have recently been proposed to tackle capacity, coverage and efficiency problems, including: C-RAN, Software Defined Networking (SDN) and fog computing, among others. However, these are not explicitly tailored to increase the energy efficiency of networks featuring renewable energy sources, and have the following limitations: (i) their energy savings are in many cases still insufficient and (ii) they do not consider network elements possessing energy harvesting capabilities. In this paper, we systematically review existing energy sustainable paradigms and methods to address points (i) and (ii), discussing how these can be exploited to obtain highly efficient, energy self-sufficient and high capacity networks. Several open issues have emerged from our review, ranging from the need for accurate energy, transmission and consumption models, to the lack of accurate data traffic profiles, to the use of power transfer, energy cooperation and energy trading techniques. These challenges are here discussed along with some research directions to follow for achieving sustainable 5G systems.
+                  </div></div></p>
+
+
+                  <br><br>
+                  <h5>2017</h5>
+
+
+                  <b>Optimal Direct Load Control of Renewable Powered Small Cells: A Shortest Path Approach</b>
+                  <br />
+                  <u>Nicola Piovesan</u>, Paolo Dini
+                  <br />
+                  <i>Internet Technology Letters,</i> Wiley, 2017.
+                  <br />
+                  <a class="btn btn-outline-primary btn-xs" data-toggle="collapse" href="#col_intlet" role="button" aria-expanded="false" aria-controls="collapseExample">Abstract</a>
+                  <a href="http://onlinelibrary.wiley.com/doi/10.1002/itl2.7/abstract" target="_blank" class="btn btn-outline-secondary btn-xs" role="button">Paper</a>          
+                  <!--   <a href="#" onclick="showDiv(this.parentNode, 'bib');return false;">[bib]</a><br>-->
+                  <p><div class="collapse" id="col_intlet"><div class="card card-body">
+                   In this letter, we propose an optimal direct load control of renewable powered small base stations (SBSs) in a two-tier mobile network based on dynamic programming (DP). We represent the DP optimization using Graph Theory and state the problem as a Shortest Path search. We use the Label Correcting Method to explore the graph and find the optimal ON/OFF policy for the SBSs. Simulation results demonstrate that the proposed algorithm is able to adapt to the varying conditions of the environment, namely renewable energy arrivals and traffic demands. The key benefit of our study is that it allows to elaborate on the behavior and performance bounds of the system.
+                 </div></div></p><br />
+
+
+
+                 <h5>2016</h5>
+
+                 <b>Cooperative Localization in WSNs: a Hybrid Convex/non-Convex Solution</b>
+                 <br />
+                 <u>Nicola Piovesan</u>, Tomaso Erseghe
+                 <br />
+                 <i>IEEE Transactions on Signal and Information Processing over Networks,</i> 2016.
+                 <br />
+                 <a class="btn btn-outline-primary btn-xs" data-toggle="collapse" href="#col_coop" role="button" aria-expanded="false" aria-controls="collapseExample">Abstract</a>
+                 <a href="http://ieeexplore.ieee.org/abstract/document/7782840/" target="_blank" class="btn btn-outline-secondary btn-xs" role="button">Paper</a> 
+                 <a href="https://arxiv.org/abs/1604.02838" target="_blank" class="btn btn-outline-secondary btn-xs" role="button">Preprint</a> 
+                 <a class="btn btn-outline-secondary btn-xs" data-toggle="collapse" href="#col_coop_code" role="button" aria-expanded="false" aria-controls="collapseExample">Code</a>
+                 <!--<a href="#" onclick="showDiv(this.parentNode, 'bib');return false;">[bib]</a><br>-->
+                 <p><div class="collapse" id="col_coop"><div class="card card-body">
+                  We propose an efficient solution to peer-to-peer localization in a wireless sensor network which works in two stages. At the first stage the optimization problem is relaxed into a convex problem, given in the form recently proposed by Soares, Xavier, and Gomes. The convex problem is efficiently solved in a distributed way by an ADMM approach, which provides a significant improvement in speed with respect to the original solution. In the second stage, a soft transition to the original, non-convex, non relaxed formulation is applied in such a way to force the solution towards a local minimum. The algorithm is built in such a way to be fully distributed, and it is tested in meaningful situations, showing its effectiveness in localization accuracy and speed of convergence, as well as its inner robustness.
+                </div></div></p>
+                <p><div class="collapse" id="col_coop_code"><div class="card card-body"><div class="alert alert-primary" role="alert">
+                  You can request the code by sending me an email. Please give credits to this paper if you use the code for your research.
+                </div>
+              </div></div></p>
+
+
+              <b>Data Analytics for Smart Parking Applications</b>
+              <br />
+              <u>Nicola Piovesan</u>, Leo Turi, Enrico Toigo, Borja Martinez, Michele Rossi
+              <br />
+              <i>MDPI Sensors,</i> 2016.
+              <br />
+              <a class="btn btn-outline-primary btn-xs" data-toggle="collapse" href="#col_smartpark" role="button" aria-expanded="false" aria-controls="collapseExample">Abstract</a>
+              <a href="http://www.mdpi.com/1424-8220/16/10/1575/htm" target="_blank" class="btn btn-outline-secondary btn-xs" role="button">Paper</a>  
+              <!-- <a href="#" onclick="showDiv(this.parentNode, 'bib');return false;">[bib]</a><br>-->
+              <p><div class="collapse" id="col_smartpark"><div class="card card-body">
+                We consider real-life smart parking systems where parking lot occupancy data are collected from field sensor devices and sent to backend servers for further processing and usage for applications. Our objective is to make these data useful to end users, such as parking managers, and, ultimately, to citizens. To this end, we concoct and validate an automated classification algorithm having two objectives: (1) outlier detection: to detect sensors with anomalous behavioral patterns, i.e., outliers; and (2) clustering: to group the parking sensors exhibiting similar patterns into distinct clusters. We first analyze the statistics of real parking data, obtaining suitable simulation models for parking traces. We then consider a simple classification algorithm based on the empirical complementary distribution function of occupancy times and show its limitations. Hence, we design a more sophisticated algorithm exploiting unsupervised learning techniques (self-organizing maps). These are tuned following a supervised approach using our trace generator and are compared against other clustering schemes, namely expectation maximization, k-means clustering and DBSCAN, considering six months of data from a real sensor deployment. Our approach is found to be superior in terms of classification accuracy, while also being capable of identifying all of the outliers in the dataset.
+              </div></div></p>
+
+
+              <b>Distributed algorithms for localization in Wireless Sensor Networks</b>
+              <br />
+              <u>Nicola Piovesan</u>
+              <br />
+              <i>M.Sc. thesis,</i> 2016.
+              <br />
+              <a class="btn btn-outline-primary btn-xs" data-toggle="collapse" href="#col_mscth" role="button" aria-expanded="false" aria-controls="collapseExample">Abstract</a>
+              <a href="http://tesi.cab.unipd.it/51898/" target="_blank" class="btn btn-outline-secondary btn-xs" role="button">Thesis</a>&nbsp;&nbsp;
+              <p><div class="collapse" id="col_mscth"><div class="card card-body">
+                We introduce the concept of localization in Wireless Sensor Networks, starting from ranging measurements available at sensor nodes. We explore different solutions available in the literature and then we introduce the algorithms proposed by two recent publications. Finally, we propose a new hybrid ADMM algorithm that, considering both the original non-convex problem and a convexification of the problem, allows to obtain better performances.
+              </div></div></p>
+
+
+              <br /><br />
+              <h5>2013</h5>
+
+
+              <b>Studio di Support Vector Machine per la classificazione e la regressione statistica</b>
+              <br />
+              <u>Nicola Piovesan</u>
+              <br />
+              <i>B.Sc. thesis,</i> 2013.
+              <br />
+              <a class="btn btn-outline-primary btn-xs" data-toggle="collapse" href="#col_bscth" role="button" aria-expanded="false" aria-controls="col_bscth">Abstract</a>
+              <a href="http://tesi.cab.unipd.it/43809/" target="_blank" class="btn btn-outline-secondary btn-xs" role="button">Thesis</a>&nbsp;&nbsp;
+              <p><div class="collapse" id="col_bscth"><div class="card card-body">
+                Il lavoro studia inizialmente l’utilizzo di Support Vector Machine per la classificazione. Vengono introdotte SVM lineari per dati separabili e non separabili e SVM non lineari con Kernel. In seguito, quanto visto in via teorica viene applicato a due casi di classificazione (Iris di Fisher e classificazione dei dati di una analisi SPECT). Per finire vengono introdotte le SVM per la regressione statistica.
+              </div></div></p>
+
+
+
+            </div>
+          </div>
+        </div>
+
+      </section>
 
 
 
 
+      <section id="talks" class="bg-light">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <h2>Talks and Posters</h2>
+              <b>Network resource allocation policies with energy transfer capabilities: Latest research results and future steps</b>
+              <br />
+              <i>SCAVENGE workshop</i>
+              <br><i class="fa fa-calendar"></i> September 27th, 2018<br/><i class="fa fa-globe"></i> CTTC, Barcelona, Spain<br> 
+              <br/>
 
 
+              <b>Network resource allocation policies with energy transfer capabilities</b> 
+              <br />
+              <i>1st CTTC Workshop</i>
+              <br><i class="fa fa-calendar"></i> September 21th, 2018<br/><i class="fa fa-globe"></i> Sitges, Spain<br> 
+              <a class="btn btn-outline-primary btn-xs" data-toggle="collapse" href="#col_cttcwork" role="button" aria-expanded="false" aria-controls="collapseExample">Abstract</a>
+              <p><div class="collapse" id="col_cttcwork"><div class="card card-body">
+                This project investigates on possible integration architectures between the energy harvesting mobile network and the smart
+                electricity grid. The main scope is to study the capability of 5G mobile networks of intelligently routing energy in a micro grid
+                of interconnected conventional/renewable energy sources and loads, in order to (i) satisfy the demand of communication networks
+                while avoiding energy outages in zones with high user density and/or low ambient energy availability and (ii) to provide ancillary
+                services to the grid.
+              </div></div></p>
+
+              <b>SCAVENGE: a European Training Network for PhD students</b>
+              <br />
+              <i>Science week 2017</i>
+              <br><i class="fa fa-calendar"></i> November 16th, 2017<br/><i class="fa fa-globe"></i> CTTC, Barcelona, Spain<br> 
+              <a class="btn btn-outline-primary btn-xs" data-toggle="collapse" href="#col_scweek" role="button" aria-expanded="false" aria-controls="col_scweek">Abstract</a>
+              <p><div class="collapse" id="col_scweek"><div class="card card-body">
+                In this talk we introduce our work in SCAVENGE, an European Training Network. The project is about sustainable design for mobile communication systems by engineering the integration and the control of renewable energy sources within communication network elements, such as base stations and mobile phones. We will describe the main objectives of the Network, detailing the training and research activities that we have been carrying out during our first year of work.
+              </div></div></p>
+
+              <b>Network resource allocation policies with energy transfer capabilities</b>
+              <br />
+              <i>SCAVENGE mid-term review</i>
+              <br><i class="fa fa-calendar"></i> September 21th, 2017<br/><i class="fa fa-globe"></i> Paris, France<br> 
+              <a class="btn btn-outline-primary btn-xs" data-toggle="collapse" href="#col_midterm" role="button" aria-expanded="false" aria-controls="col_midterm">Abstract</a>
+              <p><div class="collapse" id="col_midterm"><div class="card card-body">
+                This project investigates on possible integration architectures between the energy harvesting mobile network and the smart
+                electricity grid. The main scope is to study the capability of 5G mobile networks of intelligently routing energy in a micro grid
+                of interconnected conventional/renewable energy sources and loads, in order to (i) satisfy the demand of communication networks
+                while avoiding energy outages in zones with high user density and/or low ambient energy availability and (ii) to provide ancillary
+                services to the grid.
+              </div></div></p>
+
+              <b>Optimal energy conservation policies for self-sustainable Small Cells</b>
+              <br />
+              <i>SCAVENGE workshop</i>
+              <br><i class="fa fa-calendar"></i> June 2nd, 2017<br/><i class="fa fa-globe"></i> Strathclyde University, Glasgow, UK<br> 
+              <a class="btn btn-outline-primary btn-xs" data-toggle="collapse" href="#col_scglasgow" role="button" aria-expanded="false" aria-controls="col_scglasgow">Abstract</a>
+              <p><div class="collapse" id="col_scglasgow"><div class="card card-body">
+                Current trends anticipate that 5G mobile networks will be composed of ultra-dense deployments of heterogeneous Base Stations (BSs), where BSs using different transmission powers coexist to provide the 1000x network capacity increase that is required by 2020. Accordingly, the traditional macro cell layer will be complemented or replaced with multiple overlapping tiers of smaller cells, which extend the system capacity, thanks to a higher spatial reuse and to a better spectral efficiency. We introduce a two-tier cellular network architecture, where self-sustainable small cells (SCs), solely relying on energy harvesting and storage, can offload the grid-connected macro base station. The available energy at the SC must be allocated in an optimal way, in order to jointly minimize the consumption of grid energy and maximize the system performance. The proposed offline optimal algorithm, based on the label correcting algorithm, finds the optimal energy allocation policy, after transforming the problem into a shortest-path problem.
+              </div></div></p>
+
+              <b>Presentation of the SCAVENGE ESR-05</b> 
+              <br />
+              <i>SCAVENGE initial training school</i><br><i class="fa fa-calendar"></i> November 21st, 2016.<br/><i class="fa fa-globe"></i> CTTC, Barcelona, Spain <br> 
+              <br />
+            </li>
 
 
- 
+            <b>Data analytics for Smart Parking Applications</b> 
+            <br />
+            <i>DEI Awards</i> <br><i class="fa fa-calendar"></i> June 5th, 2015.<br/><i class="fa fa-globe"></i> University of Padova, Padova, Italy<br> 
+            <br /><br/>
 
-</main>
-
-      <div class="footer">
-        <span style="font-size: 10pt;">Copyright &copy 2018 Nicola Piovesan.</span>
+          </div>
+        </div>
       </div>
+    </section>
 
-    </div>
 
-<!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>-->
+    <section id="other">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2>Other</h2>
+            <h5>Services to the research community</h5>
+            Reviewer of IEEE Transactions on Wireless Communications, IEEE Transactions on Green Communications and Networking, IEEE Internet of Things Journal, Wiley Transactions on Emerging Telecommunications Technologies, Elsevier Computer Networks, among others.
+            <!--
+              <p class="lead">My name's Nicola Piovesan. I am a European Commission Marie Skłodowska-Curie fellow and I am working on <a href="http://www.scavenge.eu">EU H2020 SCAVENGE</a> at the <a href="http://www.cttc.es">Centre Tecnològic de Telecomunicacions de Catalunya (CTTC)</a>.</p> <p class="lead">I received the BSc degree in <i>Information Engineering</i> and the MSc in <i>Telecommunication Engineering</i> from the University of Padova, Italy, and I am currently pursuing a PhD at the department of <i>Telematics Engineering</i> of the Technical University of Catalonia (UPC).</p>-->
+            </div>
+          </div>
+        </div>
+      </section>
 
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-<script src="//static.getclicky.com/js" type="text/javascript"></script>
-<script type="text/javascript">try{ clicky.init(101089699); }catch(e){}</script>
-<noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101089699ns.gif" /></p></noscript>
-	</body>
-</html>
+
+      <!-- Footer -->
+      <footer class="py-5 bg-dark">
+        <div class="container">
+          <p class="m-0 text-center text-white">Copyright &copy; Nicola Piovesan 2018</p>
+          <p class="m-0 small text-center text-gray">Made with ❤ and Bootstrap</span>
+          </p>
+        </div>
+        <!-- /.container -->
+      </footer>
+
+      <!-- Bootstrap core JavaScript -->
+      <script src="vendor/jquery/jquery.min.js"></script>
+      <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+      <!-- Plugin JavaScript -->
+      <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+      <!-- Custom JavaScript for this theme -->
+      <script src="js/scrolling-nav.js"></script>
+      <script src="//static.getclicky.com/js" type="text/javascript"></script>
+      <script type="text/javascript">try{ clicky.init(101089699); }catch(e){}</script>
+      <noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101089699ns.gif" /></p></noscript>
+    </body>
+
+    </html>
