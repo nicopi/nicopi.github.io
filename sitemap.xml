@@ -8,26 +8,18 @@
 
 <url>
   <loc>https://www.nicolapiovesan.com/</loc>
-  <xhtml:link
-               rel="alternate"
-               hreflang="it"
-               href="https://www.nicolapiovesan.com/it/"/>
-  <xhtml:link
-               rel="alternate"
-               hreflang="en"
-               href="https://www.nicolapiovesan.com/"/>
 </url>
 
 <url>
-  <loc>https://www.nicolapiovesan.com/it/</loc>
-  <xhtml:link
-               rel="alternate"
-               hreflang="it"
-               href="https://www.nicolapiovesan.com/it/"/>
-  <xhtml:link
-               rel="alternate"
-               hreflang="en"
-               href="https://www.nicolapiovesan.com/"/>
+  <loc>https://www.nicolapiovesan.com/publications/</loc>
+</url>
+
+<url>
+  <loc>https://www.nicolapiovesan.com/talks/</loc>
+</url>
+
+<url>
+  <loc>https://www.nicolapiovesan.com/patents/</loc>
 </url>
 
 </urlset>
