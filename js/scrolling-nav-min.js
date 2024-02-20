@@ -4,10 +4,12 @@ $(function() {
   $(window).scroll(function() {
     var x = $(window).scrollTop();
 
-    if (x >= 82) {
+    if (x >= 120) {
       $("#header-logo").show();
+      $('.navbar').addClass('scrolled');
     } else {
       $("#header-logo").hide();
+      $('.navbar').removeClass('scrolled');
     }
 
   });
