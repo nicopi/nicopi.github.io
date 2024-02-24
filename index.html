@@ -134,7 +134,7 @@
           <div class="col-lg-8 mx-auto">
             <h2>Biography</h2>
             <img src="images/nicola3.jpg" alt="Nicola Piovesan" class="float-left" style="height:150px;margin-right:10px;margin-top:10px">
-            <p class="lead text-justify">Nicola Piovesan is a Senior Researcher at the Advanced Wireless Technology Lab, <a href="https://www.huawei.com/en/" title="Huawei">Huawei Technologies</a>, in Paris, France.</p>
+            <p class="lead text-justify">Nicola Piovesan is a Senior Researcher at <a href="https://www.huawei.com/en/" title="Huawei">Huawei Technologies</a>, in Paris, France.</p>
             <p class="lead text-justify">He earned his PhD degree in <i>Network Engineering</i> at the <a href="http://www.upc.edu" title="UPC website">Universitat Politècnica de Catalunya (UPC)</a>, Barcelona, Spain, in 2020, and he received the BSc degree in <i>Information Engineering</i> and the MSc in <i>Telecommunication Engineering</i> from the <a href="http://www.unipd.it" title="University of Padova">University of Padova</a>, Italy, in 2013 and 2016, respectively.</p>
             <p class="lead text-justify">From 2016 to 2019, he was an Assistant Researcher at the Mobile Networks Department of the  <a href="http://www.cttc.es" title="CTTC website">Centre Tecnològic de Telecomunicacions de Catalunya (CTTC)</a>.  In 2016, he has been awarded with a European Commission’s Marie Skłodowska-Curie fellowship to work as early-stage researcher in the <a href="http://www.scavenge.eu" title="SCAVENGE website">EU H2020 MSCA SCAVENGE</a> (Sustainable Cellular Networks Harvesting Ambient Energy) project.</p>
 <p class="lead text-justify">In 2019, he was at <a href="http://www.bell-labs.com/" title="Bell Labs">Nokia Bell Labs</a> as a visiting researcher in the Small Cells Research Department.</p>
@@ -167,29 +167,30 @@
           <div class="row">
             <div class="col-lg-8 mx-auto">
               <h2>Recent Publications</h2>
-              <b>Data-driven Energy Efficiency Modelling in Large-scale Networks: An Expert Knowledge and ML-based Approach</b>
+              <b>Telecom Language Models: Must They Be Large?</b>
               <br />
-              David López-Pérez, Antonio De Domenico, <u>Nicola Piovesan</u>, Merouane Debbah
+              <u>Nicola Piovesan</u>, Antonio De Domenico, Fadhel Ayed
               <br />
               <i>Submitted</i>
               <br />
-              <a class="btn btn-outline-primary btn-xs" data-toggle="collapse" href="#col_abm24" role="button" aria-expanded="false" aria-controls="collapseExample" title="Show abstract">Abstract</a>
-              <a href="https://arxiv.org/abs/2401.00443" target="_blank" class="btn btn-outline-secondary btn-xs" role="button" title="Paper">Preprint</a>
-              <p><div class="collapse" id="col_abm24"><div class="card card-body">
-                The energy consumption of mobile networks poses a critical challenge. Mitigating this concern necessitates the deployment and optimization of network energy-saving solutions, such as carrier shutdown, to dynamically manage network resources. Traditional optimization approaches encounter complexity due to factors like the large number of cells, stochastic traffic, channel variations, and intricate trade-offs. This paper introduces the simulated reality of communication networks (SRCON) framework, a novel, data-driven modeling paradigm that harnesses live network data and employs a blend of machine learning (ML)- and expert-based models. These mix of models accurately characterizes the functioning of network components, and predicts network energy efficiency and user equipment (UE) quality of service for any energy carrier shutdown configuration in a specific network. Distinguishing itself from existing methods, SRCON eliminates the reliance on expensive expert knowledge, drive testing, or incomplete maps for predicting network performance. This paper details the pipeline employed by SRCON to decompose the large network energy efficiency modeling problem into MLand expert-based submodels. It demonstrates how, by embracing stochasticity, and carefully crafting the relationship between such submodels, the overall computational complexity can be reduced and prediction accuracy enhanced. Results derived from real network data underscore the paradigm shift introduced by SRCON, showcasing significant gains over a state-of-theart method used by a operator for network energy efficiency modeling. The reliability of this local, data-driven modeling of the network proves to be a key asset for network energy-saving optimization.
+              <a class="btn btn-outline-primary btn-xs" data-toggle="collapse" href="#col_llmnp24" role="button" aria-expanded="false" aria-controls="collapseExample" title="Show abstract">Abstract</a>
+              <!--<a href="https://" target="_blank" class="btn btn-outline-secondary btn-xs" role="button" title="Paper">Preprint</a>-->
+              <p><div class="collapse" id="col_llmnp24"><div class="card card-body">
+                The increasing interest in Large Language Models (LLMs) within the telecommunications sector underscores their potential to revolutionize operational efficiency. However, the deployment of these sophisticated models is often hampered by their substantial size and computational demands, raising concerns about their viability in resource-constrained environments. Addressing this challenge, recent advancements have seen the emergence of small language models that surprisingly exhibit performance comparable to their larger counterparts in many tasks, such as coding and common-sense reasoning. Phi-2, a compact yet powerful model, exemplifies this new wave of efficient small language models. This paper conducts a comprehensive evaluation of Phi-2's intrinsic understanding of the telecommunications domain. Recognizing the scale-related limitations, we enhance Phi-2's capabilities through a Retrieval-Augmented Generation approach, meticulously integrating an extensive knowledge base specifically curated with telecom standard specifications. The enhanced Phi-2 model demonstrates a profound improvement in accuracy, answering questions about telecom standards with a precision that closely rivals the more resource-intensive GPT-3.5. The paper further explores the refined capabilities of Phi-2 in addressing problem-solving scenarios within the telecom sector, highlighting its potentials and limitations.
+              </div></div><p>
+
+              <b>Linguistic Intelligence in Large Language Models for Telecommunications</b>
+              <br />
+              Tasnim Ahmed, <u>Nicola Piovesan</u>, Antonio De Domenico, Salimur Choudhury
+              <br />
+              <i>Submitted</i>
+              <br />
+              <a class="btn btn-outline-primary btn-xs" data-toggle="collapse" href="#col_llmq24" role="button" aria-expanded="false" aria-controls="collapseExample" title="Show abstract">Abstract</a>
+              <!--<a href="https://" target="_blank" class="btn btn-outline-secondary btn-xs" role="button" title="Paper">Preprint</a>-->
+              <p><div class="collapse" id="col_llmq24"><div class="card card-body">
+                Large Language Models (LLMs) have emerged as a significant advancement in the field of Natural Language Processing (NLP), demonstrating remarkable capabilities in language generation and other language-centric tasks. Despite their evaluation across a multitude of analytical and reasoning tasks in various scientific domains, a comprehensive exploration of their knowledge and understanding within the realm of natural language tasks in the telecommunications domain is still needed. This study, therefore, seeks to evaluate the knowledge and understanding capabilities of LLMs within this domain. To achieve this, we conduct an exhaustive zero-shot evaluation of four prominent LLMs—Llama-2, Falcon, Mistral, and Zephyr. These models require fewer resources than ChatGPT, making them suitable for resource-constrained environments. Their performance is compared with state-of-the-art, fine-tuned models. To the best of our knowledge, this is the first work to extensively evaluate and compare the understanding of LLMs across multiple language-centric tasks in this domain. Our evaluation reveals that zero-shot LLMs can achieve performance levels comparable to the current state-of-the-art fine-tuned models. This indicates that pretraining on extensive text corpora equips LLMs with a degree of specialization, even within the telecommunications domain. We also observe that no single LLM consistently outperforms others, and the performance of different LLMs can fluctuate. Although their performance lags behind fine-tuned models, our findings underscore the potential of LLMs as a valuable resource for understanding various aspects of this field that lack large annotated data.
                 </div></div><p>
 
-              <b>FlexTrain: A Dynamic Training Framework for Heterogeneous Devices Environments</b>
-              <br />
-              Mert Unsal, Ali Maatouk, Antonio De Domenico, <u>Nicola Piovesan</u>, Fadhel Ayed
-              <br />
-              <i>NeurIPS 2023, 10-16 December 2023, New Orleans (USA)</i>
-              <br />
-              <a class="btn btn-outline-primary btn-xs" data-toggle="collapse" href="#col_nips23" role="button" aria-expanded="false" aria-controls="collapseExample" title="Show abstract">Abstract</a>
-              <a href="https://arxiv.org/abs/2310.20457" target="_blank" class="btn btn-outline-secondary btn-xs" role="button" title="Paper">Preprint</a>
-              <p><div class="collapse" id="col_nips23">              <div class="card card-body">
-                As deep learning models become increasingly large, they pose significant challenges in heterogeneous devices environments. The size of deep learning models makes it difficult to deploy them on low-power or resource-constrained devices, leading to long inference times and high energy consumption. To address these challenges, we propose FlexTrain, a framework that accommodates the diverse storage and computational resources available on different devices during the training phase. FlexTrain enables efficient deployment of deep learning models, while respecting device constraints, minimizing communication costs, and ensuring seamless integration with diverse devices. We demonstrate the effectiveness of FlexTrain on the CIFAR-100 dataset, where a single global model trained with FlexTrain can be easily deployed on heterogeneous devices, saving training time and energy consumption. We also extend FlexTrain to the federated learning setting, showing that our approach outperforms standard federated learning benchmarks on both CIFAR-10 and CIFAR-100 datasets.
-                  </div></div><p>
 
             <p class="lead mb-0"><a href="publications.html" class="text-body-emphasis fw-bold">More...<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
 <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
@@ -264,16 +265,16 @@
           <div class="row">
             <div class="col-lg-8 mx-auto">
               <h2>Recent Patents</h2>
-              <b>Device and Method for Real-Time Prediction of QoE in Voice Services</b>
+              <b>Method for shutting down a cell of one or more cells of a base station for wireless communication</b>
               </br>
-              A. De Domenico, F. Ayed, D. Lopez-Perez, <u>N. Piovesan</u>, W. Li, X. Wei, J. Chen
+              <u>N. Piovesan</u>, A. De Domenico, N. Zhao, L. Madier
               </br>
               <i>Filed patent</i>
               <br>
               <br />
-              <b>Telecomunications System for Controlling Network Resource Allocation to User Subjective Requirements and Method Therefor</b>
+              <b>Devices and methods for real-time ML framework supporting network optimization</b>
               </br>
-              <u>N. Piovesan</u>, F. Ayed, D. López-Pérez, A. De Domenico, W. Xing, H. Bao
+              A. De Domenico, F. Ayed, <u>N. Piovesan</u>, N. Zhao, M. Spini, A. Maatouk
               </br>
               <i>Filed patent</i>
               <br>
