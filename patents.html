@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nicola Piovesan | Patents</title>
-  <meta http-equiv="Expires" content="7">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <meta name="description" content="Nicola Piovesan's innovative patents featuring advancements in telecommunications such as network resource allocation based on user requirements and sustainable communication systems.">
   <meta name="author" content="Nicola Piovesan">
-
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://www.nicolapiovesan.com/images/nicola3.jpg">
   <meta property="og:title" content= "Nicola Piovesan">
@@ -24,187 +23,344 @@
   <meta name="twitter:image" content="https://www.nicolapiovesan.com/images/nicola3.jpg">
 
   <link rel="icon" href="images/favicon.png" />
-  <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Custom styles for this template -->
-  <link href="css/scrolling-nav-min.css" rel="stylesheet">
-  <link rel="stylesheet" href="./css/font-awesome/css/all.css">
-  <link rel="stylesheet" href="./css/font-awesome/css/v4-shims.css">
-  <link rel="stylesheet" href="./css/academicons/css/academicons.min.css"/>
 
   <script type="application/ld+json">
-{
-	"@context": "http://schema.org",
-	"@type": "Person",
-	"familyName": "Piovesan",
-	"givenName": "Nicola",
-  "url": "https://www.nicolapiovesan.com",
-	"worksFor": "https://www.huawei.com",
-	"jobTitle": "Researcher",
-	"alumniOf": "http://www.upc.edu",
-	"image": "https://www.nicolapiovesan.com/images/nicola3.jpg",
-	"gender": "http://schema.org/Male",
-	"sameAs": ["https://www.twitter.com/itspiove","https://fr.linkedin.com/in/nicolapiovesan","https://scholar.google.com/citations?user=hxWbCAUAAAAJ"]
-}
-</script>
-
-<style>
-.navbar.scrolled {
-  background-color: #4d4b42 !important;
-  transition: background-color 200ms linear;
-}
-</style>
+  {
+    "@context": "http://schema.org",
+    "@type": "Person",
+    "familyName": "Piovesan",
+    "givenName": "Nicola",
+    "url": "https://www.nicolapiovesan.com",
+    "worksFor": "https://www.huawei.com",
+    "jobTitle": "Researcher",
+    "alumniOf": "http://www.upc.edu",
+    "image": "https://www.nicolapiovesan.com/images/nicola3.jpg",
+    "gender": "http://schema.org/Male",
+    "sameAs": ["https://www.twitter.com/itspiove","https://fr.linkedin.com/in/nicolapiovesan","https://scholar.google.com/citations?user=hxWbCAUAAAAJ"]
+  }
+  </script>
+  <style>
+  .publication-item {
+    border-left: 3px solid #3b82f6;
+  }
+  .patent-item {
+    border-left: 3px solid #10b981;
+  }
+  .year-divider {
+    position: relative;
+    text-align: center;
+    margin: 2rem 0;
+  }
+  .year-divider::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #e5e7eb;
+    z-index: -1;
+  }
+  .year-divider span {
+    background-color: white;
+    padding: 0 1rem;
+    font-weight: bold;
+    color: #3b82f6;
+  }
+  .back-link:hover {
+    transform: translateX(-3px);
+  }
+  .pub-tag {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-weight: 600;
+  }
+  .journal-tag {
+    background-color: #ECFDF5;
+    color: #065F46;
+  }
+  .conference-tag {
+    background-color: #EFF6FF;
+    color: #1E40AF;
+  }
+  .preprint-tag {
+    background-color: #FEF2F2;
+    color: #991B1B;
+  }
+  .book-tag {
+    background-color: #F5F3FF;
+    color: #5B21B6;
+  }
+  .thesis-tag {
+    background-color: #F3E8FF;
+    color: #6B21A8;
+  }
+  .status-tag {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-weight: 600;
+  }
+  .granted-tag {
+    background-color: #ECFDF5;
+    color: #065F46;
+  }
+  .pending-tag {
+    background-color: #EFF6FF;
+    color: #1E40AF;
+  }
+  .provisional-tag {
+    background-color: #FEF3C7;
+    color: #92400E;
+  }
+  .international-tag {
+    background-color: #F5F3FF;
+    color: #5B21B6;
+  }
+  </style>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-H8WN74700N"></script>
-<script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H8WN74700N"></script>
+  <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
   gtag('config', 'G-H8WN74700N');
-</script>
+  </script>
 </head>
-
-<body id="page-top">
-
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style="background: transparent">
-    <div class="container">
-      <a id="header-log" class="navbar-brand" href="/" title="Nicola Piovesan">Nicola Piovesan</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="/#biography" title="Biography">Biography</a>
-          </li>
-        <!--  <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#services" title="Research">Research</a>
-          </li>-->
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="publications.html" title="Publications">Publications</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="talks.html" title="Talks">Talks</a>
-          </li>
-        </ul>
+<body class="bg-gray-50 text-gray-800 font-sans">
+  <header class="bg-white shadow-sm sticky top-0 z-10">
+    <div class="container mx-auto px-6 py-4">
+      <div class="flex justify-between items-center">
+        <h1 class="text-2xl font-bold text-blue-600">Nicola Piovesan</h1>
+        <nav class="hidden md:block">
+          <ul class="flex space-x-8">
+            <li><a href="index.html" class="text-gray-600 hover:text-blue-600">Home</a></li>
+            <li><a href="index.html#about" class="text-gray-600 hover:text-blue-600">About</a></li>
+            <li><a href="#publications" class="text-gray-600 font-medium">Publications</a></li>
+            <li><a href="index.html#talks" class="text-gray-600 hover:text-blue-600">Talks</a></li>
+            <li><a href="index.html#patents" class="text-blue-600 hover:text-blue-600">Patents</a></li>
+          </ul>
+        </nav>
+        <button class="md:hidden focus:outline-none">
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
       </div>
     </div>
-  </nav>
+  </header>
 
-  <header class="bg-dark text-white overlay-gradient" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(./images/backheader.jpg) center center no-repeat;background-size: cover;background-position:top">
-    <div class="container text-center">
-      <div class="row">
-        <!--<div class="col-lg">
-          <img src="images/nicola3.jpg" alt="..." class="img-thumbnail" width="32%">
-        </div>-->
-        <div class="col-lg align-middle">
-          <h1>Patents</span></h1>
+  <main class="container mx-auto px-6 py-8">
+    <div class="mb-8">
+      <a href="index.html" class="text-blue-600 hover:text-blue-800 font-medium flex items-center back-link transition-transform duration-200">
+        <i class="fas fa-arrow-left mr-2"></i> Back to homepage
+      </a>
+    </div>
+
+    <section id="publications" class="mb-12">
+      <h1 class="text-3xl font-bold mb-6">Patents</h1>
+
+
+      <div class="space-y-4">
+        <div class="patent-item bg-white p-4 rounded-lg shadow-sm pl-6">
+          <div class="flex justify-between items-start">
+            <h3 class="font-bold text-lg mb-1">Method for activating energy saving for a base station</h3>
+            <span class="pub-tag international-tag">Filed</span>
+          </div>
+          <p class="text-gray-600 mb-2"></p>
+          <p class="text-gray-700 mb-2">
+            <span class="font-medium">Inventors:</span> A. De Domenico, L. Madier, N. Piovesan, H. Feng
+          </p>
+          <div class="flex flex-wrap gap-4">
           </div>
         </div>
-      </div>
-    </header>
 
-    <section id="patents">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 mx-auto">
-            <b>Method for activating energy saving for a base station</b>
-            </br>
-            A. De Domenico, L. Madier, <u>N. Piovesan</u>, H. Feng
-            </br>
-            <i>Filed patent</i>
-            <br>
-            <br />
-            <b>Method for shutting down a cell of one or more cells of a base station for wireless communication</b>
-            </br>
-            <u>N. Piovesan</u>, A. De Domenico, N. Zhao, L. Madier
-            </br>
-            <i>Filed patent</i>
-            <br>
-            <br />
-            <b>Devices and methods for real-time ML framework supporting network optimization</b>
-            </br>
-            A. De Domenico, F. Ayed, <u>N. Piovesan</u>, N. Zhao, M. Spini, A. Maatouk
-            </br>
-            <i>Filed patent</i>
-            <br>
-            <br />
-            <b>Device and Method for Real-Time Prediction of QoE in Voice Services</b>
-            </br>
-            A. De Domenico, F. Ayed, D. Lopez-Perez, <u>N. Piovesan</u>, W. Li, X. Wei, J. Chen
-            </br>
-            <i>Filed patent</i>
-            <br>
-            <br />
-            <b>Telecomunications System for Controlling Network Resource Allocation to User Subjective Requirements and Method Therefor</b>
-            </br>
-            <u>N. Piovesan</u>, F. Ayed, D. López-Pérez, A. De Domenico, W. Xing, H. Bao
-            </br>
-            <a href="https://patents.google.com/patent/WO2024192577A1/en" target="_blank" class="btn btn-outline-secondary btn-xs" role="button" title="Thesis">Patent</a>&nbsp;&nbsp;
-            <br>
-            <br />
-            <b>Sustainable Communication System</b>
-            </br>
-            D. López-Pérez, A. De Domenico, <u>N. Piovesan</u>, D. Tsishkou, and H. Bao
-            </br>
-            <a href="https://patents.google.com/patent/WO2024120608A1/en" target="_blank" class="btn btn-outline-secondary btn-xs" role="button" title="Thesis">Patent</a>&nbsp;&nbsp;
-            <br>
-            <br />
-            <b>Method and System for Estimating Energy Consumption in Radio Access Network</b>
-            <br />
-            D. López-Pérez, <u>N. Piovesan</u>, A. De Domenico, H. Bao, Y. Wang
-            <br />
-            <a href="https://patents.google.com/patent/WO2024148496A1/en" target="_blank" class="btn btn-outline-secondary btn-xs" role="button" title="Thesis">Patent</a>&nbsp;&nbsp;
-            <br>
-            <br />
-            <b>Method for Controlling Carrier Shutdowns in a Multi-Carrier Cellular Network</b>
-            <br />
-            A. De Domenico, D. López-Pérez, <u>N. Piovesan</u>, N. Zhao, H. Bao
-            <br />
-            <a href="https://patents.google.com/patent/WO2024124435A1/en" target="_blank" class="btn btn-outline-secondary btn-xs" role="button" title="Thesis">Patent</a>&nbsp;&nbsp;
-            <br>
-            <br />
-            <b>Carrier shutdown for nodes in a telecommunications network</b>
-            <br />
-            D. López-Pérez, A. De Domenico, <u>N. Piovesan</u>, X. Geng, H. Bao
-            <br />
-            <a href="https://patents.google.com/patent/WO2023010305A1/en" target="_blank" class="btn btn-outline-secondary btn-xs" role="button" title="Thesis">Patent</a>&nbsp;&nbsp;
+        <div class="patent-item bg-white p-4 rounded-lg shadow-sm pl-6">
+          <div class="flex justify-between items-start">
+            <h3 class="font-bold text-lg mb-1">Method for shutting down a cell of one or more cells of a base station for wireless communication</h3>
+            <span class="pub-tag international-tag">Filed</span>
+          </div>
+          <p class="text-gray-600 mb-2"></p>
+          <p class="text-gray-700 mb-2">
+            <span class="font-medium">Inventors:</span> N. Piovesan, A. De Domenico, N. Zhao, L. Madier
+          </p>
+          <div class="flex flex-wrap gap-4">
           </div>
         </div>
+
+        <div class="patent-item bg-white p-4 rounded-lg shadow-sm pl-6">
+          <div class="flex justify-between items-start">
+            <h3 class="font-bold text-lg mb-1">Devices and methods for real-time ML framework supporting network optimization</h3>
+            <span class="pub-tag international-tag">Filed</span>
+          </div>
+          <p class="text-gray-600 mb-2"></p>
+          <p class="text-gray-700 mb-2">
+            <span class="font-medium">Inventors:</span> A. De Domenico, F. Ayed, N. Piovesan, N. Zhao, M. Spini, A. Maatouk
+          </p>
+          <div class="flex flex-wrap gap-4">
+          </div>
+        </div>
+
+        <div class="patent-item bg-white p-4 rounded-lg shadow-sm pl-6">
+          <div class="flex justify-between items-start">
+            <h3 class="font-bold text-lg mb-1">Device and Method for Real-Time Prediction of QoE in Voice Services</h3>
+            <span class="pub-tag international-tag">Filed</span>
+          </div>
+          <p class="text-gray-600 mb-2"></p>
+          <p class="text-gray-700 mb-2">
+            <span class="font-medium">Inventors:</span> A. De Domenico, F. Ayed, D. Lopez-Perez, N. Piovesan, W. Li, X. Wei, J. Chen
+          </p>
+          <div class="flex flex-wrap gap-4">
+          </div>
+        </div>
+
+        <div class="patent-item bg-white p-4 rounded-lg shadow-sm pl-6">
+          <div class="flex justify-between items-start">
+            <h3 class="font-bold text-lg mb-1">Telecomunications System for Controlling Network Resource Allocation to User Subjective Requirements and Method Therefor</h3>
+            <span class="pub-tag international-tag">Filed</span>
+          </div>
+          <p class="text-gray-600 mb-2">PCT/CN2023/082254 • Filed: Mar 17, 2023</p>
+          <p class="text-gray-700 mb-2">
+            <span class="font-medium">Inventors:</span> N. Piovesan, F. Ayed, D. López-Pérez, A. De Domenico, W. Xing, H. Bao
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="https://patentscope.wipo.int/search/en/WO2024192577" target="_blank "class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
+              <i class="fas fa-link mr-1"></i> WIPO
+            </a>
+            <a href="https://patents.google.com/patent/WO2024192577A1/en" target="_blank "class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
+              <i class="fas fa-link mr-1"></i> Google Patents
+            </a>
+          </div>
+        </div>
+
+        <div class="patent-item bg-white p-4 rounded-lg shadow-sm pl-6">
+          <div class="flex justify-between items-start">
+            <h3 class="font-bold text-lg mb-1">Sustainable Communication System</h3>
+            <span class="pub-tag international-tag">Filed</span>
+          </div>
+          <p class="text-gray-600 mb-2">PCT/EP2022/084497 • Filed: Dec 06, 2022</p>
+          <p class="text-gray-700 mb-2">
+            <span class="font-medium">Inventors:</span> D. López-Pérez, A. De Domenico, N. Piovesan, D. Tsishkou, and H. Bao
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="https://patentscope.wipo.int/search/en/WO2024120608" target="_blank "class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
+              <i class="fas fa-link mr-1"></i> WIPO
+            </a>
+            <a href="https://patents.google.com/patent/WO2024120608A1/en" target="_blank "class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
+              <i class="fas fa-link mr-1"></i> Google Patents
+            </a>
+          </div>
+        </div>
+
+        <div class="patent-item bg-white p-4 rounded-lg shadow-sm pl-6">
+          <div class="flex justify-between items-start">
+            <h3 class="font-bold text-lg mb-1">Method and System for Estimating Energy Consumption in Radio Access Network</h3>
+            <span class="pub-tag international-tag">Filed</span>
+          </div>
+          <p class="text-gray-600 mb-2">PCT/CN2023/071462 • Filed: Jan 09, 2023</p>
+          <p class="text-gray-700 mb-2">
+            <span class="font-medium">Inventors:</span> D. López-Pérez, N. Piovesan, A. De Domenico, H. Bao, Y. Wang
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="https://patentscope.wipo.int/search/en/WO2024148496" target="_blank "class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
+              <i class="fas fa-link mr-1"></i> WIPO
+            </a>
+            <a href="https://patents.google.com/patent/WO2024148496A1/en" target="_blank "class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
+              <i class="fas fa-link mr-1"></i> Google Patents
+            </a>
+          </div>
+        </div>
+
+        <div class="patent-item bg-white p-4 rounded-lg shadow-sm pl-6">
+          <div class="flex justify-between items-start">
+            <h3 class="font-bold text-lg mb-1">Method for Controlling Carrier Shutdowns in a Multi-Carrier Cellular Network</h3>
+            <span class="pub-tag international-tag">Filed</span>
+          </div>
+          <p class="text-gray-600 mb-2">PCT/CN2022/139002 • Filed: Dec 14, 2022</p>
+          <p class="text-gray-700 mb-2">
+            <span class="font-medium">Inventors:</span> A. De Domenico, D. López-Pérez, N. Piovesan, N. Zhao, H. Bao
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="https://patentscope.wipo.int/search/en/WO2024124435" target="_blank "class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
+              <i class="fas fa-link mr-1"></i> WIPO
+            </a>
+            <a href="https://patents.google.com/patent/WO2024124435A1/en" target="_blank "class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
+              <i class="fas fa-link mr-1"></i> Google Patents
+            </a>
+          </div>
+        </div>
+
+        <div class="patent-item bg-white p-4 rounded-lg shadow-sm pl-6">
+          <div class="flex justify-between items-start">
+            <h3 class="font-bold text-lg mb-1">Carrier shutdown for nodes in a telecommunications network</h3>
+            <span class="pub-tag international-tag">Filed</span>
+          </div>
+          <p class="text-gray-600 mb-2">PCT/CN2021/110439 • Filed: Aug 04, 2021</p>
+          <p class="text-gray-700 mb-2">
+            <span class="font-medium">Inventors:</span> D. López-Pérez, A. De Domenico, N. Piovesan, X. Geng, H. Bao
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="https://patentscope.wipo.int/search/en/WO2023010305" target="_blank "class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
+              <i class="fas fa-link mr-1"></i> WIPO
+            </a>
+            <a href="https://patents.google.com/patent/WO2023010305A1/en" target="_blank "class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
+              <i class="fas fa-link mr-1"></i> Google Patents
+            </a>
+          </div>
+        </div>
+
+
       </div>
     </section>
+  </main>
 
+  <footer class="bg-gray-100 py-8">
+    <div class="container mx-auto px-6">
+      <div class="mt-8 pt-6 border-t border-gray-200 text-center text-gray-500 text-sm">
+        <p>© 2025 Nicola Piovesan. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
 
-      <!-- Footer -->
-      <footer class="py-5 bg-white">
-        <div class="container">
-          <p class="m-0 text-center text-gray">Copyright &copy; Nicola Piovesan 2025</p>
-          </p>
-        </div>
-        <!-- /.container -->
-      </footer>
+  <script>
+  // Simple mobile menu toggle functionality
+  document.querySelector('button').addEventListener('click', function() {
+    const nav = document.querySelector('nav');
+    nav.classList.toggle('hidden');
+    nav.classList.toggle('block');
+    nav.classList.toggle('absolute');
+    nav.classList.toggle('top-16');
+    nav.classList.toggle('right-6');
+    nav.classList.toggle('bg-white');
+    nav.classList.toggle('p-4');
+    nav.classList.toggle('rounded');
+    nav.classList.toggle('shadow-md');
+  });
 
-      <!-- Bootstrap core JavaScript -->
-      <script src="vendor/jquery/jquery.min.js"></script>
-      <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  // Smooth scrolling for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
 
-      <!-- Plugin JavaScript -->
-      <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-      <!-- Custom JavaScript for this theme -->
-      <script src="js/scrolling-nav-min.js"></script>
-      <script src="//static.getclicky.com/js" type="text/javascript"></script>
-      <script type="text/javascript">try{ clicky.init(101089699); }catch(e){}</script>
-      <noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101089699ns.gif" /></p></noscript>
-	<script>
-	(function(h,e,a,t,m,p) {
-	m=e.createElement(a);m.async=!0;m.src=t;
-	p=e.getElementsByTagName(a)[0];p.parentNode.insertBefore(m,p);
-	})(window,document,'script','https://u.heatmap.it/log.js');
-	</script>
-    </body>
-
-    </html>
+  // Toggle abstract visibility
+  function toggleAbstract(id) {
+    const abstract = document.getElementById(id);
+    abstract.classList.toggle('hidden');
+  }
+  </script>
+  <script src="//static.getclicky.com/js" type="text/javascript"></script>
+  <script type="text/javascript">try{ clicky.init(101089699); }catch(e){}</script>
+  <noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101089699ns.gif" /></p></noscript>
+  <script>
+  (function(h,e,a,t,m,p) {
+    m=e.createElement(a);m.async=!0;m.src=t;
+    p=e.getElementsByTagName(a)[0];p.parentNode.insertBefore(m,p);
+  })(window,document,'script','https://u.heatmap.it/log.js');
+  </script>
+</body>
+</html>

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nicola Piovesan</title>
   <link rel="alternate" hreflang="en" href="https://www.nicolapiovesan.com" />
   <meta http-equiv="Expires" content="7">
@@ -25,405 +26,653 @@
   <meta name="twitter:image" content="https://www.nicolapiovesan.com/images/nicola3.jpg">
 
   <link rel="icon" href="images/favicon.png" />
-  <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Custom styles for this template -->
-  <link href="css/scrolling-nav-min.css" rel="stylesheet">
-  <link rel="stylesheet" href="./css/font-awesome/css/all.css">
-  <link rel="stylesheet" href="./css/font-awesome/css/v4-shims.css">
-  <link rel="stylesheet" href="./css/academicons/css/academicons.min.css"/>
-
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="./css/academicons/css/academicons.min.css">
   <script type="application/ld+json">
-{
-	"@context": "http://schema.org",
-	"@type": "Person",
-	"familyName": "Piovesan",
-	"givenName": "Nicola",
-  "name": "Nicola Piovesan",
-  "url": "https://www.nicolapiovesan.com",
-	"worksFor": "https://www.huawei.com",
-	"jobTitle": "Researcher",
-  "knowsAbout": "artificial intelligence, machine learning, wireless communications",
-  "nationality": "Italy",
-	"alumniOf": "http://www.upc.edu",
-	"image": "https://www.nicolapiovesan.com/images/nicola3.jpg",
-	"gender": "http://schema.org/Male",
-	"sameAs": ["https://www.twitter.com/itspiove",
-  "https://www.linkedin.com/in/nicolapiovesan",
-  "https://scholar.google.com/citations?user=hxWbCAUAAAAJ",
-  "https://aiforgood.itu.int/speaker/nicola-piovesan/",
-  "https://techinformed.com/using-ai-to-make-5g-more-sustainable/",
-  "https://ieeexplore.ieee.org/author/37086305388",
-  "https://www.researchgate.net/profile/Nicola-Piovesan",
-  "https://www.youtube.com/watch?v=zSetefnu3y8"]
-}
-</script>
-
-<style>
-.popover{
-    max-width: 50%; /* Max Width of the popover (depending on the container!) */
-}
-.navbar.scrolled {
-  background-color: #4d4b42 !important;
-  transition: background-color 200ms linear;
-}
-</style>
-
-
-
-
-
+  {
+    "@context": "http://schema.org",
+    "@type": "Person",
+    "familyName": "Piovesan",
+    "givenName": "Nicola",
+    "name": "Nicola Piovesan",
+    "url": "https://www.nicolapiovesan.com",
+    "worksFor": "https://www.huawei.com",
+    "jobTitle": "Researcher",
+    "knowsAbout": "artificial intelligence, machine learning, wireless communications",
+    "nationality": "Italy",
+    "alumniOf": "http://www.upc.edu",
+    "image": "https://www.nicolapiovesan.com/images/nicola3.jpg",
+    "gender": "http://schema.org/Male",
+    "sameAs": ["https://www.twitter.com/itspiove",
+    "https://www.linkedin.com/in/nicolapiovesan",
+    "https://scholar.google.com/citations?user=hxWbCAUAAAAJ",
+    "https://aiforgood.itu.int/speaker/nicola-piovesan/",
+    "https://techinformed.com/using-ai-to-make-5g-more-sustainable/",
+    "https://ieeexplore.ieee.org/author/37086305388",
+    "https://www.researchgate.net/profile/Nicola-Piovesan",
+    "https://www.youtube.com/watch?v=zSetefnu3y8"]
+  }
+  </script>
+  <style>
+  .profile-pic {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border: 5px solid #fff;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+  .talk-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .talk-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+  .section-divider {
+    border-top: 2px solid #e5e7eb;
+    margin: 3rem 0;
+  }
+  .publication-item {
+    border-left: 3px solid #3b82f6;
+  }
+  .patent-item {
+    border-left: 3px solid #10b981;
+  }
+  .award-item {
+    border-left: 3px solid #f59e0b;
+  }
+  .news-item {
+    border-left: 3px solid #8b5cf6;
+  }
+  .service-item {
+    border-left: 3px solid #ec4899;
+  }
+  .nav-link {
+    position: relative;
+  }
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #3b82f6;
+    transition: width 0.3s ease;
+  }
+  .nav-link:hover::after {
+    width: 100%;
+  }
+  .pub-tag {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-weight: 600;
+  }
+  .journal-tag {
+    background-color: #ECFDF5;
+    color: #065F46;
+  }
+  .conference-tag {
+    background-color: #EFF6FF;
+    color: #1E40AF;
+  }
+  .preprint-tag {
+    background-color: #FEF2F2;
+    color: #991B1B;
+  }
+  .book-tag {
+    background-color: #F5F3FF;
+    color: #5B21B6;
+  }
+  .international-tag {
+    background-color: #F5F3FF;
+    color: #5B21B6;
+  }
+  .bio-link {
+    color: #4b5563; /* gray-600 */
+    text-decoration: underline;
+    text-decoration-color: #d1d5db; /* gray-300 */
+    text-underline-offset: 3px;
+    transition: all 0.2s ease;
+  }
+  .bio-link:hover {
+    color: #3b82f6; /* blue-500 */
+    text-decoration-color: #93c5fd; /* blue-300 */
+  }
+  /* Responsive centering for smaller viewports */
+  @media (max-width: 1024px) {
+    .responsive-center {
+      text-align: center;
+      justify-content: center;
+    }
+    .responsive-stack {
+      flex-direction: row;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      gap: 0.8rem; /* Add some vertical spacing */
+    }
+    .responsive-profile {
+      margin-bottom: 1.5rem; /* Add space below profile pic */
+    }
+  }
+  /* Bio expand/collapse styles */
+  .bio-content {
+    max-height: 200px; /* Show about 4 lines of text */
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    position: relative;
+  }
+  .bio-content.expanded {
+    max-height: 1000px; /* Enough to show all content */
+  }
+  .bio-content::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    background: linear-gradient(to bottom, rgba(249, 250, 251, 0), rgba(249, 250, 251, 1));
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+  .bio-content.expanded::after {
+    opacity: 0;
+  }
+  .read-more-btn {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 1rem;
+    color: #3b82f6;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.2s ease;
+  }
+  .read-more-btn:hover {
+    color: #2563eb;
+  }
+  .read-more-btn i {
+    margin-left: 0.5rem;
+    transition: transform 0.3s ease;
+  }
+  .read-more-btn.expanded i {
+    transform: rotate(180deg);
+  }
+  </style>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-H8WN74700N"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H8WN74700N"></script>
 
-<script>
+  <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
   gtag('config', 'G-H8WN74700N');
-</script>
+  </script>
 </head>
-
-<body id="page-top">
-
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style="background: transparent">
-    <div class="container">
-      <a id="header-logo" style="display:none" class="navbar-brand js-scroll-trigger" href="#page-top" title="Nicola Piovesan">Nicola Piovesan</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#biography" title="Biography">Biography</a>
-          </li>
-        <!--  <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#services" title="Research">Research</a>
-          </li>-->
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#publications" title="Publications">Publications</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#talks" title="Talks">Talks</a>
-          </li>
-        </ul>
+<body class="bg-gray-50 text-gray-800 font-sans">
+  <header class="bg-white shadow-sm">
+    <div class="container mx-auto px-6 py-4">
+      <div class="flex justify-between items-center">
+        <h1 class="text-2xl font-bold text-blue-600">Nicola Piovesan</h1>
+        <nav class="hidden md:block">
+          <ul class="flex space-x-8">
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#publications" class="nav-link">Publications</a></li>
+            <li><a href="#talks" class="nav-link">Talks</a></li>
+            <li><a href="#patents" class="nav-link">Patents</a></li>
+            <li><a href="#other" class="nav-link">Other</a></li>
+          </ul>
+        </nav>
+        <button class="md:hidden focus:outline-none">
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
       </div>
     </div>
-  </nav>
+  </header>
 
-  <header class="bg-dark text-white overlay-gradient" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(./images/backheader.jpg) center center no-repeat;background-size: cover;background-position:top">
-    <div class="container text-center">
-      <div class="row">
-        <!--<div class="col-lg">
-          <img src="images/nicola3.jpg" alt="..." class="img-thumbnail" width="32%">
-        </div>-->
-        <div class="col-lg align-middle">
-          <h1>Nicola Piovesan<span style="font-size:20px">, PhD</span></h1>
-          <!--<p>Senior Researcher @ Huawei
-<br>European Commission Marie Skłodowska-Curie Fellow</p>-->
-            <div align="center" class="text-white">
-              <a href="mailto:nicola.piovesan@ieee.org" title="Email" target="_blank" class="l_mail text-light"><i class="fa fa-envelope fa-2x"></i></a>
-              <a href="https://www.linkedin.com/in/nicolapiovesan/" title="Linkedin profile" target="_blank" class="l_linkedin text-light"><i class="fa fa-linkedin fa-2x"></i></a>
-              <a href="http://github.com/nicopi" title="Github profile" target="_blank" class="l_github"><i class="fa fa-github fa-2x text-light"></i></a>
-              <a href="https://www.researchgate.net/profile/Nicola_Piovesan" title="ResearchGate profile" target="_blank" class="l_rg text-light"><i class="ai ai-researchgate ai-2x"></i></a>
-              <a href="https://scholar.google.it/citations?user=hxWbCAUAAAAJ" title="Google Scholar profile" target="_blank" class="l_scholar text-light"><i class="ai ai-google-scholar ai-2x"></i></a>
-              <a href="https://cttc.academia.edu/NicolaPiovesan" title="Academia profile" target="_blank" class="l_academia text-light"><i class="ai ai-academia ai-2x"></i></a>
-              <a href="https://ieeexplore.ieee.org/author/37086305388" title="Nicola Piovesans | IEEE Xplore Author Details" target="_blank" class="l_ieee text-light"><i class="ai ai-ieee ai-2x"></i></a>
+  <main class="container mx-auto px-6 py-8">
+    <!-- Profile Section -->
+    <section id="about" class="flex flex-col md:flex-row items-center md:items-start gap-8 mb-12">
+      <div class="flex-shrink-0 responsive-profile">
+        <img src="https://www.nicolapiovesan.com/images/nicola3.jpg"
+        alt="Dr. Researcher Name"
+        class="profile-pic rounded-full">
+      </div>
+      <div class="flex-1">
+        <div class="responsive-center">
+          <h2 class="text-3xl font-bold mb-2">Nicola Piovesan, PhD</h2>
+          <p class="text-xl text-gray-600 mb-4 responsive-center">Senior Researcher</p>
+
+          <div class="flex space-x-4 mb-6 responsive-stack">
+            <a href="https://www.linkedin.com/in/nicolapiovesan/" target="_blank" class="text-gray-700 hover:text-blue-700 text-2xl" title="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="http://github.com/nicopi" target="_blank" class="text-gray-800 hover:text-blue-700 text-2xl" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.researchgate.net/profile/Nicola_Piovesan" target="_blank" title="ResearchGate profile" target="_blank" class="l_rg text-gray-600 hover:text-blue-700 text-2xl">
+              <i class="ai ai-researchgate ai-xl"></i>
+            </a>
+            <a href="https://scholar.google.it/citations?user=hxWbCAUAAAAJ" target="_blank" class="text-gray-600 hover:text-blue-700 text-2xl" title="Google Scholar">
+              <i class="ai ai-google-scholar ai-xl"></i>
+            </a>
+            <a href="https://orcid.org/0000-0001-5397-5248" target="_blank" class="text-gray-600 hover:text-blue-700 text-2xl" title="ORCID">
+              <i class="fab fa-orcid"></i>
+            </a>
+            <a href="https://ieeexplore.ieee.org/author/37086305388" target="_blank" title="Nicola Piovesans | IEEE Xplore Author Details" target="_blank" class="l_ieee text-gray-600 hover:text-blue-700 text-2xl">
+              <i class="ai ai-ieee ai-xl"></i>
+            </a>
+
+          </div>
+        </div>
+
+        <div class="bio-content" id="bioContent">
+          <p class="mb-4">
+            Nicola Piovesan is a Senior Researcher at <a href="https://www.huawei.com/en/" target="_blank" class="bio-link">Huawei Technologies</a>, in Paris, France. His research activity focuses on large-scale network modeling, data-driven network optimization, green networking, and the integration of artificial intelligence in the telecom domain.
+          </p>
+          <p class="mb-4">
+            He earned his PhD degree in Network Engineering at the <a href="http://www.upc.edu/" target="_blank" class="bio-link">Universitat Politècnica de Catalunya (UPC)</a>, Barcelona, Spain, in 2020, and he received the BSc degree in Information Engineering and the MSc in Telecommunication Engineering from the <a href="http://www.unipd.it/" target="_blank" class="bio-link">University of Padova</a>, Italy, in 2013 and 2016, respectively.                    </p>
+            <p>
+              From 2016 to 2019, he was an Assistant Researcher at the Mobile Networks Department of the <a href="http://www.cttc.es/" target="_blank" class="bio-link">Centre Tecnològic de Telecomunicacions de Catalunya (CTTC)</a>. In 2016, he has been awarded with a European Commission’s Marie Skłodowska-Curie fellowship to work as early-stage researcher in the <a href="http://www.scavenge.eu/" target="_blank" class="bio-link">EU H2020 MSCA SCAVENGE</a> (Sustainable Cellular Networks Harvesting Ambient Energy) project.
+            </p>
+            <!-- Additional bio content that will be hidden initially -->
+            <p class="mb-4">
+              In 2019, he was at <a href="http://www.bell-labs.com/" target="_blank" class="bio-link">Nokia Bell Labs</a> as a visiting researcher in the Small Cells Research Department.
+            </p>
+            <p class="mb-4">
+              Dr. Piovesan has contributed to multiple industrial and academic projects, published over 40 research articles, and is co-inventor of more than 10 patents. His work has been recognized with the Huawei GTS President Award (2021) and the Huawei Quality Star Award (2024), acknowledging his successful translation of research into real-world product development. He is actively involved in collaborative initiatives on AI and energy efficiency in next-generation networks.
+            </p>
+          </div>
+          <button class="read-more-btn" id="readMoreBtn">
+            Read more
+            <i class="fas fa-chevron-down"></i>
+          </button>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- Publications Section -->
+      <section id="publications" class="mb-12">
+        <div class="flex justify-between items-center mb-6">
+          <h2 class="text-2xl font-bold">Recent Publications</h2>
+          <a href="publications.html" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
+            See all <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+        </div>
+
+        <div class="space-y-4">
+          <div class="publication-item bg-white p-4 rounded-lg shadow-sm pl-6">
+            <div class="flex justify-between items-start">
+              <h3 class="font-bold text-lg mb-1">Hermes: A Large Language Model Framework on the Journey to Autonomous Networks</h3>
+              <span class="pub-tag preprint-tag">Preprint</span>
+            </div>
+            <p class="text-gray-600 mb-2">Submitted</p>
+            <p class="text-gray-700 mb-2">
+              <span class="font-medium">Authors:</span> Fadhel Ayed, Ali Maatouk, Nicola Piovesan, Antonio De Domenico, Merouane Debbah, Zhi-Quan Luo
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <button type="button" class="text-blue-600 hover:text-blue-800 text-sm flex items-center" onclick="toggleAbstract('abstract2')">
+                <i class="fas fa-align-left mr-1"></i> Abstract
+              </button>
+              <a href="https://arxiv.org/abs/2411.06490" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
+                <i class="fas fa-file-pdf mr-1"></i> Preprint
+              </a>
+              <a href="https://huggingface.co/spaces/netop/hermes" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
+                <i class="fas fa-laptop mr-1"></i> Demo
+              </a>
+            </div>
+            <div id="abstract2" class="hidden mt-3 text-sm text-gray-600">
+              The drive toward automating cellular network operations has grown with the increasing complexity of these systems. Despite advancements, full autonomy currently remains out of reach due to reliance on human intervention for modeling network behaviors and defining policies to meet target requirements. Network Digital Twins (NDTs) have shown promise in enhancing network intelligence, but the successful implementation of this technology is constrained by use case-specific architectures, limiting its role in advancing network autonomy. A more capable network intelligence, or "telecommunications brain", is needed to enable seamless, autonomous management of cellular network. Large Language Models (LLMs) have emerged as potential enablers for this vision but face challenges in network modeling, especially in reasoning and handling diverse data types. To address these gaps, we introduce Hermes, a chain of LLM agents that uses "blueprints" for constructing NDT instances through structured and explainable logical steps. Hermes allows automatic, reliable, and accurate network modeling of diverse use cases and configurations, thus marking progress toward fully autonomous network operations.
             </div>
           </div>
+
+          <div class="publication-item bg-white p-4 rounded-lg shadow-sm pl-6">
+            <div class="flex justify-between items-start">
+              <h3 class="font-bold text-lg mb-1">Waste Factor and Waste Figure: A Unified Theory for Modeling and Analyzing Wasted Power in Radio Access Networks for Improved Sustainability</h3>
+              <span class="pub-tag journal-tag">Journal</span>
+            </div>
+            <p class="text-gray-600 mb-2">IEEE Open Journal of the Communications Society</p>
+            <p class="text-gray-700 mb-2">
+              <span class="font-medium">Authors:</span> Theodore S. Rappaport, Mingjun Ying, Nicola Piovesan, Antonio De Domenico, Dipankar Shakya
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <button type="button" class="text-blue-600 hover:text-blue-800 text-sm flex items-center" onclick="toggleAbstract('abstract3')">
+                <i class="fas fa-align-left mr-1"></i> Abstract
+              </button>
+              <a href="https://ieeexplore.ieee.org/document/10604822" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
+                <i class="fas fa-file-pdf mr-1"></i> Paper
+              </a>
+              <a href="https://arxiv.org/abs/2405.07710" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
+                <i class="fas fa-file-pdf mr-1"></i> Preprint
+              </a>
+            </div>
+            <div id="abstract3" class="hidden mt-3 text-sm text-gray-600">
+              This paper introduces Waste Factor (W), also denoted as Waste Figure (WF) in dB, a promising new metric for quantifying energy efficiency in a wide range of circuits and systems applications, including data centers and RANs. Also, the networks used to connect data centers and AI computing engines with users for ML applications must become more power efficient. This paper illustrates the limitations of existing energy efficiency metrics that inadequately capture the intricate energy dynamics of RAN components. We delineate the methodology for applying W across various network configurations, including MISO, SIMO, and MIMO systems, and demonstrate the effectiveness of W in identifying energy optimization opportunities. Our findings reveal that W not only offers nuanced insights into the energy performance of RANs but also facilitates informed decision-making for network design and operational efficiency. Furthermore, we show how W can be integrated with other KPIs to guide the development of optimal strategies for enhancing network energy efficiency under different operational conditions. Additionally, we present simulation results for a distributed multi-user MIMO system at 3.5, 17, and 28 GHz, demonstrating overall network power efficiency on a per square kilometer basis, and show how overall W decreases with an increasing number of base stations and increasing carrier frequency. This paper shows that adopting W as a figure of merit can significantly contribute to the sustainability and energy optimization of next-generation wireless communication networks, paving the way for greener and more sustainable, energy-efficient 5G and 6G technologies.
+            </div>
+          </div>
+
+          <!--<div class="publication-item bg-white p-4 rounded-lg shadow-sm pl-6">
+          <div class="flex justify-between items-start">
+          <h3 class="font-bold text-lg mb-1">Telco-RAG: Navigating the Challenges of Retrieval-Augmented Language Models for Telecommunications</h3>
+          <span class="pub-tag conference-tag">Conference</span>
+        </div>
+        <p class="text-gray-600 mb-2">IEEE Global Communications Conference (GLOBECOM), 8-12 December 2024, Cape Town (South Africa)</p>
+        <p class="text-gray-700 mb-2">
+        <span class="font-medium">Authors:</span> Andrei-Laurentiu Bornea, Fadhel Ayed, Antonio De Domenico, Nicola Piovesan, Ali Maatouk
+      </p>
+      <div class="flex flex-wrap gap-4">
+      <a href="https://arxiv.org/abs/2404.15939" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
+      <i class="fas fa-file-pdf mr-1"></i> Preprint
+    </a>
+    <button type="button" class="text-blue-600 hover:text-blue-800 text-sm flex items-center" onclick="toggleAbstract('abstract4')">
+    <i class="fas fa-align-left mr-1"></i> Abstract
+  </button>
+</div>
+<div id="abstract4" class="hidden mt-3 text-sm text-gray-600">
+The application of Large Language Models (LLMs) and Retrieval-Augmented Generation (RAG) systems in the telecommunication domain presents unique challenges, primarily due to the complex nature of telecom standard documents and the rapid evolution of the field. The paper introduces and open-sources Telco-RAG, a customized RAG framework designed to handle the specific needs of telecommunications standards, particularly 3rd Generation Partnership Project (3GPP) documents. Telco-RAG addresses the critical challenges of implementing a RAG pipeline on highly technical content, paving the way for applying LLMs in telecommunications and offering guidelines for RAG implementation in other technical domains.
+</div>
+</div>
+</div>-->
+</section>
+
+<div class="section-divider"></div>
+
+<!-- Talks Section -->
+<section id="talks" class="mb-12">
+  <div class="flex justify-between items-center mb-6">
+    <h2 class="text-2xl font-bold">Selected Talks</h2>
+    <a href="talks.html" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
+      See all <i class="fas fa-arrow-right ml-2"></i>
+    </a>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div class="talk-card bg-white rounded-lg overflow-hidden shadow-sm">
+      <a href="https://www.chaspark.com/#/live/1070480298598825984?anchorV=1077734077277118464&multi=en" target="_blank" class="block">
+        <img src="https://www.nicolapiovesan.com/images/talk-6gsummit.jpeg"
+        alt="AI Conference Talk"
+        class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="font-bold text-lg mb-2">Network Modelling and Optimization for the 6G Era: Human Expertise Meets AI</h3>
+          <p class="text-gray-600 text-sm mb-2">Abu Dhabi 6G summit</p>
+          <div class="flex justify-between items-center text-sm">
+            <span class="text-blue-600">Watch video →</span>
+            <span class="text-gray-500">November 2024</span>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="talk-card bg-white rounded-lg overflow-hidden shadow-sm">
+      <a href="https://aiforgood.itu.int/event/ai-and-machine-learning-in-communication-networks/" target="_blank" class="block">
+        <img src="https://www.nicolapiovesan.com/images/talk-itu-ai4good.jpeg"
+        alt="Tech Summit Talk"
+        class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="font-bold text-lg mb-2">Data-Driven Modelling and Optimization of Green Future Mobile Networks</h3>
+          <p class="text-gray-600 text-sm mb-2">ITU AI for Good Global Summit</p>
+          <div class="flex justify-between items-center text-sm">
+            <span class="text-blue-600">See event →</span>
+            <span class="text-gray-500">May 2024</span>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="talk-card bg-white rounded-lg overflow-hidden shadow-sm">
+      <a href="https://www.youtube.com/watch?v=zSetefnu3y8" target="_blank" class="block">
+        <img src="https://www.nicolapiovesan.com/images/talk_itu.jpg"
+        alt="University Lecture"
+        class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="font-bold text-lg mb-2">AI/ML for 5G-Energy Consumption Modelling</h3>
+          <p class="text-gray-600 text-sm mb-2">ITU AI for Good</p>
+          <div class="flex justify-between items-center text-sm">
+            <span class="text-blue-600">Watch video →</span>
+            <span class="text-gray-500">June 2023</span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+<div class="section-divider"></div>
+
+<!-- Upcoming Talks Section -->
+<section id="upcoming-talks" class="mb-12">
+  <h2 class="text-2xl font-bold mb-6">Upcoming Talks & Events</h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div class="bg-white p-6 rounded-lg shadow-sm border-l-4 border-blue-500">
+      <div class="flex justify-between items-start mb-2">
+        <h3 class="font-bold text-lg">AI and Machine Learning in communication networks</h3>
+      </div>
+      <p class="text-gray-600 mb-2">AI for Good Summit</p>
+      <div class="flex items-center text-gray-500 text-sm mb-3">
+        <i class="fas fa-calendar-alt mr-2"></i>
+        <span>July 9, 2025</span>
+        <i class="fas fa-map-marker-alt ml-4 mr-2"></i>
+        <span>Geneva, Switzerland</span>
+      </div>
+      <!--<p class="text-gray-700 mb-3">Talk on "AI-Driven Network Optimization for 6G"</p>-->
+      <a href="https://aiforgood.itu.int/event/ai-and-machine-learning-in-communication-networks-2/" target="_blank "class="text-blue-600 hover:text-blue-800 text-sm inline-block">
+        Event website →
+      </a>
+    </div>
+
+    <div class="bg-white p-6 rounded-lg shadow-sm border-l-4 border-blue-500">
+      <div class="flex justify-between items-start mb-2">
+        <h3 class="font-bold text-lg">The Role of AI and LLMs in Future Wireless Networks</h3>
+        <!--<span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Confirmed</span>-->
+      </div>
+      <p class="text-gray-600 mb-2">Cuenca Summer School</p>
+      <div class="flex items-center text-gray-500 text-sm mb-3">
+        <i class="fas fa-calendar-alt mr-2"></i>
+        <span>July 1, 2025</span>
+        <i class="fas fa-map-marker-alt ml-4 mr-2"></i>
+        <span>Cuenca, Spain</span>
+      </div>
+      <!--<p class="text-gray-700 mb-3">Panelist on "Sustainable Networks of the Future"</p>-->
+      <!--<a href="#" class="text-blue-600 hover:text-blue-800 text-sm inline-block">
+      Conference program →
+    </a>-->
+  </div>
+</div>
+
+<!--<div class="text-center mt-6">
+<a href="talks.html#upcoming" class="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center">
+View all upcoming events <i class="fas fa-arrow-right ml-2"></i>
+</a>
+</div>-->
+</section>
+
+<div class="section-divider"></div>
+
+<!-- Patents Section -->
+<section id="patents" class="mb-12">
+  <div class="flex justify-between items-center mb-6">
+    <h2 class="text-2xl font-bold">Recent Patents</h2>
+    <a href="patents.html" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
+      See all <i class="fas fa-arrow-right ml-2"></i>
+    </a>
+  </div>
+
+  <div class="space-y-4">
+    <div class="patent-item bg-white p-4 rounded-lg shadow-sm pl-6">
+      <div class="flex justify-between items-start">
+        <h3 class="font-bold text-lg mb-1">Telecomunications System for Controlling Network Resource Allocation to User Subjective Requirements and Method Therefor</h3>
+        <span class="pub-tag international-tag">Filed</span>
+      </div>
+      <p class="text-gray-600 mb-2">PCT/CN2023/082254 • Filed: Mar 17, 2023</p>
+      <p class="text-gray-700 mb-2">
+        <span class="font-medium">Inventors:</span> N. Piovesan, F. Ayed, D. López-Pérez, A. De Domenico, W. Xing, H. Bao
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a href="https://patentscope.wipo.int/search/en/WO2024192577" target="_blank "class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
+          <i class="fas fa-link mr-1"></i> WIPO
+        </a>
+        <a href="https://patents.google.com/patent/WO2024192577A1/en" target="_blank "class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
+          <i class="fas fa-link mr-1"></i> Google Patents
+        </a>
+      </div>
+    </div>
+
+    <div class="patent-item bg-white p-4 rounded-lg shadow-sm pl-6">
+      <div class="flex justify-between items-start">
+        <h3 class="font-bold text-lg mb-1">Sustainable Communication System</h3>
+        <span class="pub-tag international-tag">Filed</span>
+      </div>
+      <p class="text-gray-600 mb-2">PCT/EP2022/084497 • Filed: Dec 06, 2022</p>
+      <p class="text-gray-700 mb-2">
+        <span class="font-medium">Inventors:</span> D. López-Pérez, A. De Domenico, N. Piovesan, D. Tsishkou, and H. Bao
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a href="https://patentscope.wipo.int/search/en/WO2024120608" target="_blank "class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
+          <i class="fas fa-link mr-1"></i> WIPO
+        </a>
+        <a href="https://patents.google.com/patent/WO2024120608A1/en" target="_blank "class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
+          <i class="fas fa-link mr-1"></i> Google Patents
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- Other Section -->
+<section id="other" class="mb-12">
+  <h2 class="text-2xl font-bold mb-6">Other Activities</h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <!-- Awards -->
+    <div class="bg-white p-6 rounded-lg shadow-sm">
+      <h3 class="font-bold text-lg mb-4 flex items-center">
+        <i class="fas fa-award text-yellow-500 mr-2"></i> Awards
+      </h3>
+      <div class="space-y-4">
+        <div class="award-item pl-4">
+          <h4 class="font-medium">Huawei Quality Star Award</h4>
+          <p class="text-gray-600 text-sm">2023</p>
+        </div>
+        <div class="award-item pl-4">
+          <h4 class="font-medium">Huawei GTS President Award</h4>
+          <p class="text-gray-600 text-sm">2021</p>
+        </div>
+        <div class="award-item pl-4">
+          <h4 class="font-medium">Marie Skłodowska-Curie fellowship</h4>
+          <p class="text-gray-600 text-sm">2016</p>
         </div>
       </div>
-    </header>
+      <!--<a href="awards.html" class="text-blue-600 hover:text-blue-800 text-sm mt-4 inline-block">
+      View all awards
+    </a>-->
+  </div>
 
-    <section id="biography">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 mx-auto">
-            <h2>Biography</h2>
-            <img src="images/nicola3.jpg" alt="Nicola Piovesan" class="float-left" style="height:150px;margin-right:10px;margin-top:10px">
-            <p class="lead text-justify">Nicola Piovesan is a Senior Researcher at <a href="https://www.huawei.com/en/" title="Huawei">Huawei Technologies</a>, in Paris, France. His research activity focuses on large-scale network modeling, data-driven network optimization, green networking, and the integration of artificial intelligence in the telecom domain.</p>
-            <p class="lead text-justify">He earned his PhD degree in <i>Network Engineering</i> at the <a href="http://www.upc.edu" title="UPC website">Universitat Politècnica de Catalunya (UPC)</a>, Barcelona, Spain, in 2020, and he received the BSc degree in <i>Information Engineering</i> and the MSc in <i>Telecommunication Engineering</i> from the <a href="http://www.unipd.it" title="University of Padova">University of Padova</a>, Italy, in 2013 and 2016, respectively.</p>
-            <p class="lead text-justify">From 2016 to 2019, he was an Assistant Researcher at the Mobile Networks Department of the  <a href="http://www.cttc.es" title="CTTC website">Centre Tecnològic de Telecomunicacions de Catalunya (CTTC)</a>.  In 2016, he has been awarded with a European Commission’s Marie Skłodowska-Curie fellowship to work as early-stage researcher in the <a href="http://www.scavenge.eu" title="SCAVENGE website">EU H2020 MSCA SCAVENGE</a> (Sustainable Cellular Networks Harvesting Ambient Energy) project.</p>
-<p class="lead text-justify">In 2019, he was at <a href="http://www.bell-labs.com/" title="Bell Labs">Nokia Bell Labs</a> as a visiting researcher in the Small Cells Research Department.</p>
-              <p class="lead text-justify">Nicola has authored over 30 research articles and holds co-inventorship in over 10 patent applications. His achievements have been recognized with the Huawei GTS President Award in 2021 and the Huawei Quality Star Award in 2024, acknowledging his successful research application into product development.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+  <!-- News -->
+  <div class="bg-white p-6 rounded-lg shadow-sm">
+    <h3 class="font-bold text-lg mb-4 flex items-center">
+      <i class="fas fa-newspaper text-purple-500 mr-2"></i> News
+    </h3>
+    <div class="space-y-4">
+      <div class="news-item pl-4">
+        <h4 class="font-medium">Using AI to make 5G more sustainable</h4>
+        <p class="text-gray-600 text-sm">August 2023</p>
+        <a href="https://techinformed.com/using-ai-to-make-5g-more-sustainable/" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm">Read article →</a>
+      </div>
+    </div>
+    <!--<a href="news.html" class="text-blue-600 hover:text-blue-800 text-sm mt-4 inline-block">
+    View all news
+  </a>-->
+</div>
 
+<!-- Service -->
+<div class="bg-white p-6 rounded-lg shadow-sm">
+  <h3 class="font-bold text-lg mb-4 flex items-center">
+    <i class="fas fa-users text-pink-500 mr-2"></i> Service
+  </h3>
+  <div class="space-y-4">
+    <div class="service-item pl-4">
+      <h4 class="font-medium">Workshop Co-Chair</h4>
+      <p class="text-gray-600 text-sm">IEEE GLOBECOM, 2024</p>
+      <a href="https://sites.google.com/view/mllmonet-2024/home" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm">See event →</a>
+    </div>
+    <div class="service-item pl-4">
+      <h4 class="font-medium">Workshop Co-Chair</h4>
+      <p class="text-gray-600 text-sm">IEEE ICC, 2024</p>
+      <a href="https://sites.google.com/view/llmonet-2024/home" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm">See event →</a>
+    </div>
+  </div>
+  <!--<a href="service.html" class="text-blue-600 hover:text-blue-800 text-sm mt-4 inline-block">
+  View all service
+</a>-->
+</div>
+</div>
+</section>
+</main>
 
-  <!--    <section id="services" class="bg-light">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-8 mx-auto">
-              <h2>Research</h2>
-              <h3>SCAVENGE</h3>
-              <p class="lead">From September 2016 to September 2019, I worked as European Commission's Marie Skłodowska-Curie fellow in the <a href="http://www.scavenge.eu" title="SCAVENGE website">EU H2020 MSCA SCAVENGE</a> (Sustainable Cellular Networks Harvesting Ambient Energy) project.</p>
-              <p class="lead">My research project investigated on possible <b>integration architectures</b> between the energy harvesting mobile network and the smart electricity grid. In particular, the main scope was to study the capability of 5G mobile networks of intelligently <b>routing energy</b> in a micro grid of interconnected conventional/renewable energy sources and loads. The goals were (i) to satisfy the demand of communication networks</b> while avoiding energy outages in zones with high user density and/or low ambient energy availability (ii) provide <b>ancillary services</b> to the grid.</li></ul></p>
-                        <div style="    display:flex;    align-items:center;">
-                <img src="./images/flagEU.jpg" alt="EU logo" width="80px" style="margin-right:10px;"><span style="line-height: 15px; font-style:italic; font-size:10pt">This project has received funding from the European Union Horizon 2020 research and innovation programme under the Marie Sklodowska-Curie grant agreement No. 675891 (SCAVENGE).</span>
-              </div>
-            </div>
+<footer class="bg-gray-100 py-8">
+  <div class="mt-8 pt-6 border-t border-gray-200 text-center text-gray-500 text-sm">
+    <p>© 2025 Nicola Piovesan. All rights reserved.</p>
+  </div>
+</div>
+</footer>
 
-          </div>
-        </div>
-      </section>-->
+<script>
+// Bio expand/collapse functionality
+const readMoreBtn = document.getElementById('readMoreBtn');
+const bioContent = document.getElementById('bioContent');
 
-      <section id="publications" class="bg-light">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-8 mx-auto">
-              <h2>Recent Publications</h2>
-              <b>Hermes: A Large Language Model Framework on the Journey to Autonomous Networks</b>
-              <br />
-              Fadhel Ayed, Ali Maatouk, <u>Nicola Piovesan</u>, Antonio De Domenico, Merouane Debbah, Zhi-Quan Luo
-              <br />
-              <i>Submitted</i>
-              <br />
-              <a class="btn btn-outline-primary btn-xs" data-toggle="collapse" href="#col_hermes24" role="button" aria-expanded="false" aria-controls="collapseExample" title="Show abstract">Abstract</a>
-              <a href="https://arxiv.org/abs/2411.06490" target="_blank" class="btn btn-outline-secondary btn-xs" role="button" title="Paper">Preprint</a>
-              <p><div class="collapse" id="col_hermes24"><div class="card card-body">
-                The drive toward automating cellular network operations has grown with the increasing complexity of these systems. Despite advancements, full autonomy currently remains out of reach due to reliance on human intervention for modeling network behaviors and defining policies to meet target requirements. Network Digital Twins (NDTs) have shown promise in enhancing network intelligence, but the successful implementation of this technology is constrained by use case-specific architectures, limiting its role in advancing network autonomy. A more capable network intelligence, or "telecommunications brain", is needed to enable seamless, autonomous management of cellular network. Large Language Models (LLMs) have emerged as potential enablers for this vision but face challenges in network modeling, especially in reasoning and handling diverse data types. To address these gaps, we introduce Hermes, a chain of LLM agents that uses "blueprints" for constructing NDT instances through structured and explainable logical steps. Hermes allows automatic, reliable, and accurate network modeling of diverse use cases and configurations, thus marking progress toward fully autonomous network operations.
-              </div></div><p>
+readMoreBtn.addEventListener('click', function() {
+  bioContent.classList.toggle('expanded');
+  this.classList.toggle('expanded');
+  this.innerHTML = bioContent.classList.contains('expanded') ?
+  'Read less <i class="fas fa-chevron-up"></i>' :
+  'Read more <i class="fas fa-chevron-down"></i>';
+});
+// Simple mobile menu toggle functionality
+document.querySelector('button').addEventListener('click', function() {
+  const nav = document.querySelector('nav');
+  nav.classList.toggle('hidden');
+  nav.classList.toggle('block');
+  nav.classList.toggle('absolute');
+  nav.classList.toggle('top-16');
+  nav.classList.toggle('right-6');
+  nav.classList.toggle('bg-white');
+  nav.classList.toggle('p-4');
+  nav.classList.toggle('rounded');
+  nav.classList.toggle('shadow-md');
+});
 
-              <b>Waste Factor and Waste Figure: A Unified Theory for Modeling and Analyzing Wasted Power in Radio Access Networks for Improved Sustainability</b>
-              <br />
-              Theodore S. Rappaport, Mingjun Ying, <u>Nicola Piovesan</u>, Antonio De Domenico, Dipankar Shakya
-              <br />
-              <i>IEEE Open Journal of the Communications Society</i>
-              <br />
-              <a class="btn btn-outline-primary btn-xs" data-toggle="collapse" href="#col_wastefactor24" role="button" aria-expanded="false" aria-controls="collapseExample" title="Show abstract">Abstract</a>
-              <a href="https://ieeexplore.ieee.org/document/10604822" target="_blank" class="btn btn-outline-secondary btn-xs" role="button" title="Paper">Paper</a>
-              <a href="https://arxiv.org/abs/2405.07710" target="_blank" class="btn btn-outline-secondary btn-xs" role="button" title="Preprint">Preprint</a>
-              <p><div class="collapse" id="col_wastefactor24"><div class="card card-body">
-                This paper introduces Waste Factor (W), also denoted as Waste Figure (WF) in dB, a promising new metric for quantifying energy efficiency in a wide range of circuits and systems applications, including data centers and RANs. Also, the networks used to connect data centers and AI computing engines with users for ML applications must become more power efficient. This paper illustrates the limitations of existing energy efficiency metrics that inadequately capture the intricate energy dynamics of RAN components. We delineate the methodology for applying W across various network configurations, including MISO, SIMO, and MIMO systems, and demonstrate the effectiveness of W in identifying energy optimization opportunities. Our findings reveal that W not only offers nuanced insights into the energy performance of RANs but also facilitates informed decision-making for network design and operational efficiency. Furthermore, we show how W can be integrated with other KPIs to guide the development of optimal strategies for enhancing network energy efficiency under different operational conditions. Additionally, we present simulation results for a distributed multi-user MIMO system at 3.5, 17, and 28 GHz, demonstrating overall network power efficiency on a per square kilometer basis, and show how overall W decreases with an increasing number of base stations and increasing carrier frequency. This paper shows that adopting W as a figure of merit can significantly contribute to the sustainability and energy optimization of next-generation wireless communication networks, paving the way for greener and more sustainable, energy-efficient 5G and 6G technologies.
-             </div></div><p>
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+});
 
-
-
-
-
-            <p class="lead mb-0"><a href="publications.html" class="text-body-emphasis fw-bold">More...<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
-<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
-</svg></a></p>
-
-
-            </div>
-          </div>
-        </div>
-
-      </section>
-
-            <section id="talks" >
-              <div class="container">
-                <div class="row">
-                  <div class="col-lg-8 mx-auto">
-                    <h2>Talks</h2>
-                  <!--  <h5>Upcoming</h5>
-                    <b>Data-Driven Modelling and Optimization of Green Future Mobile Networks: From Machine Learning to Generative AI</b>
-                    <br />
-                    <i>International Conference on 6G Networking (6GNet)</i>
-                    <br><i class="fa fa-calendar"></i> October 21st, 2024<br/><i class="fa fa-globe"></i> Paris, France<br>
-                      <a href="https://6g-conference.dnac.org/2024/tutorials-2/" target="_blank" class="btn btn-outline-secondary btn-xs" role="button" title="Link">Event</a>
-                      <br><br>
-                      <b>Network Modelling and Optimization for the 6G Era: Human Expertise Meets AI</b>
-                      <br />
-                      <i>6G summit</i>
-                      <br><i class="fa fa-calendar"></i> November 14th, 2024<br/><i class="fa fa-globe"></i> Abu Dhabi, UAE<br>
-                        <a href="https://www.6gsummitabudhabi.com/invited.php" target="_blank" class="btn btn-outline-secondary btn-xs" role="button" title="Link">Event</a>
-            <br><br>-->
-                    <h5>Selected Talks</h5>
-                    <div class="card-group">
-
-                      <div class="card">
-                          <img class="card-img-top" src="images/talk-6gsummit.jpeg" alt="Card image cap">
-                          <div class="card-body">
-                            <h5 class="card-title">Network Modelling and Optimization for the 6G Era: Human Expertise Meets AI</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">Abu Dhabi 6G summit</h6>
-                            <p class="card-text"><small class="text-muted">November 14, 2024</small></p>
-                          </div>
-                          <div class="card-footer">
-                            <!--<button type="button" class="btn btn-outline-primary btn-xs" data-toggle="popover" title="Abstract" data-content="The fifth generation (5G) of radio technology is revolutionizing our everyday lives, by enabling a high degree of automation, through its larger capacity, massive connectivity, and ultra-reliable low-latency communications. However, while 5G networks offer unprecedented capabilities, there exists a crucial area that demands further enhancement: energy efficiency. Despite achieving around a 4x improvement in energy efficiency compared to 3GPP Long Term Evolution (LTE) deployments, current 5G New Radio (NR) networks still consume up to 3x more energy, leading to heightened carbon emissions and increased operational costs for network operators.
-                            In light of the increasing interest in this field, this talk confronts the urgent challenge of 5G energy efficiency from an industrial perspective. We embark on a journey that harnesses the potential of big data and machine learning, exploring how data gleaned from thousands of base stations can be used to construct precise machine learning models to characterize the energy consumption of multi-carrier base stations. The insights gained from this framework is leveraged to create a realistic and analytically tractable power consumption model, which can drive theoretical analyses, standardization, development, and optimization frameworks. Moreover, we peer into the horizon of a future where large language models take center stage, autonomously generating explainable models, thus advancing the pursuit of energy-efficient networks.">Abstract</button>
-                          --><a href="https://www.6gsummitabudhabi.com/invited.php" target="_blank" class="btn btn-outline-secondary btn-xs" role="button" title="Link">Event</a>
-                            <a href="https://www.chaspark.com/#/live/1070480298598825984?anchorV=1077734077277118464&multi=en" target="_blank" class="btn btn-outline-secondary btn-xs" role="button" title="Video">Video</a>&nbsp;&nbsp;
-                          </div>
-                        </div>
-
-                      <div class="card">
-                        <img class="card-img-top" src="images/talk-itu-ai4good.jpeg" alt="Card image cap">
-                        <div class="card-body">
-                        <h5 class="card-title">Data-Driven Modelling and Optimization of Green Future Mobile Networks</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">ITU AI for Good Global Summit </h6>
-                        <p class="card-text"><small class="text-muted">May 30, 2024</small></p>
-                        </div>
-                        <div class="card-footer">
-                          <!--<button type="button" class="btn btn-outline-primary btn-xs" data-toggle="popover" title="Abstract" data-content="The fifth generation (5G) of radio technology is changing our everyday lives, by enabling a plethora of new use cases, through its better coverage, larger capacity and massive connectivity. Thanks to its ultra-reliable low-latency communications, 5G also allows a high degree of automation, thus helping to expand cellular systems into new ecosystems. Importantly, 5G has already become an integral part of governmental and industrial environmental programs, as it is envisioned that an intelligent exploitation of their resources through 5G will significantly decrease carbon emissions. Despite its unprecedented capabilities, however, 5G networks must further improve in certain key technology areas, particularly in that of network energy efficiency. While current third generation partnership project (3GPP) new radio (NR) deployments provide an improved energy efficiency of around 4x w.r.t. 3GPP long term evolution (LTE) ones, they still consume up to 3x more energy, resulting in increased carbon emissions and electricity bills for operators. Even if the 3GPP NR specification provides a rich set of tools to meet IMT-2020 energy efficiency requirements, it is important to note that one of the main challenges to 5G network energy efficiency is the complexity of their optimization in wide-area deployments: a large-scale, stochastic, non-convex and non-linear optimization problem. In light of the increasing interest in this field, this one-of-a-kind tutorial shares the author’s industrial view on the 5G energy efficiency challenge. This tutorial provides a detailed, up-to-date overview of the most relevant technologies that a 5G radio access network can use to increase its energy efficiency from both a theoretical and practical perspective. Moreover, this tutorial shows how increasing the network energy efficiency by exploiting such technologies in practical scenarios highly depends on the accuracy of the models used to characterize the network. In this line, this tutorial exhaustively surveys and presents machine learning techniques which are being used to create accurate network models for most network components and processes, and optimize a large-scale 5G network.">Abstract</button>
-                          --><a href="https://aiforgood.itu.int/event/ai-and-machine-learning-in-communication-networks/" target="_blank" class="btn btn-outline-secondary btn-xs" role="button" title="Link">Event</a>&nbsp;&nbsp;
-                        </div>
-
-                      </div>
-
-                      <div class="card">
-                        <img class="card-img-top" src="images/talk_itu.jpg" alt="Card image cap">
-                        <div class="card-body">
-                        <h5 class="card-title">AI/ML for 5G-Energy Consumption Modelling</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">ITU AI for Good</h6>
-                        <p class="card-text"><small class="text-muted">July 11, 2023</small></p>
-                        </div>
-                        <div class="card-footer">
-                      <!--  <button type="button" class="btn btn-outline-primary btn-xs" data-toggle="popover" title="Abstract" data-content="As we advance toward the global adoption of 5G networks, it becomes essential not only to boost their speed but also enhance their sustainability. The surge in the number of connected devices and the data explosion they induce has imposed a significant challenge on network operators: how to meet the escalating demand without skyrocketing the energy consumption.
-                          Within this context, the energy optimization of base stations emerges as a pivotal aspect of constructing a sustainable and cost-efficient 5G network. Given the myriad factors that impact this energy consumption, having precise models that elucidate how different configurations and parameters affect energy usage is of utmost importance.">Abstract</button>
-                        --><a href="https://aiforgood.itu.int/event/ai-ml-for-5g-energy-consumption-modelling/" target="_blank" class="btn btn-outline-secondary btn-xs" role="button" title="Link">Event</a>
-                        <a href="https://www.youtube.com/watch?v=zSetefnu3y8" target="_blank" class="btn btn-outline-secondary btn-xs" role="button" title="Link">Video</a>&nbsp;&nbsp;
-                        </div>
-                      </div>
-
-                    <!--  <div class="card">
-                        <img class="card-img-top" src="images/talk_valencia.jpg" alt="Card image cap">
-                        <div class="card-body">
-                          <h5 class="card-title">A Journey Towards Energy Efficiency</h5>
-                          <h6 class="card-subtitle mb-2 text-muted">Universitat Politècnica de València</h6>
-                          <p class="card-text"><small class="text-muted">September 14, 2023</small></p>
-                        </div>
-                        <div class="card-footer">
-                          <button type="button" class="btn btn-outline-primary btn-xs" data-toggle="popover" title="Abstract" data-content="The fifth generation (5G) of radio technology is revolutionizing our everyday lives, by enabling a high degree of automation, through its larger capacity, massive connectivity, and ultra-reliable low-latency communications. However, while 5G networks offer unprecedented capabilities, there exists a crucial area that demands further enhancement: energy efficiency. Despite achieving around a 4x improvement in energy efficiency compared to 3GPP Long Term Evolution (LTE) deployments, current 5G New Radio (NR) networks still consume up to 3x more energy, leading to heightened carbon emissions and increased operational costs for network operators.
-                          In light of the increasing interest in this field, this talk confronts the urgent challenge of 5G energy efficiency from an industrial perspective. We embark on a journey that harnesses the potential of big data and machine learning, exploring how data gleaned from thousands of base stations can be used to construct precise machine learning models to characterize the energy consumption of multi-carrier base stations. The insights gained from this framework is leveraged to create a realistic and analytically tractable power consumption model, which can drive theoretical analyses, standardization, development, and optimization frameworks. Moreover, we peer into the horizon of a future where large language models take center stage, autonomously generating explainable models, thus advancing the pursuit of energy-efficient networks.">Abstract</button>
-                        </div>
-                      </div>-->
-                    </div>
-                    <br/>
-                    <p class="lead mb-0"><a href="talks.html" class="text-body-emphasis fw-bold">More...<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
-                    </svg></a></p>
-                </div>
-              </div>
-            </div>
-          </section>
-
-      <section id="patents" class="bg-light">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-8 mx-auto">
-              <h2>Recent Patents</h2>
-              <b>Method for activating energy saving for a base station</b>
-              </br>
-              A. De Domenico, L. Madier, <u>N. Piovesan</u>, H. Feng
-              </br>
-              <i>Filed patent</i>
-              <br>
-              <br />
-              <b>Method for shutting down a cell of one or more cells of a base station for wireless communication</b>
-              </br>
-              <u>N. Piovesan</u>, A. De Domenico, N. Zhao, L. Madier
-              </br>
-              <i>Filed patent</i>
-              <br>
-              <br>
-              <p class="lead mb-0"><a href="patents.html" class="text-body-emphasis fw-bold">More...<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
-              <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
-              </svg></a></p>
-
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!--<section id="tutorials" class="bg-light">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-8 mx-auto">
-              <h2>Tutorials</h2>
-              <b>Data-driven modelling and optimization of green future mobile networks</b>
-              <br />
-              <u>N. Piovesan</u>, A. De Domenico, D. López-Pérez
-              <br />
-              <i>European Conference on Networks and Communications (EuCNC) & 6G Summit , 6-9 June 2023, Gothenburg (Sweden)</i>
-              <br/>
-              <a class="btn btn-outline-primary btn-xs" data-toggle="collapse" href="#col_tutorialeucnc23" role="button" aria-expanded="false" aria-controls="collapseExample" title="Show abstract">Abstract</a>
-              <a href="https://www.eucnc.eu/programme/tutorials/tutorial-2/" target="_blank" class="btn btn-outline-secondary btn-xs" role="button" title="Thesis">Conference</a>&nbsp;&nbsp;
-              <p><div class="collapse" id="col_tutorialeucnc23"><div class="card card-body">
-                The fifth generation (5G) of radio technology is changing our everyday lives, by enabling a plethora of new use cases, through its better coverage, larger capacity and massive connectivity. Thanks to its ultra-reliable low-latency communications, 5G also allows a high degree of automation, thus helping to expand cellular systems into new ecosystems. Importantly, 5G has already become an integral part of governmental and industrial environmental programs, as it is envisioned that an intelligent exploitation of their resources through 5G will significantly decrease carbon emissions. Despite its unprecedented capabilities, however, 5G networks must further improve in certain key technology areas, particularly in that of network energy efficiency. While current third generation partnership project (3GPP) new radio (NR) deployments provide an improved energy efficiency of around 4x w.r.t. 3GPP long term evolution (LTE) ones, they still consume up to 3x more energy, resulting in increased carbon emissions and electricity bills for operators. Even if the 3GPP NR specification provides a rich set of tools to
-meet IMT-2020 energy efficiency requirements, it is important to note that one of the main challenges to 5G network energy efficiency is the complexity of their optimization in wide-area deployments: a large-scale, stochastic, non-convex and non-linear optimization problem. In light of the increasing interest in this field, this one-of-a-kind tutorial shares the author’s industrial view on the 5G energy efficiency challenge. This tutorial provides a detailed, up-to-date overview of the most relevant technologies that a 5G radio access network can use to increase its energy efficiency from both a theoretical and practical perspective. Moreover, this tutorial shows how increasing the network energy efficiency by exploiting such technologies in practical scenarios highly depends on the accuracy of the models used to characterize the network. In this line, this tutorial exhaustively surveys and presents machine learning techniques which are being used to create accurate network models for most network components and processes, and optimize a large-scale 5G network.
-              </div></div></p>
-
-              <b>Breaking the Energy Consumption Growth in Future Mobile Networks: 5G Enhancements and Machine Learning</b>
-              <br />
-              <u>N. Piovesan</u>, A. De Domenico, D. López-Pérez
-              <br />
-              <i>IEEE International Conference on Communications (ICC), 16-20 May 2022, Seoul (South Korea)</i>
-              <a class="btn btn-outline-primary btn-xs" data-toggle="collapse" href="#col_tutorialicc22" role="button" aria-expanded="false" aria-controls="collapseExample" title="Show abstract">Abstract</a>
-              <a href="https://icc2022.ieee-icc.org/program/tutorials#tut-14" target="_blank" class="btn btn-outline-secondary btn-xs" role="button" title="Thesis">Conference</a>&nbsp;&nbsp;
-              <p><div class="collapse" id="col_tutorialicc22"><div class="card card-body">
-                The fifth generation (5G) of radio technology is revolutionizing our everyday lives, by enabling a high degree of automation, through its larger capacity, massive connectivity, and ultra-reliable low-latency communications. Despite its capabilities, however, 5G networks must improve in certain key technology areas, such as that of energy efficiency. While current 3GPP NR deployments provide an improved energy efficiency of around 4x w.r.t. 3GPP LTE ones, they still consume up to 3x more energy. Even if the 3GPP NR specification provides several tools to meet IMT-2020 energy efficiency requirements, one of the main energy consumption challenges of 5G networks is the complexity of their optimization in wide-area deployments: A large-scale, stochastic, non-convex and non-linear optimization problem. In light of the increasing interest in this field, this one-of-a-kind tutorial shares the author's industrial view on this 5G energy efficiency problem. In details, the tutorial provides a fresh look at energy efficiency enabling technologies in 3GPP NR. Moreover, by leveraging on the concepts of big data and machine learning, the tutorial presents practical scenarios in which data collected from thousands of base stations can be used to derive accurate machine learning models for the main building blocks of the energy efficiency optimization problem.
-              </div></div></p>
-
-
-            </div>
-          </div>
-        </div>
-      </section>-->
-
-
-
-
-    <section id="other" >
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 mx-auto">
-            <h2>Other</h2>
-            <h5>Awards & Honors</h5>
-            <div><i class="fa fa-award"></i> <b>2024</b> &middot; Huawei &middot; Quality Star Award</div> <!--for breakthroughs on energy efficiency modelling and optimization transferred to products-->
-            <div><i class="fa fa-award"></i> <b>2021</b> &middot; Huawei &middot; GTS President Award - Technology Innovation and Breakthrough Award</div> <!--for breakthroughs on energy efficiency modelling and optimization transferred to products-->
-            <div><i class="fa fa-award"></i> <b>2020</b> &middot; Huawei &middot; Future Star Award</div>
-            <div><i class="fa fa-award"></i> <b>2016</b> &middot; European Union &middot; Marie Skłodowska-Curie fellowship</div>
-            <div><i class="fa fa-award"></i> <b>2015</b> &middot; WorldSensing &middot; Winner of the Smart City Big Data Contest</div>
-          </br>
-          <h5>Press</h5>
-          <a href="https://techinformed.com/using-ai-to-make-5g-more-sustainable/">Using AI to make 5G more sustainable</a>
-          </br></br>
-            <h5>Services to the research community</h5>
-            <p class='text-justify'>Reviewer of IEEE Transactions on Wireless Communications, IEEE Communications Magazine, IEEE Transactions on Green Communications and Networking, IEEE Internet of Things Journal, Wiley Transactions on Emerging Telecommunications Technologies, Elsevier Computer Networks, Elsevier Computer Communications, among others.</p>
-<p class='text-justify'>Technical Program Commitee Member of IEEE International Conference on Communications conference (<a href="https://icc2023.ieee-icc.org/" target="_blank" title="ICC 2023">ICC 2023</a>, <a href="https://icc2024.ieee-icc.org/" target="_blank" title="ICC 2024">ICC 2024</a>, <a href="https://icc2025.ieee-icc.org/" target="_blank" title="ICC 2025">ICC 2025</a>), IEEE Wireless Communications and Networking Conference (<a href="https://wcnc2022.ieee-wcnc.org/" target="_blank" title="WCNC 2022">WCNC 2022</a>), European Conference on Networks and Communications (<a href="https://www.eucnc.eu/2019/www.eucnc.eu/" target="_blank" title="EuCNC 2019">EuCNC 2019</a>, <a href="https://www.eucnc.eu/" target="_blank" title="EuCNC 2019">EuCNC 2020</a>) and IEEE Vehicular Technology Conference (<a href="http://www.ieeevtc.org/vtc2019fall/" target="_blank" title="VTC 2019">VTC-Fall 2019</a>).</p>
-            <!--
-              <p class="lead">My name's Nicola Piovesan. I am a European Commission Marie Skłodowska-Curie fellow and I am working on <a href="http://www.scavenge.eu">EU H2020 SCAVENGE</a> at the <a href="http://www.cttc.es">Centre Tecnològic de Telecomunicacions de Catalunya (CTTC)</a>.</p> <p class="lead">I received the BSc degree in <i>Information Engineering</i> and the MSc in <i>Telecommunication Engineering</i> from the University of Padova, Italy, and I am currently pursuing a PhD at the department of <i>Telematics Engineering</i> of the Technical University of Catalonia (UPC).</p>-->
-              Co-chair of the <a href="https://sites.google.com/view/llmonet-2024/home">Workshop on The Impact of Large Language Models on 6G Networks</a>, in conjunction with IEEE ICC 2024, Denver, USA, June 2024, and of the <a href="https://sites.google.com/view/mllmonet-2024/home">Workshop on The Impact of Multi-Modal Large Language Models on 6G and Beyond</a>, in conjunction with IEEE Globecom 2024, Cape Town, South Africa, December 2024.
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-      <!-- Footer -->
-      <footer class="py-5 bg-white">
-        <div class="container">
-          <p class="m-0 text-center text-gray">Copyright &copy; Nicola Piovesan 2025</p>
-          </p>
-        </div>
-        <!-- /.container -->
-      </footer>
-
-      <!-- Bootstrap core JavaScript -->
-      <script src="vendor/jquery/jquery.min.js"></script>
-      <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-      <!-- Plugin JavaScript -->
-      <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-      <!-- Custom JavaScript for this theme -->
-      <script src="js/scrolling-nav-min.js"></script>
-      <script src="//static.getclicky.com/js" type="text/javascript"></script>
-      <script type="text/javascript">try{ clicky.init(101089699); }catch(e){}</script>
-      <noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101089699ns.gif" /></p></noscript>
-	<script>
-	(function(h,e,a,t,m,p) {
-	m=e.createElement(a);m.async=!0;m.src=t;
-	p=e.getElementsByTagName(a)[0];p.parentNode.insertBefore(m,p);
-	})(window,document,'script','https://u.heatmap.it/log.js');
-	</script>
-    </body>
-
-    </html>
+// Toggle abstract visibility
+function toggleAbstract(id) {
+  const abstract = document.getElementById(id);
+  abstract.classList.toggle('hidden');
+}
+</script>
+<script src="//static.getclicky.com/js" type="text/javascript"></script>
+<script type="text/javascript">try{ clicky.init(101089699); }catch(e){}</script>
+<noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101089699ns.gif" /></p></noscript>
+<script>
+(function(h,e,a,t,m,p) {
+  m=e.createElement(a);m.async=!0;m.src=t;
+  p=e.getElementsByTagName(a)[0];p.parentNode.insertBefore(m,p);
+})(window,document,'script','https://u.heatmap.it/log.js');
+</script>
+</body>
+</html>
