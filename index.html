@@ -308,26 +308,26 @@
         <div class="space-y-4">
           <div class="publication-item bg-white p-4 rounded-lg shadow-sm pl-6">
             <div class="flex justify-between items-start">
-              <h3 class="font-bold text-lg mb-1">Hermes: A Large Language Model Framework on the Journey to Autonomous Networks</h3>
+              <h3 class="font-bold text-lg mb-1">TeleMath: A Benchmark for Large Language Models in Telecom Mathematical Problem Solving</h3>
               <span class="pub-tag preprint-tag">Preprint</span>
             </div>
             <p class="text-gray-600 mb-2">Submitted</p>
             <p class="text-gray-700 mb-2">
-              <span class="font-medium">Authors:</span> Fadhel Ayed, Ali Maatouk, Nicola Piovesan, Antonio De Domenico, Merouane Debbah, Zhi-Quan Luo
+              <span class="font-medium">Authors:</span> Vincenzo Colle, Mohamed Sana, Nicola Piovesan, Antonio De Domenico, Fadhel Ayed, Merouane Debbah
             </p>
             <div class="flex flex-wrap gap-4">
-              <button type="button" class="text-blue-600 hover:text-blue-800 text-sm flex items-center" onclick="toggleAbstract('abstract2')">
+              <button type="button" class="text-blue-600 hover:text-blue-800 text-sm flex items-center" onclick="toggleAbstract('abstract2025telemath')">
                 <i class="fas fa-align-left mr-1"></i> Abstract
               </button>
-              <a href="https://arxiv.org/abs/2411.06490" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
+              <a href="https://arxiv.org/abs/2506.10674" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
                 <i class="fas fa-file-pdf mr-1"></i> Preprint
               </a>
-              <a href="https://huggingface.co/spaces/netop/hermes" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-                <i class="fas fa-laptop mr-1"></i> Demo
+              <a href="https://huggingface.co/datasets/netop/TeleMath" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
+                <i class="fas fa-database mr-1"></i> Dataset
               </a>
             </div>
-            <div id="abstract2" class="hidden mt-3 text-sm text-gray-600">
-              The drive toward automating cellular network operations has grown with the increasing complexity of these systems. Despite advancements, full autonomy currently remains out of reach due to reliance on human intervention for modeling network behaviors and defining policies to meet target requirements. Network Digital Twins (NDTs) have shown promise in enhancing network intelligence, but the successful implementation of this technology is constrained by use case-specific architectures, limiting its role in advancing network autonomy. A more capable network intelligence, or "telecommunications brain", is needed to enable seamless, autonomous management of cellular network. Large Language Models (LLMs) have emerged as potential enablers for this vision but face challenges in network modeling, especially in reasoning and handling diverse data types. To address these gaps, we introduce Hermes, a chain of LLM agents that uses "blueprints" for constructing NDT instances through structured and explainable logical steps. Hermes allows automatic, reliable, and accurate network modeling of diverse use cases and configurations, thus marking progress toward fully autonomous network operations.
+            <div id="abstract2025telemath" class="hidden mt-3 text-sm text-gray-600">
+              The increasing adoption of artificial intelligence in telecommunications has raised interest in the capability of Large Language Models (LLMs) to address domain-specific, mathematically intensive tasks. Although recent advancements have improved the performance of LLMs in general mathematical reasoning, their effectiveness within specialized domains, such as signal processing, network optimization, and performance analysis, remains largely unexplored. To address this gap, we introduce TeleMath, the first benchmark dataset specifically designed to evaluate LLM performance in solving mathematical problems with numerical solutions in the telecommunications domain. Comprising 500 question-answer (QnA) pairs, TeleMath covers a wide spectrum of topics in the telecommunications field. This paper outlines the proposed QnAs generation pipeline, starting from a selected seed of problems crafted by Subject Matter Experts. The evaluation of a wide range of open-source LLMs reveals that best performance on TeleMath is achieved by recent models explicitly designed for mathematical or logical reasoning. In contrast, general-purpose models, even those with a large number of parameters, often struggle with these challenges. We have released the dataset and the evaluation code to ease result reproducibility and support future research.
             </div>
           </div>
 
@@ -450,7 +450,7 @@ The application of Large Language Models (LLMs) and Retrieval-Augmented Generati
   <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
     <div class="bg-white p-6 rounded-lg shadow-sm border-l-4 border-blue-500">
       <div class="flex justify-between items-start mb-2">
-        <h3 class="font-bold text-lg">AI and Machine Learning in communication networks</h3>
+        <h3 class="font-bold text-lg">Advancing Network Automation through Multi-Agent Large Language Models</h3>
       </div>
       <p class="text-gray-600 mb-2">AI for Good Summit</p>
       <div class="flex items-center text-gray-500 text-sm mb-3">
@@ -460,14 +460,14 @@ The application of Large Language Models (LLMs) and Retrieval-Augmented Generati
         <span>Geneva, Switzerland</span>
       </div>
       <!--<p class="text-gray-700 mb-3">Talk on "AI-Driven Network Optimization for 6G"</p>-->
-      <a href="https://aiforgood.itu.int/event/ai-and-machine-learning-in-communication-networks-2/" target="_blank "class="text-blue-600 hover:text-blue-800 text-sm inline-block">
+      <a href="https://aiforgood.itu.int/event/ai-and-machine-learning-in-communication-networks-summit25-day1/" target="_blank "class="text-blue-600 hover:text-blue-800 text-sm inline-block">
         Event website →
       </a>
     </div>
 
     <div class="bg-white p-6 rounded-lg shadow-sm border-l-4 border-blue-500">
       <div class="flex justify-between items-start mb-2">
-        <h3 class="font-bold text-lg">The Role of AI and LLMs in Future Wireless Networks</h3>
+        <h3 class="font-bold text-lg">The Role of AI and Large Language Models in Future Wireless Networks</h3>
         <!--<span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Confirmed</span>-->
       </div>
       <p class="text-gray-600 mb-2">Cuenca Summer School</p>
@@ -503,43 +503,32 @@ View all upcoming events <i class="fas fa-arrow-right ml-2"></i>
   </div>
 
   <div class="space-y-4">
-    <div class="patent-item bg-white p-4 rounded-lg shadow-sm pl-6">
-      <div class="flex justify-between items-start">
-        <h3 class="font-bold text-lg mb-1">Telecomunications System for Controlling Network Resource Allocation to User Subjective Requirements and Method Therefor</h3>
-        <span class="pub-tag international-tag">Filed</span>
+    <div class="space-y-4">
+      <div class="patent-item bg-white p-4 rounded-lg shadow-sm pl-6">
+        <div class="flex justify-between items-start">
+          <h3 class="font-bold text-lg mb-1">A device and method for evaluating generative artificial intelligence models</h3>
+          <span class="pub-tag international-tag">Filed</span>
+        </div>
+        <p class="text-gray-600 mb-2">PCT/EP2025/063678 • Filed: May 19, 2025</p>
+        <p class="text-gray-700 mb-2">
+          <span class="font-medium">Inventors:</span> N. Piovesan, A. De Domenico, M. Sana, F. Ayed
+        </p>
+        <div class="flex flex-wrap gap-4">
+        </div>
       </div>
-      <p class="text-gray-600 mb-2">PCT/CN2023/082254 • Filed: Mar 17, 2023</p>
-      <p class="text-gray-700 mb-2">
-        <span class="font-medium">Inventors:</span> N. Piovesan, F. Ayed, D. López-Pérez, A. De Domenico, W. Xing, H. Bao
-      </p>
-      <div class="flex flex-wrap gap-4">
-        <a href="https://patentscope.wipo.int/search/en/WO2024192577" target="_blank "class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-          <i class="fas fa-link mr-1"></i> WIPO
-        </a>
-        <a href="https://patents.google.com/patent/WO2024192577A1/en" target="_blank "class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-          <i class="fas fa-link mr-1"></i> Google Patents
-        </a>
-      </div>
-    </div>
 
-    <div class="patent-item bg-white p-4 rounded-lg shadow-sm pl-6">
-      <div class="flex justify-between items-start">
-        <h3 class="font-bold text-lg mb-1">Sustainable Communication System</h3>
-        <span class="pub-tag international-tag">Filed</span>
+      <div class="patent-item bg-white p-4 rounded-lg shadow-sm pl-6">
+        <div class="flex justify-between items-start">
+          <h3 class="font-bold text-lg mb-1">Devices and methods for energy saving and energy source scheduling in cellular networks</h3>
+          <span class="pub-tag international-tag">Filed</span>
+        </div>
+        <p class="text-gray-600 mb-2">PCT/CN2025/076717 • Filed: Feb 10, 2025</p>
+        <p class="text-gray-700 mb-2">
+          <span class="font-medium">Inventors:</span> N. Piovesan, A. De Domenico, L. Madier, X. Li
+        </p>
+        <div class="flex flex-wrap gap-4">
+        </div>
       </div>
-      <p class="text-gray-600 mb-2">PCT/EP2022/084497 • Filed: Dec 06, 2022</p>
-      <p class="text-gray-700 mb-2">
-        <span class="font-medium">Inventors:</span> D. López-Pérez, A. De Domenico, N. Piovesan, D. Tsishkou, and H. Bao
-      </p>
-      <div class="flex flex-wrap gap-4">
-        <a href="https://patentscope.wipo.int/search/en/WO2024120608" target="_blank "class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-          <i class="fas fa-link mr-1"></i> WIPO
-        </a>
-        <a href="https://patents.google.com/patent/WO2024120608A1/en" target="_blank "class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-          <i class="fas fa-link mr-1"></i> Google Patents
-        </a>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -557,16 +546,16 @@ View all upcoming events <i class="fas fa-arrow-right ml-2"></i>
       </h3>
       <div class="space-y-4">
         <div class="award-item pl-4">
+          <h4 class="font-medium">IEEE ICC Best Paper Award</h4>
+          <p class="text-gray-600 text-sm">2025</p>
+        </div>
+        <div class="award-item pl-4">
           <h4 class="font-medium">Huawei Quality Star Award</h4>
           <p class="text-gray-600 text-sm">2023</p>
         </div>
         <div class="award-item pl-4">
           <h4 class="font-medium">Huawei GTS President Award</h4>
           <p class="text-gray-600 text-sm">2021</p>
-        </div>
-        <div class="award-item pl-4">
-          <h4 class="font-medium">Marie Skłodowska-Curie fellowship</h4>
-          <p class="text-gray-600 text-sm">2016</p>
         </div>
       </div>
       <!--<a href="awards.html" class="text-blue-600 hover:text-blue-800 text-sm mt-4 inline-block">
