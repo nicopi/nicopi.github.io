@@ -272,7 +272,7 @@
 
         <div class="bio-content" id="bioContent">
           <p class="mb-4">
-            Nicola Piovesan is a Senior Researcher at <a href="https://www.huawei.com/en/" target="_blank" class="bio-link">Huawei Technologies</a>, in Paris, France. His research activity focuses on large-scale network modeling, data-driven network optimization, green networking, and the integration of artificial intelligence in the telecom domain.
+            Nicola Piovesan is a Senior Researcher at <a href="https://www.huawei.com/en/" target="_blank" class="bio-link">Huawei Technologies</a>, in Paris, France. His research activity focuses on generative AI in next-generation telecom networks, large-scale network modeling, and green networking.
           </p>
           <p class="mb-4">
             He earned his PhD degree in Network Engineering at the <a href="http://www.upc.edu/" target="_blank" class="bio-link">Universitat Politècnica de Catalunya (UPC)</a>, Barcelona, Spain, in 2020, and he received the BSc degree in Information Engineering and the MSc in Telecommunication Engineering from the <a href="http://www.unipd.it/" target="_blank" class="bio-link">University of Padova</a>, Italy, in 2013 and 2016, respectively.                    </p>
@@ -308,6 +308,31 @@
         <div class="space-y-4">
           <div class="publication-item bg-white p-4 rounded-lg shadow-sm pl-6">
             <div class="flex justify-between items-start">
+              <h3 class="font-bold text-lg mb-1">Reasoning Language Models for Root Cause Analysis in 5G Wireless Networks</h3>
+              <span class="pub-tag preprint-tag">Preprint</span>
+            </div>
+            <p class="text-gray-600 mb-2">Submitted</p>
+            <p class="text-gray-700 mb-2">
+              <span class="font-medium">Authors:</span> Mohamed Sana, Nicola Piovesan, Antonio De Domenico, Yibin Kang, Haozhe Zhang, Merouane Debbah, Fadhel Ayed
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <button type="button" class="text-blue-600 hover:text-blue-800 text-sm flex items-center" onclick="toggleAbstract('abstract2025telelogs')">
+                <i class="fas fa-align-left mr-1"></i> Abstract
+              </button>
+              <a href="https://arxiv.org/abs/2507.21974" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
+                <i class="fas fa-file-pdf mr-1"></i> Preprint
+              </a>
+              <a href="https://huggingface.co/datasets/netop/TeleLogs" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
+                <i class="fas fa-database mr-1"></i> Dataset
+              </a>
+            </div>
+            <div id="abstract2025telelogs" class="hidden mt-3 text-sm text-gray-600">
+              Root Cause Analysis (RCA) in mobile networks remains a challenging task due to the need for interpretability, domain expertise, and causal reasoning. In this work, we propose a lightweight framework that leverages Large Language Models (LLMs) for RCA. To do so, we introduce TeleLogs, a curated dataset of annotated troubleshooting problems designed to benchmark RCA capabilities. Our evaluation reveals that existing open-source reasoning LLMs struggle with these problems, underscoring the need for domain-specific adaptation. To address this issue, we propose a two-stage training methodology that combines supervised fine-tuning with reinforcement learning to improve the accuracy and reasoning quality of LLMs. The proposed approach fine-tunes a series of RCA models to integrate domain knowledge and generate structured, multi-step diagnostic explanations, improving both interpretability and effectiveness. Extensive experiments across multiple LLM sizes show significant performance gains over state-of-the-art reasoning and non-reasoning models, including strong generalization to randomized test variants. These results demonstrate the promise of domain-adapted, reasoning-enhanced LLMs for practical and explainable RCA in network operation and management.
+            </div>
+          </div>
+
+          <div class="publication-item bg-white p-4 rounded-lg shadow-sm pl-6">
+            <div class="flex justify-between items-start">
               <h3 class="font-bold text-lg mb-1">TeleMath: A Benchmark for Large Language Models in Telecom Mathematical Problem Solving</h3>
               <span class="pub-tag preprint-tag">Preprint</span>
             </div>
@@ -328,31 +353,6 @@
             </div>
             <div id="abstract2025telemath" class="hidden mt-3 text-sm text-gray-600">
               The increasing adoption of artificial intelligence in telecommunications has raised interest in the capability of Large Language Models (LLMs) to address domain-specific, mathematically intensive tasks. Although recent advancements have improved the performance of LLMs in general mathematical reasoning, their effectiveness within specialized domains, such as signal processing, network optimization, and performance analysis, remains largely unexplored. To address this gap, we introduce TeleMath, the first benchmark dataset specifically designed to evaluate LLM performance in solving mathematical problems with numerical solutions in the telecommunications domain. Comprising 500 question-answer (QnA) pairs, TeleMath covers a wide spectrum of topics in the telecommunications field. This paper outlines the proposed QnAs generation pipeline, starting from a selected seed of problems crafted by Subject Matter Experts. The evaluation of a wide range of open-source LLMs reveals that best performance on TeleMath is achieved by recent models explicitly designed for mathematical or logical reasoning. In contrast, general-purpose models, even those with a large number of parameters, often struggle with these challenges. We have released the dataset and the evaluation code to ease result reproducibility and support future research.
-            </div>
-          </div>
-
-          <div class="publication-item bg-white p-4 rounded-lg shadow-sm pl-6">
-            <div class="flex justify-between items-start">
-              <h3 class="font-bold text-lg mb-1">Waste Factor and Waste Figure: A Unified Theory for Modeling and Analyzing Wasted Power in Radio Access Networks for Improved Sustainability</h3>
-              <span class="pub-tag journal-tag">Journal</span>
-            </div>
-            <p class="text-gray-600 mb-2">IEEE Open Journal of the Communications Society</p>
-            <p class="text-gray-700 mb-2">
-              <span class="font-medium">Authors:</span> Theodore S. Rappaport, Mingjun Ying, Nicola Piovesan, Antonio De Domenico, Dipankar Shakya
-            </p>
-            <div class="flex flex-wrap gap-4">
-              <button type="button" class="text-blue-600 hover:text-blue-800 text-sm flex items-center" onclick="toggleAbstract('abstract3')">
-                <i class="fas fa-align-left mr-1"></i> Abstract
-              </button>
-              <a href="https://ieeexplore.ieee.org/document/10604822" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-                <i class="fas fa-file-pdf mr-1"></i> Paper
-              </a>
-              <a href="https://arxiv.org/abs/2405.07710" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-                <i class="fas fa-file-pdf mr-1"></i> Preprint
-              </a>
-            </div>
-            <div id="abstract3" class="hidden mt-3 text-sm text-gray-600">
-              This paper introduces Waste Factor (W), also denoted as Waste Figure (WF) in dB, a promising new metric for quantifying energy efficiency in a wide range of circuits and systems applications, including data centers and RANs. Also, the networks used to connect data centers and AI computing engines with users for ML applications must become more power efficient. This paper illustrates the limitations of existing energy efficiency metrics that inadequately capture the intricate energy dynamics of RAN components. We delineate the methodology for applying W across various network configurations, including MISO, SIMO, and MIMO systems, and demonstrate the effectiveness of W in identifying energy optimization opportunities. Our findings reveal that W not only offers nuanced insights into the energy performance of RANs but also facilitates informed decision-making for network design and operational efficiency. Furthermore, we show how W can be integrated with other KPIs to guide the development of optimal strategies for enhancing network energy efficiency under different operational conditions. Additionally, we present simulation results for a distributed multi-user MIMO system at 3.5, 17, and 28 GHz, demonstrating overall network power efficiency on a per square kilometer basis, and show how overall W decreases with an increasing number of base stations and increasing carrier frequency. This paper shows that adopting W as a figure of merit can significantly contribute to the sustainability and energy optimization of next-generation wireless communication networks, paving the way for greener and more sustainable, energy-efficient 5G and 6G technologies.
             </div>
           </div>
 
@@ -392,6 +392,23 @@ The application of Large Language Models (LLMs) and Retrieval-Augmented Generati
   </div>
 
   <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+    <div class="talk-card bg-white rounded-lg overflow-hidden shadow-sm">
+      <a href="https://aiforgood.itu.int/event/ai-and-machine-learning-in-communication-networks-summit25-day2/" target="_blank" class="block">
+        <img src="./images/talk-ai4good.jpeg"
+        alt="Tech Summit Talk"
+        class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="font-bold text-lg mb-2">Advancing Network Automation through Multi-Agent Large Language Models</h3>
+          <p class="text-gray-600 text-sm mb-2">ITU AI for Good Global Summit</p>
+          <div class="flex justify-between items-center text-sm">
+            <span class="text-blue-600">See event →</span>
+            <span class="text-gray-500">July 2025</span>
+          </div>
+        </div>
+      </a>
+    </div>
+
     <div class="talk-card bg-white rounded-lg overflow-hidden shadow-sm">
       <a href="https://www.chaspark.com/#/live/1070480298598825984?anchorV=1077734077277118464&multi=en" target="_blank" class="block">
         <img src="https://www.nicolapiovesan.com/images/talk-6gsummit.jpeg"
@@ -403,22 +420,6 @@ The application of Large Language Models (LLMs) and Retrieval-Augmented Generati
           <div class="flex justify-between items-center text-sm">
             <span class="text-blue-600">Watch video →</span>
             <span class="text-gray-500">November 2024</span>
-          </div>
-        </div>
-      </a>
-    </div>
-
-    <div class="talk-card bg-white rounded-lg overflow-hidden shadow-sm">
-      <a href="https://aiforgood.itu.int/event/ai-and-machine-learning-in-communication-networks/" target="_blank" class="block">
-        <img src="https://www.nicolapiovesan.com/images/talk-itu-ai4good.jpeg"
-        alt="Tech Summit Talk"
-        class="w-full h-48 object-cover">
-        <div class="p-4">
-          <h3 class="font-bold text-lg mb-2">Data-Driven Modelling and Optimization of Green Future Mobile Networks</h3>
-          <p class="text-gray-600 text-sm mb-2">ITU AI for Good Global Summit</p>
-          <div class="flex justify-between items-center text-sm">
-            <span class="text-blue-600">See event →</span>
-            <span class="text-gray-500">May 2024</span>
           </div>
         </div>
       </a>
@@ -450,38 +451,22 @@ The application of Large Language Models (LLMs) and Retrieval-Augmented Generati
   <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
     <div class="bg-white p-6 rounded-lg shadow-sm border-l-4 border-blue-500">
       <div class="flex justify-between items-start mb-2">
-        <h3 class="font-bold text-lg">Advancing Network Automation through Multi-Agent Large Language Models</h3>
+        <h3 class="font-bold text-lg">Empowering Mobile Networks with Large Language Models: from Network Modelling to Optimization</h3>
       </div>
-      <p class="text-gray-600 mb-2">AI for Good Summit</p>
+      <p class="text-gray-600 mb-2">Vehicular Technology Conference (VTC) Tutorial</p>
       <div class="flex items-center text-gray-500 text-sm mb-3">
         <i class="fas fa-calendar-alt mr-2"></i>
-        <span>July 9, 2025</span>
+        <span>October 19, 2025</span>
         <i class="fas fa-map-marker-alt ml-4 mr-2"></i>
-        <span>Geneva, Switzerland</span>
+        <span>Chengdu, China</span>
       </div>
       <!--<p class="text-gray-700 mb-3">Talk on "AI-Driven Network Optimization for 6G"</p>-->
-      <a href="https://aiforgood.itu.int/event/ai-and-machine-learning-in-communication-networks-summit25-day1/" target="_blank "class="text-blue-600 hover:text-blue-800 text-sm inline-block">
+      <a href="https://events.vtsociety.org/vtc2025-fall/conference-sessions/tutorials-currently-available/t4-empowering-mobile-networks-with-large-language-models-from-network-modelling-to-optimization/" target="_blank "class="text-blue-600 hover:text-blue-800 text-sm inline-block">
         Event website →
       </a>
     </div>
 
-    <div class="bg-white p-6 rounded-lg shadow-sm border-l-4 border-blue-500">
-      <div class="flex justify-between items-start mb-2">
-        <h3 class="font-bold text-lg">The Role of AI and Large Language Models in Future Wireless Networks</h3>
-        <!--<span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Confirmed</span>-->
-      </div>
-      <p class="text-gray-600 mb-2">Summer School on advanced topics in 5G/6G Communication</p>
-      <div class="flex items-center text-gray-500 text-sm mb-3">
-        <i class="fas fa-calendar-alt mr-2"></i>
-        <span>July 1, 2025</span>
-        <i class="fas fa-map-marker-alt ml-4 mr-2"></i>
-        <span>Cuenca, Spain</span>
-      </div>
-      <!--<p class="text-gray-700 mb-3">Panelist on "Sustainable Networks of the Future"</p>-->
-      <!--<a href="#" class="text-blue-600 hover:text-blue-800 text-sm inline-block">
-      Conference program →
-    </a>-->
-  </div>
+
 </div>
 
 <!--<div class="text-center mt-6">
