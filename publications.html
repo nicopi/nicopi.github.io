@@ -144,6 +144,28 @@
       <div class="space-y-4">
         <div class="publication-item bg-white p-4 rounded-lg shadow-sm pl-6">
           <div class="flex justify-between items-start">
+            <h3 class="font-bold text-lg mb-1">KVCompose: Efficient Structured KV Cache Compression with Composite Tokens</h3>
+            <span class="pub-tag preprint-tag">Preprint</span>
+          </div>
+          <p class="text-gray-600 mb-2">Submitted</p>
+          <p class="text-gray-700 mb-2">
+            <span class="font-medium">Authors:</span> Dmitry Akulov, Mohamed Sana, Antonio De Domenico, Tareq Si Salem, Nicola Piovesan, Fadhel Ayed
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <button type="button" class="text-blue-600 hover:text-blue-800 text-sm flex items-center" onclick="toggleAbstract('abstract2025kvcompose')">
+              <i class="fas fa-align-left mr-1"></i> Abstract
+            </button>
+            <a href="https://arxiv.org/abs/2509.05165" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
+              <i class="fas fa-file-pdf mr-1"></i> Preprint
+            </a>
+          </div>
+          <div id="abstract2025kvcompose" class="hidden mt-3 text-sm text-gray-600">
+            Large language models (LLMs) rely on key-value (KV) caches for efficient autoregressive decoding; however, cache size grows linearly with context length and model depth, becoming a major bottleneck in long-context inference. Prior KV cache compression methods either enforce rigid heuristics, disrupt tensor layouts with per-attention-head variability, or require specialized compute kernels.
+We propose a simple, yet effective, KV cache compression framework based on attention-guided, layer-adaptive composite tokens. Our method aggregates attention scores to estimate token importance, selects head-specific tokens independently, and aligns them into composite tokens that respect the uniform cache structure required by existing inference engines. A global allocation mechanism further adapts retention budgets across layers, assigning more capacity to layers with informative tokens. This approach achieves significant memory reduction while preserving accuracy, consistently outperforming prior structured and semi-structured methods. Crucially, our approach remains fully compatible with standard inference pipelines, offering a practical and scalable solution for efficient long-context LLM deployment.
+          </div>
+        </div>
+        <div class="publication-item bg-white p-4 rounded-lg shadow-sm pl-6">
+          <div class="flex justify-between items-start">
             <h3 class="font-bold text-lg mb-1">Reasoning Language Models for Root Cause Analysis in 5G Wireless Networks</h3>
             <span class="pub-tag preprint-tag">Preprint</span>
           </div>
@@ -213,10 +235,49 @@
         </div>
         <div class="publication-item bg-white p-4 rounded-lg shadow-sm pl-6">
           <div class="flex justify-between items-start">
-            <h3 class="font-bold text-lg mb-1">Goal-Oriented Time-Series Forecasting: Foundation Framework Design</h3>
-            <span class="pub-tag preprint-tag">Preprint</span>
+            <h3 class="font-bold text-lg mb-1">Enhancing Energy Efficiency in Cellular Networks via Power Consumption Model Exchange</h3>
+            <span class="pub-tag conference-tag">Conference</span>
           </div>
-          <p class="text-gray-600 mb-2">Submitted</p>
+          <p class="text-gray-600 mb-2">IEEE Global Communications Conference (GLOBECOM), 8-12 December 2025, Taipei (Taiwan)</p>
+          <p class="text-gray-700 mb-2">
+            <span class="font-medium">Authors:</span> Alexander Busch, David López-Pérez, Matteo Bernabè, Nicola Piovesan
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <button type="button" class="text-blue-600 hover:text-blue-800 text-sm flex items-center" onclick="toggleAbstract('abstract2025exchange')">
+              <i class="fas fa-align-left mr-1"></i> Abstract
+            </button>
+          </div>
+          <div id="abstract2025exchange" class="hidden mt-3 text-sm text-gray-600">
+This paper proposes an energy-efficient user association algorithm for cellular networks. Unlike traditional approaches, it leverages AI-based power consumption model exchanges between base stations to enable more energy-aware user reassociation. By accounting for heterogeneous radio unit power profiles, the algorithm shifts users to more efficient base stations, reducing overall energy consumption. Simulations show notable power savings-amplified by greater efficiency variance-while preserving network throughput, validating the approach's effectiveness.
+          </div>
+        </div>
+        <div class="publication-item bg-white p-4 rounded-lg shadow-sm pl-6">
+          <div class="flex justify-between items-start">
+            <h3 class="font-bold text-lg mb-1">Modelling the 5G Energy Consumption using Real-world Data: Energy Fingerprint is All You Need</h3>
+            <span class="pub-tag conference-tag">Conference</span>
+          </div>
+          <p class="text-gray-600 mb-2">IEEE Global Communications Conference (GLOBECOM), 8-12 December 2025, Taipei (Taiwan)</p>
+          <p class="text-gray-700 mb-2">
+            <span class="font-medium">Authors:</span> Tingwei Chen, Yantao Wang, Hanzhi Chen, Zijian Zhao, Xinhao Li, Nicola Piovesan, Guangxu Zhu, Qingjiang Shi
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <button type="button" class="text-blue-600 hover:text-blue-800 text-sm flex items-center" onclick="toggleAbstract('abstract6')">
+              <i class="fas fa-align-left mr-1"></i> Abstract
+            </button>
+            <a href="https://arxiv.org/abs/2406.16929" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
+              <i class="fas fa-file-pdf mr-1"></i> Preprint
+            </a>
+          </div>
+          <div id="abstract6" class="hidden mt-3 text-sm text-gray-600">
+            The introduction of fifth-generation (5G) radio technology has revolutionized communications, bringing unprecedented automation, capacity, connectivity, and ultra-fast, reliable communications. However, this technological leap comes with a substantial increase in energy consumption, presenting a significant challenge. To improve the energy efficiency of 5G networks, it is imperative to develop sophisticated models that accurately reflect the influence of base station (BS) attributes and operational conditions on energy this http URL, addressing the complexity and interdependencies of these diverse features is particularly challenging, both in terms of data processing and model architecture design. This paper proposes a novel 5G base stations energy consumption modelling method by learning from a real-world dataset used in the ITU 5G Base Station Energy Consumption Modelling Challenge in which our model ranked second. Unlike existing methods that omit the Base Station Identifier (BSID) information and thus fail to capture the unique energy fingerprint in different base stations, we incorporate the BSID into the input features and encoding it with an embedding layer for precise representation. Additionally, we introduce a novel masked training method alongside an attention mechanism to further boost the model's generalization capabilities and accuracy. After evaluation, our method demonstrates significant improvements over existing models, reducing Mean Absolute Percentage Error (MAPE) from 12.75% to 4.98%, leading to a performance gain of more than 60%.
+          </div>
+        </div>
+        <div class="publication-item bg-white p-4 rounded-lg shadow-sm pl-6">
+          <div class="flex justify-between items-start">
+            <h3 class="font-bold text-lg mb-1">Goal-Oriented Time-Series Forecasting: Foundation Framework Design</h3>
+            <span class="pub-tag conference-tag">Conference</span>
+          </div>
+          <p class="text-gray-600 mb-2">NeurIPS 2025, 30 November - 7 December, San Diego (USA)</p>
           <p class="text-gray-700 mb-2">
             <span class="font-medium">Authors:</span> Luca-Andrei Fechete, Mohamed Sana, Fadhel Ayed, Nicola Piovesan, Wenjie Li, Antonio De Domenico, Tareq Si Salem
           </p>
@@ -232,6 +293,30 @@
             Traditional time-series forecasting often focuses only on minimizing prediction errors, ignoring the specific requirements of real-world applications that employ them. This paper presents a new training methodology, which allows a forecasting model to dynamically adjust its focus based on the importance of forecast ranges specified by the end application. Unlike previous methods that fix these ranges beforehand, our training approach breaks down predictions over the entire signal range into smaller segments, which are then dynamically weighted and combined to produce accurate forecasts. We tested our method on standard datasets, including a new dataset from wireless communication, and found that not only it improves prediction accuracy but also improves the performance of end application employing the forecasting model. This research provides a basis for creating forecasting systems that better connect prediction and decision-making in various practical applications.
           </div>
         </div>
+
+        <div class="publication-item bg-white p-4 rounded-lg shadow-sm pl-6">
+          <div class="flex justify-between items-start">
+            <h3 class="font-bold text-lg mb-1">Cell-Free Massive MIMO at Midband: Potentials and Risks</h3>
+            <span class="pub-tag conference-tag">Conference</span>
+          </div>
+          <p class="text-gray-600 mb-2">IEEE International Workshop on Signal Processing and Artificial Intelligence for Wireless Communications (SPAWC), 7-10 July 2025, Surrey (UK)</p>
+          <p class="text-gray-700 mb-2">
+            <span class="font-medium">Authors:</span> Felip Riera-Palou, Guillem Femenias, David López-Pérez, Nicola Piovesan, Antonio De Domenico
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <button type="button" class="text-blue-600 hover:text-blue-800 text-sm flex items-center" onclick="toggleAbstract('abstract2025spawc')">
+              <i class="fas fa-align-left mr-1"></i> Abstract
+            </button>
+            <a href="https://ieeexplore.ieee.org/abstract/document/11143273" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
+              <i class="fas fa-file-pdf mr-1"></i> Paper
+            </a>
+          </div>
+          <div id="abstract2025spawc" class="hidden mt-3 text-sm text-gray-600">
+This work addresses the exploitation of the midband frequency range (often called FR3) when deploying a cell-free massive MIMO (CF-mMIMO) network in a dense urban scenario. A multicarrier setup is considered where both bands, sub- 6 GHz and midband, can be leveraged. A user-to-band assignment is proposed that aims at matching the specific propagation environment each user is experiencing to the most appropriate transmission band. It has been found that the indoor/outdoor condition of any given user is a key attribute to take into account when managing the two bands efficiently.
+          </div>
+        </div>
+
+
         <div class="publication-item bg-white p-4 rounded-lg shadow-sm pl-6">
           <div class="flex justify-between items-start">
             <h3 class="font-bold text-lg mb-1">Capacity and Power Consumption of Multi-Layer 6G Networks Using the Upper Mid-Band</h3>
@@ -354,35 +439,14 @@
           </div>
         </div>
 
-        <div class="publication-item bg-white p-4 rounded-lg shadow-sm pl-6">
-          <div class="flex justify-between items-start">
-            <h3 class="font-bold text-lg mb-1">Modelling the 5G Energy Consumption using Real-world Data: Energy Fingerprint is All You Need</h3>
-            <span class="pub-tag preprint-tag">Preprint</span>
-          </div>
-          <p class="text-gray-600 mb-2">Submitted</p>
-          <p class="text-gray-700 mb-2">
-            <span class="font-medium">Authors:</span> Tingwei Chen, Yantao Wang, Hanzhi Chen, Zijian Zhao, Xinhao Li, Nicola Piovesan, Guangxu Zhu, Qingjiang Shi
-          </p>
-          <div class="flex flex-wrap gap-4">
-            <button type="button" class="text-blue-600 hover:text-blue-800 text-sm flex items-center" onclick="toggleAbstract('abstract6')">
-              <i class="fas fa-align-left mr-1"></i> Abstract
-            </button>
-            <a href="https://arxiv.org/abs/2406.16929" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-              <i class="fas fa-file-pdf mr-1"></i> Preprint
-            </a>
-          </div>
-          <div id="abstract6" class="hidden mt-3 text-sm text-gray-600">
-            The introduction of fifth-generation (5G) radio technology has revolutionized communications, bringing unprecedented automation, capacity, connectivity, and ultra-fast, reliable communications. However, this technological leap comes with a substantial increase in energy consumption, presenting a significant challenge. To improve the energy efficiency of 5G networks, it is imperative to develop sophisticated models that accurately reflect the influence of base station (BS) attributes and operational conditions on energy this http URL, addressing the complexity and interdependencies of these diverse features is particularly challenging, both in terms of data processing and model architecture design. This paper proposes a novel 5G base stations energy consumption modelling method by learning from a real-world dataset used in the ITU 5G Base Station Energy Consumption Modelling Challenge in which our model ranked second. Unlike existing methods that omit the Base Station Identifier (BSID) information and thus fail to capture the unique energy fingerprint in different base stations, we incorporate the BSID into the input features and encoding it with an embedding layer for precise representation. Additionally, we introduce a novel masked training method alongside an attention mechanism to further boost the model's generalization capabilities and accuracy. After evaluation, our method demonstrates significant improvements over existing models, reducing Mean Absolute Percentage Error (MAPE) from 12.75% to 4.98%, leading to a performance gain of more than 60%.
-          </div>
-        </div>
         <!-- Add more 2024 publications following the same pattern -->
 
         <div class="publication-item bg-white p-4 rounded-lg shadow-sm pl-6">
           <div class="flex justify-between items-start">
             <h3 class="font-bold text-lg mb-1">Optimal SSB Beam Planning and UAV Cell Selection for 5G Connectivity on Aerial Highways</h3>
-            <span class="pub-tag preprint-tag">Preprint</span>
+            <span class="pub-tag conference-tag">Conference</span>
           </div>
-          <p class="text-gray-600 mb-2">Submitted</p>
+          <p class="text-gray-600 mb-2">IEEE Global Communications Conference (GLOBECOM), 8-12 December 2024, Cape Town (South Africa)</p>
           <p class="text-gray-700 mb-2">
             <span class="font-medium">Authors:</span> Matteo Bernabè, David López-Pérez, Nicola Piovesan, Giovanni Geraci, David Gesbert
           </p>
@@ -390,6 +454,9 @@
             <button type="button" class="text-blue-600 hover:text-blue-800 text-sm flex items-center" onclick="toggleAbstract('abstract8')">
               <i class="fas fa-align-left mr-1"></i> Abstract
             </button>
+            <a href="https://ieeexplore.ieee.org/abstract/document/10901503" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
+              <i class="fas fa-file-pdf mr-1"></i> Paper
+            </a>
             <a href="https://arxiv.org/abs/2409.01812" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
               <i class="fas fa-file-pdf mr-1"></i> Preprint
             </a>
