@@ -55,15 +55,17 @@
   }
   </script>
   <style>
-  .profile-pic {
+.profile-pic {
     width: 220px;
     height: 220px;
     object-fit: cover;
-    border: 5px solid #fff;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    border: 5px solid rgba(255,255,255,0.9);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.18);
   }
+
   .talk-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08) !important;
   }
   .talk-card:hover {
     transform: translateY(-5px);
@@ -73,20 +75,30 @@
     border-top: 2px solid #e5e7eb;
     margin: 3rem 0;
   }
-  .publication-item {
-    border-left: 3px solid #3b82f6;
+  section{
+    scroll-margin-top: 70px;
+    }
+
+  /* Elevated cards on white background */
+  .publication-item, .patent-item {
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08) !important;
+    border-left: 3px solid #4a9ebe;
   }
+  .bg-white.p-6.rounded-lg {
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08) !important;
+  }
+  
   .patent-item {
-    border-left: 3px solid #10b981;
+    border-left: 3px solid #3a9e6e;
   }
   .award-item {
-    border-left: 3px solid #f59e0b;
+    border-left: 3px solid #c49a3c;
   }
   .news-item {
-    border-left: 3px solid #8b5cf6;
+    border-left: 3px solid #6a7fc1;
   }
   .service-item {
-    border-left: 3px solid #ec4899;
+    border-left: 3px solid #c4606a;
   }
   .nav-link {
     position: relative;
@@ -98,7 +110,7 @@
     height: 2px;
     bottom: -2px;
     left: 0;
-    background-color: #3b82f6;
+    background-color: #4a9ebe;
     transition: width 0.3s ease;
   }
   .nav-link:hover::after {
@@ -119,8 +131,8 @@
     color: #1E40AF;
   }
   .preprint-tag {
-    background-color: #FEF2F2;
-    color: #991B1B;
+    background-color: #f9e8e9;
+    color: #9e3a42;
   }
   .book-tag {
     background-color: #F5F3FF;
@@ -137,9 +149,9 @@
     text-underline-offset: 3px;
     transition: all 0.2s ease;
   }
-  .bio-link:hover {
-    color: #3b82f6; /* blue-500 */
-    text-decoration-color: #93c5fd; /* blue-300 */
+.bio-link:hover {
+    color: #4a9ebe;
+    text-decoration-color: #a8d8ea;
   }
   /* Responsive centering for smaller viewports */
   @media (max-width: 1024px) {
@@ -201,6 +213,26 @@
   .read-more-btn.expanded i {
     transform: rotate(180deg);
   }
+  /* Hero/Bio gradient */
+/* Full-width hero gradient band */
+.hero-band {
+background: linear-gradient(135deg, #daeef7 0%, #ffffff 50%, #dff2e6 100%);
+  padding: 2.5rem 0;
+  margin-bottom: 3rem;
+}
+#about {
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+  background: transparent;
+}
+#about .bio-content::after {
+  background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.6));
+}
+.read-more-btn { color: #4a9ebe; }
+.read-more-btn:hover { color: #357a96; }
+a.text-blue-600 { color: #4a9ebe !important; }
+a.text-blue-600:hover { color: #357a96 !important; }
   </style>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-H8WN74700N"></script>
@@ -213,17 +245,17 @@
   gtag('config', 'G-H8WN74700N');
   </script>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans">
-  <header class="bg-white shadow-sm">
+<body class="bg-white text-gray-800 font-sans">
+  <header class="bg-white shadow-sm sticky top-0 z-10">
     <div class="container mx-auto px-6 py-4">
       <div class="flex justify-between items-center">
-        <h1 class="text-2xl font-bold text-blue-600">Nicola Piovesan</h1>
+        <h1 class="text-2xl font-bold text-gray-800">Nicola Piovesan</h1>
         <nav class="hidden md:block">
           <ul class="flex space-x-8">
             <li><a href="#about" class="nav-link">About</a></li>
-            <li><a href="#publications" class="nav-link">Publications</a></li>
-            <li><a href="#talks" class="nav-link">Talks</a></li>
-            <li><a href="#patents" class="nav-link">Patents</a></li>
+            <li><a href="publications.html" class="nav-link">Publications</a></li>
+            <li><a href="talks.html" class="nav-link">Talks</a></li>
+            <li><a href="patents.html" class="nav-link">Patents</a></li>
             <li><a href="#other" class="nav-link">Other</a></li>
           </ul>
         </nav>
@@ -234,9 +266,10 @@
     </div>
   </header>
 
+<div class="hero-band">
   <main class="container mx-auto px-6 py-8">
     <!-- Profile Section -->
-    <section id="about" class="flex flex-col md:flex-row items-center md:items-start gap-8 mb-12">
+    <section id="about" class="flex flex-col md:flex-row items-center md:items-start gap-8 mb-12" style="scroll-margin-top: 200px;">
       <div class="flex-shrink-0 responsive-profile">
         <img src="https://www.nicolapiovesan.com/images/nicola3.jpg"
         alt="Dr. Researcher Name"
@@ -245,7 +278,7 @@
       <div class="flex-1">
         <div class="responsive-center">
           <h2 class="text-3xl font-bold mb-2">Nicola Piovesan, PhD</h2>
-          <p class="text-xl text-gray-600 mb-4 responsive-center">Senior Researcher</p>
+          <p class="text-xl text-gray-600 mb-4 responsive-center">Senior Researcher at HUAWEI</p>
 
           <div class="flex space-x-4 mb-6 responsive-stack">
             <a href="https://www.linkedin.com/in/nicolapiovesan/" target="_blank" class="text-gray-700 hover:text-blue-700 text-2xl" title="LinkedIn">
@@ -294,7 +327,10 @@
         </div>
       </section>
 
-      <div class="section-divider"></div>
+        </main>
+</div>
+
+<main class="container mx-auto px-6 py-8">
 
       <!-- Publications Section -->
       <section id="publications" class="mb-12">
@@ -306,78 +342,49 @@
         </div>
 
         <div class="space-y-4">
-          <div class="publication-item bg-white p-4 rounded-lg shadow-sm pl-6">
-            <div class="flex justify-between items-start">
-              <h3 class="font-bold text-lg mb-1">Reasoning Language Models for Root Cause Analysis in 5G Wireless Networks</h3>
-              <span class="pub-tag preprint-tag">Preprint</span>
-            </div>
-            <p class="text-gray-600 mb-2">Submitted</p>
-            <p class="text-gray-700 mb-2">
-              <span class="font-medium">Authors:</span> Mohamed Sana, Nicola Piovesan, Antonio De Domenico, Yibin Kang, Haozhe Zhang, Merouane Debbah, Fadhel Ayed
-            </p>
-            <div class="flex flex-wrap gap-4">
-              <button type="button" class="text-blue-600 hover:text-blue-800 text-sm flex items-center" onclick="toggleAbstract('abstract2025telelogs')">
-                <i class="fas fa-align-left mr-1"></i> Abstract
-              </button>
-              <a href="https://arxiv.org/abs/2507.21974" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-                <i class="fas fa-file-pdf mr-1"></i> Preprint
-              </a>
-              <a href="https://huggingface.co/datasets/netop/TeleLogs" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-                <i class="fas fa-database mr-1"></i> Dataset
-              </a>
-            </div>
-            <div id="abstract2025telelogs" class="hidden mt-3 text-sm text-gray-600">
-              Root Cause Analysis (RCA) in mobile networks remains a challenging task due to the need for interpretability, domain expertise, and causal reasoning. In this work, we propose a lightweight framework that leverages Large Language Models (LLMs) for RCA. To do so, we introduce TeleLogs, a curated dataset of annotated troubleshooting problems designed to benchmark RCA capabilities. Our evaluation reveals that existing open-source reasoning LLMs struggle with these problems, underscoring the need for domain-specific adaptation. To address this issue, we propose a two-stage training methodology that combines supervised fine-tuning with reinforcement learning to improve the accuracy and reasoning quality of LLMs. The proposed approach fine-tunes a series of RCA models to integrate domain knowledge and generate structured, multi-step diagnostic explanations, improving both interpretability and effectiveness. Extensive experiments across multiple LLM sizes show significant performance gains over state-of-the-art reasoning and non-reasoning models, including strong generalization to randomized test variants. These results demonstrate the promise of domain-adapted, reasoning-enhanced LLMs for practical and explainable RCA in network operation and management.
-            </div>
-          </div>
-
-          <div class="publication-item bg-white p-4 rounded-lg shadow-sm pl-6">
-            <div class="flex justify-between items-start">
-              <h3 class="font-bold text-lg mb-1">TeleMath: A Benchmark for Large Language Models in Telecom Mathematical Problem Solving</h3>
-              <span class="pub-tag preprint-tag">Preprint</span>
-            </div>
-            <p class="text-gray-600 mb-2">Submitted</p>
-            <p class="text-gray-700 mb-2">
-              <span class="font-medium">Authors:</span> Vincenzo Colle, Mohamed Sana, Nicola Piovesan, Antonio De Domenico, Fadhel Ayed, Merouane Debbah
-            </p>
-            <div class="flex flex-wrap gap-4">
-              <button type="button" class="text-blue-600 hover:text-blue-800 text-sm flex items-center" onclick="toggleAbstract('abstract2025telemath')">
-                <i class="fas fa-align-left mr-1"></i> Abstract
-              </button>
-              <a href="https://arxiv.org/abs/2506.10674" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-                <i class="fas fa-file-pdf mr-1"></i> Preprint
-              </a>
-              <a href="https://huggingface.co/datasets/netop/TeleMath" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-                <i class="fas fa-database mr-1"></i> Dataset
-              </a>
-            </div>
-            <div id="abstract2025telemath" class="hidden mt-3 text-sm text-gray-600">
-              The increasing adoption of artificial intelligence in telecommunications has raised interest in the capability of Large Language Models (LLMs) to address domain-specific, mathematically intensive tasks. Although recent advancements have improved the performance of LLMs in general mathematical reasoning, their effectiveness within specialized domains, such as signal processing, network optimization, and performance analysis, remains largely unexplored. To address this gap, we introduce TeleMath, the first benchmark dataset specifically designed to evaluate LLM performance in solving mathematical problems with numerical solutions in the telecommunications domain. Comprising 500 question-answer (QnA) pairs, TeleMath covers a wide spectrum of topics in the telecommunications field. This paper outlines the proposed QnAs generation pipeline, starting from a selected seed of problems crafted by Subject Matter Experts. The evaluation of a wide range of open-source LLMs reveals that best performance on TeleMath is achieved by recent models explicitly designed for mathematical or logical reasoning. In contrast, general-purpose models, even those with a large number of parameters, often struggle with these challenges. We have released the dataset and the evaluation code to ease result reproducibility and support future research.
-            </div>
-          </div>
-
-          <!--<div class="publication-item bg-white p-4 rounded-lg shadow-sm pl-6">
+         <div class="publication-item bg-white p-4 rounded-lg shadow-sm pl-6">
           <div class="flex justify-between items-start">
-          <h3 class="font-bold text-lg mb-1">Telco-RAG: Navigating the Challenges of Retrieval-Augmented Language Models for Telecommunications</h3>
-          <span class="pub-tag conference-tag">Conference</span>
+            <h3 class="font-bold text-lg mb-1">Capacity and Energy Trade-Offs in FR3 6G Networks Using Real Deployment Data</h3>
+            <span class="pub-tag preprint-tag">Preprint</span>
+          </div>
+          <p class="text-gray-700 mb-2">
+            <span class="font-medium">Authors:</span> David López-Pérez, Nicola Piovesan, Matteo Bernabè
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <button type="button" class="text-[#4a9ebe] hover:text-[#357a96] text-sm flex items-center" onclick="toggleAbstract('abstract2026capacity')">
+              <i class="fas fa-align-left mr-1"></i> Abstract
+            </button>
+            <a href="https://arxiv.org/abs/2601.13993" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
+              <i class="fas fa-file-pdf mr-1"></i> Preprint
+            </a>
+          </div>
+          <div id="abstract2026capacity" class="hidden mt-3 text-sm text-gray-600">
+            This article presents a data-driven system-level analysis of multi-layer 6G networks operating in the upper mid-band (FR3: 7-24 GHz). Unlike most prior studies based on 3rd Generation Partnership Project (3GPP) templates, we leverage real-world deployment and traffic data from a commercial 4G/5G network in China to evaluate practical 6G strategies. Using Giulia-a deployment-informed system-level heterogeneous network model-we show that 6G can boost median throughput by up to 9.5x over heterogeneous 4G+5G deployments, but also increases power usage by up to 59%. Critically, co-locating 6G with existing sites delivers limited gains while incurring high energy cost. In contrast, non-co-located, traffic-aware deployments achieve superior throughput-to-watt efficiency, highlighting the need for strategic, user equipment (UE) hotspot-focused 6G planning.
+          </div>
         </div>
-        <p class="text-gray-600 mb-2">IEEE Global Communications Conference (GLOBECOM), 8-12 December 2024, Cape Town (South Africa)</p>
-        <p class="text-gray-700 mb-2">
-        <span class="font-medium">Authors:</span> Andrei-Laurentiu Bornea, Fadhel Ayed, Antonio De Domenico, Nicola Piovesan, Ali Maatouk
-      </p>
-      <div class="flex flex-wrap gap-4">
-      <a href="https://arxiv.org/abs/2404.15939" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-      <i class="fas fa-file-pdf mr-1"></i> Preprint
-    </a>
-    <button type="button" class="text-blue-600 hover:text-blue-800 text-sm flex items-center" onclick="toggleAbstract('abstract4')">
-    <i class="fas fa-align-left mr-1"></i> Abstract
-  </button>
-</div>
-<div id="abstract4" class="hidden mt-3 text-sm text-gray-600">
-The application of Large Language Models (LLMs) and Retrieval-Augmented Generation (RAG) systems in the telecommunication domain presents unique challenges, primarily due to the complex nature of telecom standard documents and the rapid evolution of the field. The paper introduces and open-sources Telco-RAG, a customized RAG framework designed to handle the specific needs of telecommunications standards, particularly 3rd Generation Partnership Project (3GPP) documents. Telco-RAG addresses the critical challenges of implementing a RAG pipeline on highly technical content, paving the way for applying LLMs in telecommunications and offering guidelines for RAG implementation in other technical domains.
-</div>
-</div>
-</div>-->
+      <div class="publication-item bg-white p-4 rounded-lg shadow-sm pl-6">
+          <div class="flex justify-between items-start">
+            <h3 class="font-bold text-lg mb-1">TeleTables: A Benchmark for Large Language Models in Telecom Table Interpretation</h3>
+            <span class="pub-tag preprint-tag">Preprint</span>
+          </div>
+          <p class="text-gray-700 mb-2">
+            <span class="font-medium">Authors:</span> Anas Ezzakri, Nicola Piovesan, Mohamed Sana, Antonio De Domenico, Fadhel Ayed, Haozhe Zhang
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <button type="button" class="text-[#4a9ebe] hover:text-[#357a96] text-sm flex items-center" onclick="toggleAbstract('abstract2026teletables')">
+              <i class="fas fa-align-left mr-1"></i> Abstract
+            </button>
+            <a href="https://arxiv.org/abs/2601.04202" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
+              <i class="fas fa-file-pdf mr-1"></i> Preprint
+            </a>
+            <a href="https://huggingface.co/datasets/netop/TeleTables" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
+              <i class="fas fa-database mr-1"></i> Dataset
+            </a>
+          </div>
+          <div id="abstract2026teletables" class="hidden mt-3 text-sm text-gray-600">
+            Language Models (LLMs) are increasingly explored in the telecom industry to support engineering tasks, accelerate troubleshooting, and assist in interpreting complex technical documents. However, recent studies show that LLMs perform poorly on telecom standards, particularly 3GPP specifications. We argue that a key reason is that these standards densely include tables to present essential information, yet the LLM knowledge and interpretation ability of such tables remains largely unexamined. To address this gap, we introduce TeleTables, a benchmark designed to evaluate both the implicit knowledge LLMs have about tables in technical specifications and their explicit ability to interpret them. TeleTables is built through a novel multi-stage data generation pipeline that extracts tables from 3GPP standards and uses multimodal and reasoning-oriented LLMs to generate and validate questions. The resulting dataset, which is publicly available, comprises 500 human-verified question-answer pairs, each associated with the corresponding table in multiple formats. Our evaluation shows that, smaller models (under 10B parameters) struggle both to recall 3GPP knowledge and to interpret tables, indicating the limited exposure to telecom standards in their pretraining and the insufficient inductive biases for navigating complex technical material. Larger models, on the other hand, show stronger reasoning on table interpretation. Overall, TeleTables highlights the need for domain-specialized fine-tuning to reliably interpret and reason over telecom standards.
+          </div>
+        </div>
 </section>
 
 <div class="section-divider"></div>
@@ -402,7 +409,7 @@ The application of Large Language Models (LLMs) and Retrieval-Augmented Generati
           <h3 class="font-bold text-lg mb-2">Advancing Network Automation through Multi-Agent Large Language Models</h3>
           <p class="text-gray-600 text-sm mb-2">ITU AI for Good Global Summit</p>
           <div class="flex justify-between items-center text-sm">
-            <span class="text-blue-600">See event →</span>
+            <span style="color: #4a9ebe">See event →</span>
             <span class="text-gray-500">July 2025</span>
           </div>
         </div>
@@ -418,7 +425,7 @@ The application of Large Language Models (LLMs) and Retrieval-Augmented Generati
           <h3 class="font-bold text-lg mb-2">Network Modelling and Optimization for the 6G Era: Human Expertise Meets AI</h3>
           <p class="text-gray-600 text-sm mb-2">Abu Dhabi 6G summit</p>
           <div class="flex justify-between items-center text-sm">
-            <span class="text-blue-600">Watch video →</span>
+            <span style="color: #4a9ebe">Watch video →</span>
             <span class="text-gray-500">November 2024</span>
           </div>
         </div>
@@ -434,7 +441,7 @@ The application of Large Language Models (LLMs) and Retrieval-Augmented Generati
           <h3 class="font-bold text-lg mb-2">AI/ML for 5G-Energy Consumption Modelling</h3>
           <p class="text-gray-600 text-sm mb-2">ITU AI for Good</p>
           <div class="flex justify-between items-center text-sm">
-            <span class="text-blue-600">Watch video →</span>
+            <span style="color: #4a9ebe">Watch video →</span>
             <span class="text-gray-500">June 2023</span>
           </div>
         </div>
@@ -445,11 +452,11 @@ The application of Large Language Models (LLMs) and Retrieval-Augmented Generati
 <div class="section-divider"></div>
 
 <!-- Upcoming Talks Section -->
-<section id="upcoming-talks" class="mb-12">
+<!--<section id="upcoming-talks" class="mb-12">
   <h2 class="text-2xl font-bold mb-6">Upcoming Talks & Events</h2>
 
   <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-    <div class="bg-white p-6 rounded-lg shadow-sm border-l-4 border-blue-500">
+    <div class="bg-white p-6 rounded-lg shadow-sm border-l-4 border-[#4a9ebe]">
       <div class="flex justify-between items-start mb-2">
         <h3 class="font-bold text-lg">Agentic AI: Unlocking the Next Generation of Network Automation </h3>
       </div>
@@ -460,7 +467,6 @@ The application of Large Language Models (LLMs) and Retrieval-Augmented Generati
         <i class="fas fa-map-marker-alt ml-4 mr-2"></i>
         <span>Taipei, Taiwan</span>
       </div>
-      <!--<p class="text-gray-700 mb-3">Talk on "AI-Driven Network Optimization for 6G"</p>-->
       <a href="https://globecom2025.ieee-globecom.org/program/industry-presentation" target="_blank "class="text-blue-600 hover:text-blue-800 text-sm inline-block">
         Event website →
       </a>
@@ -468,7 +474,7 @@ The application of Large Language Models (LLMs) and Retrieval-Augmented Generati
 
 
 
-      <div class="bg-white p-6 rounded-lg shadow-sm border-l-4 border-blue-500">
+      <div class="bg-white p-6 rounded-lg shadow-sm border-l-4 border-[#4a9ebe]">
         <div class="flex justify-between items-start mb-2">
           <h3 class="font-bold text-lg">From Lab to Market: What Commercial 6G Will Be?</h3>
         </div>
@@ -480,7 +486,6 @@ The application of Large Language Models (LLMs) and Retrieval-Augmented Generati
           <i class="fas fa-map-marker-alt ml-4 mr-2"></i>
           <span>Taipei, Taiwan</span>
         </div>
-        <!--<p class="text-gray-700 mb-3">Talk on "AI-Driven Network Optimization for 6G"</p>-->
         <a href="https://globecom2025.ieee-globecom.org/tutorials#TU-21" target="_blank "class="text-blue-600 hover:text-blue-800 text-sm inline-block">
           Event website →
         </a>
@@ -489,14 +494,9 @@ The application of Large Language Models (LLMs) and Retrieval-Augmented Generati
 
 </div>
 
-<!--<div class="text-center mt-6">
-<a href="talks.html#upcoming" class="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center">
-View all upcoming events <i class="fas fa-arrow-right ml-2"></i>
-</a>
-</div>-->
-</section>
+</section> 
 
-<div class="section-divider"></div>
+<div class="section-divider"></div> -->
 
 <!-- Patents Section -->
 <section id="patents" class="mb-12">
@@ -512,7 +512,6 @@ View all upcoming events <i class="fas fa-arrow-right ml-2"></i>
       <div class="patent-item bg-white p-4 rounded-lg shadow-sm pl-6">
         <div class="flex justify-between items-start">
           <h3 class="font-bold text-lg mb-1">A device and method for evaluating generative artificial intelligence models</h3>
-          <span class="pub-tag international-tag">Filed</span>
         </div>
         <p class="text-gray-600 mb-2">PCT/EP2025/063678 • Filed: May 19, 2025</p>
         <p class="text-gray-700 mb-2">
@@ -525,7 +524,6 @@ View all upcoming events <i class="fas fa-arrow-right ml-2"></i>
       <div class="patent-item bg-white p-4 rounded-lg shadow-sm pl-6">
         <div class="flex justify-between items-start">
           <h3 class="font-bold text-lg mb-1">Devices and methods for energy saving and energy source scheduling in cellular networks</h3>
-          <span class="pub-tag international-tag">Filed</span>
         </div>
         <p class="text-gray-600 mb-2">PCT/CN2025/076717 • Filed: Feb 10, 2025</p>
         <p class="text-gray-700 mb-2">
@@ -547,7 +545,7 @@ View all upcoming events <i class="fas fa-arrow-right ml-2"></i>
     <!-- Awards -->
     <div class="bg-white p-6 rounded-lg shadow-sm">
       <h3 class="font-bold text-lg mb-4 flex items-center">
-        <i class="fas fa-award text-yellow-500 mr-2"></i> Awards
+        <i class="fas fa-award text-[#c49a3c] mr-2"></i> Awards
       </h3>
       <div class="space-y-4">
         <div class="award-item pl-4">
@@ -571,7 +569,7 @@ View all upcoming events <i class="fas fa-arrow-right ml-2"></i>
   <!-- News -->
   <div class="bg-white p-6 rounded-lg shadow-sm">
     <h3 class="font-bold text-lg mb-4 flex items-center">
-      <i class="fas fa-newspaper text-purple-500 mr-2"></i> News
+      <i class="fas fa-newspaper text-[#6a7fc1] mr-2"></i> News
     </h3>
     <div class="space-y-4">
       <div class="news-item pl-4">
@@ -588,7 +586,7 @@ View all upcoming events <i class="fas fa-arrow-right ml-2"></i>
 <!-- Service -->
 <div class="bg-white p-6 rounded-lg shadow-sm">
   <h3 class="font-bold text-lg mb-4 flex items-center">
-    <i class="fas fa-users text-pink-500 mr-2"></i> Service
+    <i class="fas fa-users text-[#c4606a] mr-2"></i> Service
   </h3>
   <div class="space-y-4">
     <div class="service-item pl-4">
@@ -610,9 +608,9 @@ View all upcoming events <i class="fas fa-arrow-right ml-2"></i>
 </section>
 </main>
 
-<footer class="bg-gray-100 py-8">
+<footer class="bg-gray-10 py-8">
   <div class="mt-8 pt-6 border-t border-gray-200 text-center text-gray-500 text-sm">
-    <p>© 2025 Nicola Piovesan. All rights reserved.</p>
+    <p>© 2026 Nicola Piovesan. All rights reserved.</p>
   </div>
 </div>
 </footer>

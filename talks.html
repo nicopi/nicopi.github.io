@@ -40,20 +40,28 @@
   }
   </script>
   <style>
-  .publication-item {
-    border-left: 3px solid #3b82f6;
+   .publication-item, .patent-item {
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08) !important;
+    border-left: 3px solid #4a9ebe;
+  }
+  .bg-white.p-6.rounded-lg {
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08) !important;
   }
   .patent-item {
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08) !important;
     border-left: 3px solid #10b981;
   }
   .talk-item {
-    border-left: 3px solid #8b5cf6;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08) !important;
+    border-left: 3px solid #4a9ebe;
   }
-  .tutorial-item {
-    border-left: 3px solid #ec4899;
+.tutorial-item {
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08) !important;
+    border-left: 3px solid #6a7fc1;
   }
-  .panel-item {
-    border-left: 3px solid #f59e0b;
+.panel-item {
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08) !important;
+    border-left: 3px solid #c49a3c;
   }
   .year-divider {
     position: relative;
@@ -94,9 +102,34 @@
     color: #9D174D;
   }
   .panel-tag {
-    background-color: #FEF3C7;
-    color: #92400E;
+    background-color: #fdf5e0;
+    color: #8a6a1a;
   }
+      .nav-link {
+    position: relative;
+  }
+      .nav-link-sel {
+    position: relative;
+    color: #4a9ebe;
+    font-weight: bold;
+  }
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #4a9ebe;
+    transition: width 0.3s ease;
+  }
+  .nav-link:hover::after {
+    width: 100%;
+  }
+  .read-more-btn { color: #4a9ebe; }
+.read-more-btn:hover { color: #357a96; }
+a.text-blue-600 { color: #4a9ebe !important; }
+a.text-blue-600:hover { color: #357a96 !important; }
   </style>
 
   <!-- Google tag (gtag.js) -->
@@ -109,18 +142,18 @@
   gtag('config', 'G-H8WN74700N');
   </script>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans">
+<body class="bg-white text-gray-800 font-sans">
   <header class="bg-white shadow-sm sticky top-0 z-10">
     <div class="container mx-auto px-6 py-4">
       <div class="flex justify-between items-center">
-        <h1 class="text-2xl font-bold text-blue-600">Nicola Piovesan</h1>
+        <h1 class="text-2xl font-bold text-gray-800">Nicola Piovesan</h1>
         <nav class="hidden md:block">
           <ul class="flex space-x-8">
-            <li><a href="index.html" class="text-gray-600 hover:text-blue-600">Home</a></li>
-            <li><a href="index.html#about" class="text-gray-600 hover:text-blue-600">About</a></li>
-            <li><a href="index.html#publications" class="text-gray-600 hover:text-blue-600">Publications</a></li>
-            <li><a href="talks.html" class="text-blue-600 font-medium">Talks</a></li>
-            <li><a href="patents.html" class="text-gray-600 hover:text-blue-600">Patents</a></li>
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="index.html#about" class="nav-link">About</a></li>
+            <li><a href="publications.html" class="nav-link">Publications</a></li>
+            <li><a href="talks.html" class="nav-link-sel">Talks</a></li>
+            <li><a href="patents.html" class="nav-link">Patents</a></li>
           </ul>
         </nav>
         <button class="md:hidden focus:outline-none">
@@ -144,7 +177,6 @@
         <div class="talk-item bg-white p-4 rounded-lg shadow-sm pl-6">
           <div class="flex justify-between items-start">
             <h3 class="font-bold text-lg mb-1">Agentic AI: Unlocking the Next Generation of Network Automation </h3>
-            <span class="event-tag talk-tag">Talk</span>
           </div>
           <p class="text-gray-600 mb-2"><i>IEEE Globecom Industry Presentation</i></p>
           <p class="flex items-center text-gray-500 text-sm mb-3">
@@ -160,7 +192,6 @@
         <div class="talk-item bg-white p-4 rounded-lg shadow-sm pl-6">
           <div class="flex justify-between items-start">
             <h3 class="font-bold text-lg mb-1">Advancing Network Automation through Multi-Agent Large Language Models</h3>
-            <span class="event-tag talk-tag">Talk</span>
           </div>
           <p class="text-gray-600 mb-2"><i>AI for Good Global Summit</i></p>
           <p class="flex items-center text-gray-500 text-sm mb-3">
@@ -177,7 +208,6 @@
         <div class="talk-item bg-white p-4 rounded-lg shadow-sm pl-6">
           <div class="flex justify-between items-start">
             <h3 class="font-bold text-lg mb-1">The Role of AI and Large Language Models in Future Wireless Networks</h3>
-            <span class="event-tag talk-tag">Talk</span>
           </div>
           <p class="text-gray-600 mb-2"><i>Summer School on advanced topics in 5G/6G Communication</i></p>
           <p class="flex items-center text-gray-500 text-sm mb-3">
@@ -189,7 +219,6 @@
         <div class="talk-item bg-white p-4 rounded-lg shadow-sm pl-6">
           <div class="flex justify-between items-start">
             <h3 class="font-bold text-lg mb-1">The Role of AI and Large Language Models in Future Telecom Networks</h3>
-            <span class="event-tag talk-tag">Talk</span>
           </div>
           <p class="text-gray-600 mb-2"><i>Invited Talk</i></p>
           <p class="flex items-center text-gray-500 text-sm mb-3">
@@ -201,7 +230,6 @@
         <div class="talk-item bg-white p-4 rounded-lg shadow-sm pl-6">
           <div class="flex justify-between items-start">
             <h3 class="font-bold text-lg mb-1">Advancing Network Optimization: Bridging Human Expertise and AI in the 6G Era</h3>
-            <span class="event-tag talk-tag">Talk</span>
           </div>
           <p class="text-gray-600 mb-2"><i>Advanced Wireless Communications Seminars</i></p>
           <p class="flex items-center text-gray-500 text-sm mb-3">
@@ -214,7 +242,6 @@
         <div class="talk-item bg-white p-4 rounded-lg shadow-sm pl-6">
           <div class="flex justify-between items-start">
             <h3 class="font-bold text-lg mb-1">Data-driven Modelling and Optimization of Green Future Mobile Networks</h3>
-            <span class="event-tag talk-tag">Talk</span>
           </div>
           <p class="text-gray-600 mb-2"><i>IEEE Globecom Industry Presentation</i></p>
           <p class="flex items-center text-gray-500 text-sm mb-3">
@@ -231,7 +258,6 @@
         <div class="talk-item bg-white p-4 rounded-lg shadow-sm pl-6">
           <div class="flex justify-between items-start">
             <h3 class="font-bold text-lg mb-1">Network Modelling and Optimization for the 6G Era: Human Expertise Meets AI</h3>
-            <span class="event-tag talk-tag">Talk</span>
           </div>
           <p class="text-gray-600 mb-2"><i>Abu Dhabi 6G summit</i></p>
           <p class="flex items-center text-gray-500 text-sm mb-3">
@@ -251,7 +277,6 @@
         <div class="talk-item bg-white p-4 rounded-lg shadow-sm pl-6">
           <div class="flex justify-between items-start">
             <h3 class="font-bold text-lg mb-1">Green Energy and Traffic Forecasting using AI/ML Challenge Launch</h3>
-            <span class="event-tag talk-tag">Talk</span>
           </div>
           <p class="text-gray-600 mb-2"><i>ITU AI for Good</i></p>
           <p class="flex items-center text-gray-500 text-sm mb-3">
@@ -271,7 +296,6 @@
         <div class="talk-item bg-white p-4 rounded-lg shadow-sm pl-6">
           <div class="flex justify-between items-start">
             <h3 class="font-bold text-lg mb-1">Data-driven Network Optimization</h3>
-            <span class="event-tag talk-tag">Talk</span>
           </div>
           <p class="text-gray-600 mb-2"><i>Summer School on advanced topics in 5G-6G Communications</i></p>
           <p class="flex items-center text-gray-500 text-sm mb-3">
@@ -288,7 +312,6 @@
         <div class="talk-item bg-white p-4 rounded-lg shadow-sm pl-6">
           <div class="flex justify-between items-start">
             <h3 class="font-bold text-lg mb-1">Data-Driven Modelling and Optimization of Green Future Mobile Networks</h3>
-            <span class="event-tag talk-tag">Talk</span>
           </div>
           <p class="text-gray-600 mb-2"><i>ITU AI for Good Global Summit - Session on Green AI: Sustainability, AI and 6G</i></p>
           <p class="flex items-center text-gray-500 text-sm mb-3">
@@ -305,7 +328,6 @@
         <div class="talk-item bg-white p-4 rounded-lg shadow-sm pl-6">
           <div class="flex justify-between items-start">
             <h3 class="font-bold text-lg mb-1">Launch of Green Telecom Competition on Smart Energy Supply Scheduling</h3>
-            <span class="event-tag talk-tag">Talk</span>
           </div>
           <p class="text-gray-600 mb-2"><i>ITU AI for Good Global Summit - Session on AI for the future of climate prediction</i></p>
           <p class="flex items-center text-gray-500 text-sm mb-3">
@@ -322,7 +344,6 @@
         <div class="talk-item bg-white p-4 rounded-lg shadow-sm pl-6">
           <div class="flex justify-between items-start">
             <h3 class="font-bold text-lg mb-1">Enhancing 5G Networks with AI: A Journey from Data Analytics to Large Language Models</h3>
-            <span class="event-tag talk-tag">Talk</span>
           </div>
           <p class="text-gray-600 mb-2"><i>Advanced Wireless Communications Seminars</i></p>
           <p class="flex items-center text-gray-500 text-sm mb-3">
@@ -335,7 +356,6 @@
         <div class="talk-item bg-white p-4 rounded-lg shadow-sm pl-6">
           <div class="flex justify-between items-start">
             <h3 class="font-bold text-lg mb-1">5G-Energy Consumption Modelling: AI/ML solutions for Climate Change</h3>
-            <span class="event-tag talk-tag">Talk</span>
           </div>
           <p class="text-gray-600 mb-2"><i>ITU AI for Good</i></p>
           <p class="flex items-center text-gray-500 text-sm mb-3">
@@ -355,7 +375,6 @@
         <div class="talk-item bg-white p-4 rounded-lg shadow-sm pl-6">
           <div class="flex justify-between items-start">
             <h3 class="font-bold text-lg mb-1">A Journey Towards Energy Efficiency: Exploring Machine Learning Models for Mobile Network Optimization</h3>
-            <span class="event-tag talk-tag">Talk</span>
           </div>
           <p class="text-gray-600 mb-2"><i>Invited Talk</i></p>
           <p class="flex items-center text-gray-500 text-sm mb-3">
@@ -367,7 +386,6 @@
         <div class="talk-item bg-white p-4 rounded-lg shadow-sm pl-6">
           <div class="flex justify-between items-start">
             <h3 class="font-bold text-lg mb-1">AI/ML for 5G-Energy Consumption Modelling</h3>
-            <span class="event-tag talk-tag">Talk</span>
           </div>
           <p class="text-gray-600 mb-2"><i>ITU AI for Good</i></p>
           <p class="flex items-center text-gray-500 text-sm mb-3">
@@ -387,7 +405,6 @@
         <div class="talk-item bg-white p-4 rounded-lg shadow-sm pl-6">
           <div class="flex justify-between items-start">
             <h3 class="font-bold text-lg mb-1">Machine Learning for Green Future Mobile Networks</h3>
-            <span class="event-tag talk-tag">Talk</span>
           </div>
           <p class="text-gray-600 mb-2"><i>Advanced Wireless Communications Seminars</i></p>
           <p class="flex items-center text-gray-500 text-sm mb-3">
@@ -400,7 +417,6 @@
         <div class="talk-item bg-white p-4 rounded-lg shadow-sm pl-6">
           <div class="flex justify-between items-start">
             <h3 class="font-bold text-lg mb-1">Machine Learning and Analytical Power Consumption Models for 5G Base Stations</h3>
-            <span class="event-tag talk-tag">Talk</span>
           </div>
           <p class="text-gray-600 mb-2"><i>Next Generation Mobile Networks (NGMN) Green Future Networks</i></p>
           <p class="flex items-center text-gray-500 text-sm mb-3">
@@ -412,7 +428,6 @@
         <div class="talk-item bg-white p-4 rounded-lg shadow-sm pl-6">
           <div class="flex justify-between items-start">
             <h3 class="font-bold text-lg mb-1">Forecasting Mobile Traffic to Achieve Greener 5G Networks: When Machine Learning is Key</h3>
-            <span class="event-tag talk-tag">Talk</span>
           </div>
           <p class="text-gray-600 mb-2"><i>Huawei AI forum</i></p>
           <p class="flex items-center text-gray-500 text-sm mb-3">
@@ -424,7 +439,6 @@
         <div class="talk-item bg-white p-4 rounded-lg shadow-sm pl-6">
           <div class="flex justify-between items-start">
             <h3 class="font-bold text-lg mb-1">European Training Networks: My experience</h3>
-            <span class="event-tag talk-tag">Talk</span>
           </div>
           <p class="text-gray-600 mb-2"><i>WindMill kickoff school</i></p>
           <p class="flex items-center text-gray-500 text-sm mb-3">
@@ -436,7 +450,6 @@
         <div class="talk-item bg-white p-4 rounded-lg shadow-sm pl-6">
           <div class="flex justify-between items-start">
             <h3 class="font-bold text-lg mb-1">Energy-aware network control</h3>
-            <span class="event-tag talk-tag">Talk</span>
           </div>
           <p class="text-gray-600 mb-2"><i>SoftCom 2019</i></p>
           <p class="flex items-center text-gray-500 text-sm mb-3">
@@ -448,7 +461,6 @@
         <div class="talk-item bg-white p-4 rounded-lg shadow-sm pl-6">
           <div class="flex justify-between items-start">
             <h3 class="font-bold text-lg mb-1">Network resource allocation policies with energy transfer capabilities: Latest research results and future steps</h3>
-            <span class="event-tag talk-tag">Talk</span>
           </div>
           <p class="text-gray-600 mb-2"><i>SCAVENGE workshop</i></p>
           <p class="flex items-center text-gray-500 text-sm mb-3">
@@ -460,7 +472,6 @@
         <div class="talk-item bg-white p-4 rounded-lg shadow-sm pl-6">
           <div class="flex justify-between items-start">
             <h3 class="font-bold text-lg mb-1">Network resource allocation policies with energy transfer capabilities</h3>
-            <span class="event-tag talk-tag">Talk</span>
           </div>
           <p class="text-gray-600 mb-2"><i>1st CTTC Workshop</i></p>
           <p class="flex items-center text-gray-500 text-sm mb-3">
@@ -472,7 +483,6 @@
         <div class="talk-item bg-white p-4 rounded-lg shadow-sm pl-6">
           <div class="flex justify-between items-start">
             <h3 class="font-bold text-lg mb-1">SCAVENGE: a European Training Network for PhD students</h3>
-            <span class="event-tag talk-tag">Talk</span>
           </div>
           <p class="text-gray-600 mb-2"><i>Science week 2017</i></p>
           <p class="flex items-center text-gray-500 text-sm mb-3">
@@ -484,7 +494,6 @@
         <div class="talk-item bg-white p-4 rounded-lg shadow-sm pl-6">
           <div class="flex justify-between items-start">
             <h3 class="font-bold text-lg mb-1">Network resource allocation policies with energy transfer capabilities</h3>
-            <span class="event-tag talk-tag">Talk</span>
           </div>
           <p class="text-gray-600 mb-2"><i>SCAVENGE mid-term review</i></p>
           <p class="flex items-center text-gray-500 text-sm mb-3">
@@ -496,7 +505,6 @@
         <div class="talk-item bg-white p-4 rounded-lg shadow-sm pl-6">
           <div class="flex justify-between items-start">
             <h3 class="font-bold text-lg mb-1">Optimal energy conservation policies for self-sustainable Small Cells</h3>
-            <span class="event-tag talk-tag">Talk</span>
           </div>
           <p class="text-gray-600 mb-2"><i>SCAVENGE workshop</i></p>
           <p class="flex items-center text-gray-500 text-sm mb-3">
@@ -508,7 +516,6 @@
         <div class="talk-item bg-white p-4 rounded-lg shadow-sm pl-6">
           <div class="flex justify-between items-start">
             <h3 class="font-bold text-lg mb-1">Presentation of the SCAVENGE ESR-05</h3>
-            <span class="event-tag talk-tag">Talk</span>
           </div>
           <p class="text-gray-600 mb-2"><i>SCAVENGE initial training school</i></p>
           <p class="flex items-center text-gray-500 text-sm mb-3">
@@ -520,7 +527,6 @@
         <div class="talk-item bg-white p-4 rounded-lg shadow-sm pl-6">
           <div class="flex justify-between items-start">
             <h3 class="font-bold text-lg mb-1">Data analytics for Smart Parking Applications</h3>
-            <span class="event-tag talk-tag">Talk</span>
           </div>
           <p class="text-gray-600 mb-2"><i>DEI Awards</i></p>
           <p class="flex items-center text-gray-500 text-sm mb-3">
@@ -534,7 +540,6 @@
         <div class="tutorial-item bg-white p-4 rounded-lg shadow-sm pl-6">
           <div class="flex justify-between items-start">
             <h3 class="font-bold text-lg mb-1">From Lab to Market: What Commercial 6G Will Be?</h3>
-            <span class="event-tag tutorial-tag">Tutorial</span>
           </div>
           <p class="text-gray-600 mb-2"><i>IEEE Global Communications Conference (GLOBECOM)</i></p>
           <p class="text-gray-700 mb-2">
@@ -553,7 +558,6 @@
         <div class="tutorial-item bg-white p-4 rounded-lg shadow-sm pl-6">
           <div class="flex justify-between items-start">
             <h3 class="font-bold text-lg mb-1">Empowering Mobile Networks with Large Language Models: from Network Modelling to Optimization</h3>
-            <span class="event-tag tutorial-tag">Tutorial</span>
           </div>
           <p class="text-gray-600 mb-2"><i>IEEE Conference on Vehicular Technology (VTC)</i></p>
           <p class="text-gray-700 mb-2">
@@ -572,7 +576,6 @@
         <div class="tutorial-item bg-white p-4 rounded-lg shadow-sm pl-6">
           <div class="flex justify-between items-start">
             <h3 class="font-bold text-lg mb-1">Data-Driven Modelling and Optimization of Green Future Mobile Networks: From Machine Learning to Generative AI</h3>
-            <span class="event-tag tutorial-tag">Tutorial</span>
           </div>
           <p class="text-gray-600 mb-2"><i>International Conference on 6G Networking (6GNet)</i></p>
           <p class="text-gray-700 mb-2">
@@ -592,7 +595,6 @@
         <div class="tutorial-item bg-white p-4 rounded-lg shadow-sm pl-6">
           <div class="flex justify-between items-start">
             <h3 class="font-bold text-lg mb-1">Data-Driven Modelling and Optimization of Green Future Mobile Networks: From Machine Learning to Generative AI</h3>
-            <span class="event-tag tutorial-tag">Tutorial</span>
           </div>
           <p class="text-gray-600 mb-2"><i>IEEE International Conference on Machine Learning for Communications and Networking</i></p>
           <p class="text-gray-700 mb-2">
@@ -612,7 +614,6 @@
         <div class="tutorial-item bg-white p-4 rounded-lg shadow-sm pl-6">
           <div class="flex justify-between items-start">
             <h3 class="font-bold text-lg mb-1">Waste Factor, a Figure of Merit for Sustainability: Holistic Analysis of Energy and Throughput Tradeoffs in Radio Access</h3>
-            <span class="event-tag tutorial-tag">Tutorial</span>
           </div>
           <p class="text-gray-600 mb-2"><i>IEEE Wireless Communications and Networking Conference (WCNC)</i></p>
           <p class="text-gray-700 mb-2">
@@ -632,7 +633,6 @@
         <div class="tutorial-item bg-white p-4 rounded-lg shadow-sm pl-6">
           <div class="flex justify-between items-start">
             <h3 class="font-bold text-lg mb-1">Data-driven modelling and optimization of green future mobile networks</h3>
-            <span class="event-tag tutorial-tag">Tutorial</span>
           </div>
           <p class="text-gray-600 mb-2"><i>European Conference on Networks and Communications (EuCNC) & 6G Summit</i></p>
           <p class="text-gray-700 mb-2">
@@ -652,7 +652,6 @@
         <div class="tutorial-item bg-white p-4 rounded-lg shadow-sm pl-6">
           <div class="flex justify-between items-start">
             <h3 class="font-bold text-lg mb-1">Breaking the Energy Consumption Growth in Future Mobile Networks: 5G Enhancements and Machine Learning</h3>
-            <span class="event-tag tutorial-tag">Tutorial</span>
           </div>
           <p class="text-gray-600 mb-2"><i>IEEE International Conference on Communications (ICC)</i></p>
           <p class="text-gray-700 mb-2">
@@ -704,10 +703,10 @@
     </section>
   </main>
 
-  <footer class="bg-gray-100 py-8">
+  <footer class="bg-gray-10 py-8">
     <div class="container mx-auto px-6">
       <div class="mt-8 pt-6 border-t border-gray-200 text-center text-gray-500 text-sm">
-        <p>© 2025 Nicola Piovesan. All rights reserved.</p>
+        <p>© 2026 Nicola Piovesan. All rights reserved.</p>
       </div>
     </div>
   </footer>

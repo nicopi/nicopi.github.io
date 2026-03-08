@@ -40,8 +40,12 @@
   <link rel="icon" href="images/favicon.png" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-  .publication-item {
-    border-left: 3px solid #3b82f6;
+    .publication-item, .patent-item {
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08) !important;
+    border-left: 3px solid #4a9ebe;
+  }
+  .bg-white.p-6.rounded-lg {
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08) !important;
   }
   .year-divider {
     position: relative;
@@ -62,7 +66,7 @@
     background-color: white;
     padding: 0 1rem;
     font-weight: bold;
-    color: #3b82f6;
+    color: #4a9ebe; 
   }
   .back-link:hover {
     transform: translateX(-3px);
@@ -74,29 +78,54 @@
     font-weight: 600;
   }
   .journal-tag {
-    background-color: #ECFDF5;
-    color: #065F46;
+    background-color: #eceef8;
+    color: #6a7fc1;
   }
   .conference-tag {
-    background-color: #EFF6FF;
-    color: #1E40AF;
+    background-color: #e0f5f2;
+    color: #3a9e8f;
   }
   .best-tag {
   background-color: #FFF9E6;  /* Very light gold */
   color: #B8860B;             /* Dark gold text */
   }
   .preprint-tag {
-    background-color: #FEF2F2;
-    color: #991B1B;
+    background-color: #f9e8e9;
+    color: #9e3a42;
   }
   .book-tag {
-    background-color: #F5F3FF;
-    color: #5B21B6;
+    background-color: #eceef8;
+    color: #6a7fc1;
   }
   .thesis-tag {
-    background-color: #F3E8FF;
-    color: #6B21A8;
+    background-color: #eceef8;
+    color: #6a7fc1;
   }
+    .nav-link {
+    position: relative;
+  }
+      .nav-link-sel {
+    position: relative;
+    color: #4a9ebe;
+    font-weight: bold;
+  }
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #4a9ebe;
+    transition: width 0.3s ease;
+  }
+  .nav-link:hover::after {
+    width: 100%;
+  }
+  .read-more-btn { color: #4a9ebe; }
+.read-more-btn:hover { color: #357a96; }
+a.text-blue-600 { color: #4a9ebe !important; }
+a.text-blue-600:hover { color: #357a96 !important; }
   </style>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-H8WN74700N"></script>
@@ -108,18 +137,18 @@
   gtag('config', 'G-H8WN74700N');
   </script>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans">
+<body class="bg-white text-gray-800 font-sans">
   <header class="bg-white shadow-sm sticky top-0 z-10">
     <div class="container mx-auto px-6 py-4">
       <div class="flex justify-between items-center">
-        <h1 class="text-2xl font-bold text-blue-600">Nicola Piovesan</h1>
+        <h1 class="text-2xl font-bold text-gray-800">Nicola Piovesan</h1>
         <nav class="hidden md:block">
           <ul class="flex space-x-8">
-            <li><a href="index.html" class="text-gray-600 hover:text-blue-600">Home</a></li>
-            <li><a href="index.html#about" class="text-gray-600 hover:text-blue-600">About</a></li>
-            <li><a href="#publications" class="text-blue-600 font-medium">Publications</a></li>
-            <li><a href="index.html#talks" class="text-gray-600 hover:text-blue-600">Talks</a></li>
-            <li><a href="index.html#patents" class="text-gray-600 hover:text-blue-600">Patents</a></li>
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="index.html#about" class="nav-link">About</a></li>
+            <li><a href="" class="nav-link-sel">Publications</a></li>
+            <li><a href="talks.html" class="nav-link">Talks</a></li>
+            <li><a href="patents.html" class="nav-link">Patents</a></li>
           </ul>
         </nav>
         <button class="md:hidden focus:outline-none">
@@ -139,9 +168,84 @@
     <section id="publications" class="mb-12">
       <h1 class="text-3xl font-bold mb-6">Publications</h1>
       <div class="year-divider">
+        <span>2026</span>
+      </div>
+      <div class="space-y-4">
+      <div class="publication-item bg-white p-4 rounded-lg shadow-sm pl-6">
+          <div class="flex justify-between items-start">
+            <h3 class="font-bold text-lg mb-1">Capacity and Energy Trade-Offs in FR3 6G Networks Using Real Deployment Data</h3>
+            <span class="pub-tag preprint-tag">Preprint</span>
+          </div>
+          <p class="text-gray-600 mb-2">Submitted</p>
+          <p class="text-gray-700 mb-2">
+            <span class="font-medium">Authors:</span> David López-Pérez, Nicola Piovesan, Matteo Bernabè
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <button type="button" class="text-[#4a9ebe] hover:text-[#357a96] text-sm flex items-center" onclick="toggleAbstract('abstract2026capacity')">
+              <i class="fas fa-align-left mr-1"></i> Abstract
+            </button>
+            <a href="https://arxiv.org/abs/2601.13993" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
+              <i class="fas fa-file-pdf mr-1"></i> Preprint
+            </a>
+          </div>
+          <div id="abstract2026capacity" class="hidden mt-3 text-sm text-gray-600">
+            This article presents a data-driven system-level analysis of multi-layer 6G networks operating in the upper mid-band (FR3: 7-24 GHz). Unlike most prior studies based on 3rd Generation Partnership Project (3GPP) templates, we leverage real-world deployment and traffic data from a commercial 4G/5G network in China to evaluate practical 6G strategies. Using Giulia-a deployment-informed system-level heterogeneous network model-we show that 6G can boost median throughput by up to 9.5x over heterogeneous 4G+5G deployments, but also increases power usage by up to 59%. Critically, co-locating 6G with existing sites delivers limited gains while incurring high energy cost. In contrast, non-co-located, traffic-aware deployments achieve superior throughput-to-watt efficiency, highlighting the need for strategic, user equipment (UE) hotspot-focused 6G planning.
+          </div>
+        </div>
+      <div class="publication-item bg-white p-4 rounded-lg shadow-sm pl-6">
+          <div class="flex justify-between items-start">
+            <h3 class="font-bold text-lg mb-1">TeleTables: A Benchmark for Large Language Models in Telecom Table Interpretation</h3>
+            <span class="pub-tag preprint-tag">Preprint</span>
+          </div>
+          <p class="text-gray-600 mb-2">Submitted</p>
+          <p class="text-gray-700 mb-2">
+            <span class="font-medium">Authors:</span> Anas Ezzakri, Nicola Piovesan, Mohamed Sana, Antonio De Domenico, Fadhel Ayed, Haozhe Zhang
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <button type="button" class="text-[#4a9ebe] hover:text-[#357a96] text-sm flex items-center" onclick="toggleAbstract('abstract2026teletables')">
+              <i class="fas fa-align-left mr-1"></i> Abstract
+            </button>
+            <a href="https://arxiv.org/abs/2601.04202" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
+              <i class="fas fa-file-pdf mr-1"></i> Preprint
+            </a>
+            <a href="https://huggingface.co/datasets/netop/TeleTables" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
+              <i class="fas fa-database mr-1"></i> Dataset
+            </a>
+          </div>
+          <div id="abstract2026teletables" class="hidden mt-3 text-sm text-gray-600">
+            Language Models (LLMs) are increasingly explored in the telecom industry to support engineering tasks, accelerate troubleshooting, and assist in interpreting complex technical documents. However, recent studies show that LLMs perform poorly on telecom standards, particularly 3GPP specifications. We argue that a key reason is that these standards densely include tables to present essential information, yet the LLM knowledge and interpretation ability of such tables remains largely unexamined. To address this gap, we introduce TeleTables, a benchmark designed to evaluate both the implicit knowledge LLMs have about tables in technical specifications and their explicit ability to interpret them. TeleTables is built through a novel multi-stage data generation pipeline that extracts tables from 3GPP standards and uses multimodal and reasoning-oriented LLMs to generate and validate questions. The resulting dataset, which is publicly available, comprises 500 human-verified question-answer pairs, each associated with the corresponding table in multiple formats. Our evaluation shows that, smaller models (under 10B parameters) struggle both to recall 3GPP knowledge and to interpret tables, indicating the limited exposure to telecom standards in their pretraining and the insufficient inductive biases for navigating complex technical material. Larger models, on the other hand, show stronger reasoning on table interpretation. Overall, TeleTables highlights the need for domain-specialized fine-tuning to reliably interpret and reason over telecom standards.
+          </div>
+        </div>
+      
+      
+      </div>
+      
+      
+      <div class="year-divider">
         <span>2025</span>
       </div>
       <div class="space-y-4">
+      <div class="publication-item bg-white p-4 rounded-lg shadow-sm pl-6">
+          <div class="flex justify-between items-start">
+            <h3 class="font-bold text-lg mb-1">Gradient-Based Optimization of Terrestrial Cellular Networks for Aerial Highways</h3>
+            <span class="pub-tag journal-tag">Journal</span>
+          </div>
+          <p class="text-gray-600 mb-2">Submitted</p>
+          <p class="text-gray-700 mb-2">
+            <span class="font-medium">Authors:</span> Matteo Bernabè, David López-Pérez, Nicola Piovesan, David Gerbert
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <button type="button" class="text-[#4a9ebe] hover:text-[#357a96] text-sm flex items-center" onclick="toggleAbstract('abstract2025gradient')">
+              <i class="fas fa-align-left mr-1"></i> Abstract
+            </button>
+            <a href="https://ieeexplore.ieee.org/abstract/document/11223088" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
+              <i class="fas fa-file-alt mr-1"></i> Paper
+            </a>
+          </div>
+          <div id="abstract2025gradient" class="hidden mt-3 text-sm text-gray-600">
+            Unmanned aerial vehicles (UAVs), owing to their ability to navigate 3D space and encounter line of sight (LoS) conditions, often experience high channel gains across multiple cells. This phenomena results in comparable signal power from various neighboring cells, causing significant interference and reduced signal-to-interference-plus-noise ratio (SINR), which complicates their integration into terrestrial networks. In this paper, we investigate how prior knowledge of planned aerial highways (AHs) can be leveraged by network operators to efficiently optimize their infrastructures for seamless UAV connectivity. In particular, we propose a gradient-based optimization algorithm to adjust the vertical tilts of 4G long term evolution (LTE) cells, ensuring optimal power distribution between ground and sky, while meeting minimum connectivity requirements along the AHs. Moving towards 5G new radio (NR), we also investigate how multi-antenna systems can be leveraged, together with the information of the planned AHs, to provide further enhanced coverage and performance. In this line, we propose an optimization framework that utilizes gradient computations to design optimal coverage and data beams from NR network cells. Simulation results show significant enhancement in coverage, SINR, and data rates for UAVs. Specifically, considering LTE, our approach yields up to 7dB in SINR along with a fivefold increase in rates, allowing to satisfy requirements and eliminate coverage gaps. While within NR, our solution achieves up to 13dB SINR gains and a sixfold improvement in UAV data rate, thereby overcoming previous-generation limitations and further improving aerial connectivity. These findings provide valuable recommendations for network operators aiming to support UAVs services with existing terrestrial infrastructures.
+          </div>
+        </div>
         <div class="publication-item bg-white p-4 rounded-lg shadow-sm pl-6">
           <div class="flex justify-between items-start">
             <h3 class="font-bold text-lg mb-1">KVCompose: Efficient Structured KV Cache Compression with Composite Tokens</h3>
@@ -152,7 +256,7 @@
             <span class="font-medium">Authors:</span> Dmitry Akulov, Mohamed Sana, Antonio De Domenico, Tareq Si Salem, Nicola Piovesan, Fadhel Ayed
           </p>
           <div class="flex flex-wrap gap-4">
-            <button type="button" class="text-blue-600 hover:text-blue-800 text-sm flex items-center" onclick="toggleAbstract('abstract2025kvcompose')">
+            <button type="button" class="text-[#4a9ebe] hover:text-[#357a96] text-sm flex items-center" onclick="toggleAbstract('abstract2025kvcompose')">
               <i class="fas fa-align-left mr-1"></i> Abstract
             </button>
             <a href="https://arxiv.org/abs/2509.05165" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
@@ -174,7 +278,7 @@ We propose a simple, yet effective, KV cache compression framework based on atte
             <span class="font-medium">Authors:</span> Mohamed Sana, Nicola Piovesan, Antonio De Domenico, Yibin Kang, Haozhe Zhang, Merouane Debbah, Fadhel Ayed
           </p>
           <div class="flex flex-wrap gap-4">
-            <button type="button" class="text-blue-600 hover:text-blue-800 text-sm flex items-center" onclick="toggleAbstract('abstract2025telelogs')">
+            <button type="button" class="text-[#4a9ebe] hover:text-[#357a96] text-sm flex items-center" onclick="toggleAbstract('abstract2025telelogs')">
               <i class="fas fa-align-left mr-1"></i> Abstract
             </button>
             <a href="https://arxiv.org/abs/2507.21974" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
@@ -191,16 +295,19 @@ We propose a simple, yet effective, KV cache compression framework based on atte
         <div class="publication-item bg-white p-4 rounded-lg shadow-sm pl-6">
           <div class="flex justify-between items-start">
             <h3 class="font-bold text-lg mb-1">TeleMath: A Benchmark for Large Language Models in Telecom Mathematical Problem Solving</h3>
-            <span class="pub-tag preprint-tag">Preprint</span>
+            <span class="pub-tag journal-tag">Journal</span>
           </div>
-          <p class="text-gray-600 mb-2">Submitted</p>
+          <p class="text-gray-600 mb-2">IEEE Network</p>
           <p class="text-gray-700 mb-2">
             <span class="font-medium">Authors:</span> Vincenzo Colle, Mohamed Sana, Nicola Piovesan, Antonio De Domenico, Fadhel Ayed, Merouane Debbah
           </p>
           <div class="flex flex-wrap gap-4">
-            <button type="button" class="text-blue-600 hover:text-blue-800 text-sm flex items-center" onclick="toggleAbstract('abstract2025telemath')">
+            <button type="button" class="text-[#4a9ebe] hover:text-[#357a96] text-sm flex items-center" onclick="toggleAbstract('abstract2025telemath')">
               <i class="fas fa-align-left mr-1"></i> Abstract
             </button>
+            <a href="https://ieeexplore.ieee.org/document/11393555" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
+              <i class="fas fa-file-alt mr-1"></i> Paper
+            </a>
             <a href="https://arxiv.org/abs/2506.10674" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
               <i class="fas fa-file-pdf mr-1"></i> Preprint
             </a>
@@ -215,16 +322,19 @@ We propose a simple, yet effective, KV cache compression framework based on atte
         <div class="publication-item bg-white p-4 rounded-lg shadow-sm pl-6">
           <div class="flex justify-between items-start">
             <h3 class="font-bold text-lg mb-1">Telco-oRAG: Optimizing Retrieval-augmented Generation for Telecom Queries via Hybrid Retrieval and Neural Routing</h3>
-            <span class="pub-tag preprint-tag">Preprint</span>
+            <span class="pub-tag journal-tag">Journal</span>
           </div>
-          <p class="text-gray-600 mb-2">Submitted</p>
+          <p class="text-gray-600 mb-2">IEEE Journal on Selected Areas in Communications</p>
           <p class="text-gray-700 mb-2">
             <span class="font-medium">Authors:</span> Andrei-Laurentiu Bornea, Fadhel Ayed, Antonio De Domenico, Nicola Piovesan, Tareq Si Salem, Ali Maatouk
           </p>
           <div class="flex flex-wrap gap-4">
-            <button type="button" class="text-blue-600 hover:text-blue-800 text-sm flex items-center" onclick="toggleAbstract('abstract2025telcoorag')">
+            <button type="button" class="text-[#4a9ebe] hover:text-[#357a96] text-sm flex items-center" onclick="toggleAbstract('abstract2025telcoorag')">
               <i class="fas fa-align-left mr-1"></i> Abstract
             </button>
+            <a href="https://ieeexplore.ieee.org/abstract/document/11284862" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
+              <i class="fas fa-file-alt mr-1"></i> Paper
+            </a>
             <a href="https://arxiv.org/abs/2505.11856" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
               <i class="fas fa-file-pdf mr-1"></i> Preprint
             </a>
@@ -243,7 +353,7 @@ We propose a simple, yet effective, KV cache compression framework based on atte
             <span class="font-medium">Authors:</span> Alexander Busch, David López-Pérez, Matteo Bernabè, Nicola Piovesan
           </p>
           <div class="flex flex-wrap gap-4">
-            <button type="button" class="text-blue-600 hover:text-blue-800 text-sm flex items-center" onclick="toggleAbstract('abstract2025exchange')">
+            <button type="button" class="text-[#4a9ebe] hover:text-[#357a96] text-sm flex items-center" onclick="toggleAbstract('abstract2025exchange')">
               <i class="fas fa-align-left mr-1"></i> Abstract
             </button>
           </div>
@@ -261,7 +371,7 @@ This paper proposes an energy-efficient user association algorithm for cellular 
             <span class="font-medium">Authors:</span> Tingwei Chen, Yantao Wang, Hanzhi Chen, Zijian Zhao, Xinhao Li, Nicola Piovesan, Guangxu Zhu, Qingjiang Shi
           </p>
           <div class="flex flex-wrap gap-4">
-            <button type="button" class="text-blue-600 hover:text-blue-800 text-sm flex items-center" onclick="toggleAbstract('abstract6')">
+            <button type="button" class="text-[#4a9ebe] hover:text-[#357a96] text-sm flex items-center" onclick="toggleAbstract('abstract6')">
               <i class="fas fa-align-left mr-1"></i> Abstract
             </button>
             <a href="https://arxiv.org/abs/2406.16929" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
@@ -282,7 +392,7 @@ This paper proposes an energy-efficient user association algorithm for cellular 
             <span class="font-medium">Authors:</span> Luca-Andrei Fechete, Mohamed Sana, Fadhel Ayed, Nicola Piovesan, Wenjie Li, Antonio De Domenico, Tareq Si Salem
           </p>
           <div class="flex flex-wrap gap-4">
-            <button type="button" class="text-blue-600 hover:text-blue-800 text-sm flex items-center" onclick="toggleAbstract('abstract2025goal')">
+            <button type="button" class="text-[#4a9ebe] hover:text-[#357a96] text-sm flex items-center" onclick="toggleAbstract('abstract2025goal')">
               <i class="fas fa-align-left mr-1"></i> Abstract
             </button>
             <a href="https://arxiv.org/abs/2504.17493" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
@@ -304,7 +414,7 @@ This paper proposes an energy-efficient user association algorithm for cellular 
             <span class="font-medium">Authors:</span> Felip Riera-Palou, Guillem Femenias, David López-Pérez, Nicola Piovesan, Antonio De Domenico
           </p>
           <div class="flex flex-wrap gap-4">
-            <button type="button" class="text-blue-600 hover:text-blue-800 text-sm flex items-center" onclick="toggleAbstract('abstract2025spawc')">
+            <button type="button" class="text-[#4a9ebe] hover:text-[#357a96] text-sm flex items-center" onclick="toggleAbstract('abstract2025spawc')">
               <i class="fas fa-align-left mr-1"></i> Abstract
             </button>
             <a href="https://ieeexplore.ieee.org/abstract/document/11143273" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
@@ -328,7 +438,7 @@ This work addresses the exploitation of the midband frequency range (often calle
             <span class="font-medium">Authors:</span> David López-Pérez, Nicola Piovesan, Giovanni Geraci
           </p>
           <div class="flex flex-wrap gap-4">
-            <button type="button" class="text-blue-600 hover:text-blue-800 text-sm flex items-center" onclick="toggleAbstract('abstract1')">
+            <button type="button" class="text-[#4a9ebe] hover:text-[#357a96] text-sm flex items-center" onclick="toggleAbstract('abstract1')">
               <i class="fas fa-align-left mr-1"></i> Abstract
             </button>
             <a href="https://arxiv.org/abs/2411.09660" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
@@ -349,7 +459,7 @@ This work addresses the exploitation of the midband frequency range (often calle
             <span class="font-medium">Authors:</span> Fadhel Ayed, Ali Maatouk, Nicola Piovesan, Antonio De Domenico, Merouane Debbah, Zhi-Quan Luo
           </p>
           <div class="flex flex-wrap gap-4">
-            <button type="button" class="text-blue-600 hover:text-blue-800 text-sm flex items-center" onclick="toggleAbstract('abstract2')">
+            <button type="button" class="text-[#4a9ebe] hover:text-[#357a96] text-sm flex items-center" onclick="toggleAbstract('abstract2')">
               <i class="fas fa-align-left mr-1"></i> Abstract
             </button>
             <a href="https://arxiv.org/abs/2411.06490" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
@@ -377,11 +487,11 @@ This work addresses the exploitation of the midband frequency range (often calle
             <span class="font-medium">Authors:</span> Theodore S. Rappaport, Mingjun Ying, Nicola Piovesan, Antonio De Domenico, Dipankar Shakya
           </p>
           <div class="flex flex-wrap gap-4">
-            <button type="button" class="text-blue-600 hover:text-blue-800 text-sm flex items-center" onclick="toggleAbstract('abstract3')">
+            <button type="button" class="text-[#4a9ebe] hover:text-[#357a96] text-sm flex items-center" onclick="toggleAbstract('abstract3')">
               <i class="fas fa-align-left mr-1"></i> Abstract
             </button>
             <a href="https://ieeexplore.ieee.org/document/10604822" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-              <i class="fas fa-file-pdf mr-1"></i> Paper
+              <i class="fas fa-file-alt mr-1"></i> Paper
             </a>
             <a href="https://arxiv.org/abs/2405.07710" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
               <i class="fas fa-file-pdf mr-1"></i> Preprint
@@ -402,7 +512,7 @@ This work addresses the exploitation of the midband frequency range (often calle
             <span class="font-medium">Authors:</span> Andrei-Laurentiu Bornea, Fadhel Ayed, Antonio De Domenico, Nicola Piovesan, Ali Maatouk
           </p>
           <div class="flex flex-wrap gap-4">
-            <button type="button" class="text-blue-600 hover:text-blue-800 text-sm flex items-center" onclick="toggleAbstract('abstract4')">
+            <button type="button" class="text-[#4a9ebe] hover:text-[#357a96] text-sm flex items-center" onclick="toggleAbstract('abstract4')">
               <i class="fas fa-align-left mr-1"></i> Abstract
             </button>
             <a href="https://arxiv.org/abs/2404.15939" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
@@ -424,11 +534,11 @@ This work addresses the exploitation of the midband frequency range (often calle
             <span class="font-medium">Authors:</span> Felip Riera-Palou, Guillem Femenias, David López-Pérez, Nicola Piovesan, Antonio De Domenico
           </p>
           <div class="flex flex-wrap gap-4">
-            <button type="button" class="text-blue-600 hover:text-blue-800 text-sm flex items-center" onclick="toggleAbstract('abstract5')">
+            <button type="button" class="text-[#4a9ebe] hover:text-[#357a96] text-sm flex items-center" onclick="toggleAbstract('abstract5')">
               <i class="fas fa-align-left mr-1"></i> Abstract
             </button>
             <a href="https://ieeexplore.ieee.org/abstract/document/10713293" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-              <i class="fas fa-file-pdf mr-1"></i> Paper
+              <i class="fas fa-file-alt mr-1"></i> Paper
             </a>
             <a href="https://arxiv.org/abs/2306.06404" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
               <i class="fas fa-file-pdf mr-1"></i> Preprint
@@ -451,11 +561,11 @@ This work addresses the exploitation of the midband frequency range (often calle
             <span class="font-medium">Authors:</span> Matteo Bernabè, David López-Pérez, Nicola Piovesan, Giovanni Geraci, David Gesbert
           </p>
           <div class="flex flex-wrap gap-4">
-            <button type="button" class="text-blue-600 hover:text-blue-800 text-sm flex items-center" onclick="toggleAbstract('abstract8')">
+            <button type="button" class="text-[#4a9ebe] hover:text-[#357a96] text-sm flex items-center" onclick="toggleAbstract('abstract8')">
               <i class="fas fa-align-left mr-1"></i> Abstract
             </button>
             <a href="https://ieeexplore.ieee.org/abstract/document/10901503" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-              <i class="fas fa-file-pdf mr-1"></i> Paper
+              <i class="fas fa-file-alt mr-1"></i> Paper
             </a>
             <a href="https://arxiv.org/abs/2409.01812" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
               <i class="fas fa-file-pdf mr-1"></i> Preprint
@@ -476,11 +586,11 @@ This work addresses the exploitation of the midband frequency range (often calle
             <span class="font-medium">Authors:</span> Matteo Bernabè, David López-Pérez, Nicola Piovesan, Giovanni Geraci, David Gesbert
           </p>
           <div class="flex flex-wrap gap-4">
-            <button type="button" class="text-blue-600 hover:text-blue-800 text-sm flex items-center" onclick="toggleAbstract('abstract9')">
+            <button type="button" class="text-[#4a9ebe] hover:text-[#357a96] text-sm flex items-center" onclick="toggleAbstract('abstract9')">
               <i class="fas fa-align-left mr-1"></i> Abstract
             </button>
             <a href="https://ieeexplore.ieee.org/abstract/document/10569086" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-              <i class="fas fa-file-pdf mr-1"></i> Paper
+              <i class="fas fa-file-alt mr-1"></i> Paper
             </a>
           </div>
           <div id="abstract9" class="hidden mt-3 text-sm text-gray-600">
@@ -498,7 +608,7 @@ This work addresses the exploitation of the midband frequency range (often calle
             <span class="font-medium">Authors:</span> Nicola Piovesan, Antonio De Domenico, Fadhel Ayed
           </p>
           <div class="flex flex-wrap gap-4">
-            <button type="button" class="text-blue-600 hover:text-blue-800 text-sm flex items-center" onclick="toggleAbstract('abstract10')">
+            <button type="button" class="text-[#4a9ebe] hover:text-[#357a96] text-sm flex items-center" onclick="toggleAbstract('abstract10')">
               <i class="fas fa-align-left mr-1"></i> Abstract
             </button>
             <a href="https://arxiv.org/abs/2403.04666" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
@@ -520,11 +630,11 @@ This work addresses the exploitation of the midband frequency range (often calle
             <span class="font-medium">Authors:</span> Tasnim Ahmed, Nicola Piovesan, Antonio De Domenico, Salimur Choudhury
           </p>
           <div class="flex flex-wrap gap-4">
-            <button type="button" class="text-blue-600 hover:text-blue-800 text-sm flex items-center" onclick="toggleAbstract('abstract11')">
+            <button type="button" class="text-[#4a9ebe] hover:text-[#357a96] text-sm flex items-center" onclick="toggleAbstract('abstract11')">
               <i class="fas fa-align-left mr-1"></i> Abstract
             </button>
             <a href="https://ieeexplore.ieee.org/abstract/document/10615609" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-              <i class="fas fa-file-pdf mr-1"></i> Paper
+              <i class="fas fa-file-alt mr-1"></i> Paper
             </a>
             <a href="https://arxiv.org/abs/2402.15818" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
               <i class="fas fa-file-pdf mr-1"></i> Preprint
@@ -545,11 +655,11 @@ This work addresses the exploitation of the midband frequency range (often calle
             <span class="font-medium">Authors:</span> David López-Pérez, Antonio De Domenico, Nicola Piovesan, Merouane Debbah
           </p>
           <div class="flex flex-wrap gap-4">
-            <button type="button" class="text-blue-600 hover:text-blue-800 text-sm flex items-center" onclick="toggleAbstract('abstract12')">
+            <button type="button" class="text-[#4a9ebe] hover:text-[#357a96] text-sm flex items-center" onclick="toggleAbstract('abstract12')">
               <i class="fas fa-align-left mr-1"></i> Abstract
             </button>
             <a href="https://ieeexplore.ieee.org/abstract/document/10547043" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-              <i class="fas fa-file-pdf mr-1"></i> Paper
+              <i class="fas fa-file-alt mr-1"></i> Paper
             </a>
             <a href="https://arxiv.org/abs/2401.00443" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
               <i class="fas fa-file-pdf mr-1"></i> Preprint
@@ -570,11 +680,11 @@ This work addresses the exploitation of the midband frequency range (often calle
             <span class="font-medium">Authors:</span> Tailai Song, David López-Pérez, Michela Meo, Nicola Piovesan, Daniela Renga
           </p>
           <div class="flex flex-wrap gap-4">
-            <button type="button" class="text-blue-600 hover:text-blue-800 text-sm flex items-center" onclick="toggleAbstract('abstract13')">
+            <button type="button" class="text-[#4a9ebe] hover:text-[#357a96] text-sm flex items-center" onclick="toggleAbstract('abstract13')">
               <i class="fas fa-align-left mr-1"></i> Abstract
             </button>
             <a href="https://ieeexplore.ieee.org/abstract/document/10571153" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-              <i class="fas fa-file-pdf mr-1"></i> Paper
+              <i class="fas fa-file-alt mr-1"></i> Paper
             </a>
             <a href="https://arxiv.org/abs/2307.00969" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
               <i class="fas fa-file-pdf mr-1"></i> Preprint
@@ -602,7 +712,7 @@ This work addresses the exploitation of the midband frequency range (often calle
             <span class="font-medium">Authors:</span> Mert Unsal, Ali Maatouk, Antonio De Domenico, Nicola Piovesan, Fadhel Ayed
           </p>
           <div class="flex flex-wrap gap-4">
-            <button type="button" class="text-blue-600 hover:text-blue-800 text-sm flex items-center" onclick="toggleAbstract('abstract2023-1')">
+            <button type="button" class="text-[#4a9ebe] hover:text-[#357a96] text-sm flex items-center" onclick="toggleAbstract('abstract2023-1')">
               <i class="fas fa-align-left mr-1"></i> Abstract
             </button>
             <a href="https://arxiv.org/abs/2310.20457" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
@@ -624,11 +734,11 @@ This work addresses the exploitation of the midband frequency range (often calle
             <span class="font-medium">Authors:</span> Ali Maatouk, Fadhel Ayed, Nicola Piovesan, Antonio De Domenico, Merouane Debbah, Zhi-Quan Luo
           </p>
           <div class="flex flex-wrap gap-4">
-            <button type="button" class="text-blue-600 hover:text-blue-800 text-sm flex items-center" onclick="toggleAbstract('abstract2023-2')">
+            <button type="button" class="text-[#4a9ebe] hover:text-[#357a96] text-sm flex items-center" onclick="toggleAbstract('abstract2023-2')">
               <i class="fas fa-align-left mr-1"></i> Abstract
             </button>
             <a href="https://ieeexplore.ieee.org/document/11021474" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-              <i class="fas fa-file-pdf mr-1"></i> Paper
+              <i class="fas fa-file-alt mr-1"></i> Paper
             </a>
             <a href="https://arxiv.org/abs/2310.15051" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
               <i class="fas fa-file-pdf mr-1"></i> Preprint
@@ -652,11 +762,11 @@ This work addresses the exploitation of the midband frequency range (often calle
             <span class="font-medium">Authors:</span> Ali Maatouk, Nicola Piovesan, Fadhel Ayed, Antonio De Domenico, Merouane Debbah
           </p>
           <div class="flex flex-wrap gap-4">
-            <button type="button" class="text-blue-600 hover:text-blue-800 text-sm flex items-center" onclick="toggleAbstract('abstract2023-3')">
+            <button type="button" class="text-[#4a9ebe] hover:text-[#357a96] text-sm flex items-center" onclick="toggleAbstract('abstract2023-3')">
               <i class="fas fa-align-left mr-1"></i> Abstract
             </button>
             <a href="https://ieeexplore.ieee.org/abstract/document/10599120" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-              <i class="fas fa-file-pdf mr-1"></i> Paper
+              <i class="fas fa-file-alt mr-1"></i> Paper
             </a>
             <a href="https://arxiv.org/abs/2308.06013" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
               <i class="fas fa-file-pdf mr-1"></i> Preprint
@@ -677,11 +787,11 @@ This work addresses the exploitation of the midband frequency range (often calle
             <span class="font-medium">Authors:</span> Alessio Zappone, David López-Pérez, Antonio De Domenico, Nicola Piovesan, Harvey Bao
           </p>
           <div class="flex flex-wrap gap-4">
-            <button type="button" class="text-blue-600 hover:text-blue-800 text-sm flex items-center" onclick="toggleAbstract('abstract2023-4')">
+            <button type="button" class="text-[#4a9ebe] hover:text-[#357a96] text-sm flex items-center" onclick="toggleAbstract('abstract2023-4')">
               <i class="fas fa-align-left mr-1"></i> Abstract
             </button>
             <a href="https://ieeexplore.ieee.org/abstract/document/10123096" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-              <i class="fas fa-file-pdf mr-1"></i> Paper
+              <i class="fas fa-file-alt mr-1"></i> Paper
             </a>
           </div>
           <div id="abstract2023-4" class="hidden mt-3 text-sm text-gray-600">
@@ -699,7 +809,7 @@ This work addresses the exploitation of the midband frequency range (often calle
             <span class="font-medium">Authors:</span> Matteo Bernabè, David López-Pérez, Nicola Piovesan, Giovanni Geraci, David Gesbert
           </p>
           <div class="flex flex-wrap gap-4">
-            <button type="button" class="text-blue-600 hover:text-blue-800 text-sm flex items-center" onclick="toggleAbstract('abstract2023-5')">
+            <button type="button" class="text-[#4a9ebe] hover:text-[#357a96] text-sm flex items-center" onclick="toggleAbstract('abstract2023-5')">
               <i class="fas fa-align-left mr-1"></i> Abstract
             </button>
             <a href="https://arxiv.org/abs/2303.13870" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
@@ -721,11 +831,11 @@ This work addresses the exploitation of the midband frequency range (often calle
             <span class="font-medium">Authors:</span> Felip Riera-Palou, Guillem Femenias, David López-Pérez, Nicola Piovesan, Antonio De Domenico
           </p>
           <div class="flex flex-wrap gap-4">
-            <button type="button" class="text-blue-600 hover:text-blue-800 text-sm flex items-center" onclick="toggleAbstract('abstract2023-6')">
+            <button type="button" class="text-[#4a9ebe] hover:text-[#357a96] text-sm flex items-center" onclick="toggleAbstract('abstract2023-6')">
               <i class="fas fa-align-left mr-1"></i> Abstract
             </button>
             <a href="https://ieeexplore.ieee.org/abstract/document/10283562" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-              <i class="fas fa-file-pdf mr-1"></i> Paper
+              <i class="fas fa-file-alt mr-1"></i> Paper
             </a>
           </div>
         </div>
@@ -740,7 +850,7 @@ This work addresses the exploitation of the midband frequency range (often calle
             <span class="font-medium">Authors:</span> Nicola Piovesan, David López-Pérez, Antonio De Domenico, Xinli Geng, Harvey Bao
           </p>
           <div class="flex flex-wrap gap-4">
-            <button type="button" class="text-blue-600 hover:text-blue-800 text-sm flex items-center" onclick="toggleAbstract('abstract2023-7')">
+            <button type="button" class="text-[#4a9ebe] hover:text-[#357a96] text-sm flex items-center" onclick="toggleAbstract('abstract2023-7')">
               <i class="fas fa-align-left mr-1"></i> Abstract
             </button>
             <a href="https://arxiv.org/abs/2212.04318" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
@@ -762,11 +872,11 @@ This work addresses the exploitation of the midband frequency range (often calle
             <span class="font-medium">Authors:</span> Antonio De Domenico, David López-Pérez, Wenjie Li, Nicola Piovesan, Harvey Bao, Xinli Geng
           </p>
           <div class="flex flex-wrap gap-4">
-            <button type="button" class="text-blue-600 hover:text-blue-800 text-sm flex items-center" onclick="toggleAbstract('abstract2023-8')">
+            <button type="button" class="text-[#4a9ebe] hover:text-[#357a96] text-sm flex items-center" onclick="toggleAbstract('abstract2023-8')">
               <i class="fas fa-align-left mr-1"></i> Abstract
             </button>
             <a href="https://ieeexplore.ieee.org/abstract/document/10017182" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-              <i class="fas fa-file-pdf mr-1"></i> Paper
+              <i class="fas fa-file-alt mr-1"></i> Paper
             </a>
           </div>
           <div id="abstract2023-8" class="hidden mt-3 text-sm text-gray-600">
@@ -791,11 +901,11 @@ This work addresses the exploitation of the midband frequency range (often calle
             <span class="font-medium">Authors:</span> Alessio Zappone, David López-Pérez, Antonio De Domenico, Nicola Piovesan, Harvey Bao
           </p>
           <div class="flex flex-wrap gap-4">
-            <button type="button" class="text-blue-600 hover:text-blue-800 text-sm flex items-center" onclick="toggleAbstract('abstract2022-1')">
+            <button type="button" class="text-[#4a9ebe] hover:text-[#357a96] text-sm flex items-center" onclick="toggleAbstract('abstract2022-1')">
               <i class="fas fa-align-left mr-1"></i> Abstract
             </button>
             <a href="https://ieeexplore.ieee.org/abstract/document/10001432" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-              <i class="fas fa-file-pdf mr-1"></i> Paper
+              <i class="fas fa-file-alt mr-1"></i> Paper
             </a>
           </div>
           <div id="abstract2022-1" class="hidden mt-3 text-sm text-gray-600">
@@ -813,11 +923,11 @@ This work addresses the exploitation of the midband frequency range (often calle
             <span class="font-medium">Authors:</span> Nicola Piovesan, David López-Pérez, Antonio De Domenico, Xinli Geng, Harvey Bao, Mérouane Debbah
           </p>
           <div class="flex flex-wrap gap-4">
-            <button type="button" class="text-blue-600 hover:text-blue-800 text-sm flex items-center" onclick="toggleAbstract('abstract2022-2')">
+            <button type="button" class="text-[#4a9ebe] hover:text-[#357a96] text-sm flex items-center" onclick="toggleAbstract('abstract2022-2')">
               <i class="fas fa-align-left mr-1"></i> Abstract
             </button>
             <a href="https://ieeexplore.ieee.org/document/9928089" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-              <i class="fas fa-file-pdf mr-1"></i> Paper
+              <i class="fas fa-file-alt mr-1"></i> Paper
             </a>
             <a href="https://arxiv.org/abs/2209.11600" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
               <i class="fas fa-file-pdf mr-1"></i> Preprint
@@ -838,11 +948,11 @@ This work addresses the exploitation of the midband frequency range (often calle
             <span class="font-medium">Authors:</span> David López-Pérez, Antonio De Domenico, Nicola Piovesan, Harvey Bao, Xinli Geng, Song Qitao, Mérouane Debbah
           </p>
           <div class="flex flex-wrap gap-4">
-            <button type="button" class="text-blue-600 hover:text-blue-800 text-sm flex items-center" onclick="toggleAbstract('abstract2022-3')">
+            <button type="button" class="text-[#4a9ebe] hover:text-[#357a96] text-sm flex items-center" onclick="toggleAbstract('abstract2022-3')">
               <i class="fas fa-align-left mr-1"></i> Abstract
             </button>
             <a href="https://ieeexplore.ieee.org/document/9678321/" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-              <i class="fas fa-file-pdf mr-1"></i> Paper
+              <i class="fas fa-file-alt mr-1"></i> Paper
             </a>
             <a href="https://arxiv.org/abs/2101.11246" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
               <i class="fas fa-file-pdf mr-1"></i> Preprint
@@ -870,11 +980,11 @@ This work addresses the exploitation of the midband frequency range (often calle
             <span class="font-medium">Authors:</span> Nicola Piovesan, Antonio De Domenico, David López-Pérez, Harvey Bao, Xinli Geng, Xie Wang, Mérouane Debbah
           </p>
           <div class="flex flex-wrap gap-4">
-            <button type="button" class="text-blue-600 hover:text-blue-800 text-sm flex items-center" onclick="toggleAbstract('abstract2021-1')">
+            <button type="button" class="text-[#4a9ebe] hover:text-[#357a96] text-sm flex items-center" onclick="toggleAbstract('abstract2021-1')">
               <i class="fas fa-align-left mr-1"></i> Abstract
             </button>
             <a href="https://ieeexplore.ieee.org/document/9685639" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-              <i class="fas fa-file-pdf mr-1"></i> Paper
+              <i class="fas fa-file-alt mr-1"></i> Paper
             </a>
           </div>
           <div id="abstract2021-1" class="hidden mt-3 text-sm text-gray-600">
@@ -892,11 +1002,11 @@ This work addresses the exploitation of the midband frequency range (often calle
             <span class="font-medium">Authors:</span> David López-Pérez, Antonio De Domenico, Nicola Piovesan, Xinli Geng, Harvey Bao, Mérouane Debbah
           </p>
           <div class="flex flex-wrap gap-4">
-            <button type="button" class="text-blue-600 hover:text-blue-800 text-sm flex items-center" onclick="toggleAbstract('abstract2021-2')">
+            <button type="button" class="text-[#4a9ebe] hover:text-[#357a96] text-sm flex items-center" onclick="toggleAbstract('abstract2021-2')">
               <i class="fas fa-align-left mr-1"></i> Abstract
             </button>
             <a href="https://ieeexplore.ieee.org/abstract/document/9685216" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-              <i class="fas fa-file-pdf mr-1"></i> Paper
+              <i class="fas fa-file-alt mr-1"></i> Paper
             </a>
           </div>
           <div id="abstract2021-2" class="hidden mt-3 text-sm text-gray-600">
@@ -914,11 +1024,11 @@ This work addresses the exploitation of the midband frequency range (often calle
             <span class="font-medium">Authors:</span> Nicola Piovesan, Antonio De Domenico, Matteo Bernabè, David López-Pérez, Harvey Bao, Xinli Geng, Xie Wang, Mérouane Debbah
           </p>
           <div class="flex flex-wrap gap-4">
-            <button type="button" class="text-blue-600 hover:text-blue-800 text-sm flex items-center" onclick="toggleAbstract('abstract2021-3')">
+            <button type="button" class="text-[#4a9ebe] hover:text-[#357a96] text-sm flex items-center" onclick="toggleAbstract('abstract2021-3')">
               <i class="fas fa-align-left mr-1"></i> Abstract
             </button>
             <a href="https://ieeexplore.ieee.org/document/9593102/" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-              <i class="fas fa-file-pdf mr-1"></i> Paper
+              <i class="fas fa-file-alt mr-1"></i> Paper
             </a>
           </div>
           <div id="abstract2021-3" class="hidden mt-3 text-sm text-gray-600">
@@ -943,7 +1053,7 @@ This work addresses the exploitation of the midband frequency range (often calle
             <span class="font-medium">Authors:</span> Marco Miozzo, Nicola Piovesan, Dagnachew Temesgene, Paolo Dini
           </p>
           <div class="flex flex-wrap gap-4">
-            <button type="button" class="text-blue-600 hover:text-blue-800 text-sm flex items-center" onclick="toggleAbstract('abstract2020-1')">
+            <button type="button" class="text-[#4a9ebe] hover:text-[#357a96] text-sm flex items-center" onclick="toggleAbstract('abstract2020-1')">
               <i class="fas fa-align-left mr-1"></i> Abstract
             </button>
             <a href="https://link.springer.com/chapter/10.1007%2F978-3-030-77939-9_8" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
@@ -965,11 +1075,11 @@ This work addresses the exploitation of the midband frequency range (often calle
             <span class="font-medium">Authors:</span> Nicola Piovesan, David López-Pérez, Marco Miozzo, Paolo Dini
           </p>
           <div class="flex flex-wrap gap-4">
-            <button type="button" class="text-blue-600 hover:text-blue-800 text-sm flex items-center" onclick="toggleAbstract('abstract2020-2')">
+            <button type="button" class="text-[#4a9ebe] hover:text-[#357a96] text-sm flex items-center" onclick="toggleAbstract('abstract2020-2')">
               <i class="fas fa-align-left mr-1"></i> Abstract
             </button>
             <a href="https://ieeexplore.ieee.org/document/9207762" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-              <i class="fas fa-file-pdf mr-1"></i> Paper
+              <i class="fas fa-file-alt mr-1"></i> Paper
             </a>
           </div>
           <div id="abstract2020-2" class="hidden mt-3 text-sm text-gray-600">
@@ -987,7 +1097,7 @@ This work addresses the exploitation of the midband frequency range (often calle
             <span class="font-medium">Author:</span> Nicola Piovesan
           </p>
           <div class="flex flex-wrap gap-4">
-            <button type="button" class="text-blue-600 hover:text-blue-800 text-sm flex items-center" onclick="toggleAbstract('abstractphd')">
+            <button type="button" class="text-[#4a9ebe] hover:text-[#357a96] text-sm flex items-center" onclick="toggleAbstract('abstractphd')">
               <i class="fas fa-align-left mr-1"></i> Abstract
             </button>
             <a href="https://upcommons.upc.edu/handle/2117/328196" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
@@ -1009,11 +1119,11 @@ This work addresses the exploitation of the midband frequency range (often calle
             <span class="font-medium">Authors:</span> Nicola Piovesan, Marco Miozzo, Paolo Dini
           </p>
           <div class="flex flex-wrap gap-4">
-            <button type="button" class="text-blue-600 hover:text-blue-800 text-sm flex items-center" onclick="toggleAbstract('abstract2020-3')">
+            <button type="button" class="text-[#4a9ebe] hover:text-[#357a96] text-sm flex items-center" onclick="toggleAbstract('abstract2020-3')">
               <i class="fas fa-align-left mr-1"></i> Abstract
             </button>
             <a href="https://ieeexplore.ieee.org/document/9054646" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-              <i class="fas fa-file-pdf mr-1"></i> Paper
+              <i class="fas fa-file-alt mr-1"></i> Paper
             </a>
           </div>
           <div id="abstract2020-3" class="hidden mt-3 text-sm text-gray-600">
@@ -1038,11 +1148,11 @@ This work addresses the exploitation of the midband frequency range (often calle
             <span class="font-medium">Authors:</span> Marco Miozzo, Nicola Piovesan, Paolo Dini
           </p>
           <div class="flex flex-wrap gap-4">
-            <button type="button" class="text-blue-600 hover:text-blue-800 text-sm flex items-center" onclick="toggleAbstract('abstract2019-1')">
+            <button type="button" class="text-[#4a9ebe] hover:text-[#357a96] text-sm flex items-center" onclick="toggleAbstract('abstract2019-1')">
               <i class="fas fa-align-left mr-1"></i> Abstract
             </button>
             <a href="https://ieeexplore.ieee.org/document/8822474" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-              <i class="fas fa-file-pdf mr-1"></i> Paper
+              <i class="fas fa-file-alt mr-1"></i> Paper
             </a>
           </div>
           <div id="abstract2019-1" class="hidden mt-3 text-sm text-gray-600">
@@ -1060,11 +1170,11 @@ This work addresses the exploitation of the midband frequency range (often calle
             <span class="font-medium">Authors:</span> Nicola Piovesan, Dagnachew Temesgene, Marco Miozzo, Paolo Dini
           </p>
           <div class="flex flex-wrap gap-4">
-            <button type="button" class="text-blue-600 hover:text-blue-800 text-sm flex items-center" onclick="toggleAbstract('abstract2019-2')">
+            <button type="button" class="text-[#4a9ebe] hover:text-[#357a96] text-sm flex items-center" onclick="toggleAbstract('abstract2019-2')">
               <i class="fas fa-align-left mr-1"></i> Abstract
             </button>
             <a href="https://ieeexplore.ieee.org/document/8662568" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-              <i class="fas fa-file-pdf mr-1"></i> Paper
+              <i class="fas fa-file-alt mr-1"></i> Paper
             </a>
           </div>
           <div id="abstract2019-2" class="hidden mt-3 text-sm text-gray-600">
@@ -1089,14 +1199,14 @@ This work addresses the exploitation of the midband frequency range (often calle
             <span class="font-medium">Authors:</span> Nicola Piovesan, Paolo Dini
           </p>
           <div class="flex flex-wrap gap-4">
-            <button type="button" class="text-blue-600 hover:text-blue-800 text-sm flex items-center" onclick="toggleAbstract('abstract2018-1')">
+            <button type="button" class="text-[#4a9ebe] hover:text-[#357a96] text-sm flex items-center" onclick="toggleAbstract('abstract2018-1')">
               <i class="fas fa-align-left mr-1"></i> Abstract
             </button>
             <a href="https://ieeexplore.ieee.org/document/8580891" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-              <i class="fas fa-file-pdf mr-1"></i> Paper
+              <i class="fas fa-file-alt mr-1"></i> Paper
             </a>
             <a href="https://www.researchgate.net/publication/326231377_Unsupervised_Learning_of_Representations_from_Solar_Energy_Data" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-              <i class="fas fa-file-alt mr-1"></i> Preprint
+              <i class="fas fa-file-pdf mr-1"></i> Preprint
             </a>
           </div>
           <div id="abstract2018-1" class="hidden mt-3 text-sm text-gray-600">
@@ -1114,7 +1224,7 @@ This work addresses the exploitation of the midband frequency range (often calle
             <span class="font-medium">Authors:</span> Dagnachew Temesgene, Nicola Piovesan, Marco Miozzo, Paolo Dini
           </p>
           <div class="flex flex-wrap gap-4">
-            <button type="button" class="text-blue-600 hover:text-blue-800 text-sm flex items-center" onclick="toggleAbstract('abstract2018-2')">
+            <button type="button" class="text-[#4a9ebe] hover:text-[#357a96] text-sm flex items-center" onclick="toggleAbstract('abstract2018-2')">
               <i class="fas fa-align-left mr-1"></i> Abstract
             </button>
             <a href="https://arxiv.org/pdf/1805.12015.pdf" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
@@ -1136,14 +1246,14 @@ This work addresses the exploitation of the midband frequency range (often calle
             <span class="font-medium">Authors:</span> Nicola Piovesan, Marco Miozzo, Paolo Dini
           </p>
           <div class="flex flex-wrap gap-4">
-            <button type="button" class="text-blue-600 hover:text-blue-800 text-sm flex items-center" onclick="toggleAbstract('abstract2018-3')">
+            <button type="button" class="text-[#4a9ebe] hover:text-[#357a96] text-sm flex items-center" onclick="toggleAbstract('abstract2018-3')">
               <i class="fas fa-align-left mr-1"></i> Abstract
             </button>
             <a href="https://ieeexplore.ieee.org/document/8377448/" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-              <i class="fas fa-file-pdf mr-1"></i> Paper
+              <i class="fas fa-file-alt mr-1"></i> Paper
             </a>
             <a href="https://www.researchgate.net/publication/322953132_Optimal_Direct_Load_Control_of_Renewable_Powered_Small_Cells_Performance_Evaluation_and_Bounds" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-              <i class="fas fa-file-alt mr-1"></i> Preprint
+              <i class="fas fa-file-pdf mr-1"></i> Preprint
             </a>
           </div>
           <div id="abstract2018-3" class="hidden mt-3 text-sm text-gray-600">
@@ -1161,14 +1271,14 @@ This work addresses the exploitation of the midband frequency range (often calle
             <span class="font-medium">Authors:</span> Nicola Piovesan, Angel F. Gambin, Marco Miozzo, Michele Rossi, Paolo Dini
           </p>
           <div class="flex flex-wrap gap-4">
-            <button type="button" class="text-blue-600 hover:text-blue-800 text-sm flex items-center" onclick="toggleAbstract('abstract2018-4')">
+            <button type="button" class="text-[#4a9ebe] hover:text-[#357a96] text-sm flex items-center" onclick="toggleAbstract('abstract2018-4')">
               <i class="fas fa-align-left mr-1"></i> Abstract
             </button>
             <a href="http://www.sciencedirect.com/science/article/pii/S0140366417309088" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-              <i class="fas fa-file-pdf mr-1"></i> Paper
+              <i class="fas fa-file-alt mr-1"></i> Paper
             </a>
             <a href="https://arxiv.org/abs/1801.07551" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-              <i class="fas fa-file-alt mr-1"></i> Preprint
+              <i class="fas fa-file-pdf mr-1"></i> Preprint
             </a>
           </div>
           <div id="abstract2018-4" class="hidden mt-3 text-sm text-gray-600">
@@ -1193,7 +1303,7 @@ This work addresses the exploitation of the midband frequency range (often calle
             <span class="font-medium">Authors:</span> Nicola Piovesan, Paolo Dini
           </p>
           <div class="flex flex-wrap gap-4">
-            <button type="button" class="text-blue-600 hover:text-blue-800 text-sm flex items-center" onclick="toggleAbstract('abstract2017-1')">
+            <button type="button" class="text-[#4a9ebe] hover:text-[#357a96] text-sm flex items-center" onclick="toggleAbstract('abstract2017-1')">
               <i class="fas fa-align-left mr-1"></i> Abstract
             </button>
             <a href="http://onlinelibrary.wiley.com/doi/10.1002/itl2.7/abstract" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
@@ -1222,14 +1332,14 @@ This work addresses the exploitation of the midband frequency range (often calle
             <span class="font-medium">Authors:</span> Nicola Piovesan, Tomaso Erseghe
           </p>
           <div class="flex flex-wrap gap-4">
-            <button type="button" class="text-blue-600 hover:text-blue-800 text-sm flex items-center" onclick="toggleAbstract('abstract2016-1')">
+            <button type="button" class="text-[#4a9ebe] hover:text-[#357a96] text-sm flex items-center" onclick="toggleAbstract('abstract2016-1')">
               <i class="fas fa-align-left mr-1"></i> Abstract
             </button>
             <a href="http://ieeexplore.ieee.org/abstract/document/7782840/" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-              <i class="fas fa-file-pdf mr-1"></i> Paper
+              <i class="fas fa-file-alt mr-1"></i> Paper
             </a>
             <a href="https://arxiv.org/abs/1604.02838" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-              <i class="fas fa-file-alt mr-1"></i> Preprint
+              <i class="fas fa-file-pdf mr-1"></i> Preprint
             </a>
           </div>
           <div id="abstract2016-1" class="hidden mt-3 text-sm text-gray-600">
@@ -1247,7 +1357,7 @@ This work addresses the exploitation of the midband frequency range (often calle
             <span class="font-medium">Authors:</span> Nicola Piovesan, Leo Turi, Enrico Toigo, Borja Martinez, Michele Rossi
           </p>
           <div class="flex flex-wrap gap-4">
-            <button type="button" class="text-blue-600 hover:text-blue-800 text-sm flex items-center" onclick="toggleAbstract('abstract2016-2')">
+            <button type="button" class="text-[#4a9ebe] hover:text-[#357a96] text-sm flex items-center" onclick="toggleAbstract('abstract2016-2')">
               <i class="fas fa-align-left mr-1"></i> Abstract
             </button>
             <a href="http://www.mdpi.com/1424-8220/16/10/1575/htm" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
@@ -1269,7 +1379,7 @@ This work addresses the exploitation of the midband frequency range (often calle
             <span class="font-medium">Author:</span> Nicola Piovesan
           </p>
           <div class="flex flex-wrap gap-4">
-            <button type="button" class="text-blue-600 hover:text-blue-800 text-sm flex items-center" onclick="toggleAbstract('abstract2016-3')">
+            <button type="button" class="text-[#4a9ebe] hover:text-[#357a96] text-sm flex items-center" onclick="toggleAbstract('abstract2016-3')">
               <i class="fas fa-align-left mr-1"></i> Abstract
             </button>
             <a href="http://tesi.cab.unipd.it/51898/" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
@@ -1298,7 +1408,7 @@ This work addresses the exploitation of the midband frequency range (often calle
             <span class="font-medium">Author:</span> Nicola Piovesan
           </p>
           <div class="flex flex-wrap gap-4">
-            <button type="button" class="text-blue-600 hover:text-blue-800 text-sm flex items-center" onclick="toggleAbstract('abstract2013-1')">
+            <button type="button" class="text-[#4a9ebe] hover:text-[#357a96] text-sm flex items-center" onclick="toggleAbstract('abstract2013-1')">
               <i class="fas fa-align-left mr-1"></i> Abstract
             </button>
             <a href="http://tesi.cab.unipd.it/43809/" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
@@ -1315,10 +1425,10 @@ This work addresses the exploitation of the midband frequency range (often calle
     </section>
   </main>
 
-  <footer class="bg-gray-100 py-8">
+  <footer class="bg-gray-10 py-8">
     <div class="container mx-auto px-6">
       <div class="mt-8 pt-6 border-t border-gray-200 text-center text-gray-500 text-sm">
-        <p>© 2025 Nicola Piovesan. All rights reserved.</p>
+        <p>© 2026 Nicola Piovesan. All rights reserved.</p>
       </div>
     </div>
   </footer>
