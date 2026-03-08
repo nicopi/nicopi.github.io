@@ -24,6 +24,9 @@
   <title>Nicola Piovesan | Talks</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <script type="application/ld+json">
   {
     "@context": "http://schema.org",
@@ -40,6 +43,9 @@
   }
   </script>
   <style>
+  body {
+  font-family: 'Raleway', sans-serif;
+}
    .publication-item, .patent-item {
     box-shadow: 0 2px 12px rgba(0,0,0,0.08) !important;
     border-left: 3px solid #4a9ebe;
@@ -63,6 +69,27 @@
     box-shadow: 0 2px 12px rgba(0,0,0,0.08) !important;
     border-left: 3px solid #c49a3c;
   }
+  .talk-item, .tutorial-item, .panel-item {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-left-color 0.2s ease;
+}
+
+.talk-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12) !important;
+  border-left-color: #74c4e8;
+}
+
+.tutorial-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12) !important;
+  border-left-color: #8f9fd4;
+}
+
+.panel-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12) !important;
+  border-left-color: #d4b45c;
+}
   .year-divider {
     position: relative;
     text-align: center;
@@ -142,7 +169,7 @@ a.text-blue-600:hover { color: #357a96 !important; }
   gtag('config', 'G-H8WN74700N');
   </script>
 </head>
-<body class="bg-white text-gray-800 font-sans">
+<body class="bg-white text-gray-800">
   <header class="bg-white shadow-sm sticky top-0 z-10">
     <div class="container mx-auto px-6 py-4">
       <div class="flex justify-between items-center">

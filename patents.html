@@ -21,7 +21,9 @@
   <meta name="twitter:description" content="Nicola Piovesan's innovative patents featuring advancements in telecommunications such as network resource allocation based on user requirements and sustainable communication systems.">
   <meta name="twitter:creator" content="@itspiove">
   <meta name="twitter:image" content="https://www.nicolapiovesan.com/images/nicola3.jpg">
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link rel="icon" href="images/favicon.png" />
 
   <script type="application/ld+json">
@@ -40,6 +42,9 @@
   }
   </script>
   <style>
+  body {
+  font-family: 'Raleway', sans-serif;
+}
   .publication-item {
     border-left: 3px solid #3b82f6;
   }
@@ -47,6 +52,21 @@
     box-shadow: 0 2px 12px rgba(0,0,0,0.08) !important;
     border-left: 3px solid #10b981;
   }
+  .publication-item, .patent-item {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-left-color 0.2s ease;
+}
+
+.publication-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12) !important;
+  border-left-color: #74c4e8;
+}
+
+.patent-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12) !important;
+  border-left-color: #5abf9e;
+}
   .year-divider {
     position: relative;
     text-align: center;
@@ -155,7 +175,7 @@ a.text-blue-600:hover { color: #357a96 !important; }
   gtag('config', 'G-H8WN74700N');
   </script>
 </head>
-<body class="bg-white text-gray-800 font-sans">
+<body class="bg-white text-gray-800">
   <header class="bg-white shadow-sm sticky top-0 z-10">
     <div class="container mx-auto px-6 py-4">
       <div class="flex justify-between items-center">
