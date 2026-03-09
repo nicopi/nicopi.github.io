@@ -278,6 +278,27 @@ background: linear-gradient(135deg, #daeef7 0%, #ffffff 50%, #dff2e6 100%);
 .read-more-btn:hover { color: #357a96; }
 a.text-blue-600 { color: #4a9ebe !important; }
 a.text-blue-600:hover { color: #357a96 !important; }
+#mainNav.mobile-open {
+  display: block !important;
+  position: absolute;
+  top: 64px;
+  right: 1.5rem;
+  background: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  z-index: 50;
+}
+#mainNav.mobile-open ul {
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
+  padding-left: 0;
+  margin-left: 0;
+}
+#mainNav.mobile-open ul li {
+  margin-left: 0 !important;
+}
   </style>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-H8WN74700N"></script>
@@ -295,7 +316,7 @@ a.text-blue-600:hover { color: #357a96 !important; }
     <div class="container mx-auto px-6 py-4">
       <div class="flex justify-between items-center">
         <h1 class="text-2xl font-bold text-gray-800">Nicola Piovesan</h1>
-        <nav class="hidden md:block">
+        <nav class="hidden md:block" id="mainNav">
           <ul class="flex space-x-8">
             <li><a href="biography.html" class="nav-link">Bio</a></li>
             <li><a href="publications.html" class="nav-link">Publications</a></li>
@@ -303,7 +324,7 @@ a.text-blue-600:hover { color: #357a96 !important; }
             <li><a href="patents.html" class="nav-link">Patents</a></li>
           </ul>
         </nav>
-        <button class="md:hidden focus:outline-none">
+        <button  id="menuToggle" class="md:hidden focus:outline-none">
           <i class="fas fa-bars text-2xl"></i>
         </button>
       </div>
@@ -644,29 +665,9 @@ a.text-blue-600:hover { color: #357a96 !important; }
 </footer>
 
 <script>
-// Bio expand/collapse functionality
-const readMoreBtn = document.getElementById('readMoreBtn');
-const bioContent = document.getElementById('bioContent');
-
-readMoreBtn.addEventListener('click', function() {
-  bioContent.classList.toggle('expanded');
-  this.classList.toggle('expanded');
-  this.innerHTML = bioContent.classList.contains('expanded') ?
-  'Read less <i class="fas fa-chevron-up"></i>' :
-  'Read more <i class="fas fa-chevron-down"></i>';
-});
 // Simple mobile menu toggle functionality
-document.querySelector('button').addEventListener('click', function() {
-  const nav = document.querySelector('nav');
-  nav.classList.toggle('hidden');
-  nav.classList.toggle('block');
-  nav.classList.toggle('absolute');
-  nav.classList.toggle('top-16');
-  nav.classList.toggle('right-6');
-  nav.classList.toggle('bg-white');
-  nav.classList.toggle('p-4');
-  nav.classList.toggle('rounded');
-  nav.classList.toggle('shadow-md');
+document.getElementById('menuToggle').addEventListener('click', function() {
+  document.getElementById('mainNav').classList.toggle('mobile-open');
 });
 
 // Smooth scrolling for anchor links
