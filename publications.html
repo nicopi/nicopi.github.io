@@ -147,6 +147,27 @@
 .read-more-btn:hover { color: #357a96; }
 a.text-blue-600 { color: #4a9ebe !important; }
 a.text-blue-600:hover { color: #357a96 !important; }
+#mainNav.mobile-open {
+  display: block !important;
+  position: absolute;
+  top: 64px;
+  right: 1.5rem;
+  background: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  z-index: 50;
+}
+#mainNav.mobile-open ul {
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
+  padding-left: 0;
+  margin-left: 0;
+}
+#mainNav.mobile-open ul li {
+  margin-left: 0 !important;
+}
   </style>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-H8WN74700N"></script>
@@ -162,7 +183,7 @@ a.text-blue-600:hover { color: #357a96 !important; }
   <header class="bg-white shadow-sm sticky top-0 z-10">
     <div class="container mx-auto px-6 py-4">
       <div class="flex justify-between items-center">
-        <h1 class="text-2xl font-bold text-gray-800">Nicola Piovesan</h1>
+        <a href="index.html" class="text-2xl font-bold text-gray-800">Nicola Piovesan</a>
         <nav class="hidden md:block">
           <ul class="flex space-x-8">
             <li><a href="biography.html" class="nav-link">Bio</a></li>
@@ -191,6 +212,27 @@ a.text-blue-600:hover { color: #357a96 !important; }
         <span>2026</span>
       </div>
       <div class="space-y-4">
+      <div class="publication-item bg-white p-4 rounded-lg shadow-sm pl-6">
+          <div class="flex justify-between items-start">
+            <h3 class="font-bold text-lg mb-1">Advancing green mobile networks</h3>
+            <span class="pub-tag journal-tag">Journal</span>
+          </div>
+          <p class="text-gray-600 mb-2">Nature Communications</p>
+          <p class="text-gray-700 mb-2">
+            <span class="font-medium">Authors:</span> Antonio De Domenico, Nicola Piovesan, Xiaoyi Zhou, Xiaowen Li, Magnus Olsson, Xin Chen
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <button type="button" class="text-[#4a9ebe] hover:text-[#357a96] text-sm flex items-center" onclick="toggleAbstract('abstract2026nature')">
+              <i class="fas fa-align-left mr-1"></i> Abstract
+            </button>
+            <a href="https://www.nature.com/articles/s41467-026-71562-1" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
+              <i class="fas fa-file-alt mr-1"></i> Paper
+            </a>
+          </div>
+          <div id="abstract2026nature" class="hidden mt-3 text-sm text-gray-600">
+            Mobile communication is a cornerstone technology in our society, facilitating personal relationships, fostering cooperation, and advancing education. Each generation of this technology has brought new services, from voice calls and messaging to internet access, and now Artificial Intelligence (AI). This transformation has steadily augmented the mobile network resource requirements. Driven by the societal and economical needs to increase the mobile network energy efficiency, reduce its energy consumption and the associated environmental footprint, this comment surveys standardized metrics to assess energy-related network performance and overview data-driven state-of-the-art solutions to accelerate the energy transition of mobile networks.
+          </div>
+        </div>
       <div class="publication-item bg-white p-4 rounded-lg shadow-sm pl-6">
           <div class="flex justify-between items-start">
             <h3 class="font-bold text-lg mb-1">Capacity and Energy Trade-Offs in FR3 6G Networks Using Real Deployment Data</h3>
@@ -236,7 +278,30 @@ a.text-blue-600:hover { color: #357a96 !important; }
             Language Models (LLMs) are increasingly explored in the telecom industry to support engineering tasks, accelerate troubleshooting, and assist in interpreting complex technical documents. However, recent studies show that LLMs perform poorly on telecom standards, particularly 3GPP specifications. We argue that a key reason is that these standards densely include tables to present essential information, yet the LLM knowledge and interpretation ability of such tables remains largely unexamined. To address this gap, we introduce TeleTables, a benchmark designed to evaluate both the implicit knowledge LLMs have about tables in technical specifications and their explicit ability to interpret them. TeleTables is built through a novel multi-stage data generation pipeline that extracts tables from 3GPP standards and uses multimodal and reasoning-oriented LLMs to generate and validate questions. The resulting dataset, which is publicly available, comprises 500 human-verified question-answer pairs, each associated with the corresponding table in multiple formats. Our evaluation shows that, smaller models (under 10B parameters) struggle both to recall 3GPP knowledge and to interpret tables, indicating the limited exposure to telecom standards in their pretraining and the insufficient inductive biases for navigating complex technical material. Larger models, on the other hand, show stronger reasoning on table interpretation. Overall, TeleTables highlights the need for domain-specialized fine-tuning to reliably interpret and reason over telecom standards.
           </div>
         </div>
-      
+      <div class="publication-item bg-white p-4 rounded-lg shadow-sm pl-6">
+          <div class="flex justify-between items-start">
+            <h3 class="font-bold text-lg mb-1">Goal-Oriented Time-Series Forecasting: Foundation Framework Design</h3>
+            <span class="pub-tag conference-tag">Conference</span>
+          </div>
+          <p class="text-gray-600 mb-2">Annual AAAI Conference on Artificial Intelligence (AAAI), 20-27 January 2026, Singapore</p>
+          <p class="text-gray-700 mb-2">
+            <span class="font-medium">Authors:</span> Luca-Andrei Fechete, Mohamed Sana, Fadhel Ayed, Nicola Piovesan, Wenjie Li, Antonio De Domenico, Tareq Si Salem
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <button type="button" class="text-[#4a9ebe] hover:text-[#357a96] text-sm flex items-center" onclick="toggleAbstract('abstract2025goal')">
+              <i class="fas fa-align-left mr-1"></i> Abstract
+            </button>
+            <a href="https://ojs.aaai.org/index.php/AAAI/article/view/39249" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
+              <i class="fas fa-file-alt mr-1"></i> Preprint
+            </a>
+            <a href="https://arxiv.org/abs/2504.17493" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
+              <i class="fas fa-file-pdf mr-1"></i> Preprint
+            </a>
+          </div>
+          <div id="abstract2025goal" class="hidden mt-3 text-sm text-gray-600">
+            Conventional time-series forecasting methods typically aim to minimize overall prediction error, without accounting for the varying importance of different forecast ranges in downstream applications. We propose a training methodology that enables forecasting models to adapt their focus to application-specific regions of interest at inference time, without retraining. The approach partitions the prediction space into fine-grained segments during training, which are dynamically reweighted and aggregated to emphasize the target range specified by the application. Unlike prior methods that predefine these ranges, our framework supports flexible, on-demand adjustments. Experiments on standard benchmarks and a newly collected wireless communication dataset demonstrate that our method not only improves forecast accuracy within regions of interest but also yields measurable gains in downstream task performance. These results highlight the potential for closer integration between predictive modeling and decision-making in real-world systems.
+          </div>
+        </div>
       
       </div>
       
@@ -402,28 +467,6 @@ This paper proposes an energy-efficient user association algorithm for cellular 
             The introduction of fifth-generation (5G) radio technology has revolutionized communications, bringing unprecedented automation, capacity, connectivity, and ultra-fast, reliable communications. However, this technological leap comes with a substantial increase in energy consumption, presenting a significant challenge. To improve the energy efficiency of 5G networks, it is imperative to develop sophisticated models that accurately reflect the influence of base station (BS) attributes and operational conditions on energy this http URL, addressing the complexity and interdependencies of these diverse features is particularly challenging, both in terms of data processing and model architecture design. This paper proposes a novel 5G base stations energy consumption modelling method by learning from a real-world dataset used in the ITU 5G Base Station Energy Consumption Modelling Challenge in which our model ranked second. Unlike existing methods that omit the Base Station Identifier (BSID) information and thus fail to capture the unique energy fingerprint in different base stations, we incorporate the BSID into the input features and encoding it with an embedding layer for precise representation. Additionally, we introduce a novel masked training method alongside an attention mechanism to further boost the model's generalization capabilities and accuracy. After evaluation, our method demonstrates significant improvements over existing models, reducing Mean Absolute Percentage Error (MAPE) from 12.75% to 4.98%, leading to a performance gain of more than 60%.
           </div>
         </div>
-        <div class="publication-item bg-white p-4 rounded-lg shadow-sm pl-6">
-          <div class="flex justify-between items-start">
-            <h3 class="font-bold text-lg mb-1">Goal-Oriented Time-Series Forecasting: Foundation Framework Design</h3>
-            <span class="pub-tag conference-tag">Conference</span>
-          </div>
-          <p class="text-gray-600 mb-2">NeurIPS 2025, 30 November - 7 December, San Diego (USA)</p>
-          <p class="text-gray-700 mb-2">
-            <span class="font-medium">Authors:</span> Luca-Andrei Fechete, Mohamed Sana, Fadhel Ayed, Nicola Piovesan, Wenjie Li, Antonio De Domenico, Tareq Si Salem
-          </p>
-          <div class="flex flex-wrap gap-4">
-            <button type="button" class="text-[#4a9ebe] hover:text-[#357a96] text-sm flex items-center" onclick="toggleAbstract('abstract2025goal')">
-              <i class="fas fa-align-left mr-1"></i> Abstract
-            </button>
-            <a href="https://arxiv.org/abs/2504.17493" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-              <i class="fas fa-file-pdf mr-1"></i> Preprint
-            </a>
-          </div>
-          <div id="abstract2025goal" class="hidden mt-3 text-sm text-gray-600">
-            Traditional time-series forecasting often focuses only on minimizing prediction errors, ignoring the specific requirements of real-world applications that employ them. This paper presents a new training methodology, which allows a forecasting model to dynamically adjust its focus based on the importance of forecast ranges specified by the end application. Unlike previous methods that fix these ranges beforehand, our training approach breaks down predictions over the entire signal range into smaller segments, which are then dynamically weighted and combined to produce accurate forecasts. We tested our method on standard datasets, including a new dataset from wireless communication, and found that not only it improves prediction accuracy but also improves the performance of end application employing the forecasting model. This research provides a basis for creating forecasting systems that better connect prediction and decision-making in various practical applications.
-          </div>
-        </div>
-
         <div class="publication-item bg-white p-4 rounded-lg shadow-sm pl-6">
           <div class="flex justify-between items-start">
             <h3 class="font-bold text-lg mb-1">Cell-Free Massive MIMO at Midband: Potentials and Risks</h3>
