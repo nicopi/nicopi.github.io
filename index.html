@@ -391,6 +391,27 @@ a.text-blue-600:hover { color: #357a96 !important; }
         </div>
 
         <div class="space-y-4">
+        <div class="publication-item bg-white p-4 rounded-lg shadow-sm pl-6">
+          <div class="flex justify-between items-start">
+            <h3 class="font-bold text-lg mb-1">HPO: Hysteretic Policy Optimization for Stable and Efficient Training under Sparse-Reward Regime</h3>
+            <span class="pub-tag preprint-tag">Preprint</span>
+          </div>
+          <p class="text-gray-600 mb-2">Submitted</p>
+          <p class="text-gray-700 mb-2">
+            <span class="font-medium">Authors:</span> Mohamed Sana, Nicola Piovesan, Antonio De Domenico, Fadhel Ayed, Haozhe Zhang
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <button type="button" class="text-[#4a9ebe] hover:text-[#357a96] text-sm flex items-center" onclick="toggleAbstract('abstract2026hpo')">
+              <i class="fas fa-align-left mr-1"></i> Abstract
+            </button>
+            <a href="https://arxiv.org/abs/2605.30201" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
+              <i class="fas fa-file-alt mr-1"></i> Paper
+            </a>
+          </div>
+          <div id="abstract2026hpo" class="hidden mt-3 text-sm text-gray-600">
+            We investigate a narrow but common failure mode of GRPO-style reinforcement learning in the context of sparse verifiable rewards: early updates contain more responses with negative advantages than those with positive advantages, while response-level length normalization ties the magnitude of the update to the length of the output. We propose Hysteretic Policy Optimization (HPO), a minimal modification of GRPO that reduces the weight of negative-advantage updates and replaces per-response length normalization with mean-length normalization. We further introduce Adaptive HPO (A-HPO), which sets the hysteretic weight based on batch-level advantage-sign statistics, thereby removing the need for tuning a fixed hysteretic weight. In our TeleLogs and Countdown experiments, A-HPO improves the reward per update compared to GRPO, with the largest gains in early sparse reward regimes. On TeleLogs, A-HPO achieves a final reward of 0.84, outperforming SAPO by 5%, GSPO by 11%, and GRPO by 15%, while maintaining a comparable response-length. On Countdown, A-HPO achieves the largest gains in initial and most difficult configurations across 1.5B-7B models. Ablation studies on the hysteretic weight show that the gains of A-HPO come from better balancing the contributions of positive and negative advantages compared to positive-only or fully symmetric updates.
+          </div>
+        </div>
          <div class="publication-item bg-white p-4 rounded-lg shadow-sm pl-6">
           <div class="flex justify-between items-start">
             <h3 class="font-bold text-lg mb-1">Advancing green mobile networks</h3>
@@ -410,29 +431,6 @@ a.text-blue-600:hover { color: #357a96 !important; }
           </div>
           <div id="abstract2026nature" class="hidden mt-3 text-sm text-gray-600">
             Mobile communication is a cornerstone technology in our society, facilitating personal relationships, fostering cooperation, and advancing education. Each generation of this technology has brought new services, from voice calls and messaging to internet access, and now Artificial Intelligence (AI). This transformation has steadily augmented the mobile network resource requirements. Driven by the societal and economical needs to increase the mobile network energy efficiency, reduce its energy consumption and the associated environmental footprint, this comment surveys standardized metrics to assess energy-related network performance and overview data-driven state-of-the-art solutions to accelerate the energy transition of mobile networks.
-          </div>
-        </div>
-      <div class="publication-item bg-white p-4 rounded-lg shadow-sm pl-6">
-          <div class="flex justify-between items-start">
-            <h3 class="font-bold text-lg mb-1">TeleTables: A Benchmark for Large Language Models in Telecom Table Interpretation</h3>
-            <span class="pub-tag preprint-tag">Preprint</span>
-          </div>
-          <p class="text-gray-700 mb-2">
-            <span class="font-medium">Authors:</span> Anas Ezzakri, Nicola Piovesan, Mohamed Sana, Antonio De Domenico, Fadhel Ayed, Haozhe Zhang
-          </p>
-          <div class="flex flex-wrap gap-4">
-            <button type="button" class="text-[#4a9ebe] hover:text-[#357a96] text-sm flex items-center" onclick="toggleAbstract('abstract2026teletables')">
-              <i class="fas fa-align-left mr-1"></i> Abstract
-            </button>
-            <a href="https://arxiv.org/abs/2601.04202" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-              <i class="fas fa-file-pdf mr-1"></i> Preprint
-            </a>
-            <a href="https://huggingface.co/datasets/netop/TeleTables" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-              <i class="fas fa-database mr-1"></i> Dataset
-            </a>
-          </div>
-          <div id="abstract2026teletables" class="hidden mt-3 text-sm text-gray-600">
-            Language Models (LLMs) are increasingly explored in the telecom industry to support engineering tasks, accelerate troubleshooting, and assist in interpreting complex technical documents. However, recent studies show that LLMs perform poorly on telecom standards, particularly 3GPP specifications. We argue that a key reason is that these standards densely include tables to present essential information, yet the LLM knowledge and interpretation ability of such tables remains largely unexamined. To address this gap, we introduce TeleTables, a benchmark designed to evaluate both the implicit knowledge LLMs have about tables in technical specifications and their explicit ability to interpret them. TeleTables is built through a novel multi-stage data generation pipeline that extracts tables from 3GPP standards and uses multimodal and reasoning-oriented LLMs to generate and validate questions. The resulting dataset, which is publicly available, comprises 500 human-verified question-answer pairs, each associated with the corresponding table in multiple formats. Our evaluation shows that, smaller models (under 10B parameters) struggle both to recall 3GPP knowledge and to interpret tables, indicating the limited exposure to telecom standards in their pretraining and the insufficient inductive biases for navigating complex technical material. Larger models, on the other hand, show stronger reasoning on table interpretation. Overall, TeleTables highlights the need for domain-specialized fine-tuning to reliably interpret and reason over telecom standards.
           </div>
         </div>
 </section>
