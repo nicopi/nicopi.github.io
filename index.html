@@ -393,6 +393,27 @@ a.text-blue-600:hover { color: #357a96 !important; }
         <div class="space-y-4">
         <div class="publication-item bg-white p-4 rounded-lg shadow-sm pl-6">
           <div class="flex justify-between items-start">
+            <h3 class="font-bold text-lg mb-1">CTBench: Evaluating Troubleshooting Capabilities of AI Agents in Realistic Telecom Network Operations</h3>
+            <span class="pub-tag preprint-tag">Preprint</span>
+          </div>
+          <p class="text-gray-600 mb-2">Submitted</p>
+          <p class="text-gray-700 mb-2">
+            <span class="font-medium">Authors:</span> Xingyu Yan, Tingting Dai, Antonio De Domenico, Mohamed Sana, Nicola Piovesan, Changchang Li, Bowen Liu, Kun Jiang, Mengjie Zhang, Dingcheng Shan, Jing-Cheng Pang, Chenwei Wu, Sijie Wu, Lianying Chao, Haoran Cai, Jiantao Ye, Xubin Li, Simon Mark Lucas, Xin Chen
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <button type="button" class="text-[#4a9ebe] hover:text-[#357a96] text-sm flex items-center" onclick="toggleAbstract('abstract2026ctbench')">
+              <i class="fas fa-align-left mr-1"></i> Abstract
+            </button>
+            <a href="https://arxiv.org/abs/2608.12002" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
+              <i class="fas fa-file-pdf mr-1"></i> Preprint
+            </a>
+          </div>
+          <div id="abstract2026ctbench" class="hidden mt-3 text-sm text-gray-600">
+            Agents are increasingly considered for automating network operations and maintenance, where engineers must diagnose network faults, optimize configurations to enhance services, and reduce operational costs while acting under strict constraints. However, existing evaluations fail to accurately model real network characteristics or assess agents under partially observable telecom environments with diverse vendors, devices, protocols, and interfaces. In this paper, we introduce CTBench, a public benchmark for assessing whether an agent behaves like a competent telecom troubleshooting engineer. CTBench focuses on root cause analysis and path restoration. Each task is constructed by experts and annotated with rich task metadata, including golden evidence steps. CTBench uses expert-grounded metrics that evaluate both final answers and the diagnostic evidence. Experiments with representative harness-model combinations show that state-of-the-art agents perform very well at identifying endpoints in path-restoration tasks but, more generally, underperform in root cause analysis. In particular, agents struggle with interface state, link-layer, service-management, and other operational faults. Most importantly, even when agents produce plausible or correct final answers, they often fail to provide the evidence-grounded diagnoses required in operational practice. Our results further show that path restoration is generally more resource expensive, yet larger resource usage does not necessarily translate into better diagnosis.
+          </div>
+        </div>
+        <div class="publication-item bg-white p-4 rounded-lg shadow-sm pl-6">
+          <div class="flex justify-between items-start">
             <h3 class="font-bold text-lg mb-1">HPO: Hysteretic Policy Optimization for Stable and Efficient Training under Sparse-Reward Regime</h3>
             <span class="pub-tag preprint-tag">Preprint</span>
           </div>
@@ -410,27 +431,6 @@ a.text-blue-600:hover { color: #357a96 !important; }
           </div>
           <div id="abstract2026hpo" class="hidden mt-3 text-sm text-gray-600">
             We investigate a narrow but common failure mode of GRPO-style reinforcement learning in the context of sparse verifiable rewards: early updates contain more responses with negative advantages than those with positive advantages, while response-level length normalization ties the magnitude of the update to the length of the output. We propose Hysteretic Policy Optimization (HPO), a minimal modification of GRPO that reduces the weight of negative-advantage updates and replaces per-response length normalization with mean-length normalization. We further introduce Adaptive HPO (A-HPO), which sets the hysteretic weight based on batch-level advantage-sign statistics, thereby removing the need for tuning a fixed hysteretic weight. In our TeleLogs and Countdown experiments, A-HPO improves the reward per update compared to GRPO, with the largest gains in early sparse reward regimes. On TeleLogs, A-HPO achieves a final reward of 0.84, outperforming SAPO by 5%, GSPO by 11%, and GRPO by 15%, while maintaining a comparable response-length. On Countdown, A-HPO achieves the largest gains in initial and most difficult configurations across 1.5B-7B models. Ablation studies on the hysteretic weight show that the gains of A-HPO come from better balancing the contributions of positive and negative advantages compared to positive-only or fully symmetric updates.
-          </div>
-        </div>
-         <div class="publication-item bg-white p-4 rounded-lg shadow-sm pl-6">
-          <div class="flex justify-between items-start">
-            <h3 class="font-bold text-lg mb-1">Advancing green mobile networks</h3>
-            <span class="pub-tag journal-tag">Journal</span>
-          </div>
-          <p class="text-gray-600 mb-2">Nature Communications</p>
-          <p class="text-gray-700 mb-2">
-            <span class="font-medium">Authors:</span> Antonio De Domenico, Nicola Piovesan, Xiaoyi Zhou, Xiaowen Li, Magnus Olsson, Xin Chen
-          </p>
-          <div class="flex flex-wrap gap-4">
-            <button type="button" class="text-[#4a9ebe] hover:text-[#357a96] text-sm flex items-center" onclick="toggleAbstract('abstract2026nature')">
-              <i class="fas fa-align-left mr-1"></i> Abstract
-            </button>
-            <a href="https://www.nature.com/articles/s41467-026-71562-1" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-              <i class="fas fa-file-alt mr-1"></i> Paper
-            </a>
-          </div>
-          <div id="abstract2026nature" class="hidden mt-3 text-sm text-gray-600">
-            Mobile communication is a cornerstone technology in our society, facilitating personal relationships, fostering cooperation, and advancing education. Each generation of this technology has brought new services, from voice calls and messaging to internet access, and now Artificial Intelligence (AI). This transformation has steadily augmented the mobile network resource requirements. Driven by the societal and economical needs to increase the mobile network energy efficiency, reduce its energy consumption and the associated environmental footprint, this comment surveys standardized metrics to assess energy-related network performance and overview data-driven state-of-the-art solutions to accelerate the energy transition of mobile networks.
           </div>
         </div>
 </section>
