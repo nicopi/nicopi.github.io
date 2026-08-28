@@ -214,6 +214,69 @@ a.text-blue-600:hover { color: #357a96 !important; }
       <div class="space-y-4">
       <div class="publication-item bg-white p-4 rounded-lg shadow-sm pl-6">
           <div class="flex justify-between items-start">
+            <h3 class="font-bold text-lg mb-1">CTBench: Evaluating Troubleshooting Capabilities of AI Agents in Realistic Telecom Network Operations</h3>
+            <span class="pub-tag preprint-tag">Preprint</span>
+          </div>
+          <p class="text-gray-600 mb-2">Submitted</p>
+          <p class="text-gray-700 mb-2">
+            <span class="font-medium">Authors:</span> Xingyu Yan, Tingting Dai, Antonio De Domenico, Mohamed Sana, Nicola Piovesan, Changchang Li, Bowen Liu, Kun Jiang, Mengjie Zhang, Dingcheng Shan, Jing-Cheng Pang, Chenwei Wu, Sijie Wu, Lianying Chao, Haoran Cai, Jiantao Ye, Xubin Li, Simon Mark Lucas, Xin Chen
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <button type="button" class="text-[#4a9ebe] hover:text-[#357a96] text-sm flex items-center" onclick="toggleAbstract('abstract2026ctbench')">
+              <i class="fas fa-align-left mr-1"></i> Abstract
+            </button>
+            <a href="https://arxiv.org/abs/2608.12002" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
+              <i class="fas fa-file-pdf mr-1"></i> Preprint
+            </a>
+          </div>
+          <div id="abstract2026ctbench" class="hidden mt-3 text-sm text-gray-600">
+            Agents are increasingly considered for automating network operations and maintenance, where engineers must diagnose network faults, optimize configurations to enhance services, and reduce operational costs while acting under strict constraints. However, existing evaluations fail to accurately model real network characteristics or assess agents under partially observable telecom environments with diverse vendors, devices, protocols, and interfaces. In this paper, we introduce CTBench, a public benchmark for assessing whether an agent behaves like a competent telecom troubleshooting engineer. CTBench focuses on root cause analysis and path restoration. Each task is constructed by experts and annotated with rich task metadata, including golden evidence steps. CTBench uses expert-grounded metrics that evaluate both final answers and the diagnostic evidence. Experiments with representative harness-model combinations show that state-of-the-art agents perform very well at identifying endpoints in path-restoration tasks but, more generally, underperform in root cause analysis. In particular, agents struggle with interface state, link-layer, service-management, and other operational faults. Most importantly, even when agents produce plausible or correct final answers, they often fail to provide the evidence-grounded diagnoses required in operational practice. Our results further show that path restoration is generally more resource expensive, yet larger resource usage does not necessarily translate into better diagnosis.
+          </div>
+        </div>
+      <div class="publication-item bg-white p-4 rounded-lg shadow-sm pl-6">
+          <div class="flex justify-between items-start">
+            <h3 class="font-bold text-lg mb-1">Physics-Aware Conditional SetGAN for Spatially Consistent Multi-User TR 38.901 Channel Generation</h3>
+            <span class="pub-tag conference-tag">Conference</span>
+          </div>
+          <p class="text-gray-600 mb-2">IEEE Global Communications Conference (GLOBECOM), 7-11 December 2026, Macao</p>
+          <p class="text-gray-700 mb-2">
+            <span class="font-medium">Authors:</span> Mauro Gonzalo Tarazona-Levano, David López-Pérez, Nicola Piovesan, David Gómez-Barquero
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <button type="button" class="text-[#4a9ebe] hover:text-[#357a96] text-sm flex items-center" onclick="toggleAbstract('abstract2026setgan')">
+              <i class="fas fa-align-left mr-1"></i> Abstract
+            </button>
+            <a href="https://arxiv.org/abs/2607.11429" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
+              <i class="fas fa-file-pdf mr-1"></i> Preprint
+            </a>
+          </div>
+          <div id="abstract2026setgan" class="hidden mt-3 text-sm text-gray-600">
+            TR 38.901-based channel models such as Sionna are reliable, but generating many multi-user channel realizations remains expensive. This paper asks a practical question: can a trained generative model produce multi-user TR 38.901 channels faster than Sionna without losing the spatial correlations imposed by user geometry? To answer this question, we propose a physics-aware, geometry-conditioned SetGAN trained on Sionna reference data. The method separates large-scale received power from normalized small-scale fading, compresses the latter with principal component analysis, and learns the conditional channel distribution in a latent space while preserving geometry-dependent correlations. On the UMa/NLoS benchmark, the model keeps the received-power distributions close to the reference, with about 0.41 dB Wasserstein distance, and reproduces spatial-consistency profiles with mean deviations below 0.03 on median curves versus distance. In addition, it reduces elapsed generation time by a factor of 3.45 and CPU-total cost by a factor of 6.15 relative to Sionna under matched user positions in the fixed-position CPU-vs-CPU benchmark. These results show that a trained generative model can substantially accelerate TR 38.901 channel generation without breaking the spatial consistency needed to evaluate multi-user systems.
+          </div>
+        </div>
+      <div class="publication-item bg-white p-4 rounded-lg shadow-sm pl-6">
+          <div class="flex justify-between items-start">
+            <h3 class="font-bold text-lg mb-1">HAPS as a Hypercell: Enabling Coverage and Capacity Carrier Shutdown in Cellular Networks</h3>
+            <span class="pub-tag conference-tag">Conference</span>
+          </div>
+          <p class="text-gray-600 mb-2">IEEE Global Communications Conference (GLOBECOM), 7-11 December 2026, Macao</p>
+          <p class="text-gray-700 mb-2">
+            <span class="font-medium">Authors:</span> Matteo Bernabè, David López-Pérez, Nicola Piovesan
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <button type="button" class="text-[#4a9ebe] hover:text-[#357a96] text-sm flex items-center" onclick="toggleAbstract('abstract2026haps')">
+              <i class="fas fa-align-left mr-1"></i> Abstract
+            </button>
+            <a href="https://arxiv.org/abs/2607.06072" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
+              <i class="fas fa-file-pdf mr-1"></i> Preprint
+            </a>
+          </div>
+          <div id="abstract2026haps" class="hidden mt-3 text-sm text-gray-600">
+            Energy consumption remains a dominant operational challenge for current and future cellular systems, especially in dense urban deployments. This paper investigates a novel role for non terrestrial network (NTN) high-altitude platform station (HAPS) as an enabler of energy-efficient operation rather than only coverage extension. We define the HAPS-Hypercell as a wide-area non-terrestrial layer that can assume the coverage role of multiple terrestrial macro-cells, enabling, for the first time, the shutdown of both capacity and coverage macro-cells. We develop a comprehensive third generation partnership project (3GPP)-compliant system model, along with two HAPS-Hypercell pairing architectures that capture the interplay among multiple layers, realistic channel conditions, and distributed carrier shutdown (CS) mechanisms. Our results show that the HAPS-Hypercell can effectively reduce overall network power consumption. We then identify key limitations of a straightforward HAPS integration, laying the groundwork for future optimization and providing key insights for next-generation CS operations.
+          </div>
+        </div>
+      <div class="publication-item bg-white p-4 rounded-lg shadow-sm pl-6">
+          <div class="flex justify-between items-start">
             <h3 class="font-bold text-lg mb-1">HPO: Hysteretic Policy Optimization for Stable and Efficient Training under Sparse-Reward Regime</h3>
             <span class="pub-tag preprint-tag">Preprint</span>
           </div>
@@ -257,9 +320,9 @@ a.text-blue-600:hover { color: #357a96 !important; }
       <div class="publication-item bg-white p-4 rounded-lg shadow-sm pl-6">
           <div class="flex justify-between items-start">
             <h3 class="font-bold text-lg mb-1">Capacity and Energy Trade-Offs in FR3 6G Networks Using Real Deployment Data</h3>
-            <span class="pub-tag preprint-tag">Preprint</span>
+            <span class="pub-tag journal-tag">Journal</span>
           </div>
-          <p class="text-gray-600 mb-2">Submitted</p>
+          <p class="text-gray-600 mb-2">IEEE Communications Magazine</p>
           <p class="text-gray-700 mb-2">
             <span class="font-medium">Authors:</span> David López-Pérez, Nicola Piovesan, Matteo Bernabè
           </p>
@@ -267,6 +330,9 @@ a.text-blue-600:hover { color: #357a96 !important; }
             <button type="button" class="text-[#4a9ebe] hover:text-[#357a96] text-sm flex items-center" onclick="toggleAbstract('abstract2026capacity')">
               <i class="fas fa-align-left mr-1"></i> Abstract
             </button>
+            <a href="https://ieeexplore.ieee.org/document/11669035" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
+              <i class="fas fa-file-alt mr-1"></i> Paper
+            </a>
             <a href="https://arxiv.org/abs/2601.13993" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
               <i class="fas fa-file-pdf mr-1"></i> Preprint
             </a>
@@ -278,9 +344,9 @@ a.text-blue-600:hover { color: #357a96 !important; }
       <div class="publication-item bg-white p-4 rounded-lg shadow-sm pl-6">
           <div class="flex justify-between items-start">
             <h3 class="font-bold text-lg mb-1">TeleTables: A Benchmark for Large Language Models in Telecom Table Interpretation</h3>
-            <span class="pub-tag preprint-tag">Preprint</span>
+            <span class="pub-tag conference-tag">Conference</span>
           </div>
-          <p class="text-gray-600 mb-2">Submitted</p>
+          <p class="text-gray-600 mb-2">Conference on Empirical Methods in Natural Language Processing (EMNLP), 24-29 October 2026, Budapest (Hungary)</p>
           <p class="text-gray-700 mb-2">
             <span class="font-medium">Authors:</span> Anas Ezzakri, Nicola Piovesan, Mohamed Sana, Antonio De Domenico, Fadhel Ayed, Haozhe Zhang
           </p>
@@ -336,7 +402,7 @@ a.text-blue-600:hover { color: #357a96 !important; }
             <h3 class="font-bold text-lg mb-1">Gradient-Based Optimization of Terrestrial Cellular Networks for Aerial Highways</h3>
             <span class="pub-tag journal-tag">Journal</span>
           </div>
-          <p class="text-gray-600 mb-2">Submitted</p>
+          <p class="text-gray-600 mb-2">IEEE Transactions on Vehicular Technology</p>
           <p class="text-gray-700 mb-2">
             <span class="font-medium">Authors:</span> Matteo Bernabè, David López-Pérez, Nicola Piovesan, David Gerbert
           </p>
@@ -377,9 +443,9 @@ We propose a simple, yet effective, KV cache compression framework based on atte
         <div class="publication-item bg-white p-4 rounded-lg shadow-sm pl-6">
           <div class="flex justify-between items-start">
             <h3 class="font-bold text-lg mb-1">Reasoning Language Models for Root Cause Analysis in 5G Wireless Networks</h3>
-            <span class="pub-tag preprint-tag">Preprint</span>
+            <span class="pub-tag conference-tag">Conference</span>
           </div>
-          <p class="text-gray-600 mb-2">Submitted</p>
+          <p class="text-gray-600 mb-2">IEEE International Conference on Machine Learning for Communication and Networking (ICMLCN), June 2026, Abu Dhabi (UAE)</p>
           <p class="text-gray-700 mb-2">
             <span class="font-medium">Authors:</span> Mohamed Sana, Nicola Piovesan, Antonio De Domenico, Yibin Kang, Haozhe Zhang, Merouane Debbah, Fadhel Ayed
           </p>
@@ -462,6 +528,9 @@ We propose a simple, yet effective, KV cache compression framework based on atte
             <button type="button" class="text-[#4a9ebe] hover:text-[#357a96] text-sm flex items-center" onclick="toggleAbstract('abstract2025exchange')">
               <i class="fas fa-align-left mr-1"></i> Abstract
             </button>
+            <a href="https://ieeexplore.ieee.org/document/11590865/" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
+              <i class="fas fa-file-alt mr-1"></i> Paper
+            </a>
           </div>
           <div id="abstract2025exchange" class="hidden mt-3 text-sm text-gray-600">
 This paper proposes an energy-efficient user association algorithm for cellular networks. Unlike traditional approaches, it leverages AI-based power consumption model exchanges between base stations to enable more energy-aware user reassociation. By accounting for heterogeneous radio unit power profiles, the algorithm shifts users to more efficient base stations, reducing overall energy consumption. Simulations show notable power savings-amplified by greater efficiency variance-while preserving network throughput, validating the approach's effectiveness.
