@@ -31,6 +31,8 @@
   width: 320px;
   min-height: 330px;
   margin: 0;
+  overflow: hidden;
+  border-bottom-right-radius: 23px;
   z-index: 1;
 }
 .bio-portrait img {
@@ -41,6 +43,7 @@
   flex: none;
   object-fit: cover;
   object-position: center top;
+  border-bottom-right-radius: inherit;
   filter: drop-shadow(7px 0 12px #34546b12);
 }
 .bio-introduction {
