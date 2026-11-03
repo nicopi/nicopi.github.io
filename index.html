@@ -1,692 +1,208 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nicola Piovesan</title>
-  <link rel="alternate" hreflang="en" href="https://www.nicolapiovesan.com" />
-  <meta http-equiv="Expires" content="7">
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Nicola Piovesan is a researcher at Huawei Technologies France. His research includes energy efficiency in wireless communications and AI.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nicola Piovesan, PhD</title>
+  <meta name="description" content="Nicola Piovesan, PhD, Senior Researcher at Huawei Technologies. Generative and agentic AI, large language models, and AI-driven network automation.">
   <meta name="author" content="Nicola Piovesan">
-
+  <link rel="canonical" href="https://www.nicolapiovesan.com/">
+  <link rel="icon" href="images/favicon.png">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://www.nicolapiovesan.com/images/nicola3.jpg">
-  <meta property="og:title" content= "Nicola Piovesan">
-  <meta property="og:description" content="Nicola Piovesan is a researcher at Huawei Technologies France. His research includes energy efficiency in wireless communications and AI.">
   <meta property="og:site_name" content="Nicola Piovesan">
+  <meta property="og:title" content="Nicola Piovesan, PhD">
+  <meta property="og:description" content="Nicola Piovesan, PhD, Senior Researcher at Huawei Technologies. Generative and agentic AI, large language models, and AI-driven network automation.">
   <meta property="og:url" content="https://www.nicolapiovesan.com/">
-
+  <meta property="og:image" content="https://www.nicolapiovesan.com/images/nicola3.jpg">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@itspiove">
-  <meta name="twitter:title" content="Nicola Piovesan">
-  <meta name="twitter:description" content="Nicola Piovesan is a researcher at Huawei Technologies France. His research includes energy efficiency in wireless communications and AI.">
   <meta name="twitter:creator" content="@itspiove">
+  <meta name="twitter:title" content="Nicola Piovesan, PhD">
+  <meta name="twitter:description" content="Nicola Piovesan, PhD, Senior Researcher at Huawei Technologies. Generative and agentic AI, large language models, and AI-driven network automation.">
   <meta name="twitter:image" content="https://www.nicolapiovesan.com/images/nicola3.jpg">
-
-  <link rel="icon" href="images/favicon.png" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="./css/academicons/css/academicons.min.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <script type="application/ld+json">
-  {
-    "@context": "http://schema.org",
-    "@type": "Person",
-    "familyName": "Piovesan",
-    "givenName": "Nicola",
-    "name": "Nicola Piovesan",
-    "url": "https://www.nicolapiovesan.com",
-    "worksFor": "https://www.huawei.com",
-    "jobTitle": "Researcher",
-    "knowsAbout": "artificial intelligence, machine learning, wireless communications",
-    "nationality": "Italy",
-    "alumniOf": "http://www.upc.edu",
-    "image": "https://www.nicolapiovesan.com/images/nicola3.jpg",
-    "gender": "http://schema.org/Male",
-    "sameAs": ["https://www.twitter.com/itspiove",
-    "https://www.linkedin.com/in/nicolapiovesan",
-    "https://scholar.google.com/citations?user=hxWbCAUAAAAJ",
-    "https://aiforgood.itu.int/speaker/nicola-piovesan/",
-    "https://techinformed.com/using-ai-to-make-5g-more-sustainable/",
-    "https://ieeexplore.ieee.org/author/37086305388",
-    "https://www.researchgate.net/profile/Nicola-Piovesan",
-    "https://www.youtube.com/watch?v=zSetefnu3y8"]
-  }
-  </script>
-  <style>
-body {
-  font-family: 'Raleway', sans-serif;
-}
-.profile-pic {
-    width: 220px;
-    height: 220px;
-    object-fit: cover;
-    border: 5px solid rgba(255,255,255,0.9);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.18);
-  }
-
-  .talk-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.08) !important;
-  }
-  .talk-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-  }
-  .section-divider {
-    border-top: 2px solid #e5e7eb;
-    margin: 3rem 0;
-  }
-  section{
-    scroll-margin-top: 70px;
-    }
-
-  /* Elevated cards on white background */
-  .publication-item, .patent-item {
-    box-shadow: 0 2px 12px rgba(0,0,0,0.08) !important;
-    border-left: 3px solid #4a9ebe;
-  }
-  .bg-white.p-6.rounded-lg {
-    box-shadow: 0 2px 12px rgba(0,0,0,0.08) !important;
-  }
-  
-  .patent-item {
-    border-left: 3px solid #3a9e6e;
-  }
-  .award-item {
-    border-left: 3px solid #c49a3c;
-  }
-  .news-item {
-    border-left: 3px solid #6a7fc1;
-  }
-  .service-item {
-    border-left: 3px solid #c4606a;
-  }
-  .nav-link {
-    position: relative;
-  }
-  .nav-link::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -2px;
-    left: 0;
-    background-color: #4a9ebe;
-    transition: width 0.3s ease;
-  }
-  .nav-link:hover::after {
-    width: 100%;
-  }
-  .pub-tag {
-    font-size: 0.75rem;
-    padding: 0.25rem 0.5rem;
-    border-radius: 0.25rem;
-    font-weight: 600;
-  }
-  .journal-tag {
-    background-color: #ECFDF5;
-    color: #065F46;
-  }
-  .conference-tag {
-    background-color: #EFF6FF;
-    color: #1E40AF;
-  }
-  .preprint-tag {
-    background-color: #f9e8e9;
-    color: #9e3a42;
-  }
-  .book-tag {
-    background-color: #F5F3FF;
-    color: #5B21B6;
-  }
-  .international-tag {
-    background-color: #F5F3FF;
-    color: #5B21B6;
-  }
-  .bio-link {
-    color: #4b5563; /* gray-600 */
-    text-decoration: underline;
-    text-decoration-color: #d1d5db; /* gray-300 */
-    text-underline-offset: 3px;
-    transition: all 0.2s ease;
-  }
-.bio-link:hover {
-    color: #4a9ebe;
-    text-decoration-color: #a8d8ea;
-  }
-  /* Responsive centering for smaller viewports */
-  @media (max-width: 1024px) {
-    .responsive-center {
-      text-align: center;
-      justify-content: center;
-    }
-    .responsive-stack {
-      flex-direction: row;
-      align-items: center;
-      text-align: center;
-      justify-content: center;
-      gap: 0.8rem; /* Add some vertical spacing */
-    }
-    .responsive-profile {
-      margin-bottom: 1.5rem; /* Add space below profile pic */
-    }
-  }
-  /* Bio expand/collapse styles */
-  .bio-content {
-    max-height: 200px; /* Show about 4 lines of text */
-    overflow: hidden;
-    transition: max-height 0.5s ease;
-    position: relative;
-  }
-  .bio-content.expanded {
-    max-height: 1000px; /* Enough to show all content */
-  }
-  .bio-content::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 40px;
-    background: linear-gradient(to bottom, rgba(249, 250, 251, 0), rgba(249, 250, 251, 1));
-    pointer-events: none;
-    transition: opacity 0.3s ease;
-  }
-  .bio-content.expanded::after {
-    opacity: 0;
-  }
-  .read-more-btn {
-    display: inline-flex;
-    align-items: center;
-    margin-top: 1rem;
-    color: #3b82f6;
-    font-weight: 500;
-    cursor: pointer;
-    transition: color 0.2s ease;
-  }
-  .read-more-btn:hover {
-    color: #2563eb;
-  }
-  .read-more-btn i {
-    margin-left: 0.5rem;
-    transition: transform 0.3s ease;
-  }
-  .read-more-btn.expanded i {
-    transform: rotate(180deg);
-  }
-  /* Hero/Bio gradient */
-/* Full-width hero gradient band */
-.hero-band {
-background: linear-gradient(135deg, #daeef7 0%, #ffffff 50%, #dff2e6 100%);
-  padding: 2.5rem 0 2rem 0;
-  margin-bottom: 3rem;
-    position: relative;
-}
-.hero-band::after {
-  content: '';
-  position: absolute;
-  bottom: -1px;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-  background: white;
-  clip-path: ellipse(55% 60% at 50% 100%);
-  height: 60px;
-}
-#about {
-  border-radius: 0;
-  box-shadow: none;
-  padding: 0;
-  background: transparent;
-}
-#about .bio-content::after {
-  background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.6));
-}
-.profile-pic {
-  animation: profilePulse 20s ease-in-out infinite;
-}
-
-@keyframes profilePulse {
-  0%   { box-shadow: 0 0 0 0px rgba(74, 158, 190, 0.4), 0 10px 30px rgba(0,0,0,0.18); }
-  50%  { box-shadow: 0 0 0 10px rgba(74, 158, 190, 0.0), 0 10px 30px rgba(0,0,0,0.18); }
-  100% { box-shadow: 0 0 0 0px rgba(74, 158, 190, 0.4), 0 10px 30px rgba(0,0,0,0.18); }
-}
-
-.publication-item, .patent-item {
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-left-color 0.2s ease;
-}
-
-.publication-item:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.12) !important;
-  border-left-color: #74c4e8;
-}
-
-.patent-item:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.12) !important;
-  border-left-color: #5abf9e;
-}
-
-.read-more-btn { color: #4a9ebe; }
-.read-more-btn:hover { color: #357a96; }
-a.text-blue-600 { color: #4a9ebe !important; }
-a.text-blue-600:hover { color: #357a96 !important; }
-#mainNav.mobile-open {
-  display: block !important;
-  position: absolute;
-  top: 64px;
-  right: 1.5rem;
-  background: white;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
-  z-index: 50;
-}
-#mainNav.mobile-open ul {
-  flex-direction: column;
-  gap: 1rem;
-  align-items: flex-start;
-  padding-left: 0;
-  margin-left: 0;
-}
-#mainNav.mobile-open ul li {
-  margin-left: 0 !important;
-}
-  </style>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H8WN74700N"></script>
-
-  <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-H8WN74700N');
-  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Manrope:wght@400..800&amp;display=swap" rel="stylesheet">
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="stylesheet" href="css/site.css">
+  <link rel="stylesheet" href="css/home.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Person", "@id": "https://www.nicolapiovesan.com/#person", "name": "Nicola Piovesan", "givenName": "Nicola", "familyName": "Piovesan", "url": "https://www.nicolapiovesan.com/", "jobTitle": "Senior Researcher", "image": "https://www.nicolapiovesan.com/images/nicola3.jpg", "worksFor": {"@type": "Organization", "name": "Huawei Technologies", "url": "https://www.huawei.com/en/"}, "alumniOf": [{"@type": "CollegeOrUniversity", "name": "Universitat Politècnica de Catalunya", "url": "https://www.upc.edu/"}, {"@type": "CollegeOrUniversity", "name": "University of Padova", "url": "https://www.unipd.it/"}], "knowsAbout": ["Generative AI", "Agentic AI", "Large language models", "LLM-based agents", "Model specialization and post-training", "AI-driven network automation", "Energy-efficient networks"], "sameAs": ["https://www.linkedin.com/in/nicolapiovesan/", "https://github.com/nicopi", "https://scholar.google.it/citations?user=hxWbCAUAAAAJ", "https://www.researchgate.net/profile/Nicola_Piovesan", "https://orcid.org/0000-0001-5397-5248", "https://ieeexplore.ieee.org/author/37086305388"]}, {"@type": "WebSite", "@id": "https://www.nicolapiovesan.com/#website", "url": "https://www.nicolapiovesan.com/", "name": "Nicola Piovesan"}, {"@type": "WebPage", "@id": "https://www.nicolapiovesan.com/#webpage", "url": "https://www.nicolapiovesan.com/", "name": "Nicola Piovesan, PhD", "description": "Nicola Piovesan, PhD, Senior Researcher at Huawei Technologies. Generative and agentic AI, large language models, and AI-driven network automation.", "about": {"@id": "https://www.nicolapiovesan.com/#person"}, "isPartOf": {"@id": "https://www.nicolapiovesan.com/#website"}}]}</script>
 </head>
-<body class="bg-white text-gray-800">
-  <header class="bg-white shadow-sm sticky top-0 z-10">
-    <div class="container mx-auto px-6 py-4">
-      <div class="flex justify-between items-center">
-        <h1 class="text-2xl font-bold text-gray-800">Nicola Piovesan</h1>
-        <nav class="hidden md:block" id="mainNav">
-          <ul class="flex space-x-8">
-            <li><a href="biography.html" class="nav-link">Bio</a></li>
-            <li><a href="publications.html" class="nav-link">Publications</a></li>
-            <li><a href="talks.html" class="nav-link">Talks</a></li>
-            <li><a href="patents.html" class="nav-link">Patents</a></li>
-          </ul>
-        </nav>
-        <button  id="menuToggle" class="md:hidden focus:outline-none">
-          <i class="fas fa-bars text-2xl"></i>
-        </button>
-      </div>
-    </div>
-  </header>
-
-<div class="hero-band">
-  <main class="container mx-auto px-6 py-8">
-    <!-- Profile Section -->
-    <section id="about" class="flex flex-col md:flex-row items-center md:items-start gap-8 mb-12" style="scroll-margin-top: 200px;">
-      <div class="flex-shrink-0 responsive-profile">
-        <img src="https://www.nicolapiovesan.com/images/nicola3.jpg"
-        alt="Dr. Researcher Name"
-        class="profile-pic rounded-full">
-      </div>
-      <div class="flex-1">
-        <div class="responsive-center">
-          <h2 class="text-3xl font-bold mb-2">Nicola Piovesan, PhD</h2>
-          <p class="text-xl text-gray-600 mb-4 responsive-center">Senior Researcher at HUAWEI</p>
-
-          <div class="flex space-x-4 mb-6 responsive-stack">
-            <a href="https://www.linkedin.com/in/nicolapiovesan/" target="_blank" class="text-gray-700 hover:text-blue-700 text-2xl" title="LinkedIn">
-              <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="http://github.com/nicopi" target="_blank" class="text-gray-800 hover:text-blue-700 text-2xl" title="GitHub">
-              <i class="fab fa-github"></i>
-            </a>
-            <a href="https://www.researchgate.net/profile/Nicola_Piovesan" target="_blank" title="ResearchGate profile" target="_blank" class="l_rg text-gray-600 hover:text-blue-700 text-2xl">
-              <i class="ai ai-researchgate ai-xl"></i>
-            </a>
-            <a href="https://scholar.google.it/citations?user=hxWbCAUAAAAJ" target="_blank" class="text-gray-600 hover:text-blue-700 text-2xl" title="Google Scholar">
-              <i class="ai ai-google-scholar ai-xl"></i>
-            </a>
-            <a href="https://orcid.org/0000-0001-5397-5248" target="_blank" class="text-gray-600 hover:text-blue-700 text-2xl" title="ORCID">
-              <i class="fab fa-orcid"></i>
-            </a>
-            <a href="https://ieeexplore.ieee.org/author/37086305388" target="_blank" title="Nicola Piovesans | IEEE Xplore Author Details" target="_blank" class="l_ieee text-gray-600 hover:text-blue-700 text-2xl">
-              <i class="ai ai-ieee ai-xl"></i>
-            </a>
-
-          </div>
-        </div>
-
-        <div>
-          <p class="mb-4">
-            Nicola Piovesan is a Senior Researcher at <a href="https://www.huawei.com/en/" target="_blank" class="bio-link">Huawei Technologies</a>, Paris, working on generative AI and large language models for next-generation telecom networks, network modeling, and green networking. <a href="biography.html" class="read-more-btn" style="display:inline-flex; margin-top:0;">Full bio <i class="fas fa-arrow-right" style="margin-left:0.35rem;"></i></a>
-          </p>
-          </div>
-        </div>
-      </section>
-
-        </main>
+<body id="top" data-google-analytics>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="nav-inner"><a class="brand" href="index.html"><span>Nicola Piovesan</span></a><button class="menu-button mobile-menu" id="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false">Menu <span aria-hidden="true">☰</span></button>
+<nav id="site-nav" aria-label="Main navigation"><a href="biography.html">Bio</a><a href="publications.html">Publications</a><a href="talks.html">Talks</a><a href="patents.html">Patents</a>
+</nav>
 </div>
-
-<main class="container mx-auto px-6 py-8">
-
-      <!-- Publications Section -->
-      <section id="publications" class="mb-12">
-        <div class="flex justify-between items-center mb-6">
-          <h2 class="text-2xl font-bold">Recent Publications</h2>
-          <a href="publications.html" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
-            See all <i class="fas fa-arrow-right ml-2"></i>
-          </a>
-        </div>
-
-        <div class="space-y-4">
-        <div class="publication-item bg-white p-4 rounded-lg shadow-sm pl-6">
-          <div class="flex justify-between items-start">
-            <h3 class="font-bold text-lg mb-1">CTBench: Evaluating Troubleshooting Capabilities of AI Agents in Realistic Telecom Network Operations</h3>
-            <span class="pub-tag preprint-tag">Preprint</span>
-          </div>
-          <p class="text-gray-600 mb-2">Submitted</p>
-          <p class="text-gray-700 mb-2">
-            <span class="font-medium">Authors:</span> Xingyu Yan, Tingting Dai, Antonio De Domenico, Mohamed Sana, Nicola Piovesan, Changchang Li, Bowen Liu, Kun Jiang, Mengjie Zhang, Dingcheng Shan, Jing-Cheng Pang, Chenwei Wu, Sijie Wu, Lianying Chao, Haoran Cai, Jiantao Ye, Xubin Li, Simon Mark Lucas, Xin Chen
-          </p>
-          <div class="flex flex-wrap gap-4">
-            <button type="button" class="text-[#4a9ebe] hover:text-[#357a96] text-sm flex items-center" onclick="toggleAbstract('abstract2026ctbench')">
-              <i class="fas fa-align-left mr-1"></i> Abstract
-            </button>
-            <a href="https://arxiv.org/abs/2608.12002" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-              <i class="fas fa-file-pdf mr-1"></i> Preprint
-            </a>
-          </div>
-          <div id="abstract2026ctbench" class="hidden mt-3 text-sm text-gray-600">
-            Agents are increasingly considered for automating network operations and maintenance, where engineers must diagnose network faults, optimize configurations to enhance services, and reduce operational costs while acting under strict constraints. However, existing evaluations fail to accurately model real network characteristics or assess agents under partially observable telecom environments with diverse vendors, devices, protocols, and interfaces. In this paper, we introduce CTBench, a public benchmark for assessing whether an agent behaves like a competent telecom troubleshooting engineer. CTBench focuses on root cause analysis and path restoration. Each task is constructed by experts and annotated with rich task metadata, including golden evidence steps. CTBench uses expert-grounded metrics that evaluate both final answers and the diagnostic evidence. Experiments with representative harness-model combinations show that state-of-the-art agents perform very well at identifying endpoints in path-restoration tasks but, more generally, underperform in root cause analysis. In particular, agents struggle with interface state, link-layer, service-management, and other operational faults. Most importantly, even when agents produce plausible or correct final answers, they often fail to provide the evidence-grounded diagnoses required in operational practice. Our results further show that path restoration is generally more resource expensive, yet larger resource usage does not necessarily translate into better diagnosis.
-          </div>
-        </div>
-        <div class="publication-item bg-white p-4 rounded-lg shadow-sm pl-6">
-          <div class="flex justify-between items-start">
-            <h3 class="font-bold text-lg mb-1">HPO: Hysteretic Policy Optimization for Stable and Efficient Training under Sparse-Reward Regime</h3>
-            <span class="pub-tag conference-tag">Conference</span>
-          </div>
-          <p class="text-gray-600 mb-2">Asia-Pacific Chapter of the Association for Computational Linguistics & International Joint Conference on Natural Language Processing (AACL-IJCNLP), 6-10 November 2026, Hengqin (China)</p>
-          <p class="text-gray-700 mb-2">
-            <span class="font-medium">Authors:</span> Mohamed Sana, Nicola Piovesan, Antonio De Domenico, Fadhel Ayed, Haozhe Zhang
-          </p>
-          <div class="flex flex-wrap gap-4">
-            <button type="button" class="text-[#4a9ebe] hover:text-[#357a96] text-sm flex items-center" onclick="toggleAbstract('abstract2026hpo')">
-              <i class="fas fa-align-left mr-1"></i> Abstract
-            </button>
-            <a href="https://arxiv.org/abs/2605.30201" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-              <i class="fas fa-file-alt mr-1"></i> Paper
-            </a>
-          </div>
-          <div id="abstract2026hpo" class="hidden mt-3 text-sm text-gray-600">
-            We investigate a narrow but common failure mode of GRPO-style reinforcement learning in the context of sparse verifiable rewards: early updates contain more responses with negative advantages than those with positive advantages, while response-level length normalization ties the magnitude of the update to the length of the output. We propose Hysteretic Policy Optimization (HPO), a minimal modification of GRPO that reduces the weight of negative-advantage updates and replaces per-response length normalization with mean-length normalization. We further introduce Adaptive HPO (A-HPO), which sets the hysteretic weight based on batch-level advantage-sign statistics, thereby removing the need for tuning a fixed hysteretic weight. In our TeleLogs and Countdown experiments, A-HPO improves the reward per update compared to GRPO, with the largest gains in early sparse reward regimes. On TeleLogs, A-HPO achieves a final reward of 0.84, outperforming SAPO by 5%, GSPO by 11%, and GRPO by 15%, while maintaining a comparable response-length. On Countdown, A-HPO achieves the largest gains in initial and most difficult configurations across 1.5B-7B models. Ablation studies on the hysteretic weight show that the gains of A-HPO come from better balancing the contributions of positive and negative advantages compared to positive-only or fully symmetric updates.
-          </div>
-        </div>
-</section>
-
-<div class="section-divider"></div>
-
-<!-- Talks Section -->
-<section id="talks" class="mb-12">
-  <div class="flex justify-between items-center mb-6">
-    <h2 class="text-2xl font-bold">Selected Talks</h2>
-    <a href="talks.html" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
-      See all <i class="fas fa-arrow-right ml-2"></i>
-    </a>
-  </div>
-
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-
-    <div class="talk-card bg-white rounded-lg overflow-hidden shadow-sm">
-      <a href="https://aiforgood.itu.int/event/ai-and-machine-learning-in-communication-networks-summit25-day2/" target="_blank" class="block">
-        <img src="./images/talk-ai4good.jpeg"
-        alt="Tech Summit Talk"
-        class="w-full h-48 object-cover">
-        <div class="p-4">
-          <h3 class="font-bold text-lg mb-2">Advancing Network Automation through Multi-Agent Large Language Models</h3>
-          <p class="text-gray-600 text-sm mb-2">ITU AI for Good Global Summit</p>
-          <div class="flex justify-between items-center text-sm">
-            <span style="color: #4a9ebe">See event →</span>
-            <span class="text-gray-500">July 2025</span>
-          </div>
-        </div>
-      </a>
-    </div>
-
-    <div class="talk-card bg-white rounded-lg overflow-hidden shadow-sm">
-      <a href="https://www.chaspark.com/#/live/1070480298598825984?anchorV=1077734077277118464&multi=en" target="_blank" class="block">
-        <img src="https://www.nicolapiovesan.com/images/talk-6gsummit.jpeg"
-        alt="AI Conference Talk"
-        class="w-full h-48 object-cover">
-        <div class="p-4">
-          <h3 class="font-bold text-lg mb-2">Network Modelling and Optimization for the 6G Era: Human Expertise Meets AI</h3>
-          <p class="text-gray-600 text-sm mb-2">Abu Dhabi 6G summit</p>
-          <div class="flex justify-between items-center text-sm">
-            <span style="color: #4a9ebe">Watch video →</span>
-            <span class="text-gray-500">November 2024</span>
-          </div>
-        </div>
-      </a>
-    </div>
-
-    <div class="talk-card bg-white rounded-lg overflow-hidden shadow-sm">
-      <a href="https://www.youtube.com/watch?v=zSetefnu3y8" target="_blank" class="block">
-        <img src="https://www.nicolapiovesan.com/images/talk_itu.jpg"
-        alt="University Lecture"
-        class="w-full h-48 object-cover">
-        <div class="p-4">
-          <h3 class="font-bold text-lg mb-2">AI/ML for 5G-Energy Consumption Modelling</h3>
-          <p class="text-gray-600 text-sm mb-2">ITU AI for Good</p>
-          <div class="flex justify-between items-center text-sm">
-            <span style="color: #4a9ebe">Watch video →</span>
-            <span class="text-gray-500">June 2023</span>
-          </div>
-        </div>
-      </a>
-    </div>
+</header>
+<main class="page-shell" id="main" tabindex="-1">
+<div class="intro-stage">
+<div class="intro-backdrop" aria-hidden="true">
+</div>
+<section class="opening opening-bio" aria-labelledby="name">
+  <div class="bio-portrait"><img src="images/nicola3.jpg" width="800" height="800" alt="Nicola Piovesan">
+</div>
+  <div class="bio-introduction">
+    <h1 id="name">Nicola Piovesan, PhD</h1>
+    <p class="role">Senior Researcher at <a href="https://www.huawei.com/en/" target="_blank" rel="noopener noreferrer">Huawei Technologies</a>
+</p>
+    <p class="bio">Working on generative and agentic AI, large language models, and AI-driven network automation.</p>
+    <div class="intro-actions"><a class="bio-link" href="biography.html">Full biography <svg class="icon-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 15 15 5M5 5h10v10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="publications-link" href="publications.html">Publications <svg class="icon-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a><span class="email-reveal" data-address="bmljb2xhLnBpb3Zlc2FuQGllZWUub3Jn"><button class="email-trigger" type="button">Contact me <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><rect x="2.5" y="4.5" width="15" height="11" rx="2" stroke="currentColor" stroke-width="1.3"/><path d="m3.5 6 6.5 5 6.5-5" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg></button><a class="email-address" hidden></a></span>
+</div>
+    <div class="social-links" aria-label="Professional profiles"><a href="https://www.linkedin.com/in/nicolapiovesan/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="http://github.com/nicopi" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://scholar.google.it/citations?user=hxWbCAUAAAAJ" target="_blank" rel="noopener noreferrer">Scholar</a><a href="https://www.researchgate.net/profile/Nicola_Piovesan" target="_blank" rel="noopener noreferrer">ResearchGate</a><a href="https://orcid.org/0000-0001-5397-5248" target="_blank" rel="noopener noreferrer">ORCID</a><a href="https://ieeexplore.ieee.org/author/37086305388" target="_blank" rel="noopener noreferrer">IEEE</a>
+</div>
   </div>
 </section>
-<div class="section-divider"></div>
-
-<!-- Upcoming Talks Section -->
-<!--<section id="upcoming-talks" class="mb-12">
-  <h2 class="text-2xl font-bold mb-6">Upcoming Talks & Events</h2>
-
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-    <div class="bg-white p-6 rounded-lg shadow-sm border-l-4 border-[#4a9ebe]">
-      <div class="flex justify-between items-start mb-2">
-        <h3 class="font-bold text-lg">Agentic AI: Unlocking the Next Generation of Network Automation </h3>
-      </div>
-      <p class="text-gray-600 mb-2">IEEE Global Communications Conference (GLOBECOM)</p>
-      <div class="flex items-center text-gray-500 text-sm mb-3">
-        <i class="fas fa-calendar-alt mr-2"></i>
-        <span>December 9, 2025</span>
-        <i class="fas fa-map-marker-alt ml-4 mr-2"></i>
-        <span>Taipei, Taiwan</span>
-      </div>
-      <a href="https://globecom2025.ieee-globecom.org/program/industry-presentation" target="_blank "class="text-blue-600 hover:text-blue-800 text-sm inline-block">
-        Event website →
-      </a>
-    </div>
-
-
-
-      <div class="bg-white p-6 rounded-lg shadow-sm border-l-4 border-[#4a9ebe]">
-        <div class="flex justify-between items-start mb-2">
-          <h3 class="font-bold text-lg">From Lab to Market: What Commercial 6G Will Be?</h3>
-        </div>
-        <br>
-        <p class="text-gray-600 mb-2">IEEE Global Communications Conference (GLOBECOM)</p>
-        <div class="flex items-center text-gray-500 text-sm mb-3">
-          <i class="fas fa-calendar-alt mr-2"></i>
-          <span>December 12, 2025</span>
-          <i class="fas fa-map-marker-alt ml-4 mr-2"></i>
-          <span>Taipei, Taiwan</span>
-        </div>
-        <a href="https://globecom2025.ieee-globecom.org/tutorials#TU-21" target="_blank "class="text-blue-600 hover:text-blue-800 text-sm inline-block">
-          Event website →
-        </a>
-      </div>
-
-
 </div>
-
-</section> 
-
-<div class="section-divider"></div> -->
-
-<!-- Patents Section -->
-<section id="patents" class="mb-12">
-  <div class="flex justify-between items-center mb-6">
-    <h2 class="text-2xl font-bold">Recent Patents</h2>
-    <a href="patents.html" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
-      See all <i class="fas fa-arrow-right ml-2"></i>
-    </a>
-  </div>
-
-  <div class="space-y-4">
-    <div class="space-y-4">
-      <div class="patent-item bg-white p-4 rounded-lg shadow-sm pl-6">
-        <div class="flex justify-between items-start">
-          <h3 class="font-bold text-lg mb-1">Procedures for Ensuring Service Requirements in AI Inference</h3>
-        </div>
-        <p class="text-gray-600 mb-2">PCT/EP2026/067816 • Filed: Jun 16, 2026</p>
-        <p class="text-gray-700 mb-2">
-          <span class="font-medium">Inventors:</span> N. Piovesan, M. Sana, A. De Domenico
-        </p>
-        <div class="flex flex-wrap gap-4">
-        </div>
-      </div>
-
-      <div class="patent-item bg-white p-4 rounded-lg shadow-sm pl-6">
-        <div class="flex justify-between items-start">
-          <h3 class="font-bold text-lg mb-1">A device and method for evaluating generative artificial intelligence models</h3>
-        </div>
-        <p class="text-gray-600 mb-2">PCT/EP2025/063678 • Filed: May 19, 2025</p>
-        <p class="text-gray-700 mb-2">
-          <span class="font-medium">Inventors:</span> N. Piovesan, A. De Domenico, M. Sana, F. Ayed
-        </p>
-        <div class="flex flex-wrap gap-4">
-        </div>
-      </div>
-  </div>
+<div class="research-and-patents">
+<section class="research" aria-labelledby="research-title">
+<div class="section-heading">
+<h2 id="research-title">Recent research</h2><a href="publications.html">All publications <svg class="icon-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 15 15 5M5 5h10v10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</div>
+<div class="papers">
+<article class="paper-card paper-blue">
+<div class="paper-top"><span class="badge badge-rose">Preprint</span><span class="paper-status">Submitted</span>
+</div>
+<h3>CTBench: Evaluating Troubleshooting Capabilities of AI Agents in Realistic Telecom Network Operations</h3>
+<div class="paper-bottom">
+<p class="paper-byline">Xingyu Yan, Tingting Dai, Antonio De Domenico, Mohamed Sana, <strong>Nicola Piovesan</strong>, et al.</p><a href="https://arxiv.org/abs/2608.12002" target="_blank" rel="noopener noreferrer">Preprint <span aria-hidden="true"><svg class="icon-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 15 15 5M5 5h10v10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+</div>
+</article>
+<article class="paper-card paper-lilac">
+<div class="paper-top"><span class="badge badge-mint">Conference</span><span class="paper-status">AACL-IJCNLP · 2026</span>
+</div>
+<h3>HPO: Hysteretic Policy Optimization for Stable and Efficient Training under Sparse-Reward Regime</h3>
+<div class="paper-bottom">
+<p class="paper-byline">Mohamed Sana, <strong>Nicola Piovesan</strong>, Antonio De Domenico, Fadhel Ayed, Haozhe Zhang</p><a href="https://arxiv.org/abs/2605.30201" target="_blank" rel="noopener noreferrer">Paper <span aria-hidden="true"><svg class="icon-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 15 15 5M5 5h10v10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+</div>
+</article>
+</div>
 </section>
-
-<div class="section-divider"></div>
-
-<!-- Other Section -->
-<section id="other" class="mb-12">
-  <h2 class="text-2xl font-bold mb-6">Other Activities</h2>
-
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-    <!-- Awards -->
-    <div class="bg-white p-6 rounded-lg shadow-sm">
-      <h3 class="font-bold text-lg mb-4 flex items-center">
-        <i class="fas fa-award text-[#c49a3c] mr-2"></i> Awards
-      </h3>
-      <div class="space-y-4">
-        <div class="award-item pl-4">
-          <h4 class="font-medium">IEEE ICC Best Paper Award</h4>
-          <p class="text-gray-600 text-sm">2025</p>
-        </div>
-        <div class="award-item pl-4">
-          <h4 class="font-medium">Huawei Quality Star Award</h4>
-          <p class="text-gray-600 text-sm">2023</p>
-        </div>
-        <div class="award-item pl-4">
-          <h4 class="font-medium">Huawei GTS President Award</h4>
-          <p class="text-gray-600 text-sm">2021</p>
-        </div>
-      </div>
-      <!--<a href="awards.html" class="text-blue-600 hover:text-blue-800 text-sm mt-4 inline-block">
-      View all awards
-    </a>-->
-  </div>
-
-  <!-- News -->
-  <div class="bg-white p-6 rounded-lg shadow-sm">
-    <h3 class="font-bold text-lg mb-4 flex items-center">
-      <i class="fas fa-newspaper text-[#6a7fc1] mr-2"></i> News
-    </h3>
-    <div class="space-y-4">
-      <div class="news-item pl-4">
-        <h4 class="font-medium">Using AI to make 5G more sustainable</h4>
-        <p class="text-gray-600 text-sm">August 2023</p>
-        <a href="https://techinformed.com/using-ai-to-make-5g-more-sustainable/" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm">Read article →</a>
-      </div>
-    </div>
-    <!--<a href="news.html" class="text-blue-600 hover:text-blue-800 text-sm mt-4 inline-block">
-    View all news
-  </a>-->
+<section class="patents" aria-labelledby="patent-title">
+<div class="section-heading">
+<h2 id="patent-title">Recent patents</h2><a href="patents.html" aria-label="All patents">All patents <svg class="icon-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 15 15 5M5 5h10v10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
 </div>
-
-<!-- Service -->
-<div class="bg-white p-6 rounded-lg shadow-sm">
-  <h3 class="font-bold text-lg mb-4 flex items-center">
-    <i class="fas fa-users text-[#c4606a] mr-2"></i> Service
-  </h3>
-  <div class="space-y-4">
-    <div class="service-item pl-4">
-      <h4 class="font-medium">Workshop Co-Chair</h4>
-      <p class="text-gray-600 text-sm">IEEE GLOBECOM, 2024</p>
-      <a href="https://sites.google.com/view/mllmonet-2024/home" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm">See event →</a>
-    </div>
-    <div class="service-item pl-4">
-      <h4 class="font-medium">Workshop Co-Chair</h4>
-      <p class="text-gray-600 text-sm">IEEE ICC, 2024</p>
-      <a href="https://sites.google.com/view/llmonet-2024/home" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm">See event →</a>
-    </div>
-  </div>
-  <!--<a href="service.html" class="text-blue-600 hover:text-blue-800 text-sm mt-4 inline-block">
-  View all service
-</a>-->
+<div class="patent-panel">
+<div class="patent-list">
+<article>
+<div>
+<h3>Procedures for Ensuring Service Requirements in AI Inference</h3>
+<p class="patent-meta">PCT/EP2026/067816 <span>Filed June 16, 2026</span>
+</p>
+<p class="inventors">N. Piovesan, M. Sana, A. De Domenico</p>
+</div>
+</article>
+<article>
+<div>
+<h3>A device and method for evaluating generative artificial intelligence models</h3>
+<p class="patent-meta">PCT/EP2025/063678 <span>Filed May 19, 2025</span>
+</p>
+<p class="inventors">N. Piovesan, A. De Domenico, M. Sana, F. Ayed</p>
+</div>
+</article>
 </div>
 </div>
 </section>
+</div>
+<div class="talks-and-activities">
+<div class="talks-column">
+<section class="upcoming-talks" aria-labelledby="upcoming-title" data-upcoming-until="2026-11-18T15:00:00+02:00">
+<div class="section-heading">
+<h2 id="upcoming-title">Upcoming talks</h2>
+</div><a class="upcoming-card" href="https://aiforgood.itu.int/event/introducing-the-ai-agents-for-ran-challenge-from-diagnosis-to-optimization/" target="_blank" rel="noopener noreferrer">
+<div class="upcoming-copy">
+<p class="upcoming-meta"><time datetime="2026-11-18T14:00:00+02:00">18 November 2026 · 14:00–15:00 CEST (UTC+2)</time><span>AI for Good</span>
+</p>
+<h3 class="upcoming-title">Introducing the AI Agents for RAN Challenge: From Diagnosis to Optimization</h3>
+</div><svg class="icon-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 15 15 5M5 5h10v10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</section>
+<section class="talks" aria-labelledby="talks-title">
+<div class="section-heading">
+<h2 id="talks-title">Selected talks</h2><a href="talks.html">All talks <svg class="icon-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 15 15 5M5 5h10v10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</div>
+<div class="talk-grid">
+<article class="talk-card"><a class="talk-image-link" href="https://aiforgood.itu.int/event/ai-and-machine-learning-in-communication-networks-summit25-day2/" target="_blank" rel="noopener noreferrer" aria-label="Advancing Network Automation through Multi-Agent Large Language Models — event details"><img loading="lazy" src="images/talk-ai4good.jpeg" alt="Nicola Piovesan presenting at the ITU AI for Good Global Summit" width="600" height="340"></a>
+<div class="talk-copy">
+<p class="talk-meta">ITU AI for Good Global Summit <span>July 2025</span>
+</p>
+<h3><a href="https://aiforgood.itu.int/event/ai-and-machine-learning-in-communication-networks-summit25-day2/" target="_blank" rel="noopener noreferrer">Advancing Network Automation through Multi-Agent Large Language Models</a>
+</h3><a class="text-link" href="https://aiforgood.itu.int/event/ai-and-machine-learning-in-communication-networks-summit25-day2/" target="_blank" rel="noopener noreferrer">See event <span aria-hidden="true"><svg class="icon-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+</div>
+</article>
+<article class="talk-card"><a class="talk-image-link" href="https://www.chaspark.com/#/live/1070480298598825984?anchorV=1077734077277118464&multi=en" target="_blank" rel="noopener noreferrer" aria-label="Network Modelling and Optimization for the 6G Era — watch video"><img src="images/talk-6gsummit.jpeg" alt="Nicola Piovesan speaking at the Abu Dhabi 6G summit" width="600" height="340" loading="lazy"><span class="image-label">6G Summit</span><span class="image-arrow" aria-hidden="true"><svg class="icon-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 15 15 5M5 5h10v10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+<div class="talk-copy">
+<p class="talk-meta">Abu Dhabi 6G summit <span>Nov. 2024</span>
+</p>
+<h3><a href="https://www.chaspark.com/#/live/1070480298598825984?anchorV=1077734077277118464&multi=en" target="_blank" rel="noopener noreferrer">Network Modelling and Optimization for the 6G Era: Human Expertise Meets AI</a>
+</h3><a class="text-link" href="https://www.chaspark.com/#/live/1070480298598825984?anchorV=1077734077277118464&multi=en" target="_blank" rel="noopener noreferrer">Watch video <span aria-hidden="true"><svg class="icon-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+</div>
+</article>
+<article class="talk-card"><a class="talk-image-link" href="https://www.youtube.com/watch?v=zSetefnu3y8" target="_blank" rel="noopener noreferrer" aria-label="AI/ML for 5G-Energy Consumption Modelling — watch video"><img src="images/talk_itu.jpg" alt="Nicola Piovesan delivering an online ITU AI for Good talk" width="600" height="340" loading="lazy"><span class="image-label">AI for Good</span><span class="image-arrow" aria-hidden="true"><svg class="icon-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 15 15 5M5 5h10v10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+<div class="talk-copy">
+<p class="talk-meta">ITU AI for Good <span>June 2023</span>
+</p>
+<h3><a href="https://www.youtube.com/watch?v=zSetefnu3y8" target="_blank" rel="noopener noreferrer">AI/ML for 5G-Energy Consumption Modelling</a>
+</h3><a class="text-link" href="https://www.youtube.com/watch?v=zSetefnu3y8" target="_blank" rel="noopener noreferrer">Watch video <span aria-hidden="true"><svg class="icon-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+</div>
+</article>
+</div>
+</section>
+</div>
+<section class="activities" aria-labelledby="activity-title">
+<div class="section-heading">
+<h2 id="activity-title">Awards & activities</h2>
+</div>
+<div class="activity-grid">
+<article class="activity-card award-card">
+<div class="activity-heading"><span class="activity-icon" aria-hidden="true">✧</span>
+<h3>Awards</h3>
+</div>
+<ul>
+<li>
+<h4>IEEE ICC Best Paper Award</h4><span>2025</span>
+</li>
+<li>
+<h4>Huawei Quality Star Award</h4><span>2023</span>
+</li>
+<li>
+<h4>Huawei GTS President Award</h4><span>2021</span>
+</li>
+</ul>
+</article>
+<article class="activity-card news-card">
+<div class="activity-heading"><span class="activity-icon" aria-hidden="true">▤</span>
+<h3>In the news</h3>
+</div>
+<p class="activity-date">August 2023</p>
+<h4>Using AI to make 5G more sustainable</h4><a class="text-link" href="https://techinformed.com/using-ai-to-make-5g-more-sustainable/" target="_blank" rel="noopener noreferrer">Read article <span aria-hidden="true"><svg class="icon-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 15 15 5M5 5h10v10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+</article>
+<article class="activity-card service-card">
+<div class="activity-heading"><span class="activity-icon" aria-hidden="true">⌘</span>
+<h3>Service</h3>
+</div>
+<ul>
+<li>
+<h4>Workshop Co-Chair</h4>
+<p>IEEE GLOBECOM · 2024</p><a class="text-link" href="https://sites.google.com/view/mllmonet-2024/home" target="_blank" rel="noopener noreferrer">See event <span aria-hidden="true"><svg class="icon-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 15 15 5M5 5h10v10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+</li>
+<li>
+<h4>Workshop Co-Chair</h4>
+<p>IEEE ICC · 2024</p><a class="text-link" href="https://sites.google.com/view/llmonet-2024/home" target="_blank" rel="noopener noreferrer">See event <span aria-hidden="true"><svg class="icon-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 15 15 5M5 5h10v10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+</li>
+</ul>
+</article>
+</div>
+</section>
+</div>
 </main>
-
-<footer class="bg-gray-10 py-8">
-  <div class="mt-8 pt-6 border-t border-gray-200 text-center text-gray-500 text-sm">
-    <p>© 2026 Nicola Piovesan. All rights reserved.</p>
-  </div>
-</div>
+<footer class="site-footer"><span>© 2026 Nicola Piovesan</span><a href="#top">Back to top ↑</a>
 </footer>
 
-<script>
-// Simple mobile menu toggle functionality
-document.getElementById('menuToggle').addEventListener('click', function() {
-  document.getElementById('mainNav').classList.toggle('mobile-open');
-});
-
-// Smooth scrolling for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth'
-    });
-  });
-});
-
-// Toggle abstract visibility
-function toggleAbstract(id) {
-  const abstract = document.getElementById(id);
-  abstract.classList.toggle('hidden');
-}
-</script>
-<script src="//static.getclicky.com/js" type="text/javascript"></script>
-<script type="text/javascript">try{ clicky.init(101089699); }catch(e){}</script>
-<noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101089699ns.gif" /></p></noscript>
+<script src="js/navigation.js" defer></script>
+<script src="js/email-reveal.js" defer></script>
+<script src="js/upcoming-events.js" defer></script>
+<script src="js/analytics.js" defer></script>
+<noscript><img src="https://in.getclicky.com/101089699ns.gif" width="1" height="1" alt=""></noscript>
 </body>
 </html>

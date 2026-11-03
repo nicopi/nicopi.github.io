@@ -1,5 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: http://www.nicolapiovesan.com/sitemap.xml
-
+Sitemap: https://www.nicolapiovesan.com/sitemap.xml

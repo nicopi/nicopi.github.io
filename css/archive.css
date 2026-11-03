@@ -1,0 +1,311 @@
+/* Shared archive layout for publications, talks and patent applications. */
+.archive-page { line-height: 1.6; }
+.archive-page [hidden] { display: none !important; }
+.archive-page .library-hero {
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid transparent;
+  isolation: isolate;
+}
+.archive-page .hero-grain { display: none; }
+.archive-page .hero-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  max-width: 1240px;
+  min-height: 132px;
+  margin: auto;
+  padding: 35px 32px;
+}
+.archive-page .hero-copy { padding: 0; }
+.archive-page .hero-copy h1 {
+  margin: 0;
+  color: #24272d;
+  font-family: inherit;
+  font-size: 36px;
+  font-weight: 750;
+  line-height: 1.15;
+  letter-spacing: -1.4px;
+}
+.archive-page .title-dot { color: #465fde; }
+.archive-page .library-shell {
+  display: grid;
+  grid-template-columns: 145px minmax(0, 1fr);
+  align-items: start;
+  gap: 35px;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 24px 32px 72px;
+}
+.archive-page .library-main { min-width: 0; }
+
+/* Year navigation. The outer rail owns sticky positioning. */
+.archive-page .year-rail { position: sticky; top: 108px; }
+.archive-page .rail-inner { padding-top: 15px; }
+.archive-page .rail-label {
+  margin: 0 0 14px 12px;
+  color: #4f5a68;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+.archive-page .year-nav { display: flex; flex-direction: column; gap: 3px; }
+.archive-page .year-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 7px 12px;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  background: transparent;
+  color: #4f5a68;
+  font-size: 12px;
+  font-weight: 600;
+  transition: background .2s, color .2s;
+}
+.archive-page .year-button:hover { background: #ebecf0; }
+.archive-page .year-button.selected { background: #e8e9ed; }
+.archive-page .year-button > span { min-width: 21px; color: #4f5a68; font-size: 10px; text-align: center; }
+.archive-page .year-button.selected > span { border-radius: 5px; background: #fff8; }
+.archive-page .scholar-link {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  padding: 14px 12px;
+  border-top: 1px solid #e0e2e6;
+  color: #3d4fc6;
+  font-size: 11px;
+}
+.archive-page .scholar-link:hover { color: #2f47bb; }
+
+/* Search, sorting and type filters share a restrained frosted surface. */
+.archive-page .toolbar {
+  position: sticky;
+  top: 90px;
+  z-index: 9;
+  isolation: isolate;
+  margin-bottom: 12px;
+  padding: 0 0 14px;
+}
+.archive-page .toolbar::before {
+  content: "";
+  position: absolute;
+  inset: -8px -11px 0;
+  z-index: -1;
+  border: 1px solid rgba(28, 33, 42, .085);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, .79);
+  box-shadow: 0 9px 26px -18px rgba(28, 33, 42, .25), inset 0 1px 0 rgba(255, 255, 255, .86);
+  backdrop-filter: blur(22px) saturate(103%);
+  -webkit-backdrop-filter: blur(22px) saturate(103%);
+}
+.archive-page .toolbar-top { display: flex; align-items: center; gap: 18px; }
+.archive-page .search-field {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: 9px;
+  padding: 10px 12px;
+  border: 1px solid #dedfe4;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, .91);
+}
+.archive-page .search-field:focus-within { border-color: #8795e9; box-shadow: 0 0 0 3px #465fde17; }
+.archive-page .search-field svg { width: 17px; height: 17px; flex-shrink: 0; stroke: #80858e; stroke-width: 1.6; }
+.archive-page .search-field input {
+  width: 100%;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #24272d;
+  font-size: 12px;
+}
+.archive-page .search-field input:focus-visible { outline: none; }
+.archive-page .search-field input::placeholder { color: #757b84; }
+.archive-page .search-field kbd { padding: 0 5px; border: 1px solid #e7e8eb; border-radius: 3px; background: #f6f6f8; color: #7b818a; font: 10px Manrope, sans-serif; }
+.archive-page .sort-label { display: flex; align-items: center; gap: 10px; color: #727781; font-size: 11px; white-space: nowrap; }
+.archive-page .sort-label select { max-width: 112px; border: 0; background: transparent; color: #727781; font-size: 11px; }
+.archive-page .mobile-year-label { display: none; }
+.archive-page .toolbar-bottom { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: 12px; }
+.archive-page .type-filters { display: flex; flex-wrap: wrap; align-items: center; gap: 5px; }
+.archive-page .filter-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 9px;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  background: transparent;
+  color: #666c75;
+  font-size: 10px;
+  font-weight: 600;
+  transition: background .2s;
+}
+.archive-page .filter-chip:hover { background: #ededf0; }
+.archive-page .filter-chip.selected { border-color: rgba(70, 75, 85, .08); background: rgba(240, 241, 245, .84); color: #24272d; }
+.archive-page .filter-chip span { padding: 0 4px; border-radius: 3px; background: #e9eaee; color: #666c75; font-size: 9px; }
+.archive-page .filter-chip i { width: 5px; height: 5px; border-radius: 50%; background: #a0a4ac; }
+.archive-page .result-count { margin: 0; color: #727781; font-size: 10px; white-space: nowrap; }
+
+/* Compact annual reading panels. */
+.archive-page .year-group { margin-bottom: 23px; scroll-margin-top: 200px; }
+.archive-page .group-heading { display: flex; align-items: center; gap: 10px; margin: 0 0 10px; }
+.archive-page .group-heading h2 { margin: 0; color: #30343a; font-size: 16px; font-weight: 750; letter-spacing: -.6px; }
+.archive-page .group-heading .group-count { padding: 0 6px; border-radius: 4px; background: #e9eaee; color: #747984; font-size: 9px; }
+.archive-page .group-heading::after { content: ""; flex: 1; height: 1px; background: #e1e3e7; }
+.archive-page .paper-list { overflow: hidden; border: 1px solid #e4e5e8; border-radius: 14px; background: rgba(255, 255, 255, .97); }
+.archive-page .paper { position: relative; isolation: isolate; padding: 16px 21px 15px; border-bottom: 1px solid #ececf0; transition: background .2s; }
+.archive-page .paper:last-child { border-bottom: 0; }
+.archive-page .paper::before { content: ""; position: absolute; inset: 13px auto 13px 0; width: 2px; border-radius: 0 2px 2px 0; background: #465fde; opacity: 0; transition: opacity .2s; }
+.archive-page .paper:hover { background: #fafafb; }
+.archive-page .paper:hover::before, .archive-page .paper:focus-within::before { opacity: 1; }
+.archive-page .paper-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 17px; }
+.archive-page .paper h3 { margin: 0; color: #282c32; font-size: 14.5px; font-weight: 750; line-height: 1.55; letter-spacing: -.13px; }
+.archive-page .paper-title-link:hover { color: #465fde; }
+.archive-page .paper-badges { display: flex; flex-shrink: 0; align-items: center; gap: 5px; padding-top: 3px; }
+.archive-page .type-badge, .archive-page .award-badge { padding: 1px 6px; border: 1px solid #e6e7eb; border-radius: 4px; background: #f1f2f4; color: #666c75; font-size: 9px; }
+.archive-page .type-badge { font-weight: 650; white-space: nowrap; }
+.archive-page .paper-venue { margin: 5px 0; color: #696f78; font-size: 11.5px; line-height: 1.6; }
+.archive-page .paper-bottom { display: flex; align-items: flex-start; justify-content: space-between; gap: 18px; }
+.archive-page .paper-authors { flex: 1; min-width: 0; margin: 0; color: #696f78; font-size: 11.5px; line-height: 1.65; }
+.archive-page .paper-authors strong { color: #41464e; font-weight: 650; }
+.archive-page .authors-text { display: block; white-space: normal; }
+.publications-page.enhanced .authors-text { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.publications-page.enhanced .authors-text.expanded { overflow: visible; white-space: normal; }
+.archive-page .authors-toggle { display: none; padding: 0; border: 0; background: transparent; color: #69707a; font-size: 9px; text-decoration: underline; text-decoration-color: #c6c9d0; text-underline-offset: 3px; }
+.publications-page.enhanced .authors-toggle.visible { display: inline-block; }
+.archive-page .paper-actions { display: flex; flex-shrink: 0; align-items: center; gap: 12px; color: #465fde; font-size: 10.5px; line-height: 1.8; white-space: nowrap; }
+.archive-page .paper-actions a, .archive-page .abstract-toggle { transition: color .2s; }
+.archive-page .paper-actions a:hover, .archive-page .abstract-toggle:hover { color: #2f47bb; }
+.archive-page .paper-actions a span { font-size: 9px; opacity: .75; }
+.archive-page .abstract-toggle { padding: 0; border: 0; background: transparent; color: #69707a; font-size: 10.5px; }
+.archive-page .abstract-toggle svg { display: inline-block; width: 8px; height: 8px; margin-left: 2px; vertical-align: middle; transition: transform .2s; }
+.archive-page .abstract-toggle[aria-expanded="true"] svg { transform: rotate(180deg); }
+.archive-page .abstract-disclosure { margin: 0; }
+.archive-page .abstract-disclosure[open] { margin-top: 12px; }
+.archive-page .abstract-summary {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: max-content;
+  margin-left: auto;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #69707a;
+  font-size: 10.5px;
+  list-style: none;
+  line-height: 1.8;
+  cursor: pointer;
+}
+.archive-page .abstract-summary::-webkit-details-marker { display: none; }
+.archive-page .abstract-summary svg { width: 8px; height: 8px; margin-left: 2px; transition: transform .2s; }
+.archive-page .abstract-summary:hover { color: #2f47bb; }
+.archive-page .abstract-disclosure[open] > .abstract-summary svg { transform: rotate(180deg); }
+.archive-page .abstract-panel { margin-top: 12px; padding: 14px 16px; border: 1px solid #e4e5e9; border-radius: 8px; background: #f6f6f8; color: #5b626c; font-size: 12px; line-height: 1.85; }
+.archive-page .abstract-panel h4 { margin: 0 0 5px; color: #424850; font-size: 11px; }
+.archive-page .abstract-panel p { margin: 0; }
+.archive-page .abstract-disclosure .abstract-panel { margin-top: 0; }
+.archive-page .abstract-summary:not([hidden]) + .abstract-panel { margin-top: 8px; }
+.archive-page .loading { padding: 50px; color: #727985; text-align: center; }
+.archive-page .empty-state { padding: 60px 16px; border: 1px solid #e4e5e8; border-radius: 14px; background: #fff; text-align: center; }
+.archive-page .empty-state > span { color: #9a9fa8; font-size: 35px; }
+.archive-page .empty-state h2 { color: #30353c; font-size: 18px; }
+.archive-page .empty-state p { color: #6d737e; font-size: 12px; }
+.archive-page .empty-state button { padding: 8px 14px; border: 1px solid #465fde; border-radius: 8px; background: #465fde; color: #fff; font-size: 11px; }
+.archive-page .external-icon { display: inline-block; width: 11px; height: 11px; vertical-align: middle; }
+.archive-page .icon-arrow { display: inline-block; width: 12px; height: 12px; vertical-align: middle; }
+.archive-page .text-link { display: inline-flex; align-items: center; gap: 5px; color: #465fde; }
+.archive-page .text-link:hover { color: #2f47bb; }
+
+/* Talk metadata retains the same row rhythm as publications. */
+.talks-page .entry-copy-layout { display: flex; align-items: flex-start; gap: 18px; min-width: 0; }
+.talks-page .entry-copy { flex: 1; min-width: 0; }
+.talks-page .entry-presenters, .talks-page .entry-role { margin: 4px 0 0; color: #696f78; font-size: 11.5px; line-height: 1.65; }
+.talks-page .entry-role { font-weight: 600; }
+.talks-page .entry-photo { flex-shrink: 0; width: 96px; height: 72px; border-radius: 8px; object-fit: cover; }
+.talks-page .entry-bottom { margin-top: 5px; }
+.talks-page .entry-meta { display: flex; flex-wrap: wrap; gap: 3px 16px; }
+.talks-page .entry-location { margin: 0; }
+.talks-page .entry-links:empty { display: none; }
+.talks-page .entry-links .text-link { gap: 6px; font-size: inherit; line-height: inherit; }
+
+/* Patent applications use the same panels without a search toolbar. */
+.patents-page .patent-filing { display: flex; flex-wrap: wrap; gap: 3px 20px; margin: 5px 0; color: #696f78; font-size: 11.5px; line-height: 1.65; }
+.patents-page .patent-application { font-weight: 600; }
+.patents-page .patent-inventors { margin: 0; color: #696f78; font-size: 11.5px; line-height: 1.65; overflow-wrap: anywhere; }
+.patents-page .patent-inventors strong { color: #41464e; font-weight: 650; }
+.patents-page .patent-resource-links { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 9px; font-size: 10.5px; }
+.patents-page .patent-year-group { scroll-margin-top: 110px; }
+.patents-page .patents-mobile-tools { display: none; }
+
+@media (min-width: 1600px) {
+  .archive-page .hero-inner, .archive-page .library-shell { max-width: 1300px; }
+}
+@media (max-width: 1100px) {
+  .archive-page .hero-inner { padding-right: 24px; padding-left: 24px; }
+  .archive-page .library-shell { grid-template-columns: 120px minmax(0, 1fr); gap: 22px; padding-right: 24px; padding-left: 24px; }
+  .archive-page .paper { padding-right: 17px; padding-left: 17px; }
+  .archive-page .paper h3 { font-size: 14px; }
+  .archive-page .paper-bottom { gap: 10px; }
+  .archive-page .paper-venue, .archive-page .paper-authors { font-size: 11px; }
+  .archive-page .paper-actions { gap: 9px; }
+  .archive-page .paper-actions, .archive-page .abstract-toggle, .archive-page .abstract-summary { font-size: 10px; }
+  .talks-page .entry-presenters, .talks-page .entry-role { font-size: 11px; }
+  .talks-page .entry-photo { width: 84px; height: 65px; }
+  .patents-page .patent-filing, .patents-page .patent-inventors { font-size: 11px; }
+  .patents-page .patent-resource-links { font-size: 10px; }
+}
+@media (max-width: 800px) {
+  .archive-page .library-shell { grid-template-columns: 1fr; gap: 0; }
+  .archive-page .year-rail, .archive-page .sort-label { display: none; }
+  .archive-page .toolbar { padding-top: 4px; }
+  .archive-page .mobile-year-label { display: flex; align-items: center; gap: 6px; color: #636a74; font-size: 10px; }
+  .archive-page .mobile-year-label select { padding: 8px 4px; border: 1px solid #dedfe4; border-radius: 7px; background: #fff; color: #636a74; font-size: 10px; }
+  .patents-page .patents-mobile-tools { display: flex; justify-content: flex-end; margin-bottom: 16px; }
+}
+@media (max-width: 780px) {
+  .archive-page .toolbar { top: 68px; }
+  .archive-page .toolbar::before { inset: 0 -5px; border-radius: 12px; background: rgba(255, 255, 255, .88); box-shadow: 0 6px 20px -17px rgba(28, 33, 42, .22); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+}
+@media (max-width: 600px) {
+  .archive-page .hero-inner { min-height: 105px; padding: 24px 21px; }
+  .archive-page .hero-copy h1 { font-size: 30px; }
+  .archive-page .library-shell { padding: 14px 14px 40px; }
+  .archive-page .toolbar { padding-top: 8px; }
+  .archive-page .toolbar-top { gap: 9px; }
+  .archive-page .search-field { padding: 10px; }
+  .archive-page .search-field input { font-size: 11px; }
+  .archive-page .search-field kbd { display: none; }
+  .archive-page .toolbar-bottom { align-items: flex-start; gap: 7px; }
+  .archive-page .type-filters { gap: 2px; }
+  .archive-page .filter-chip { gap: 4px; padding: 4px 6px; font-size: 9px; }
+  .archive-page .filter-chip span { font-size: 8px; }
+  .archive-page .result-count { padding-top: 4px; font-size: 9px; }
+  .archive-page .mobile-year-label, .archive-page .mobile-year-label select { font-size: 11px; }
+  .archive-page .group-heading h2 { font-size: 15px; }
+  .archive-page .paper-list { border-radius: 12px; }
+  .archive-page .paper { padding-right: 14px; padding-left: 14px; }
+  .archive-page .paper-top { gap: 10px; }
+  .archive-page .paper-badges { flex-shrink: 1; flex-direction: column; align-items: flex-end; }
+  .archive-page .type-badge, .archive-page .award-badge { padding: 1px 5px; font-size: 8px; }
+  .archive-page .paper-bottom { display: block; }
+  .archive-page .authors-toggle { margin: 2px 0; }
+  .archive-page .paper-actions { justify-content: flex-end; gap: 16px; margin-top: 8px; }
+  .archive-page .abstract-panel { padding: 12px; font-size: 11px; }
+  .archive-page .empty-state { padding: 30px 12px; }
+  .talks-page .entry-copy-layout { gap: 12px; }
+  .talks-page .entry-photo { width: 68px; height: 60px; }
+  .talks-page .entry-meta { column-gap: 12px; }
+}
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .archive-page .toolbar::before { background: #fcfcfd; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .archive-page *, .archive-page *::before, .archive-page *::after { animation: none !important; transition: none !important; }
+}

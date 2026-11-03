@@ -1,438 +1,207 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nicola Piovesan | Patents</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <meta name="description" content="Nicola Piovesan's innovative patents featuring advancements in telecommunications such as network resource allocation based on user requirements and sustainable communication systems.">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Patents · Nicola Piovesan</title>
+  <meta name="description" content="Patent applications co-invented by Nicola Piovesan in AI, network automation, energy efficiency and telecommunications.">
   <meta name="author" content="Nicola Piovesan">
+  <link rel="canonical" href="https://www.nicolapiovesan.com/patents.html">
+  <link rel="icon" href="images/favicon.png">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://www.nicolapiovesan.com/images/nicola3.jpg">
-  <meta property="og:title" content= "Nicola Piovesan">
-  <meta property="og:description" content="Nicola Piovesan's innovative patents featuring advancements in telecommunications such as network resource allocation based on user requirements and sustainable communication systems.">
   <meta property="og:site_name" content="Nicola Piovesan">
-  <meta property="og:url" content="https://www.nicolapiovesan.com/">
-
+  <meta property="og:title" content="Patents · Nicola Piovesan">
+  <meta property="og:description" content="Patent applications co-invented by Nicola Piovesan in AI, network automation, energy efficiency and telecommunications.">
+  <meta property="og:url" content="https://www.nicolapiovesan.com/patents.html">
+  <meta property="og:image" content="https://www.nicolapiovesan.com/images/nicola3.jpg">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@itspiove">
-  <meta name="twitter:title" content="Nicola Piovesan">
-  <meta name="twitter:description" content="Nicola Piovesan's innovative patents featuring advancements in telecommunications such as network resource allocation based on user requirements and sustainable communication systems.">
   <meta name="twitter:creator" content="@itspiove">
+  <meta name="twitter:title" content="Patents · Nicola Piovesan">
+  <meta name="twitter:description" content="Patent applications co-invented by Nicola Piovesan in AI, network automation, energy efficiency and telecommunications.">
   <meta name="twitter:image" content="https://www.nicolapiovesan.com/images/nicola3.jpg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <link rel="icon" href="images/favicon.png" />
-
-  <script type="application/ld+json">
-  {
-    "@context": "http://schema.org",
-    "@type": "Person",
-    "familyName": "Piovesan",
-    "givenName": "Nicola",
-    "url": "https://www.nicolapiovesan.com",
-    "worksFor": "https://www.huawei.com",
-    "jobTitle": "Researcher",
-    "alumniOf": "http://www.upc.edu",
-    "image": "https://www.nicolapiovesan.com/images/nicola3.jpg",
-    "gender": "http://schema.org/Male",
-    "sameAs": ["https://www.twitter.com/itspiove","https://fr.linkedin.com/in/nicolapiovesan","https://scholar.google.com/citations?user=hxWbCAUAAAAJ"]
-  }
-  </script>
-  <style>
-  body {
-  font-family: 'Raleway', sans-serif;
-}
-  .publication-item {
-    border-left: 3px solid #3b82f6;
-  }
-  .patent-item {
-    box-shadow: 0 2px 12px rgba(0,0,0,0.08) !important;
-    border-left: 3px solid #10b981;
-  }
-  .publication-item, .patent-item {
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-left-color 0.2s ease;
-}
-
-.publication-item:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.12) !important;
-  border-left-color: #74c4e8;
-}
-
-.patent-item:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.12) !important;
-  border-left-color: #5abf9e;
-}
-  .year-divider {
-    position: relative;
-    text-align: center;
-    margin: 2rem 0;
-  }
-  .year-divider::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background-color: #e5e7eb;
-    z-index: -1;
-  }
-  .year-divider span {
-    background-color: white;
-    padding: 0 1rem;
-    font-weight: bold;
-    color: #3b82f6;
-  }
-  .back-link:hover {
-    transform: translateX(-3px);
-  }
-  .pub-tag {
-    font-size: 0.75rem;
-    padding: 0.25rem 0.5rem;
-    border-radius: 0.25rem;
-    font-weight: 600;
-  }
-  .journal-tag {
-    background-color: #ECFDF5;
-    color: #065F46;
-  }
-  .conference-tag {
-    background-color: #EFF6FF;
-    color: #1E40AF;
-  }
-  .preprint-tag {
-    background-color: #FEF2F2;
-    color: #991B1B;
-  }
-  .book-tag {
-    background-color: #F5F3FF;
-    color: #5B21B6;
-  }
-  .thesis-tag {
-    background-color: #F3E8FF;
-    color: #6B21A8;
-  }
-  .status-tag {
-    font-size: 0.75rem;
-    padding: 0.25rem 0.5rem;
-    border-radius: 0.25rem;
-    font-weight: 600;
-  }
-  .granted-tag {
-    background-color: #ECFDF5;
-    color: #065F46;
-  }
-  .pending-tag {
-    background-color: #EFF6FF;
-    color: #1E40AF;
-  }
-  .provisional-tag {
-    background-color: #FEF3C7;
-    color: #92400E;
-  }
-  .international-tag {
-    background-color: #F5F3FF;
-    color: #5B21B6;
-  }
-        .nav-link {
-    position: relative;
-  }
-      .nav-link-sel {
-    position: relative;
-    color: #4a9ebe;
-    font-weight: bold;
-  }
-  .nav-link::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -2px;
-    left: 0;
-    background-color: #4a9ebe;
-    transition: width 0.3s ease;
-  }
-  .nav-link:hover::after {
-    width: 100%;
-  }
-  .read-more-btn { color: #4a9ebe; }
-.read-more-btn:hover { color: #357a96; }
-a.text-blue-600 { color: #4a9ebe !important; }
-a.text-blue-600:hover { color: #357a96 !important; }
-  </style>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H8WN74700N"></script>
-  <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-H8WN74700N');
-  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Manrope:wght@400..800&amp;display=swap" rel="stylesheet">
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="stylesheet" href="css/site.css">
+  <link rel="stylesheet" href="css/archive.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Person", "@id": "https://www.nicolapiovesan.com/#person", "name": "Nicola Piovesan", "givenName": "Nicola", "familyName": "Piovesan", "url": "https://www.nicolapiovesan.com/", "jobTitle": "Senior Researcher", "image": "https://www.nicolapiovesan.com/images/nicola3.jpg", "worksFor": {"@type": "Organization", "name": "Huawei Technologies", "url": "https://www.huawei.com/en/"}, "alumniOf": [{"@type": "CollegeOrUniversity", "name": "Universitat Politècnica de Catalunya", "url": "https://www.upc.edu/"}, {"@type": "CollegeOrUniversity", "name": "University of Padova", "url": "https://www.unipd.it/"}], "knowsAbout": ["Generative AI", "Agentic AI", "Large language models", "LLM-based agents", "Model specialization and post-training", "AI-driven network automation", "Energy-efficient networks"], "sameAs": ["https://www.linkedin.com/in/nicolapiovesan/", "https://github.com/nicopi", "https://scholar.google.it/citations?user=hxWbCAUAAAAJ", "https://www.researchgate.net/profile/Nicola_Piovesan", "https://orcid.org/0000-0001-5397-5248", "https://ieeexplore.ieee.org/author/37086305388"]}, {"@type": "WebSite", "@id": "https://www.nicolapiovesan.com/#website", "url": "https://www.nicolapiovesan.com/", "name": "Nicola Piovesan"}, {"@type": "WebPage", "@id": "https://www.nicolapiovesan.com/patents.html#webpage", "url": "https://www.nicolapiovesan.com/patents.html", "name": "Patents · Nicola Piovesan", "description": "Patent applications co-invented by Nicola Piovesan in AI, network automation, energy efficiency and telecommunications.", "about": {"@id": "https://www.nicolapiovesan.com/#person"}, "isPartOf": {"@id": "https://www.nicolapiovesan.com/#website"}}]}</script>
 </head>
-<body class="bg-white text-gray-800">
-  <header class="bg-white shadow-sm sticky top-0 z-10">
-    <div class="container mx-auto px-6 py-4">
-      <div class="flex justify-between items-center">
-        <a href="index.html" class="text-2xl font-bold text-gray-800">Nicola Piovesan</a>
-        <nav class="hidden md:block">
-          <ul class="flex space-x-8">
-            <li><a href="biography.html" class="nav-link">Bio</a></li>
-            <li><a href="publications.html" class="nav-link">Publications</a></li>
-            <li><a href="talks.html" class="nav-link">Talks</a></li>
-            <li><a href="patents.html" class="nav-link-sel">Patents</a></li>
-          </ul>
-        </nav>
-        <button class="md:hidden focus:outline-none">
-          <i class="fas fa-bars text-2xl"></i>
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <main class="container mx-auto px-6 py-8">
-    <div class="mb-8">
-      <a href="index.html" class="text-blue-600 hover:text-blue-800 font-medium flex items-center back-link transition-transform duration-200">
-        <i class="fas fa-arrow-left mr-2"></i> Back to homepage
-      </a>
-    </div>
-
-    <section id="publications" class="mb-12">
-      <h1 class="text-3xl font-bold mb-6">Patents</h1>
-
-
-      <div class="space-y-4">
-        <div class="patent-item bg-white p-4 rounded-lg shadow-sm pl-6">
-          <div class="flex justify-between items-start">
-            <h3 class="font-bold text-lg mb-1">Procedures for Ensuring Service Requirements in AI Inference</h3>
-          </div>
-          <p class="text-gray-600 mb-2">PCT/EP2026/067816 • Filed: Jun 16, 2026</p>
-          <p class="text-gray-700 mb-2">
-            <span class="font-medium">Inventors:</span> N. Piovesan, M. Sana, A. De Domenico
-          </p>
-          <div class="flex flex-wrap gap-4">
-          </div>
-        </div>
-
-        <div class="patent-item bg-white p-4 rounded-lg shadow-sm pl-6">
-          <div class="flex justify-between items-start">
-            <h3 class="font-bold text-lg mb-1">A device and method for evaluating generative artificial intelligence models</h3>
-          </div>
-          <p class="text-gray-600 mb-2">PCT/EP2025/063678 • Filed: May 19, 2025</p>
-          <p class="text-gray-700 mb-2">
-            <span class="font-medium">Inventors:</span> N. Piovesan, A. De Domenico, M. Sana, F. Ayed
-          </p>
-          <div class="flex flex-wrap gap-4">
-          </div>
-        </div>
-
-        <div class="patent-item bg-white p-4 rounded-lg shadow-sm pl-6">
-          <div class="flex justify-between items-start">
-            <h3 class="font-bold text-lg mb-1">Devices and methods for energy saving and energy source scheduling in cellular networks</h3>
-          </div>
-          <p class="text-gray-600 mb-2">PCT/CN2025/076717 • Filed: Feb 10, 2025</p>
-          <p class="text-gray-700 mb-2">
-            <span class="font-medium">Inventors:</span> N. Piovesan, A. De Domenico, L. Madier, X. Li
-          </p>
-          <div class="flex flex-wrap gap-4">
-          </div>
-        </div>
-
-        <div class="patent-item bg-white p-4 rounded-lg shadow-sm pl-6">
-          <div class="flex justify-between items-start">
-            <h3 class="font-bold text-lg mb-1">Method for activating energy saving for a base station</h3>
-          </div>
-          <p class="text-gray-600 mb-2">PCT/CN2024/091190 • Filed: May 06, 2024</p>
-          <p class="text-gray-700 mb-2">
-            <span class="font-medium">Inventors:</span> A. De Domenico, L. Madier, N. Piovesan, H. Feng
-          </p>
-          <div class="flex flex-wrap gap-4">
-          </div>
-        </div>
-
-        <div class="patent-item bg-white p-4 rounded-lg shadow-sm pl-6">
-          <div class="flex justify-between items-start">
-            <h3 class="font-bold text-lg mb-1">Method for shutting down a cell of one or more cells of a base station for wireless communication</h3>
-          </div>
-          <p class="text-gray-600 mb-2">PCT/CN2024/078209 • Filed: Feb 23, 2024</p>
-          <p class="text-gray-700 mb-2">
-            <span class="font-medium">Inventors:</span> N. Piovesan, A. De Domenico, N. Zhao, L. Madier
-          </p>
-          <div class="flex flex-wrap gap-4">
-          </div>
-        </div>
-
-        <div class="patent-item bg-white p-4 rounded-lg shadow-sm pl-6">
-          <div class="flex justify-between items-start">
-            <h3 class="font-bold text-lg mb-1">Devices and methods for real-time ML framework supporting network optimization</h3>
-          </div>
-          <p class="text-gray-600 mb-2">PCT/CN2023/134021 • Filed: Nov 24, 2023</p>
-          <p class="text-gray-700 mb-2">
-            <span class="font-medium">Inventors:</span> A. De Domenico, F. Ayed, N. Piovesan, N. Zhao, M. Spini, A. Maatouk
-          </p>
-          <div class="flex flex-wrap gap-4">
-          </div>
-        </div>
-
-        <div class="patent-item bg-white p-4 rounded-lg shadow-sm pl-6">
-          <div class="flex justify-between items-start">
-            <h3 class="font-bold text-lg mb-1">Device and Method for Real-Time Prediction of QoE in Voice Services</h3>
-          </div>
-          <p class="text-gray-600 mb-2">PCT/CN2023/107780 • Filed: Jul 17, 2023</p>
-          <p class="text-gray-700 mb-2">
-            <span class="font-medium">Inventors:</span> A. De Domenico, F. Ayed, D. Lopez-Perez, N. Piovesan, W. Li, X. Wei, J. Chen
-          </p>
-          <div class="flex flex-wrap gap-4">
-            <a href="https://patentscope.wipo.int/search/en/WO2025015507" target="_blank "class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-              <i class="fas fa-link mr-1"></i> WIPO
-            </a>
-            <a href="https://patents.google.com/patent/WO2025015507A1/en" target="_blank "class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-              <i class="fas fa-link mr-1"></i> Google Patents
-            </a>
-          </div>
-        </div>
-
-        <div class="patent-item bg-white p-4 rounded-lg shadow-sm pl-6">
-          <div class="flex justify-between items-start">
-            <h3 class="font-bold text-lg mb-1">Telecomunications System for Controlling Network Resource Allocation to User Subjective Requirements and Method Therefor</h3>
-          </div>
-          <p class="text-gray-600 mb-2">PCT/CN2023/082254 • Filed: Mar 17, 2023</p>
-          <p class="text-gray-700 mb-2">
-            <span class="font-medium">Inventors:</span> N. Piovesan, F. Ayed, D. López-Pérez, A. De Domenico, X. Wang, H. Bao
-          </p>
-          <div class="flex flex-wrap gap-4">
-            <a href="https://patentscope.wipo.int/search/en/WO2024192577" target="_blank "class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-              <i class="fas fa-link mr-1"></i> WIPO
-            </a>
-            <a href="https://patents.google.com/patent/WO2024192577A1/en" target="_blank "class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-              <i class="fas fa-link mr-1"></i> Google Patents
-            </a>
-          </div>
-        </div>
-
-        <div class="patent-item bg-white p-4 rounded-lg shadow-sm pl-6">
-          <div class="flex justify-between items-start">
-            <h3 class="font-bold text-lg mb-1">Sustainable Communication System</h3>
-          </div>
-          <p class="text-gray-600 mb-2">PCT/EP2022/084497 • Filed: Dec 06, 2022</p>
-          <p class="text-gray-700 mb-2">
-            <span class="font-medium">Inventors:</span> D. López-Pérez, A. De Domenico, N. Piovesan, D. Tsishkou, and H. Bao
-          </p>
-          <div class="flex flex-wrap gap-4">
-            <a href="https://patentscope.wipo.int/search/en/WO2024120608" target="_blank "class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-              <i class="fas fa-link mr-1"></i> WIPO
-            </a>
-            <a href="https://patents.google.com/patent/WO2024120608A1/en" target="_blank "class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-              <i class="fas fa-link mr-1"></i> Google Patents
-            </a>
-          </div>
-        </div>
-
-        <div class="patent-item bg-white p-4 rounded-lg shadow-sm pl-6">
-          <div class="flex justify-between items-start">
-            <h3 class="font-bold text-lg mb-1">Method and System for Estimating Energy Consumption in Radio Access Network</h3>
-          </div>
-          <p class="text-gray-600 mb-2">PCT/CN2023/071462 • Filed: Jan 09, 2023</p>
-          <p class="text-gray-700 mb-2">
-            <span class="font-medium">Inventors:</span> D. López-Pérez, N. Piovesan, A. De Domenico, H. Bao, Y. Wang
-          </p>
-          <div class="flex flex-wrap gap-4">
-            <a href="https://patentscope.wipo.int/search/en/WO2024148496" target="_blank "class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-              <i class="fas fa-link mr-1"></i> WIPO
-            </a>
-            <a href="https://patents.google.com/patent/WO2024148496A1/en" target="_blank "class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-              <i class="fas fa-link mr-1"></i> Google Patents
-            </a>
-          </div>
-        </div>
-
-        <div class="patent-item bg-white p-4 rounded-lg shadow-sm pl-6">
-          <div class="flex justify-between items-start">
-            <h3 class="font-bold text-lg mb-1">Method for Controlling Carrier Shutdowns in a Multi-Carrier Cellular Network</h3>
-          </div>
-          <p class="text-gray-600 mb-2">PCT/CN2022/139002 • Filed: Dec 14, 2022</p>
-          <p class="text-gray-700 mb-2">
-            <span class="font-medium">Inventors:</span> A. De Domenico, D. López-Pérez, N. Piovesan, N. Zhao, H. Bao
-          </p>
-          <div class="flex flex-wrap gap-4">
-            <a href="https://patentscope.wipo.int/search/en/WO2024124435" target="_blank "class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-              <i class="fas fa-link mr-1"></i> WIPO
-            </a>
-            <a href="https://patents.google.com/patent/WO2024124435A1/en" target="_blank "class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-              <i class="fas fa-link mr-1"></i> Google Patents
-            </a>
-          </div>
-        </div>
-
-        <div class="patent-item bg-white p-4 rounded-lg shadow-sm pl-6">
-          <div class="flex justify-between items-start">
-            <h3 class="font-bold text-lg mb-1">Carrier shutdown for nodes in a telecommunications network</h3>
-          </div>
-          <p class="text-gray-600 mb-2">PCT/CN2021/110439 • Filed: Aug 04, 2021</p>
-          <p class="text-gray-700 mb-2">
-            <span class="font-medium">Inventors:</span> D. López-Pérez, A. De Domenico, N. Piovesan, X. Geng, H. Bao
-          </p>
-          <div class="flex flex-wrap gap-4">
-            <a href="https://patentscope.wipo.int/search/en/WO2023010305" target="_blank "class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-              <i class="fas fa-link mr-1"></i> WIPO
-            </a>
-            <a href="https://patents.google.com/patent/WO2023010305A1/en" target="_blank "class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-              <i class="fas fa-link mr-1"></i> Google Patents
-            </a>
-          </div>
-        </div>
-
-
-      </div>
-    </section>
-  </main>
-
-  <footer class="bg-gray-10 py-8">
-    <div class="container mx-auto px-6">
-      <div class="mt-8 pt-6 border-t border-gray-200 text-center text-gray-500 text-sm">
-        <p>© 2026 Nicola Piovesan. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-  // Simple mobile menu toggle functionality
-  document.querySelector('button').addEventListener('click', function() {
-    const nav = document.querySelector('nav');
-    nav.classList.toggle('hidden');
-    nav.classList.toggle('block');
-    nav.classList.toggle('absolute');
-    nav.classList.toggle('top-16');
-    nav.classList.toggle('right-6');
-    nav.classList.toggle('bg-white');
-    nav.classList.toggle('p-4');
-    nav.classList.toggle('rounded');
-    nav.classList.toggle('shadow-md');
-  });
-
-  // Smooth scrolling for anchor links
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-        behavior: 'smooth'
-      });
-    });
-  });
-
-  // Toggle abstract visibility
-  function toggleAbstract(id) {
-    const abstract = document.getElementById(id);
-    abstract.classList.toggle('hidden');
-  }
-  </script>
-  <script src="//static.getclicky.com/js" type="text/javascript"></script>
-  <script type="text/javascript">try{ clicky.init(101089699); }catch(e){}</script>
-  <noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101089699ns.gif" /></p></noscript>
+<body id="top" data-google-analytics>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="nav-inner"><a class="brand" href="index.html"><span>Nicola Piovesan</span></a><button class="menu-button mobile-menu" id="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false">Menu <span aria-hidden="true">☰</span></button>
+<nav id="site-nav" aria-label="Main navigation"><a href="biography.html">Bio</a><a href="publications.html">Publications</a><a href="talks.html">Talks</a><a href="patents.html" aria-current="page">Patents</a>
+</nav>
+</div>
+</header>
+<main class="archive-page patents-page" id="main" tabindex="-1">
+<section class="library-hero" aria-labelledby="page-title">
+<div class="hero-inner">
+<div class="hero-copy">
+<h1 id="page-title">Patents<span class="title-dot">.</span>
+</h1>
+</div>
+</div>
+</section>
+<div class="library-shell patent-archive">
+<aside class="year-rail" aria-label="Browse patents by filing year">
+<div class="rail-inner">
+<p class="rail-label">EXPLORE BY YEAR</p>
+<div class="year-nav"><button type="button" class="year-button selected" data-patent-year="all" aria-pressed="true">All years <span>12</span></button><button type="button" class="year-button" data-patent-year="2026" aria-pressed="false">2026<span>1</span></button><button type="button" class="year-button" data-patent-year="2025" aria-pressed="false">2025<span>2</span></button><button type="button" class="year-button" data-patent-year="2024" aria-pressed="false">2024<span>2</span></button><button type="button" class="year-button" data-patent-year="2023" aria-pressed="false">2023<span>4</span></button><button type="button" class="year-button" data-patent-year="2022" aria-pressed="false">2022<span>2</span></button><button type="button" class="year-button" data-patent-year="2021" aria-pressed="false">2021<span>1</span></button>
+</div>
+</div>
+</aside>
+<div class="library-main patent-archive-content">
+<div class="patents-mobile-tools"><label class="mobile-year-label">Year<select id="patents-year" aria-label="Filter patents by year"><option value="all">All years</option><option value="2026">2026</option><option value="2025">2025</option><option value="2024">2024</option><option value="2023">2023</option><option value="2022">2022</option><option value="2021">2021</option></select></label>
+</div>
+<section class="year-group patent-year-group" id="patents-2026" data-year="2026" aria-labelledby="patent-heading-2026">
+<div class="group-heading">
+<h2 id="patent-heading-2026">2026</h2><span class="group-count">1</span>
+</div>
+<div class="paper-list patent-year-panel">
+<article class="paper patent-entry">
+<h3>Procedures for Ensuring Service Requirements in AI Inference</h3>
+<p class="patent-filing"><span class="patent-application">PCT/EP2026/067816</span><span>Filed: Jun 16, 2026</span>
+</p>
+<p class="patent-inventors">Inventors: <strong>N. Piovesan</strong>, M. Sana, A. De Domenico</p>
+</article>
+</div>
+</section>
+<section class="year-group patent-year-group" id="patents-2025" data-year="2025" aria-labelledby="patent-heading-2025">
+<div class="group-heading">
+<h2 id="patent-heading-2025">2025</h2><span class="group-count">2</span>
+</div>
+<div class="paper-list patent-year-panel">
+<article class="paper patent-entry">
+<h3>A device and method for evaluating generative artificial intelligence models</h3>
+<p class="patent-filing"><span class="patent-application">PCT/EP2025/063678</span><span>Filed: May 19, 2025</span>
+</p>
+<p class="patent-inventors">Inventors: <strong>N. Piovesan</strong>, A. De Domenico, M. Sana, F. Ayed</p>
+</article>
+<article class="paper patent-entry">
+<h3>Devices and methods for energy saving and energy source scheduling in cellular networks</h3>
+<p class="patent-filing"><span class="patent-application">PCT/CN2025/076717</span><span>Filed: Feb 10, 2025</span>
+</p>
+<p class="patent-inventors">Inventors: <strong>N. Piovesan</strong>, A. De Domenico, L. Madier, X. Li</p>
+</article>
+</div>
+</section>
+<section class="year-group patent-year-group" id="patents-2024" data-year="2024" aria-labelledby="patent-heading-2024">
+<div class="group-heading">
+<h2 id="patent-heading-2024">2024</h2><span class="group-count">2</span>
+</div>
+<div class="paper-list patent-year-panel">
+<article class="paper patent-entry">
+<h3>Method for activating energy saving for a base station</h3>
+<p class="patent-filing"><span class="patent-application">PCT/CN2024/091190</span><span>Filed: May 06, 2024</span>
+</p>
+<p class="patent-inventors">Inventors: A. De Domenico, L. Madier, <strong>N. Piovesan</strong>, H. Feng</p>
+</article>
+<article class="paper patent-entry">
+<h3>Method for shutting down a cell of one or more cells of a base station for wireless communication</h3>
+<p class="patent-filing"><span class="patent-application">PCT/CN2024/078209</span><span>Filed: Feb 23, 2024</span>
+</p>
+<p class="patent-inventors">Inventors: <strong>N. Piovesan</strong>, A. De Domenico, N. Zhao, L. Madier</p>
+</article>
+</div>
+</section>
+<section class="year-group patent-year-group" id="patents-2023" data-year="2023" aria-labelledby="patent-heading-2023">
+<div class="group-heading">
+<h2 id="patent-heading-2023">2023</h2><span class="group-count">4</span>
+</div>
+<div class="paper-list patent-year-panel">
+<article class="paper patent-entry">
+<h3>Devices and methods for real-time ML framework supporting network optimization</h3>
+<p class="patent-filing"><span class="patent-application">PCT/CN2023/134021</span><span>Filed: Nov 24, 2023</span>
+</p>
+<p class="patent-inventors">Inventors: A. De Domenico, F. Ayed, <strong>N. Piovesan</strong>, N. Zhao, M. Spini, A. Maatouk</p>
+</article>
+<article class="paper patent-entry">
+<h3>Device and Method for Real-Time Prediction of QoE in Voice Services</h3>
+<p class="patent-filing"><span class="patent-application">PCT/CN2023/107780</span><span>Filed: Jul 17, 2023</span>
+</p>
+<p class="patent-inventors">Inventors: A. De Domenico, F. Ayed, D. Lopez-Perez, <strong>N. Piovesan</strong>, W. Li, X. Wei, J. Chen</p>
+<div class="patent-resource-links">
+<a class="text-link" href="https://patentscope.wipo.int/search/en/WO2025015507" target="_blank" rel="noopener noreferrer" aria-label="WIPO: Device and Method for Real-Time Prediction of QoE in Voice Services">WIPO <svg class="icon-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 15 15 5M5 5h10v10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+<a class="text-link" href="https://patents.google.com/patent/WO2025015507A1/en" target="_blank" rel="noopener noreferrer" aria-label="Google Patents: Device and Method for Real-Time Prediction of QoE in Voice Services">Google Patents <svg class="icon-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 15 15 5M5 5h10v10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</div>
+</article>
+<article class="paper patent-entry">
+<h3>Telecomunications System for Controlling Network Resource Allocation to User Subjective Requirements and Method Therefor</h3>
+<p class="patent-filing"><span class="patent-application">PCT/CN2023/082254</span><span>Filed: Mar 17, 2023</span>
+</p>
+<p class="patent-inventors">Inventors: <strong>N. Piovesan</strong>, F. Ayed, D. López-Pérez, A. De Domenico, X. Wang, H. Bao</p>
+<div class="patent-resource-links">
+<a class="text-link" href="https://patentscope.wipo.int/search/en/WO2024192577" target="_blank" rel="noopener noreferrer" aria-label="WIPO: Telecomunications System for Controlling Network Resource Allocation to User Subjective Requirements and Method Therefor">WIPO <svg class="icon-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 15 15 5M5 5h10v10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+<a class="text-link" href="https://patents.google.com/patent/WO2024192577A1/en" target="_blank" rel="noopener noreferrer" aria-label="Google Patents: Telecomunications System for Controlling Network Resource Allocation to User Subjective Requirements and Method Therefor">Google Patents <svg class="icon-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 15 15 5M5 5h10v10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</div>
+</article>
+<article class="paper patent-entry">
+<h3>Method and System for Estimating Energy Consumption in Radio Access Network</h3>
+<p class="patent-filing"><span class="patent-application">PCT/CN2023/071462</span><span>Filed: Jan 09, 2023</span>
+</p>
+<p class="patent-inventors">Inventors: D. López-Pérez, <strong>N. Piovesan</strong>, A. De Domenico, H. Bao, Y. Wang</p>
+<div class="patent-resource-links">
+<a class="text-link" href="https://patentscope.wipo.int/search/en/WO2024148496" target="_blank" rel="noopener noreferrer" aria-label="WIPO: Method and System for Estimating Energy Consumption in Radio Access Network">WIPO <svg class="icon-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 15 15 5M5 5h10v10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+<a class="text-link" href="https://patents.google.com/patent/WO2024148496A1/en" target="_blank" rel="noopener noreferrer" aria-label="Google Patents: Method and System for Estimating Energy Consumption in Radio Access Network">Google Patents <svg class="icon-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 15 15 5M5 5h10v10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</div>
+</article>
+</div>
+</section>
+<section class="year-group patent-year-group" id="patents-2022" data-year="2022" aria-labelledby="patent-heading-2022">
+<div class="group-heading">
+<h2 id="patent-heading-2022">2022</h2><span class="group-count">2</span>
+</div>
+<div class="paper-list patent-year-panel">
+<article class="paper patent-entry">
+<h3>Method for Controlling Carrier Shutdowns in a Multi-Carrier Cellular Network</h3>
+<p class="patent-filing"><span class="patent-application">PCT/CN2022/139002</span><span>Filed: Dec 14, 2022</span>
+</p>
+<p class="patent-inventors">Inventors: A. De Domenico, D. López-Pérez, <strong>N. Piovesan</strong>, N. Zhao, H. Bao</p>
+<div class="patent-resource-links">
+<a class="text-link" href="https://patentscope.wipo.int/search/en/WO2024124435" target="_blank" rel="noopener noreferrer" aria-label="WIPO: Method for Controlling Carrier Shutdowns in a Multi-Carrier Cellular Network">WIPO <svg class="icon-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 15 15 5M5 5h10v10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+<a class="text-link" href="https://patents.google.com/patent/WO2024124435A1/en" target="_blank" rel="noopener noreferrer" aria-label="Google Patents: Method for Controlling Carrier Shutdowns in a Multi-Carrier Cellular Network">Google Patents <svg class="icon-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 15 15 5M5 5h10v10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</div>
+</article>
+<article class="paper patent-entry">
+<h3>Sustainable Communication System</h3>
+<p class="patent-filing"><span class="patent-application">PCT/EP2022/084497</span><span>Filed: Dec 06, 2022</span>
+</p>
+<p class="patent-inventors">Inventors: D. López-Pérez, A. De Domenico, <strong>N. Piovesan</strong>, D. Tsishkou, and H. Bao</p>
+<div class="patent-resource-links">
+<a class="text-link" href="https://patentscope.wipo.int/search/en/WO2024120608" target="_blank" rel="noopener noreferrer" aria-label="WIPO: Sustainable Communication System">WIPO <svg class="icon-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 15 15 5M5 5h10v10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+<a class="text-link" href="https://patents.google.com/patent/WO2024120608A1/en" target="_blank" rel="noopener noreferrer" aria-label="Google Patents: Sustainable Communication System">Google Patents <svg class="icon-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 15 15 5M5 5h10v10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</div>
+</article>
+</div>
+</section>
+<section class="year-group patent-year-group" id="patents-2021" data-year="2021" aria-labelledby="patent-heading-2021">
+<div class="group-heading">
+<h2 id="patent-heading-2021">2021</h2><span class="group-count">1</span>
+</div>
+<div class="paper-list patent-year-panel">
+<article class="paper patent-entry">
+<h3>Carrier shutdown for nodes in a telecommunications network</h3>
+<p class="patent-filing"><span class="patent-application">PCT/CN2021/110439</span><span>Filed: Aug 04, 2021</span>
+</p>
+<p class="patent-inventors">Inventors: D. López-Pérez, A. De Domenico, <strong>N. Piovesan</strong>, X. Geng, H. Bao</p>
+<div class="patent-resource-links">
+<a class="text-link" href="https://patentscope.wipo.int/search/en/WO2023010305" target="_blank" rel="noopener noreferrer" aria-label="WIPO: Carrier shutdown for nodes in a telecommunications network">WIPO <svg class="icon-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 15 15 5M5 5h10v10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+<a class="text-link" href="https://patents.google.com/patent/WO2023010305A1/en" target="_blank" rel="noopener noreferrer" aria-label="Google Patents: Carrier shutdown for nodes in a telecommunications network">Google Patents <svg class="icon-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 15 15 5M5 5h10v10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</div>
+</article>
+</div>
+</section>
+</div>
+</div>
+</main>
+<footer class="site-footer"><span>© 2026 Nicola Piovesan</span><a href="#top">Back to top ↑</a>
+</footer>
+<script src="js/navigation.js" defer></script>
+<script src="js/patents-page.js" defer></script>
+<script src="js/analytics.js" defer></script>
+<noscript><img src="https://in.getclicky.com/101089699ns.gif" width="1" height="1" alt=""></noscript>
 </body>
 </html>

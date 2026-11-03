@@ -1,820 +1,893 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Nicola Piovesan's engaging talks on advancing 5G networks through AI, focusing on sustainability, machine learning, and mobile network optimization.">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Talks · Nicola Piovesan</title>
+  <meta name="description" content="Upcoming and past talks, tutorials and panel discussions by Nicola Piovesan on AI and telecommunications.">
   <meta name="author" content="Nicola Piovesan">
-
+  <link rel="canonical" href="https://www.nicolapiovesan.com/talks.html">
+  <link rel="icon" href="images/favicon.png">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://www.nicolapiovesan.com/images/nicola3.jpg">
-  <meta property="og:title" content= "Nicola Piovesan">
-  <meta property="og:description" content="Nicola Piovesan's engaging talks on advancing 5G networks through AI, focusing on sustainability, machine learning, and mobile network optimization.">
   <meta property="og:site_name" content="Nicola Piovesan">
-  <meta property="og:url" content="https://www.nicolapiovesan.com/">
-
+  <meta property="og:title" content="Talks · Nicola Piovesan">
+  <meta property="og:description" content="Upcoming and past talks, tutorials and panel discussions by Nicola Piovesan on AI and telecommunications.">
+  <meta property="og:url" content="https://www.nicolapiovesan.com/talks.html">
+  <meta property="og:image" content="https://www.nicolapiovesan.com/images/nicola3.jpg">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@itspiove">
-  <meta name="twitter:title" content="Nicola Piovesan">
-  <meta name="twitter:description" content="Nicola Piovesan's engaging talks on advancing 5G networks through AI, focusing on sustainability, machine learning, and mobile network optimization.">
   <meta name="twitter:creator" content="@itspiove">
+  <meta name="twitter:title" content="Talks · Nicola Piovesan">
+  <meta name="twitter:description" content="Upcoming and past talks, tutorials and panel discussions by Nicola Piovesan on AI and telecommunications.">
   <meta name="twitter:image" content="https://www.nicolapiovesan.com/images/nicola3.jpg">
-
-  <link rel="icon" href="images/favicon.png" />
-  <title>Nicola Piovesan | Talks</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <script type="application/ld+json">
-  {
-    "@context": "http://schema.org",
-    "@type": "Person",
-    "familyName": "Piovesan",
-    "givenName": "Nicola",
-    "url": "https://www.nicolapiovesan.com",
-    "worksFor": "https://www.huawei.com",
-    "jobTitle": "Researcher",
-    "alumniOf": "http://www.upc.edu",
-    "image": "https://www.nicolapiovesan.com/images/nicola3.jpg",
-    "gender": "http://schema.org/Male",
-    "sameAs": ["https://www.twitter.com/itspiove","https://fr.linkedin.com/in/nicolapiovesan","https://scholar.google.com/citations?user=hxWbCAUAAAAJ"]
-  }
-  </script>
-  <style>
-  body {
-  font-family: 'Raleway', sans-serif;
-}
-   .publication-item, .patent-item {
-    box-shadow: 0 2px 12px rgba(0,0,0,0.08) !important;
-    border-left: 3px solid #4a9ebe;
-  }
-  .bg-white.p-6.rounded-lg {
-    box-shadow: 0 2px 12px rgba(0,0,0,0.08) !important;
-  }
-  .patent-item {
-    box-shadow: 0 2px 12px rgba(0,0,0,0.08) !important;
-    border-left: 3px solid #10b981;
-  }
-  .talk-item {
-    box-shadow: 0 2px 12px rgba(0,0,0,0.08) !important;
-    border-left: 3px solid #4a9ebe;
-  }
-.tutorial-item {
-    box-shadow: 0 2px 12px rgba(0,0,0,0.08) !important;
-    border-left: 3px solid #6a7fc1;
-  }
-.panel-item {
-    box-shadow: 0 2px 12px rgba(0,0,0,0.08) !important;
-    border-left: 3px solid #c49a3c;
-  }
-  .talk-item, .tutorial-item, .panel-item {
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-left-color 0.2s ease;
-}
-
-.talk-item:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.12) !important;
-  border-left-color: #74c4e8;
-}
-
-.tutorial-item:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.12) !important;
-  border-left-color: #8f9fd4;
-}
-
-.panel-item:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.12) !important;
-  border-left-color: #d4b45c;
-}
-  .year-divider {
-    position: relative;
-    text-align: center;
-    margin: 2rem 0;
-  }
-  .year-divider::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background-color: #e5e7eb;
-    z-index: -1;
-  }
-  .year-divider span {
-    background-color: white;
-    padding: 0 1rem;
-    font-weight: bold;
-    color: #3b82f6;
-  }
-  .back-link:hover {
-    transform: translateX(-3px);
-  }
-  .event-tag {
-    font-size: 0.75rem;
-    padding: 0.25rem 0.5rem;
-    border-radius: 0.25rem;
-    font-weight: 600;
-  }
-  .talk-tag {
-    background-color: #EDE9FE;
-    color: #5B21B6;
-  }
-  .tutorial-tag {
-    background-color: #FCE7F3;
-    color: #9D174D;
-  }
-  .panel-tag {
-    background-color: #fdf5e0;
-    color: #8a6a1a;
-  }
-      .nav-link {
-    position: relative;
-  }
-      .nav-link-sel {
-    position: relative;
-    color: #4a9ebe;
-    font-weight: bold;
-  }
-  .nav-link::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -2px;
-    left: 0;
-    background-color: #4a9ebe;
-    transition: width 0.3s ease;
-  }
-  .nav-link:hover::after {
-    width: 100%;
-  }
-  .read-more-btn { color: #4a9ebe; }
-.read-more-btn:hover { color: #357a96; }
-a.text-blue-600 { color: #4a9ebe !important; }
-a.text-blue-600:hover { color: #357a96 !important; }
-#mainNav.mobile-open {
-  display: block !important;
-  position: absolute;
-  top: 64px;
-  right: 1.5rem;
-  background: white;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
-  z-index: 50;
-}
-#mainNav.mobile-open ul {
-  flex-direction: column;
-  gap: 1rem;
-  align-items: flex-start;
-  padding-left: 0;
-  margin-left: 0;
-}
-#mainNav.mobile-open ul li {
-  margin-left: 0 !important;
-}
-  </style>
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H8WN74700N"></script>
-  <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-H8WN74700N');
-  </script>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Manrope:wght@400..800&amp;display=swap" rel="stylesheet">
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="stylesheet" href="css/site.css">
+  <link rel="stylesheet" href="css/archive.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Person", "@id": "https://www.nicolapiovesan.com/#person", "name": "Nicola Piovesan", "givenName": "Nicola", "familyName": "Piovesan", "url": "https://www.nicolapiovesan.com/", "jobTitle": "Senior Researcher", "image": "https://www.nicolapiovesan.com/images/nicola3.jpg", "worksFor": {"@type": "Organization", "name": "Huawei Technologies", "url": "https://www.huawei.com/en/"}, "alumniOf": [{"@type": "CollegeOrUniversity", "name": "Universitat Politècnica de Catalunya", "url": "https://www.upc.edu/"}, {"@type": "CollegeOrUniversity", "name": "University of Padova", "url": "https://www.unipd.it/"}], "knowsAbout": ["Generative AI", "Agentic AI", "Large language models", "LLM-based agents", "Model specialization and post-training", "AI-driven network automation", "Energy-efficient networks"], "sameAs": ["https://www.linkedin.com/in/nicolapiovesan/", "https://github.com/nicopi", "https://scholar.google.it/citations?user=hxWbCAUAAAAJ", "https://www.researchgate.net/profile/Nicola_Piovesan", "https://orcid.org/0000-0001-5397-5248", "https://ieeexplore.ieee.org/author/37086305388"]}, {"@type": "WebSite", "@id": "https://www.nicolapiovesan.com/#website", "url": "https://www.nicolapiovesan.com/", "name": "Nicola Piovesan"}, {"@type": "WebPage", "@id": "https://www.nicolapiovesan.com/talks.html#webpage", "url": "https://www.nicolapiovesan.com/talks.html", "name": "Talks · Nicola Piovesan", "description": "Upcoming and past talks, tutorials and panel discussions by Nicola Piovesan on AI and telecommunications.", "about": {"@id": "https://www.nicolapiovesan.com/#person"}, "isPartOf": {"@id": "https://www.nicolapiovesan.com/#website"}}]}</script>
 </head>
-<body class="bg-white text-gray-800">
-  <header class="bg-white shadow-sm sticky top-0 z-10">
-    <div class="container mx-auto px-6 py-4">
-      <div class="flex justify-between items-center">
-        <a href="index.html" class="text-2xl font-bold text-gray-800">Nicola Piovesan</a>
-        <nav class="hidden md:block">
-          <ul class="flex space-x-8">
-            <li><a href="biography.html" class="nav-link">Bio</a></li>
-            <li><a href="publications.html" class="nav-link">Publications</a></li>
-            <li><a href="talks.html" class="nav-link-sel">Talks</a></li>
-            <li><a href="patents.html" class="nav-link">Patents</a></li>
-          </ul>
-        </nav>
-        <button class="md:hidden focus:outline-none">
-          <i class="fas fa-bars text-2xl"></i>
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <main class="container mx-auto px-6 py-8">
-    <div class="mb-8">
-      <a href="index.html" class="text-blue-600 hover:text-blue-800 font-medium flex items-center back-link transition-transform duration-200">
-        <i class="fas fa-arrow-left mr-2"></i> Back to homepage
-      </a>
-    </div>
-
-    <section id="talks" class="mb-12">
-      <h1 class="text-3xl font-bold mb-6">Talks</h1>
-
-      <div class="space-y-6">
-        <div class="talk-item bg-white p-4 rounded-lg shadow-sm pl-6">
-          <div class="flex justify-between items-start">
-            <h3 class="font-bold text-lg mb-1">Generative Intelligence for 6G: From Large Language Models to Autonomous Agents</h3>
-          </div>
-          <p class="text-gray-600 mb-2"><i>3rd International Terahertz Summer School (THz+6G+AI)</i></p>
-          <p class="flex items-center text-gray-500 text-sm mb-3">
-            <i class="fas fa-calendar-alt mr-2"></i> July 16th, 2026<br>
-            <i class="fas fa-map-marker-alt ml-4 mr-2"></i> Hangzhou, China
-          </p>
-          <div class="flex flex-wrap gap-2 mt-2">
-            <a href="https://biss.buaa.edu.cn/info/1036/1273.htm" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-              <i class="fas fa-link mr-1"></i> Event
-            </a>
-          </div>
-        </div>
-        <div class="talk-item bg-white p-4 rounded-lg shadow-sm pl-6">
-          <div class="flex justify-between items-start">
-            <h3 class="font-bold text-lg mb-1">Agentic AI and the Road towards Autonomous Telecom Networks</h3>
-          </div>
-          <p class="text-gray-600 mb-2"><i>Summer School of Information Engineering (SSIE)</i></p>
-          <p class="flex items-center text-gray-500 text-sm mb-3">
-            <i class="fas fa-calendar-alt mr-2"></i> July 9th, 2026<br>
-            <i class="fas fa-map-marker-alt ml-4 mr-2"></i> Brixen, Italy
-          </p>
-          <div class="flex flex-wrap gap-2 mt-2">
-            <a href="https://ssie.dei.unipd.it/technical-program-ssie-2026-track-1/" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-              <i class="fas fa-link mr-1"></i> Event
-            </a>
-          </div>
-        </div>
-        <div class="talk-item bg-white p-4 rounded-lg shadow-sm pl-6">
-          <div class="flex justify-between items-start">
-            <h3 class="font-bold text-lg mb-1">Agentic AI: Unlocking the Next Generation of Network Automation </h3>
-          </div>
-          <p class="text-gray-600 mb-2"><i>IEEE Globecom Industry Presentation</i></p>
-          <p class="flex items-center text-gray-500 text-sm mb-3">
-            <i class="fas fa-calendar-alt mr-2"></i> December 9th, 2025<br>
-            <i class="fas fa-map-marker-alt ml-4 mr-2"></i> Taipei, Taiwan
-          </p>
-          <div class="flex flex-wrap gap-2 mt-2">
-            <a href="https://globecom2025.ieee-globecom.org/program/industry-presentation" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-              <i class="fas fa-link mr-1"></i> Event
-            </a>
-          </div>
-        </div>
-        <div class="talk-item bg-white p-4 rounded-lg shadow-sm pl-6">
-          <div class="flex justify-between items-start">
-            <h3 class="font-bold text-lg mb-1">Advancing Network Automation through Multi-Agent Large Language Models</h3>
-          </div>
-          <p class="text-gray-600 mb-2"><i>AI for Good Global Summit</i></p>
-          <p class="flex items-center text-gray-500 text-sm mb-3">
-            <i class="fas fa-calendar-alt mr-2"></i> July 9th, 2025<br>
-            <i class="fas fa-map-marker-alt ml-4 mr-2"></i>Geneva, Switzerland
-          </p>
-          <div class="flex flex-wrap gap-2 mt-2">
-            <a href="https://aiforgood.itu.int/event/ai-and-machine-learning-in-communication-networks-summit25-day1/" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-              <i class="fas fa-link mr-1"></i> Event
-            </a>
-          </div>
-        </div>
-
-        <div class="talk-item bg-white p-4 rounded-lg shadow-sm pl-6">
-          <div class="flex justify-between items-start">
-            <h3 class="font-bold text-lg mb-1">The Role of AI and Large Language Models in Future Wireless Networks</h3>
-          </div>
-          <p class="text-gray-600 mb-2"><i>Summer School on advanced topics in 5G/6G Communication</i></p>
-          <p class="flex items-center text-gray-500 text-sm mb-3">
-            <i class="fas fa-calendar-alt mr-2"></i> July 1st, 2025<br>
-            <i class="fas fa-map-marker-alt ml-4 mr-2"></i>Cuenca, Spain
-          </p>
-        </div>
-
-        <div class="talk-item bg-white p-4 rounded-lg shadow-sm pl-6">
-          <div class="flex justify-between items-start">
-            <h3 class="font-bold text-lg mb-1">The Role of AI and Large Language Models in Future Telecom Networks</h3>
-          </div>
-          <p class="text-gray-600 mb-2"><i>Invited Talk</i></p>
-          <p class="flex items-center text-gray-500 text-sm mb-3">
-            <i class="fas fa-calendar-alt mr-2"></i> April 7th, 2025<br>
-            <i class="fas fa-map-marker-alt ml-4 mr-2"></i> Universitat Politecnica de Valencia, Valencia, Spain
-          </p>
-        </div>
-
-        <div class="talk-item bg-white p-4 rounded-lg shadow-sm pl-6">
-          <div class="flex justify-between items-start">
-            <h3 class="font-bold text-lg mb-1">Advancing Network Optimization: Bridging Human Expertise and AI in the 6G Era</h3>
-          </div>
-          <p class="text-gray-600 mb-2"><i>Advanced Wireless Communications Seminars</i></p>
-          <p class="flex items-center text-gray-500 text-sm mb-3">
-            <i class="fas fa-calendar-alt mr-2"></i> February 4th, 2025<br>
-            <i class="fas fa-map-marker-alt ml-4 mr-2"></i> Telecom SudParis, Institut Polytechnique de Paris, Paris, France
-          </p>
-        </div>
-
-        <!-- 2024 Talks -->
-        <div class="talk-item bg-white p-4 rounded-lg shadow-sm pl-6">
-          <div class="flex justify-between items-start">
-            <h3 class="font-bold text-lg mb-1">Data-driven Modelling and Optimization of Green Future Mobile Networks</h3>
-          </div>
-          <p class="text-gray-600 mb-2"><i>IEEE Globecom Industry Presentation</i></p>
-          <p class="flex items-center text-gray-500 text-sm mb-3">
-            <i class="fas fa-calendar-alt mr-2"></i> December 10th, 2024<br>
-            <i class="fas fa-map-marker-alt ml-4 mr-2"></i> Cape Town, South Africa
-          </p>
-          <div class="flex flex-wrap gap-2 mt-2">
-            <a href="https://globecom2024.ieee-globecom.org/program/industry-presentations" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-              <i class="fas fa-link mr-1"></i> Event
-            </a>
-          </div>
-        </div>
-
-        <div class="talk-item bg-white p-4 rounded-lg shadow-sm pl-6">
-          <div class="flex justify-between items-start">
-            <h3 class="font-bold text-lg mb-1">Network Modelling and Optimization for the 6G Era: Human Expertise Meets AI</h3>
-          </div>
-          <p class="text-gray-600 mb-2"><i>Abu Dhabi 6G summit</i></p>
-          <p class="flex items-center text-gray-500 text-sm mb-3">
-            <i class="fas fa-calendar-alt mr-2"></i> November 14th, 2024<br>
-            <i class="fas fa-map-marker-alt ml-4 mr-2"></i> Abu Dhabi, UAE
-          </p>
-          <div class="flex flex-wrap gap-2 mt-2">
-            <a href="https://www.6gsummitabudhabi.com/invited.php" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-              <i class="fas fa-link mr-1"></i> Event
-            </a>
-            <a href="https://www.chaspark.com/#/live/1070480298598825984?anchorV=1077734077277118464&amp;multi=en" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-              <i class="fas fa-video mr-1"></i> Video
-            </a>
-          </div>
-        </div>
-
-        <div class="talk-item bg-white p-4 rounded-lg shadow-sm pl-6">
-          <div class="flex justify-between items-start">
-            <h3 class="font-bold text-lg mb-1">Green Energy and Traffic Forecasting using AI/ML Challenge Launch</h3>
-          </div>
-          <p class="text-gray-600 mb-2"><i>ITU AI for Good</i></p>
-          <p class="flex items-center text-gray-500 text-sm mb-3">
-            <i class="fas fa-calendar-alt mr-2"></i> August 6th, 2024<br>
-            <i class="fas fa-map-marker-alt ml-4 mr-2"></i> Online
-          </p>
-          <div class="flex flex-wrap gap-2 mt-2">
-            <a href="https://aiforgood.itu.int/event/green-energy-and-traffic-forecasting-using-ai-ml-challenge-launch/" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-              <i class="fas fa-link mr-1"></i> Event
-            </a>
-            <a href="https://www.youtube.com/watch?v=XuCU76W7pI0" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-              <i class="fas fa-video mr-1"></i> Video
-            </a>
-          </div>
-        </div>
-
-        <div class="talk-item bg-white p-4 rounded-lg shadow-sm pl-6">
-          <div class="flex justify-between items-start">
-            <h3 class="font-bold text-lg mb-1">Data-driven Network Optimization</h3>
-          </div>
-          <p class="text-gray-600 mb-2"><i>Summer School on advanced topics in 5G-6G Communications</i></p>
-          <p class="flex items-center text-gray-500 text-sm mb-3">
-            <i class="fas fa-calendar-alt mr-2"></i> July 5th, 2024<br>
-            <i class="fas fa-map-marker-alt ml-4 mr-2"></i> Cuenca, Spain
-          </p>
-          <div class="flex flex-wrap gap-2 mt-2">
-            <a href="https://networks.imdea.org/whatsnew/events-agenda/summer-school-on-advanced-topics-in-5g-6g-communications/" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-              <i class="fas fa-link mr-1"></i> Event
-            </a>
-          </div>
-        </div>
-
-        <div class="talk-item bg-white p-4 rounded-lg shadow-sm pl-6">
-          <div class="flex justify-between items-start">
-            <h3 class="font-bold text-lg mb-1">Data-Driven Modelling and Optimization of Green Future Mobile Networks</h3>
-          </div>
-          <p class="text-gray-600 mb-2"><i>ITU AI for Good Global Summit - Session on Green AI: Sustainability, AI and 6G</i></p>
-          <p class="flex items-center text-gray-500 text-sm mb-3">
-            <i class="fas fa-calendar-alt mr-2"></i> May 30th, 2024<br>
-            <i class="fas fa-map-marker-alt ml-4 mr-2"></i> Geneva, Switzerland
-          </p>
-          <div class="flex flex-wrap gap-2 mt-2">
-            <a href="https://aiforgood.itu.int/event/ai-and-machine-learning-in-communication-networks/" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-              <i class="fas fa-link mr-1"></i> Event
-            </a>
-          </div>
-        </div>
-
-        <div class="talk-item bg-white p-4 rounded-lg shadow-sm pl-6">
-          <div class="flex justify-between items-start">
-            <h3 class="font-bold text-lg mb-1">Launch of Green Telecom Competition on Smart Energy Supply Scheduling</h3>
-          </div>
-          <p class="text-gray-600 mb-2"><i>ITU AI for Good Global Summit - Session on AI for the future of climate prediction</i></p>
-          <p class="flex items-center text-gray-500 text-sm mb-3">
-            <i class="fas fa-calendar-alt mr-2"></i> May 30th, 2024<br>
-            <i class="fas fa-map-marker-alt ml-4 mr-2"></i> Geneva, Switzerland
-          </p>
-          <div class="flex flex-wrap gap-2 mt-2">
-            <a href="https://aiforgood.itu.int/event/ai-for-the-future-of-climate-prediction/" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-              <i class="fas fa-link mr-1"></i> Event
-            </a>
-          </div>
-        </div>
-
-        <div class="talk-item bg-white p-4 rounded-lg shadow-sm pl-6">
-          <div class="flex justify-between items-start">
-            <h3 class="font-bold text-lg mb-1">Enhancing 5G Networks with AI: A Journey from Data Analytics to Large Language Models</h3>
-          </div>
-          <p class="text-gray-600 mb-2"><i>Advanced Wireless Communications Seminars</i></p>
-          <p class="flex items-center text-gray-500 text-sm mb-3">
-            <i class="fas fa-calendar-alt mr-2"></i> February 5th, 2024<br>
-            <i class="fas fa-map-marker-alt ml-4 mr-2"></i> Telecom SudParis, Institut Polytechnique de Paris, Paris, France
-          </p>
-        </div>
-
-        <!-- 2023 Talks -->
-        <div class="talk-item bg-white p-4 rounded-lg shadow-sm pl-6">
-          <div class="flex justify-between items-start">
-            <h3 class="font-bold text-lg mb-1">5G-Energy Consumption Modelling: AI/ML solutions for Climate Change</h3>
-          </div>
-          <p class="text-gray-600 mb-2"><i>ITU AI for Good</i></p>
-          <p class="flex items-center text-gray-500 text-sm mb-3">
-            <i class="fas fa-calendar-alt mr-2"></i> October 27th, 2023<br>
-            <i class="fas fa-map-marker-alt ml-4 mr-2"></i> Online
-          </p>
-          <div class="flex flex-wrap gap-2 mt-2">
-            <a href="https://aiforgood.itu.int/event/5g-energy-consumption-modelling-ai-ml-solutions-for-climate-change/" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-              <i class="fas fa-link mr-1"></i> Event
-            </a>
-            <a href="https://www.youtube.com/watch?v=G5CTO2ANOqk" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-              <i class="fas fa-video mr-1"></i> Video
-            </a>
-          </div>
-        </div>
-
-        <div class="talk-item bg-white p-4 rounded-lg shadow-sm pl-6">
-          <div class="flex justify-between items-start">
-            <h3 class="font-bold text-lg mb-1">A Journey Towards Energy Efficiency: Exploring Machine Learning Models for Mobile Network Optimization</h3>
-          </div>
-          <p class="text-gray-600 mb-2"><i>Invited Talk</i></p>
-          <p class="flex items-center text-gray-500 text-sm mb-3">
-            <i class="fas fa-calendar-alt mr-2"></i> September 14th, 2023<br>
-            <i class="fas fa-map-marker-alt ml-4 mr-2"></i> Universitat Politecnica de Valencia, Valencia, Spain
-          </p>
-        </div>
-
-        <div class="talk-item bg-white p-4 rounded-lg shadow-sm pl-6">
-          <div class="flex justify-between items-start">
-            <h3 class="font-bold text-lg mb-1">AI/ML for 5G-Energy Consumption Modelling</h3>
-          </div>
-          <p class="text-gray-600 mb-2"><i>ITU AI for Good</i></p>
-          <p class="flex items-center text-gray-500 text-sm mb-3">
-            <i class="fas fa-calendar-alt mr-2"></i> July 11th, 2023<br>
-            <i class="fas fa-map-marker-alt ml-4 mr-2"></i> Online
-          </p>
-          <div class="flex flex-wrap gap-2 mt-2">
-            <a href="https://aiforgood.itu.int/event/ai-ml-for-5g-energy-consumption-modelling/" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-              <i class="fas fa-link mr-1"></i> Event
-            </a>
-            <a href="https://www.youtube.com/watch?v=zSetefnu3y8" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-              <i class="fas fa-video mr-1"></i> Video
-            </a>
-          </div>
-        </div>
-
-        <div class="talk-item bg-white p-4 rounded-lg shadow-sm pl-6">
-          <div class="flex justify-between items-start">
-            <h3 class="font-bold text-lg mb-1">Machine Learning for Green Future Mobile Networks</h3>
-          </div>
-          <p class="text-gray-600 mb-2"><i>Advanced Wireless Communications Seminars</i></p>
-          <p class="flex items-center text-gray-500 text-sm mb-3">
-            <i class="fas fa-calendar-alt mr-2"></i> February 14th, 2023<br>
-            <i class="fas fa-map-marker-alt ml-4 mr-2"></i> Telecom SudParis, Institut Polytechnique de Paris, Paris, France
-          </p>
-        </div>
-
-        <!-- Older Talks -->
-        <div class="talk-item bg-white p-4 rounded-lg shadow-sm pl-6">
-          <div class="flex justify-between items-start">
-            <h3 class="font-bold text-lg mb-1">Machine Learning and Analytical Power Consumption Models for 5G Base Stations</h3>
-          </div>
-          <p class="text-gray-600 mb-2"><i>Next Generation Mobile Networks (NGMN) Green Future Networks</i></p>
-          <p class="flex items-center text-gray-500 text-sm mb-3">
-            <i class="fas fa-calendar-alt mr-2"></i> December 2nd, 2021<br>
-            <i class="fas fa-map-marker-alt ml-4 mr-2"></i> Online
-          </p>
-        </div>
-
-        <div class="talk-item bg-white p-4 rounded-lg shadow-sm pl-6">
-          <div class="flex justify-between items-start">
-            <h3 class="font-bold text-lg mb-1">Forecasting Mobile Traffic to Achieve Greener 5G Networks: When Machine Learning is Key</h3>
-          </div>
-          <p class="text-gray-600 mb-2"><i>Huawei AI forum</i></p>
-          <p class="flex items-center text-gray-500 text-sm mb-3">
-            <i class="fas fa-calendar-alt mr-2"></i> May 27th, 2021<br>
-            <i class="fas fa-map-marker-alt ml-4 mr-2"></i> Huawei, Paris, France
-          </p>
-        </div>
-
-        <div class="talk-item bg-white p-4 rounded-lg shadow-sm pl-6">
-          <div class="flex justify-between items-start">
-            <h3 class="font-bold text-lg mb-1">European Training Networks: My experience</h3>
-          </div>
-          <p class="text-gray-600 mb-2"><i>WindMill kickoff school</i></p>
-          <p class="flex items-center text-gray-500 text-sm mb-3">
-            <i class="fas fa-calendar-alt mr-2"></i> November 19th, 2019<br>
-            <i class="fas fa-map-marker-alt ml-4 mr-2"></i> Aalborg University, Aalborg, Denmark
-          </p>
-        </div>
-
-        <div class="talk-item bg-white p-4 rounded-lg shadow-sm pl-6">
-          <div class="flex justify-between items-start">
-            <h3 class="font-bold text-lg mb-1">Energy-aware network control</h3>
-          </div>
-          <p class="text-gray-600 mb-2"><i>SoftCom 2019</i></p>
-          <p class="flex items-center text-gray-500 text-sm mb-3">
-            <i class="fas fa-calendar-alt mr-2"></i> September 22th, 2019<br>
-            <i class="fas fa-map-marker-alt ml-4 mr-2"></i> Split, Croatia
-          </p>
-        </div>
-
-        <div class="talk-item bg-white p-4 rounded-lg shadow-sm pl-6">
-          <div class="flex justify-between items-start">
-            <h3 class="font-bold text-lg mb-1">Network resource allocation policies with energy transfer capabilities: Latest research results and future steps</h3>
-          </div>
-          <p class="text-gray-600 mb-2"><i>SCAVENGE workshop</i></p>
-          <p class="flex items-center text-gray-500 text-sm mb-3">
-            <i class="fas fa-calendar-alt mr-2"></i> September 27th, 2018<br>
-            <i class="fas fa-map-marker-alt ml-4 mr-2"></i> CTTC, Barcelona, Spain
-          </p>
-        </div>
-
-        <div class="talk-item bg-white p-4 rounded-lg shadow-sm pl-6">
-          <div class="flex justify-between items-start">
-            <h3 class="font-bold text-lg mb-1">Network resource allocation policies with energy transfer capabilities</h3>
-          </div>
-          <p class="text-gray-600 mb-2"><i>1st CTTC Workshop</i></p>
-          <p class="flex items-center text-gray-500 text-sm mb-3">
-            <i class="fas fa-calendar-alt mr-2"></i> September 21th, 2018<br>
-            <i class="fas fa-map-marker-alt ml-4 mr-2"></i> Sitges, Spain
-          </p>
-        </div>
-
-        <div class="talk-item bg-white p-4 rounded-lg shadow-sm pl-6">
-          <div class="flex justify-between items-start">
-            <h3 class="font-bold text-lg mb-1">SCAVENGE: a European Training Network for PhD students</h3>
-          </div>
-          <p class="text-gray-600 mb-2"><i>Science week 2017</i></p>
-          <p class="flex items-center text-gray-500 text-sm mb-3">
-            <i class="fas fa-calendar-alt mr-2"></i> November 16th, 2017<br>
-            <i class="fas fa-map-marker-alt ml-4 mr-2"></i> CTTC, Barcelona, Spain
-          </p>
-        </div>
-
-        <div class="talk-item bg-white p-4 rounded-lg shadow-sm pl-6">
-          <div class="flex justify-between items-start">
-            <h3 class="font-bold text-lg mb-1">Network resource allocation policies with energy transfer capabilities</h3>
-          </div>
-          <p class="text-gray-600 mb-2"><i>SCAVENGE mid-term review</i></p>
-          <p class="flex items-center text-gray-500 text-sm mb-3">
-            <i class="fas fa-calendar-alt mr-2"></i> September 21th, 2017<br>
-            <i class="fas fa-map-marker-alt ml-4 mr-2"></i> Paris, France
-          </p>
-        </div>
-
-        <div class="talk-item bg-white p-4 rounded-lg shadow-sm pl-6">
-          <div class="flex justify-between items-start">
-            <h3 class="font-bold text-lg mb-1">Optimal energy conservation policies for self-sustainable Small Cells</h3>
-          </div>
-          <p class="text-gray-600 mb-2"><i>SCAVENGE workshop</i></p>
-          <p class="flex items-center text-gray-500 text-sm mb-3">
-            <i class="fas fa-calendar-alt mr-2"></i> June 2nd, 2017<br>
-            <i class="fas fa-map-marker-alt ml-4 mr-2"></i> Strathclyde University, Glasgow, UK
-          </p>
-        </div>
-
-        <div class="talk-item bg-white p-4 rounded-lg shadow-sm pl-6">
-          <div class="flex justify-between items-start">
-            <h3 class="font-bold text-lg mb-1">Presentation of the SCAVENGE ESR-05</h3>
-          </div>
-          <p class="text-gray-600 mb-2"><i>SCAVENGE initial training school</i></p>
-          <p class="flex items-center text-gray-500 text-sm mb-3">
-            <i class="fas fa-calendar-alt mr-2"></i> November 21st, 2016<br>
-            <i class="fas fa-map-marker-alt ml-4 mr-2"></i> CTTC, Barcelona, Spain
-          </p>
-        </div>
-
-        <div class="talk-item bg-white p-4 rounded-lg shadow-sm pl-6">
-          <div class="flex justify-between items-start">
-            <h3 class="font-bold text-lg mb-1">Data analytics for Smart Parking Applications</h3>
-          </div>
-          <p class="text-gray-600 mb-2"><i>DEI Awards</i></p>
-          <p class="flex items-center text-gray-500 text-sm mb-3">
-            <i class="fas fa-calendar-alt mr-2"></i> June 5th, 2015<br>
-            <i class="fas fa-map-marker-alt ml-4 mr-2"></i> University of Padova, Padova, Italy
-          </p>
-        </div>
-
-        <!-- Tutorials Section -->
-        <h2 class="text-2xl font-bold mt-8 mb-4">Tutorials</h2>
-        <div class="tutorial-item bg-white p-4 rounded-lg shadow-sm pl-6">
-          <div class="flex justify-between items-start">
-            <h3 class="font-bold text-lg mb-1">From Lab to Market: What Commercial 6G Will Be?</h3>
-          </div>
-          <p class="text-gray-600 mb-2"><i>IEEE Global Communications Conference (GLOBECOM)</i></p>
-          <p class="text-gray-700 mb-2">
-            <span class="font-medium">Presenters:</span> David López-Pérez, Marco Giordani, Nicola Piovesan
-          </p>
-          <p class="flex items-center text-gray-500 text-sm mb-3">
-            <i class="fas fa-calendar-alt mr-2"></i> December 21st, 2025<br>
-            <i class="fas fa-map-marker-alt ml-4 mr-2"></i> Taipei, Taiwan
-          </p>
-          <div class="flex flex-wrap gap-2 mt-2">
-            <a href="https://globecom2025.ieee-globecom.org/tutorials#TU-21" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-              <i class="fas fa-link mr-1"></i> Conference
-            </a>
-          </div>
-        </div>
-        <div class="tutorial-item bg-white p-4 rounded-lg shadow-sm pl-6">
-          <div class="flex justify-between items-start">
-            <h3 class="font-bold text-lg mb-1">Empowering Mobile Networks with Large Language Models: from Network Modelling to Optimization</h3>
-          </div>
-          <p class="text-gray-600 mb-2"><i>IEEE Conference on Vehicular Technology (VTC)</i></p>
-          <p class="text-gray-700 mb-2">
-            <span class="font-medium">Presenters:</span> N. Piovesan, M. Sana
-          </p>
-          <p class="flex items-center text-gray-500 text-sm mb-3">
-            <i class="fas fa-calendar-alt mr-2"></i> October 19st, 2025<br>
-            <i class="fas fa-map-marker-alt ml-4 mr-2"></i> Chengdu, China
-          </p>
-          <div class="flex flex-wrap gap-2 mt-2">
-            <a href="https://events.vtsociety.org/vtc2025-fall/conference-sessions/tutorials-currently-available/t4-empowering-mobile-networks-with-large-language-models-from-network-modelling-to-optimization/" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-              <i class="fas fa-link mr-1"></i> Conference
-            </a>
-          </div>
-        </div>
-        <div class="tutorial-item bg-white p-4 rounded-lg shadow-sm pl-6">
-          <div class="flex justify-between items-start">
-            <h3 class="font-bold text-lg mb-1">Data-Driven Modelling and Optimization of Green Future Mobile Networks: From Machine Learning to Generative AI</h3>
-          </div>
-          <p class="text-gray-600 mb-2"><i>International Conference on 6G Networking (6GNet)</i></p>
-          <p class="text-gray-700 mb-2">
-            <span class="font-medium">Presenters:</span> A. De Domenico, N. Piovesan
-          </p>
-          <p class="flex items-center text-gray-500 text-sm mb-3">
-            <i class="fas fa-calendar-alt mr-2"></i> October 21st, 2024<br>
-            <i class="fas fa-map-marker-alt ml-4 mr-2"></i> Paris, France
-          </p>
-          <div class="flex flex-wrap gap-2 mt-2">
-            <a href="https://6g-conference.dnac.org/2024/tutorials-2/" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-              <i class="fas fa-link mr-1"></i> Conference
-            </a>
-          </div>
-        </div>
-
-        <div class="tutorial-item bg-white p-4 rounded-lg shadow-sm pl-6">
-          <div class="flex justify-between items-start">
-            <h3 class="font-bold text-lg mb-1">Data-Driven Modelling and Optimization of Green Future Mobile Networks: From Machine Learning to Generative AI</h3>
-          </div>
-          <p class="text-gray-600 mb-2"><i>IEEE International Conference on Machine Learning for Communications and Networking</i></p>
-          <p class="text-gray-700 mb-2">
-            <span class="font-medium">Presenters:</span> Nicola Piovesan, Antonio De Domenico, David López-Pérez
-          </p>
-          <p class="flex items-center text-gray-500 text-sm mb-3">
-            <i class="fas fa-calendar-alt mr-2"></i> May 5th, 2024<br>
-            <i class="fas fa-map-marker-alt ml-4 mr-2"></i> Stockholm, Sweden
-          </p>
-          <div class="flex flex-wrap gap-2 mt-2">
-            <a href="https://icmlcn2024.ieee-icmlcn.org/program/tutorials#tut-4" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-              <i class="fas fa-link mr-1"></i> Conference
-            </a>
-          </div>
-        </div>
-
-        <div class="tutorial-item bg-white p-4 rounded-lg shadow-sm pl-6">
-          <div class="flex justify-between items-start">
-            <h3 class="font-bold text-lg mb-1">Waste Factor, a Figure of Merit for Sustainability: Holistic Analysis of Energy and Throughput Tradeoffs in Radio Access</h3>
-          </div>
-          <p class="text-gray-600 mb-2"><i>IEEE Wireless Communications and Networking Conference (WCNC)</i></p>
-          <p class="text-gray-700 mb-2">
-            <span class="font-medium">Presenters:</span> Theodore S. Rappaport, Nicola Piovesan
-          </p>
-          <p class="flex items-center text-gray-500 text-sm mb-3">
-            <i class="fas fa-calendar-alt mr-2"></i> April 21st, 2024<br>
-            <i class="fas fa-map-marker-alt ml-4 mr-2"></i> Dubai, UAE
-          </p>
-          <div class="flex flex-wrap gap-2 mt-2">
-            <a href="https://wcnc2024.ieee-wcnc.org/tutorials#tut-14" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-              <i class="fas fa-link mr-1"></i> Conference
-            </a>
-          </div>
-        </div>
-
-        <div class="tutorial-item bg-white p-4 rounded-lg shadow-sm pl-6">
-          <div class="flex justify-between items-start">
-            <h3 class="font-bold text-lg mb-1">Data-driven modelling and optimization of green future mobile networks</h3>
-          </div>
-          <p class="text-gray-600 mb-2"><i>European Conference on Networks and Communications (EuCNC) & 6G Summit</i></p>
-          <p class="text-gray-700 mb-2">
-            <span class="font-medium">Presenters:</span> Nicola Piovesan, Antonio De Domenico, David López-Pérez
-          </p>
-          <p class="flex items-center text-gray-500 text-sm mb-3">
-            <i class="fas fa-calendar-alt mr-2"></i> June 6-9, 2023<br>
-            <i class="fas fa-map-marker-alt ml-4 mr-2"></i> Gothenburg, Sweden
-          </p>
-          <div class="flex flex-wrap gap-2 mt-2">
-            <a href="https://www.eucnc.eu/programme/tutorials/tutorial-2/" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-              <i class="fas fa-link mr-1"></i> Conference
-            </a>
-          </div>
-        </div>
-
-        <div class="tutorial-item bg-white p-4 rounded-lg shadow-sm pl-6">
-          <div class="flex justify-between items-start">
-            <h3 class="font-bold text-lg mb-1">Breaking the Energy Consumption Growth in Future Mobile Networks: 5G Enhancements and Machine Learning</h3>
-          </div>
-          <p class="text-gray-600 mb-2"><i>IEEE International Conference on Communications (ICC)</i></p>
-          <p class="text-gray-700 mb-2">
-            <span class="font-medium">Presenters:</span> Nicola Piovesan, Antonio De Domenico, David López-Pérez
-          </p>
-          <p class="flex items-center text-gray-500 text-sm mb-3">
-            <i class="fas fa-calendar-alt mr-2"></i> May 16-20, 2022<br>
-            <i class="fas fa-map-marker-alt ml-4 mr-2"></i> Seoul, South Korea
-          </p>
-          <div class="flex flex-wrap gap-2 mt-2">
-            <a href="https://icc2022.ieee-icc.org/program/tutorials#tut-14" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-              <i class="fas fa-link mr-1"></i> Conference
-            </a>
-          </div>
-        </div>
-
-        <!-- Panels Section -->
-        <h2 class="text-2xl font-bold mt-8 mb-4">Panels</h2>
-
-        <div class="panel-item bg-white p-4 rounded-lg shadow-sm pl-6">
-          <div class="flex justify-between items-start">
-            <h3 class="font-bold text-lg mb-1">Tech4Good in Africa: Driving Sustainable Connectivity and Telecom Growth in the Era of AI</h3>
-            <span class="event-tag panel-tag">Panelist</span>
-          </div>
-          <p class="text-gray-600 mb-2"><i>IEEE Global Communications Conference (GLOBECOM)</i></p>
-          <p class="flex items-center text-gray-500 text-sm mb-3">
-            <i class="fas fa-calendar-alt mr-2"></i> December 10th, 2024<br>
-            <i class="fas fa-map-marker-alt ml-4 mr-2"></i> Cape Town, South Africa
-          </p>
-          <div class="flex flex-wrap gap-2 mt-2">
-            <a href="https://globecom2024.ieee-globecom.org/program/ieee-humanitarian-technologies-program" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
-              <i class="fas fa-link mr-1"></i> Event
-            </a>
-          </div>
-        </div>
-
-        <div class="panel-item bg-white p-4 rounded-lg shadow-sm pl-6">
-          <div class="flex justify-between items-start">
-            <h3 class="font-bold text-lg mb-1">The interplay of Large Generative Models and Future Networks</h3>
-            <span class="event-tag panel-tag">Panel Organizer</span>
-          </div>
-          <p class="text-gray-600 mb-2"><i>IEEE International Conference on Machine Learning for Communications and Networking</i></p>
-          <p class="flex items-center text-gray-500 text-sm mb-3">
-            <i class="fas fa-calendar-alt mr-2"></i> May 6th, 2024<br>
-            <i class="fas fa-map-marker-alt ml-4 mr-2"></i> Stockholm, Sweden
-          </p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="bg-gray-10 py-8">
-    <div class="container mx-auto px-6">
-      <div class="mt-8 pt-6 border-t border-gray-200 text-center text-gray-500 text-sm">
-        <p>© 2026 Nicola Piovesan. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-  // Simple mobile menu toggle functionality
-  document.querySelector('button').addEventListener('click', function() {
-    const nav = document.querySelector('nav');
-    nav.classList.toggle('hidden');
-    nav.classList.toggle('block');
-    nav.classList.toggle('absolute');
-    nav.classList.toggle('top-16');
-    nav.classList.toggle('right-6');
-    nav.classList.toggle('bg-white');
-    nav.classList.toggle('p-4');
-    nav.classList.toggle('rounded');
-    nav.classList.toggle('shadow-md');
-  });
-
-  // Smooth scrolling for anchor links
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-        behavior: 'smooth'
-      });
-    });
-  });
-  </script>
-  <script src="//static.getclicky.com/js" type="text/javascript"></script>
-  <script type="text/javascript">try{ clicky.init(101089699); }catch(e){}</script>
-  <noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101089699ns.gif" /></p></noscript>
+<body id="top" data-google-analytics>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="nav-inner"><a class="brand" href="index.html"><span>Nicola Piovesan</span></a><button class="menu-button mobile-menu" id="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false">Menu <span aria-hidden="true">☰</span></button>
+<nav id="site-nav" aria-label="Main navigation"><a href="biography.html">Bio</a><a href="publications.html">Publications</a><a href="talks.html" aria-current="page">Talks</a><a href="patents.html">Patents</a>
+</nav>
+</div>
+</header>
+<main class="archive-page talks-page" id="main" tabindex="-1">
+<section class="library-hero" aria-labelledby="page-title">
+<div class="hero-inner">
+<div class="hero-copy">
+<h1 id="page-title">Talks<span class="title-dot">.</span>
+</h1>
+</div>
+</div>
+</section>
+<div class="library-shell" id="talks-library">
+<aside class="year-rail" aria-label="Browse talks by year">
+<div class="rail-inner">
+<p class="rail-label">EXPLORE BY YEAR</p>
+<div class="year-nav" id="talks-year-nav" role="group" aria-label="Filter talks by year" hidden><button class="year-button selected" type="button" data-talk-year="all" aria-pressed="true">All years <span>39</span></button><button class="year-button" type="button" data-talk-year="2026" aria-pressed="false">2026<span>3</span></button><button class="year-button" type="button" data-talk-year="2025" aria-pressed="false">2025<span>7</span></button><button class="year-button" type="button" data-talk-year="2024" aria-pressed="false">2024<span>12</span></button><button class="year-button" type="button" data-talk-year="2023" aria-pressed="false">2023<span>5</span></button><button class="year-button" type="button" data-talk-year="2022" aria-pressed="false">2022<span>1</span></button><button class="year-button" type="button" data-talk-year="2021" aria-pressed="false">2021<span>2</span></button><button class="year-button" type="button" data-talk-year="2019" aria-pressed="false">2019<span>2</span></button><button class="year-button" type="button" data-talk-year="2018" aria-pressed="false">2018<span>2</span></button><button class="year-button" type="button" data-talk-year="2017" aria-pressed="false">2017<span>3</span></button><button class="year-button" type="button" data-talk-year="2016" aria-pressed="false">2016<span>1</span></button><button class="year-button" type="button" data-talk-year="2015" aria-pressed="false">2015<span>1</span></button>
+</div><noscript>
+<div class="year-nav"><a class="year-button" href="#talks-group-2026">2026<span>3</span></a><a class="year-button" href="#talks-group-2025">2025<span>7</span></a><a class="year-button" href="#talks-group-2024">2024<span>12</span></a><a class="year-button" href="#talks-group-2023">2023<span>5</span></a><a class="year-button" href="#talks-group-2022">2022<span>1</span></a><a class="year-button" href="#talks-group-2021">2021<span>2</span></a><a class="year-button" href="#talks-group-2019">2019<span>2</span></a><a class="year-button" href="#talks-group-2018">2018<span>2</span></a><a class="year-button" href="#talks-group-2017">2017<span>3</span></a><a class="year-button" href="#talks-group-2016">2016<span>1</span></a><a class="year-button" href="#talks-group-2015">2015<span>1</span></a>
+</div></noscript>
+</div>
+</aside>
+<div class="library-main">
+<div class="toolbar talks-tools" hidden>
+  <div class="toolbar-top"><label class="search-field" for="talks-search"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4.5 4.5"/></svg><input id="talks-search" type="search" autocomplete="off" placeholder="Search talks, events, or locations…" aria-label="Search talks, events, or locations"><kbd aria-hidden="true">/</kbd></label><label class="mobile-year-label">Year <select id="talks-year" aria-label="Filter talks by year"><option value="all">All years</option><option value="2026">2026</option><option value="2025">2025</option><option value="2024">2024</option><option value="2023">2023</option><option value="2022">2022</option><option value="2021">2021</option><option value="2019">2019</option><option value="2018">2018</option><option value="2017">2017</option><option value="2016">2016</option><option value="2015">2015</option></select></label>
+</div>
+  <div class="toolbar-bottom">
+<div class="type-filters" role="group" aria-label="Event category"><button class="filter-chip selected" type="button" data-talk-kind="all" aria-pressed="true">All events <span>39</span></button><button class="filter-chip" type="button" data-talk-kind="talk" aria-pressed="false">Talks</button><button class="filter-chip" type="button" data-talk-kind="tutorial" aria-pressed="false">Tutorials</button><button class="filter-chip" type="button" data-talk-kind="panel" aria-pressed="false">Panels</button>
+</div>
+<p class="result-count" id="talks-result-status" role="status" aria-live="polite">39 events</p>
+</div>
+</div>
+<div class="talks-archive">
+<section class="year-group talks-year-group" id="talks-group-2026" aria-labelledby="talks-year-2026">
+<div class="group-heading">
+<h2 id="talks-year-2026">2026</h2><span class="group-count">3</span>
+</div>
+<div class="paper-list talks-year-panel">
+<article class="paper talk-archive-entry" id="talk-entry-upcoming-20261118" data-kind="talk" data-year="2026">
+<div class="entry-copy-layout">
+<div class="entry-copy">
+<div class="paper-top entry-heading">
+<h3>Introducing the AI Agents for RAN Challenge: From Diagnosis to Optimization</h3>
+<div class="paper-badges"><span class="type-badge entry-kind upcoming-badge" data-upcoming-until="2026-11-18T15:00:00+02:00">Upcoming</span>
+</div>
+</div>
+<p class="paper-venue entry-event">AI for Good</p>
+</div>
+</div>
+<div class="paper-bottom entry-bottom">
+<div class="paper-authors entry-meta"><time datetime="2026-11-18T14:00:00+02:00">18 November 2026</time><span>14:00–15:00 CEST (UTC+2)</span>
+</div>
+<div class="paper-actions entry-links"><a class="text-link" href="https://aiforgood.itu.int/event/introducing-the-ai-agents-for-ran-challenge-from-diagnosis-to-optimization/" target="_blank" rel="noopener noreferrer">Event <svg class="icon-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 15 15 5M5 5h10v10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</div>
+</div>
+</article>
+<article class="paper talk-archive-entry" id="talk-entry-0" data-kind="talk" data-year="2026">
+<div class="entry-copy-layout">
+<div class="entry-copy">
+<div class="paper-top entry-heading">
+<h3>Generative Intelligence for 6G: From Large Language Models to Autonomous Agents</h3>
+<div class="paper-badges"><span class="type-badge entry-kind">Talk</span>
+</div>
+</div>
+<p class="paper-venue entry-event">3rd International Terahertz Summer School (THz+6G+AI)</p>
+</div>
+</div>
+<div class="paper-bottom entry-bottom">
+<div class="paper-authors entry-meta"><time datetime="2026-07-16">July 16th, 2026</time>
+<p class="entry-location">Hangzhou, China</p>
+</div>
+<div class="paper-actions entry-links"><a class="text-link" href="https://biss.buaa.edu.cn/info/1036/1273.htm" target="_blank" rel="noopener noreferrer">Event <svg class="icon-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 15 15 5M5 5h10v10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</div>
+</div>
+</article>
+<article class="paper talk-archive-entry" id="talk-entry-1" data-kind="talk" data-year="2026">
+<div class="entry-copy-layout">
+<div class="entry-copy">
+<div class="paper-top entry-heading">
+<h3>Agentic AI and the Road towards Autonomous Telecom Networks</h3>
+<div class="paper-badges"><span class="type-badge entry-kind">Talk</span>
+</div>
+</div>
+<p class="paper-venue entry-event">Summer School of Information Engineering (SSIE)</p>
+</div>
+</div>
+<div class="paper-bottom entry-bottom">
+<div class="paper-authors entry-meta"><time datetime="2026-07-09">July 9th, 2026</time>
+<p class="entry-location">Brixen, Italy</p>
+</div>
+<div class="paper-actions entry-links"><a class="text-link" href="https://ssie.dei.unipd.it/technical-program-ssie-2026-track-1/" target="_blank" rel="noopener noreferrer">Event <svg class="icon-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 15 15 5M5 5h10v10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</div>
+</div>
+</article>
+</div>
+</section>
+<section class="year-group talks-year-group" id="talks-group-2025" aria-labelledby="talks-year-2025">
+<div class="group-heading">
+<h2 id="talks-year-2025">2025</h2><span class="group-count">7</span>
+</div>
+<div class="paper-list talks-year-panel">
+<article class="paper talk-archive-entry" id="talk-entry-29" data-kind="tutorial" data-year="2025">
+<div class="entry-copy-layout">
+<div class="entry-copy">
+<div class="paper-top entry-heading">
+<h3>From Lab to Market: What Commercial 6G Will Be?</h3>
+<div class="paper-badges"><span class="type-badge entry-kind">Tutorial</span>
+</div>
+</div>
+<p class="paper-venue entry-event">IEEE Global Communications Conference (GLOBECOM)</p>
+<p class="entry-presenters">Presenters: David López-Pérez, Marco Giordani, Nicola Piovesan</p>
+</div>
+</div>
+<div class="paper-bottom entry-bottom">
+<div class="paper-authors entry-meta"><time datetime="2025-12-21">December 21st, 2025</time>
+<p class="entry-location">Taipei, Taiwan</p>
+</div>
+<div class="paper-actions entry-links"><a class="text-link" href="https://globecom2025.ieee-globecom.org/tutorials#TU-21" target="_blank" rel="noopener noreferrer">Conference <svg class="icon-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 15 15 5M5 5h10v10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</div>
+</div>
+</article>
+<article class="paper talk-archive-entry" id="talk-entry-2" data-kind="talk" data-year="2025">
+<div class="entry-copy-layout">
+<div class="entry-copy">
+<div class="paper-top entry-heading">
+<h3>Agentic AI: Unlocking the Next Generation of Network Automation</h3>
+<div class="paper-badges"><span class="type-badge entry-kind">Talk</span>
+</div>
+</div>
+<p class="paper-venue entry-event">IEEE Globecom Industry Presentation</p>
+</div>
+</div>
+<div class="paper-bottom entry-bottom">
+<div class="paper-authors entry-meta"><time datetime="2025-12-09">December 9th, 2025</time>
+<p class="entry-location">Taipei, Taiwan</p>
+</div>
+<div class="paper-actions entry-links"><a class="text-link" href="https://globecom2025.ieee-globecom.org/program/industry-presentation" target="_blank" rel="noopener noreferrer">Event <svg class="icon-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 15 15 5M5 5h10v10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</div>
+</div>
+</article>
+<article class="paper talk-archive-entry" id="talk-entry-30" data-kind="tutorial" data-year="2025">
+<div class="entry-copy-layout">
+<div class="entry-copy">
+<div class="paper-top entry-heading">
+<h3>Empowering Mobile Networks with Large Language Models: from Network Modelling to Optimization</h3>
+<div class="paper-badges"><span class="type-badge entry-kind">Tutorial</span>
+</div>
+</div>
+<p class="paper-venue entry-event">IEEE Conference on Vehicular Technology (VTC)</p>
+<p class="entry-presenters">Presenters: N. Piovesan, M. Sana</p>
+</div>
+</div>
+<div class="paper-bottom entry-bottom">
+<div class="paper-authors entry-meta"><time datetime="2025-10-19">October 19st, 2025</time>
+<p class="entry-location">Chengdu, China</p>
+</div>
+<div class="paper-actions entry-links"><a class="text-link" href="https://events.vtsociety.org/vtc2025-fall/conference-sessions/tutorials-currently-available/t4-empowering-mobile-networks-with-large-language-models-from-network-modelling-to-optimization/" target="_blank" rel="noopener noreferrer">Conference <svg class="icon-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 15 15 5M5 5h10v10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</div>
+</div>
+</article>
+<article class="paper talk-archive-entry" id="talk-entry-3" data-kind="talk" data-year="2025">
+<div class="entry-copy-layout">
+<div class="entry-copy">
+<div class="paper-top entry-heading">
+<h3>Advancing Network Automation through Multi-Agent Large Language Models</h3>
+<div class="paper-badges"><span class="type-badge entry-kind">Talk</span>
+</div>
+</div>
+<p class="paper-venue entry-event">AI for Good Global Summit</p>
+</div><img class="entry-photo" src="images/talk-ai4good.jpeg" alt="Nicola Piovesan at the AI for Good Global Summit" width="128" height="88" loading="lazy">
+</div>
+<div class="paper-bottom entry-bottom">
+<div class="paper-authors entry-meta"><time datetime="2025-07-09">July 9th, 2025</time>
+<p class="entry-location">Geneva, Switzerland</p>
+</div>
+<div class="paper-actions entry-links"><a class="text-link" href="https://aiforgood.itu.int/event/ai-and-machine-learning-in-communication-networks-summit25-day1/" target="_blank" rel="noopener noreferrer">Event <svg class="icon-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 15 15 5M5 5h10v10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</div>
+</div>
+</article>
+<article class="paper talk-archive-entry" id="talk-entry-4" data-kind="talk" data-year="2025">
+<div class="entry-copy-layout">
+<div class="entry-copy">
+<div class="paper-top entry-heading">
+<h3>The Role of AI and Large Language Models in Future Wireless Networks</h3>
+<div class="paper-badges"><span class="type-badge entry-kind">Talk</span>
+</div>
+</div>
+<p class="paper-venue entry-event">Summer School on advanced topics in 5G/6G Communication</p>
+</div>
+</div>
+<div class="paper-bottom entry-bottom">
+<div class="paper-authors entry-meta"><time datetime="2025-07-01">July 1st, 2025</time>
+<p class="entry-location">Cuenca, Spain</p>
+</div>
+<div class="paper-actions entry-links"></div>
+</div>
+</article>
+<article class="paper talk-archive-entry" id="talk-entry-5" data-kind="talk" data-year="2025">
+<div class="entry-copy-layout">
+<div class="entry-copy">
+<div class="paper-top entry-heading">
+<h3>The Role of AI and Large Language Models in Future Telecom Networks</h3>
+<div class="paper-badges"><span class="type-badge entry-kind">Talk</span>
+</div>
+</div>
+<p class="paper-venue entry-event">Invited Talk</p>
+</div>
+</div>
+<div class="paper-bottom entry-bottom">
+<div class="paper-authors entry-meta"><time datetime="2025-04-07">April 7th, 2025</time>
+<p class="entry-location">Universitat Politecnica de Valencia, Valencia, Spain</p>
+</div>
+<div class="paper-actions entry-links"></div>
+</div>
+</article>
+<article class="paper talk-archive-entry" id="talk-entry-6" data-kind="talk" data-year="2025">
+<div class="entry-copy-layout">
+<div class="entry-copy">
+<div class="paper-top entry-heading">
+<h3>Advancing Network Optimization: Bridging Human Expertise and AI in the 6G Era</h3>
+<div class="paper-badges"><span class="type-badge entry-kind">Talk</span>
+</div>
+</div>
+<p class="paper-venue entry-event">Advanced Wireless Communications Seminars</p>
+</div>
+</div>
+<div class="paper-bottom entry-bottom">
+<div class="paper-authors entry-meta"><time datetime="2025-02-04">February 4th, 2025</time>
+<p class="entry-location">Telecom SudParis, Institut Polytechnique de Paris, Paris, France</p>
+</div>
+<div class="paper-actions entry-links"></div>
+</div>
+</article>
+</div>
+</section>
+<section class="year-group talks-year-group" id="talks-group-2024" aria-labelledby="talks-year-2024">
+<div class="group-heading">
+<h2 id="talks-year-2024">2024</h2><span class="group-count">12</span>
+</div>
+<div class="paper-list talks-year-panel">
+<article class="paper talk-archive-entry" id="talk-entry-7" data-kind="talk" data-year="2024">
+<div class="entry-copy-layout">
+<div class="entry-copy">
+<div class="paper-top entry-heading">
+<h3>Data-driven Modelling and Optimization of Green Future Mobile Networks</h3>
+<div class="paper-badges"><span class="type-badge entry-kind">Talk</span>
+</div>
+</div>
+<p class="paper-venue entry-event">IEEE Globecom Industry Presentation</p>
+</div>
+</div>
+<div class="paper-bottom entry-bottom">
+<div class="paper-authors entry-meta"><time datetime="2024-12-10">December 10th, 2024</time>
+<p class="entry-location">Cape Town, South Africa</p>
+</div>
+<div class="paper-actions entry-links"><a class="text-link" href="https://globecom2024.ieee-globecom.org/program/industry-presentations" target="_blank" rel="noopener noreferrer">Event <svg class="icon-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 15 15 5M5 5h10v10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</div>
+</div>
+</article>
+<article class="paper talk-archive-entry" id="talk-entry-36" data-kind="panel" data-year="2024">
+<div class="entry-copy-layout">
+<div class="entry-copy">
+<div class="paper-top entry-heading">
+<h3>Tech4Good in Africa: Driving Sustainable Connectivity and Telecom Growth in the Era of AI</h3>
+<div class="paper-badges"><span class="type-badge entry-kind">Panel</span>
+</div>
+</div>
+<p class="paper-venue entry-event">IEEE Global Communications Conference (GLOBECOM)</p>
+<p class="entry-role">Panelist</p>
+</div>
+</div>
+<div class="paper-bottom entry-bottom">
+<div class="paper-authors entry-meta"><time datetime="2024-12-10">December 10th, 2024</time>
+<p class="entry-location">Cape Town, South Africa</p>
+</div>
+<div class="paper-actions entry-links"><a class="text-link" href="https://globecom2024.ieee-globecom.org/program/ieee-humanitarian-technologies-program" target="_blank" rel="noopener noreferrer">Event <svg class="icon-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 15 15 5M5 5h10v10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</div>
+</div>
+</article>
+<article class="paper talk-archive-entry" id="talk-entry-8" data-kind="talk" data-year="2024">
+<div class="entry-copy-layout">
+<div class="entry-copy">
+<div class="paper-top entry-heading">
+<h3>Network Modelling and Optimization for the 6G Era: Human Expertise Meets AI</h3>
+<div class="paper-badges"><span class="type-badge entry-kind">Talk</span>
+</div>
+</div>
+<p class="paper-venue entry-event">Abu Dhabi 6G summit</p>
+</div><img class="entry-photo" src="images/talk-6gsummit.jpeg" alt="Nicola Piovesan at the Abu Dhabi 6G summit" width="128" height="88" loading="lazy">
+</div>
+<div class="paper-bottom entry-bottom">
+<div class="paper-authors entry-meta"><time datetime="2024-11-14">November 14th, 2024</time>
+<p class="entry-location">Abu Dhabi, UAE</p>
+</div>
+<div class="paper-actions entry-links"><a class="text-link" href="https://www.6gsummitabudhabi.com/invited.php" target="_blank" rel="noopener noreferrer">Event <svg class="icon-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 15 15 5M5 5h10v10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="text-link" href="https://www.chaspark.com/#/live/1070480298598825984?anchorV=1077734077277118464&amp;multi=en" target="_blank" rel="noopener noreferrer">Video <svg class="icon-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 15 15 5M5 5h10v10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</div>
+</div>
+</article>
+<article class="paper talk-archive-entry" id="talk-entry-31" data-kind="tutorial" data-year="2024">
+<div class="entry-copy-layout">
+<div class="entry-copy">
+<div class="paper-top entry-heading">
+<h3>Data-Driven Modelling and Optimization of Green Future Mobile Networks: From Machine Learning to Generative AI</h3>
+<div class="paper-badges"><span class="type-badge entry-kind">Tutorial</span>
+</div>
+</div>
+<p class="paper-venue entry-event">International Conference on 6G Networking (6GNet)</p>
+<p class="entry-presenters">Presenters: A. De Domenico, N. Piovesan</p>
+</div>
+</div>
+<div class="paper-bottom entry-bottom">
+<div class="paper-authors entry-meta"><time datetime="2024-10-21">October 21st, 2024</time>
+<p class="entry-location">Paris, France</p>
+</div>
+<div class="paper-actions entry-links"><a class="text-link" href="https://6g-conference.dnac.org/2024/tutorials-2/" target="_blank" rel="noopener noreferrer">Conference <svg class="icon-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 15 15 5M5 5h10v10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</div>
+</div>
+</article>
+<article class="paper talk-archive-entry" id="talk-entry-9" data-kind="talk" data-year="2024">
+<div class="entry-copy-layout">
+<div class="entry-copy">
+<div class="paper-top entry-heading">
+<h3>Green Energy and Traffic Forecasting using AI/ML Challenge Launch</h3>
+<div class="paper-badges"><span class="type-badge entry-kind">Talk</span>
+</div>
+</div>
+<p class="paper-venue entry-event">ITU AI for Good</p>
+</div>
+</div>
+<div class="paper-bottom entry-bottom">
+<div class="paper-authors entry-meta"><time datetime="2024-08-06">August 6th, 2024</time>
+<p class="entry-location">Online</p>
+</div>
+<div class="paper-actions entry-links"><a class="text-link" href="https://aiforgood.itu.int/event/green-energy-and-traffic-forecasting-using-ai-ml-challenge-launch/" target="_blank" rel="noopener noreferrer">Event <svg class="icon-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 15 15 5M5 5h10v10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="text-link" href="https://www.youtube.com/watch?v=XuCU76W7pI0" target="_blank" rel="noopener noreferrer">Video <svg class="icon-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 15 15 5M5 5h10v10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</div>
+</div>
+</article>
+<article class="paper talk-archive-entry" id="talk-entry-10" data-kind="talk" data-year="2024">
+<div class="entry-copy-layout">
+<div class="entry-copy">
+<div class="paper-top entry-heading">
+<h3>Data-driven Network Optimization</h3>
+<div class="paper-badges"><span class="type-badge entry-kind">Talk</span>
+</div>
+</div>
+<p class="paper-venue entry-event">Summer School on advanced topics in 5G-6G Communications</p>
+</div>
+</div>
+<div class="paper-bottom entry-bottom">
+<div class="paper-authors entry-meta"><time datetime="2024-07-05">July 5th, 2024</time>
+<p class="entry-location">Cuenca, Spain</p>
+</div>
+<div class="paper-actions entry-links"><a class="text-link" href="https://networks.imdea.org/whatsnew/events-agenda/summer-school-on-advanced-topics-in-5g-6g-communications/" target="_blank" rel="noopener noreferrer">Event <svg class="icon-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 15 15 5M5 5h10v10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</div>
+</div>
+</article>
+<article class="paper talk-archive-entry" id="talk-entry-11" data-kind="talk" data-year="2024">
+<div class="entry-copy-layout">
+<div class="entry-copy">
+<div class="paper-top entry-heading">
+<h3>Data-Driven Modelling and Optimization of Green Future Mobile Networks</h3>
+<div class="paper-badges"><span class="type-badge entry-kind">Talk</span>
+</div>
+</div>
+<p class="paper-venue entry-event">ITU AI for Good Global Summit - Session on Green AI: Sustainability, AI and 6G</p>
+</div>
+</div>
+<div class="paper-bottom entry-bottom">
+<div class="paper-authors entry-meta"><time datetime="2024-05-30">May 30th, 2024</time>
+<p class="entry-location">Geneva, Switzerland</p>
+</div>
+<div class="paper-actions entry-links"><a class="text-link" href="https://aiforgood.itu.int/event/ai-and-machine-learning-in-communication-networks/" target="_blank" rel="noopener noreferrer">Event <svg class="icon-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 15 15 5M5 5h10v10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</div>
+</div>
+</article>
+<article class="paper talk-archive-entry" id="talk-entry-12" data-kind="talk" data-year="2024">
+<div class="entry-copy-layout">
+<div class="entry-copy">
+<div class="paper-top entry-heading">
+<h3>Launch of Green Telecom Competition on Smart Energy Supply Scheduling</h3>
+<div class="paper-badges"><span class="type-badge entry-kind">Talk</span>
+</div>
+</div>
+<p class="paper-venue entry-event">ITU AI for Good Global Summit - Session on AI for the future of climate prediction</p>
+</div>
+</div>
+<div class="paper-bottom entry-bottom">
+<div class="paper-authors entry-meta"><time datetime="2024-05-30">May 30th, 2024</time>
+<p class="entry-location">Geneva, Switzerland</p>
+</div>
+<div class="paper-actions entry-links"><a class="text-link" href="https://aiforgood.itu.int/event/ai-for-the-future-of-climate-prediction/" target="_blank" rel="noopener noreferrer">Event <svg class="icon-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 15 15 5M5 5h10v10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</div>
+</div>
+</article>
+<article class="paper talk-archive-entry" id="talk-entry-37" data-kind="panel" data-year="2024">
+<div class="entry-copy-layout">
+<div class="entry-copy">
+<div class="paper-top entry-heading">
+<h3>The interplay of Large Generative Models and Future Networks</h3>
+<div class="paper-badges"><span class="type-badge entry-kind">Panel</span>
+</div>
+</div>
+<p class="paper-venue entry-event">IEEE International Conference on Machine Learning for Communications and Networking</p>
+<p class="entry-role">Panel Organizer</p>
+</div>
+</div>
+<div class="paper-bottom entry-bottom">
+<div class="paper-authors entry-meta"><time datetime="2024-05-06">May 6th, 2024</time>
+<p class="entry-location">Stockholm, Sweden</p>
+</div>
+<div class="paper-actions entry-links"></div>
+</div>
+</article>
+<article class="paper talk-archive-entry" id="talk-entry-32" data-kind="tutorial" data-year="2024">
+<div class="entry-copy-layout">
+<div class="entry-copy">
+<div class="paper-top entry-heading">
+<h3>Data-Driven Modelling and Optimization of Green Future Mobile Networks: From Machine Learning to Generative AI</h3>
+<div class="paper-badges"><span class="type-badge entry-kind">Tutorial</span>
+</div>
+</div>
+<p class="paper-venue entry-event">IEEE International Conference on Machine Learning for Communications and Networking</p>
+<p class="entry-presenters">Presenters: Nicola Piovesan, Antonio De Domenico, David López-Pérez</p>
+</div>
+</div>
+<div class="paper-bottom entry-bottom">
+<div class="paper-authors entry-meta"><time datetime="2024-05-05">May 5th, 2024</time>
+<p class="entry-location">Stockholm, Sweden</p>
+</div>
+<div class="paper-actions entry-links"><a class="text-link" href="https://icmlcn2024.ieee-icmlcn.org/program/tutorials#tut-4" target="_blank" rel="noopener noreferrer">Conference <svg class="icon-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 15 15 5M5 5h10v10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</div>
+</div>
+</article>
+<article class="paper talk-archive-entry" id="talk-entry-33" data-kind="tutorial" data-year="2024">
+<div class="entry-copy-layout">
+<div class="entry-copy">
+<div class="paper-top entry-heading">
+<h3>Waste Factor, a Figure of Merit for Sustainability: Holistic Analysis of Energy and Throughput Tradeoffs in Radio Access</h3>
+<div class="paper-badges"><span class="type-badge entry-kind">Tutorial</span>
+</div>
+</div>
+<p class="paper-venue entry-event">IEEE Wireless Communications and Networking Conference (WCNC)</p>
+<p class="entry-presenters">Presenters: Theodore S. Rappaport, Nicola Piovesan</p>
+</div>
+</div>
+<div class="paper-bottom entry-bottom">
+<div class="paper-authors entry-meta"><time datetime="2024-04-21">April 21st, 2024</time>
+<p class="entry-location">Dubai, UAE</p>
+</div>
+<div class="paper-actions entry-links"><a class="text-link" href="https://wcnc2024.ieee-wcnc.org/tutorials#tut-14" target="_blank" rel="noopener noreferrer">Conference <svg class="icon-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 15 15 5M5 5h10v10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</div>
+</div>
+</article>
+<article class="paper talk-archive-entry" id="talk-entry-13" data-kind="talk" data-year="2024">
+<div class="entry-copy-layout">
+<div class="entry-copy">
+<div class="paper-top entry-heading">
+<h3>Enhancing 5G Networks with AI: A Journey from Data Analytics to Large Language Models</h3>
+<div class="paper-badges"><span class="type-badge entry-kind">Talk</span>
+</div>
+</div>
+<p class="paper-venue entry-event">Advanced Wireless Communications Seminars</p>
+</div>
+</div>
+<div class="paper-bottom entry-bottom">
+<div class="paper-authors entry-meta"><time datetime="2024-02-05">February 5th, 2024</time>
+<p class="entry-location">Telecom SudParis, Institut Polytechnique de Paris, Paris, France</p>
+</div>
+<div class="paper-actions entry-links"></div>
+</div>
+</article>
+</div>
+</section>
+<section class="year-group talks-year-group" id="talks-group-2023" aria-labelledby="talks-year-2023">
+<div class="group-heading">
+<h2 id="talks-year-2023">2023</h2><span class="group-count">5</span>
+</div>
+<div class="paper-list talks-year-panel">
+<article class="paper talk-archive-entry" id="talk-entry-14" data-kind="talk" data-year="2023">
+<div class="entry-copy-layout">
+<div class="entry-copy">
+<div class="paper-top entry-heading">
+<h3>5G-Energy Consumption Modelling: AI/ML solutions for Climate Change</h3>
+<div class="paper-badges"><span class="type-badge entry-kind">Talk</span>
+</div>
+</div>
+<p class="paper-venue entry-event">ITU AI for Good</p>
+</div>
+</div>
+<div class="paper-bottom entry-bottom">
+<div class="paper-authors entry-meta"><time datetime="2023-10-27">October 27th, 2023</time>
+<p class="entry-location">Online</p>
+</div>
+<div class="paper-actions entry-links"><a class="text-link" href="https://aiforgood.itu.int/event/5g-energy-consumption-modelling-ai-ml-solutions-for-climate-change/" target="_blank" rel="noopener noreferrer">Event <svg class="icon-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 15 15 5M5 5h10v10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="text-link" href="https://www.youtube.com/watch?v=G5CTO2ANOqk" target="_blank" rel="noopener noreferrer">Video <svg class="icon-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 15 15 5M5 5h10v10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</div>
+</div>
+</article>
+<article class="paper talk-archive-entry" id="talk-entry-15" data-kind="talk" data-year="2023">
+<div class="entry-copy-layout">
+<div class="entry-copy">
+<div class="paper-top entry-heading">
+<h3>A Journey Towards Energy Efficiency: Exploring Machine Learning Models for Mobile Network Optimization</h3>
+<div class="paper-badges"><span class="type-badge entry-kind">Talk</span>
+</div>
+</div>
+<p class="paper-venue entry-event">Invited Talk</p>
+</div>
+</div>
+<div class="paper-bottom entry-bottom">
+<div class="paper-authors entry-meta"><time datetime="2023-09-14">September 14th, 2023</time>
+<p class="entry-location">Universitat Politecnica de Valencia, Valencia, Spain</p>
+</div>
+<div class="paper-actions entry-links"></div>
+</div>
+</article>
+<article class="paper talk-archive-entry" id="talk-entry-16" data-kind="talk" data-year="2023">
+<div class="entry-copy-layout">
+<div class="entry-copy">
+<div class="paper-top entry-heading">
+<h3>AI/ML for 5G-Energy Consumption Modelling</h3>
+<div class="paper-badges"><span class="type-badge entry-kind">Talk</span>
+</div>
+</div>
+<p class="paper-venue entry-event">ITU AI for Good</p>
+</div><img class="entry-photo" src="images/talk_itu.jpg" alt="Nicola Piovesan speaking at ITU AI for Good" width="128" height="88" loading="lazy">
+</div>
+<div class="paper-bottom entry-bottom">
+<div class="paper-authors entry-meta"><time datetime="2023-07-11">July 11th, 2023</time>
+<p class="entry-location">Online</p>
+</div>
+<div class="paper-actions entry-links"><a class="text-link" href="https://aiforgood.itu.int/event/ai-ml-for-5g-energy-consumption-modelling/" target="_blank" rel="noopener noreferrer">Event <svg class="icon-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 15 15 5M5 5h10v10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="text-link" href="https://www.youtube.com/watch?v=zSetefnu3y8" target="_blank" rel="noopener noreferrer">Video <svg class="icon-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 15 15 5M5 5h10v10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</div>
+</div>
+</article>
+<article class="paper talk-archive-entry" id="talk-entry-34" data-kind="tutorial" data-year="2023">
+<div class="entry-copy-layout">
+<div class="entry-copy">
+<div class="paper-top entry-heading">
+<h3>Data-driven modelling and optimization of green future mobile networks</h3>
+<div class="paper-badges"><span class="type-badge entry-kind">Tutorial</span>
+</div>
+</div>
+<p class="paper-venue entry-event">European Conference on Networks and Communications (EuCNC) &amp; 6G Summit</p>
+<p class="entry-presenters">Presenters: Nicola Piovesan, Antonio De Domenico, David López-Pérez</p>
+</div>
+</div>
+<div class="paper-bottom entry-bottom">
+<div class="paper-authors entry-meta"><time datetime="2023-06-06">June 6-9, 2023</time>
+<p class="entry-location">Gothenburg, Sweden</p>
+</div>
+<div class="paper-actions entry-links"><a class="text-link" href="https://www.eucnc.eu/programme/tutorials/tutorial-2/" target="_blank" rel="noopener noreferrer">Conference <svg class="icon-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 15 15 5M5 5h10v10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</div>
+</div>
+</article>
+<article class="paper talk-archive-entry" id="talk-entry-17" data-kind="talk" data-year="2023">
+<div class="entry-copy-layout">
+<div class="entry-copy">
+<div class="paper-top entry-heading">
+<h3>Machine Learning for Green Future Mobile Networks</h3>
+<div class="paper-badges"><span class="type-badge entry-kind">Talk</span>
+</div>
+</div>
+<p class="paper-venue entry-event">Advanced Wireless Communications Seminars</p>
+</div>
+</div>
+<div class="paper-bottom entry-bottom">
+<div class="paper-authors entry-meta"><time datetime="2023-02-14">February 14th, 2023</time>
+<p class="entry-location">Telecom SudParis, Institut Polytechnique de Paris, Paris, France</p>
+</div>
+<div class="paper-actions entry-links"></div>
+</div>
+</article>
+</div>
+</section>
+<section class="year-group talks-year-group" id="talks-group-2022" aria-labelledby="talks-year-2022">
+<div class="group-heading">
+<h2 id="talks-year-2022">2022</h2><span class="group-count">1</span>
+</div>
+<div class="paper-list talks-year-panel">
+<article class="paper talk-archive-entry" id="talk-entry-35" data-kind="tutorial" data-year="2022">
+<div class="entry-copy-layout">
+<div class="entry-copy">
+<div class="paper-top entry-heading">
+<h3>Breaking the Energy Consumption Growth in Future Mobile Networks: 5G Enhancements and Machine Learning</h3>
+<div class="paper-badges"><span class="type-badge entry-kind">Tutorial</span>
+</div>
+</div>
+<p class="paper-venue entry-event">IEEE International Conference on Communications (ICC)</p>
+<p class="entry-presenters">Presenters: Nicola Piovesan, Antonio De Domenico, David López-Pérez</p>
+</div>
+</div>
+<div class="paper-bottom entry-bottom">
+<div class="paper-authors entry-meta"><time datetime="2022-05-16">May 16-20, 2022</time>
+<p class="entry-location">Seoul, South Korea</p>
+</div>
+<div class="paper-actions entry-links"><a class="text-link" href="https://icc2022.ieee-icc.org/program/tutorials#tut-14" target="_blank" rel="noopener noreferrer">Conference <svg class="icon-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 15 15 5M5 5h10v10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</div>
+</div>
+</article>
+</div>
+</section>
+<section class="year-group talks-year-group" id="talks-group-2021" aria-labelledby="talks-year-2021">
+<div class="group-heading">
+<h2 id="talks-year-2021">2021</h2><span class="group-count">2</span>
+</div>
+<div class="paper-list talks-year-panel">
+<article class="paper talk-archive-entry" id="talk-entry-18" data-kind="talk" data-year="2021">
+<div class="entry-copy-layout">
+<div class="entry-copy">
+<div class="paper-top entry-heading">
+<h3>Machine Learning and Analytical Power Consumption Models for 5G Base Stations</h3>
+<div class="paper-badges"><span class="type-badge entry-kind">Talk</span>
+</div>
+</div>
+<p class="paper-venue entry-event">Next Generation Mobile Networks (NGMN) Green Future Networks</p>
+</div>
+</div>
+<div class="paper-bottom entry-bottom">
+<div class="paper-authors entry-meta"><time datetime="2021-12-02">December 2nd, 2021</time>
+<p class="entry-location">Online</p>
+</div>
+<div class="paper-actions entry-links"></div>
+</div>
+</article>
+<article class="paper talk-archive-entry" id="talk-entry-19" data-kind="talk" data-year="2021">
+<div class="entry-copy-layout">
+<div class="entry-copy">
+<div class="paper-top entry-heading">
+<h3>Forecasting Mobile Traffic to Achieve Greener 5G Networks: When Machine Learning is Key</h3>
+<div class="paper-badges"><span class="type-badge entry-kind">Talk</span>
+</div>
+</div>
+<p class="paper-venue entry-event">Huawei AI forum</p>
+</div>
+</div>
+<div class="paper-bottom entry-bottom">
+<div class="paper-authors entry-meta"><time datetime="2021-05-27">May 27th, 2021</time>
+<p class="entry-location">Huawei, Paris, France</p>
+</div>
+<div class="paper-actions entry-links"></div>
+</div>
+</article>
+</div>
+</section>
+<section class="year-group talks-year-group" id="talks-group-2019" aria-labelledby="talks-year-2019">
+<div class="group-heading">
+<h2 id="talks-year-2019">2019</h2><span class="group-count">2</span>
+</div>
+<div class="paper-list talks-year-panel">
+<article class="paper talk-archive-entry" id="talk-entry-20" data-kind="talk" data-year="2019">
+<div class="entry-copy-layout">
+<div class="entry-copy">
+<div class="paper-top entry-heading">
+<h3>European Training Networks: My experience</h3>
+<div class="paper-badges"><span class="type-badge entry-kind">Talk</span>
+</div>
+</div>
+<p class="paper-venue entry-event">WindMill kickoff school</p>
+</div>
+</div>
+<div class="paper-bottom entry-bottom">
+<div class="paper-authors entry-meta"><time datetime="2019-11-19">November 19th, 2019</time>
+<p class="entry-location">Aalborg University, Aalborg, Denmark</p>
+</div>
+<div class="paper-actions entry-links"></div>
+</div>
+</article>
+<article class="paper talk-archive-entry" id="talk-entry-21" data-kind="talk" data-year="2019">
+<div class="entry-copy-layout">
+<div class="entry-copy">
+<div class="paper-top entry-heading">
+<h3>Energy-aware network control</h3>
+<div class="paper-badges"><span class="type-badge entry-kind">Talk</span>
+</div>
+</div>
+<p class="paper-venue entry-event">SoftCom 2019</p>
+</div>
+</div>
+<div class="paper-bottom entry-bottom">
+<div class="paper-authors entry-meta"><time datetime="2019-09-22">September 22th, 2019</time>
+<p class="entry-location">Split, Croatia</p>
+</div>
+<div class="paper-actions entry-links"></div>
+</div>
+</article>
+</div>
+</section>
+<section class="year-group talks-year-group" id="talks-group-2018" aria-labelledby="talks-year-2018">
+<div class="group-heading">
+<h2 id="talks-year-2018">2018</h2><span class="group-count">2</span>
+</div>
+<div class="paper-list talks-year-panel">
+<article class="paper talk-archive-entry" id="talk-entry-22" data-kind="talk" data-year="2018">
+<div class="entry-copy-layout">
+<div class="entry-copy">
+<div class="paper-top entry-heading">
+<h3>Network resource allocation policies with energy transfer capabilities: Latest research results and future steps</h3>
+<div class="paper-badges"><span class="type-badge entry-kind">Talk</span>
+</div>
+</div>
+<p class="paper-venue entry-event">SCAVENGE workshop</p>
+</div>
+</div>
+<div class="paper-bottom entry-bottom">
+<div class="paper-authors entry-meta"><time datetime="2018-09-27">September 27th, 2018</time>
+<p class="entry-location">CTTC, Barcelona, Spain</p>
+</div>
+<div class="paper-actions entry-links"></div>
+</div>
+</article>
+<article class="paper talk-archive-entry" id="talk-entry-23" data-kind="talk" data-year="2018">
+<div class="entry-copy-layout">
+<div class="entry-copy">
+<div class="paper-top entry-heading">
+<h3>Network resource allocation policies with energy transfer capabilities</h3>
+<div class="paper-badges"><span class="type-badge entry-kind">Talk</span>
+</div>
+</div>
+<p class="paper-venue entry-event">1st CTTC Workshop</p>
+</div>
+</div>
+<div class="paper-bottom entry-bottom">
+<div class="paper-authors entry-meta"><time datetime="2018-09-21">September 21th, 2018</time>
+<p class="entry-location">Sitges, Spain</p>
+</div>
+<div class="paper-actions entry-links"></div>
+</div>
+</article>
+</div>
+</section>
+<section class="year-group talks-year-group" id="talks-group-2017" aria-labelledby="talks-year-2017">
+<div class="group-heading">
+<h2 id="talks-year-2017">2017</h2><span class="group-count">3</span>
+</div>
+<div class="paper-list talks-year-panel">
+<article class="paper talk-archive-entry" id="talk-entry-24" data-kind="talk" data-year="2017">
+<div class="entry-copy-layout">
+<div class="entry-copy">
+<div class="paper-top entry-heading">
+<h3>SCAVENGE: a European Training Network for PhD students</h3>
+<div class="paper-badges"><span class="type-badge entry-kind">Talk</span>
+</div>
+</div>
+<p class="paper-venue entry-event">Science week 2017</p>
+</div>
+</div>
+<div class="paper-bottom entry-bottom">
+<div class="paper-authors entry-meta"><time datetime="2017-11-16">November 16th, 2017</time>
+<p class="entry-location">CTTC, Barcelona, Spain</p>
+</div>
+<div class="paper-actions entry-links"></div>
+</div>
+</article>
+<article class="paper talk-archive-entry" id="talk-entry-25" data-kind="talk" data-year="2017">
+<div class="entry-copy-layout">
+<div class="entry-copy">
+<div class="paper-top entry-heading">
+<h3>Network resource allocation policies with energy transfer capabilities</h3>
+<div class="paper-badges"><span class="type-badge entry-kind">Talk</span>
+</div>
+</div>
+<p class="paper-venue entry-event">SCAVENGE mid-term review</p>
+</div>
+</div>
+<div class="paper-bottom entry-bottom">
+<div class="paper-authors entry-meta"><time datetime="2017-09-21">September 21th, 2017</time>
+<p class="entry-location">Paris, France</p>
+</div>
+<div class="paper-actions entry-links"></div>
+</div>
+</article>
+<article class="paper talk-archive-entry" id="talk-entry-26" data-kind="talk" data-year="2017">
+<div class="entry-copy-layout">
+<div class="entry-copy">
+<div class="paper-top entry-heading">
+<h3>Optimal energy conservation policies for self-sustainable Small Cells</h3>
+<div class="paper-badges"><span class="type-badge entry-kind">Talk</span>
+</div>
+</div>
+<p class="paper-venue entry-event">SCAVENGE workshop</p>
+</div>
+</div>
+<div class="paper-bottom entry-bottom">
+<div class="paper-authors entry-meta"><time datetime="2017-06-02">June 2nd, 2017</time>
+<p class="entry-location">Strathclyde University, Glasgow, UK</p>
+</div>
+<div class="paper-actions entry-links"></div>
+</div>
+</article>
+</div>
+</section>
+<section class="year-group talks-year-group" id="talks-group-2016" aria-labelledby="talks-year-2016">
+<div class="group-heading">
+<h2 id="talks-year-2016">2016</h2><span class="group-count">1</span>
+</div>
+<div class="paper-list talks-year-panel">
+<article class="paper talk-archive-entry" id="talk-entry-27" data-kind="talk" data-year="2016">
+<div class="entry-copy-layout">
+<div class="entry-copy">
+<div class="paper-top entry-heading">
+<h3>Presentation of the SCAVENGE ESR-05</h3>
+<div class="paper-badges"><span class="type-badge entry-kind">Talk</span>
+</div>
+</div>
+<p class="paper-venue entry-event">SCAVENGE initial training school</p>
+</div>
+</div>
+<div class="paper-bottom entry-bottom">
+<div class="paper-authors entry-meta"><time datetime="2016-11-21">November 21st, 2016</time>
+<p class="entry-location">CTTC, Barcelona, Spain</p>
+</div>
+<div class="paper-actions entry-links"></div>
+</div>
+</article>
+</div>
+</section>
+<section class="year-group talks-year-group" id="talks-group-2015" aria-labelledby="talks-year-2015">
+<div class="group-heading">
+<h2 id="talks-year-2015">2015</h2><span class="group-count">1</span>
+</div>
+<div class="paper-list talks-year-panel">
+<article class="paper talk-archive-entry" id="talk-entry-28" data-kind="talk" data-year="2015">
+<div class="entry-copy-layout">
+<div class="entry-copy">
+<div class="paper-top entry-heading">
+<h3>Data analytics for Smart Parking Applications</h3>
+<div class="paper-badges"><span class="type-badge entry-kind">Talk</span>
+</div>
+</div>
+<p class="paper-venue entry-event">DEI Awards</p>
+</div>
+</div>
+<div class="paper-bottom entry-bottom">
+<div class="paper-authors entry-meta"><time datetime="2015-06-05">June 5th, 2015</time>
+<p class="entry-location">University of Padova, Padova, Italy</p>
+</div>
+<div class="paper-actions entry-links"></div>
+</div>
+</article>
+</div>
+</section>
+</div>
+<div class="empty-state talks-empty" hidden>
+<h2>No matching events</h2>
+<p>Try another title, event, location, or year.</p><button class="talks-reset" type="button">Clear filters</button>
+</div>
+</div>
+</div>
+</main>
+<footer class="site-footer"><span>© 2026 Nicola Piovesan</span><a href="#top">Back to top ↑</a>
+</footer>
+<script src="js/navigation.js" defer></script>
+<script src="js/upcoming-events.js" defer></script>
+<script src="js/talks-page.js" defer></script>
+<script src="js/analytics.js" defer></script>
+<noscript><img src="https://in.getclicky.com/101089699ns.gif" width="1" height="1" alt=""></noscript>
 </body>
 </html>
