@@ -23,7 +23,9 @@ Open `http://localhost:8000`. On Windows, `py -m http.server 8000` also works.
 - `css/home.css`, `css/archive.css`, `css/biography.css`: page layouts.
 - `js/`: progressive filters, shared navigation, contact reveal and event expiry.
 - `data/publications.json`: the source of truth for publication records.
-- `images/`: original photographs and the portrait's lossless alpha mask.
+- `images/`: original photographs, the approved transparent portrait
+  (`nicola-piovesan.png`) and the previous portrait mask. The homepage crops the
+  new portrait in CSS, preserving its full source image.
 
 The publication archive is present in the HTML before JavaScript runs. JavaScript
 adds search, filters, sorting and compact author lists. Abstracts use native

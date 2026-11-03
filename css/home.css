@@ -39,16 +39,9 @@
   height: 320px;
   max-width: none;
   flex: none;
-  object-fit: contain;
-  object-position: center bottom;
+  object-fit: cover;
+  object-position: center top;
   filter: drop-shadow(7px 0 12px #34546b12);
-  mask-image: url('../images/portrait-alpha-mask.png');
-  -webkit-mask-image: url('../images/portrait-alpha-mask.png');
-  mask-mode: alpha;
-  mask-size: 100% 100%;
-  -webkit-mask-size: 100% 100%;
-  mask-repeat: no-repeat;
-  -webkit-mask-repeat: no-repeat;
 }
 .bio-introduction {
   position: relative;
