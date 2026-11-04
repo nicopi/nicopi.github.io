@@ -2,6 +2,7 @@
 .page-shell { max-width: 1240px; margin: auto; padding: 27px 30px 70px; }
 .intro-stage { position: relative; isolation: isolate; border-radius: 24px; }
 .intro-backdrop { display: none; }
+.portrait-tone-definitions { position: absolute; overflow: hidden; pointer-events: none; }
 .opening-bio {
   position: relative;
   display: grid;
@@ -44,7 +45,7 @@
   object-fit: cover;
   object-position: center top;
   border-bottom-right-radius: inherit;
-  filter: drop-shadow(7px 0 12px #34546b12);
+  filter: url("#portrait-tones") drop-shadow(7px 0 12px #34546b12);
 }
 .bio-introduction {
   position: relative;

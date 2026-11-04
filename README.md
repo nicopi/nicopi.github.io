@@ -27,6 +27,10 @@ Open `http://localhost:8000`. On Windows, `py -m http.server 8000` also works.
   (`nicola-piovesan.png`) and the previous portrait mask. The homepage crops the
   new portrait in CSS, preserving its full source image.
 
+The homepage applies the approved softer portrait tones through the
+`portrait-tones` SVG filter in `index.html`, referenced by `css/home.css`.
+The PNG and its transparency remain unchanged.
+
 The publication archive is present in the HTML before JavaScript runs. JavaScript
 adds search, filters, sorting and compact author lists. Abstracts use native
 disclosures, so they remain accessible without JavaScript.
